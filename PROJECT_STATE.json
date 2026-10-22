@@ -1,0 +1,116 @@
+{
+  "product_id": "PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS",
+  "title": "The AI Content Creator & Solopreneur Operating System",
+  "subtitle": "A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout",
+  "version": "1.0.0",
+  "imprint": "Apex Digital Systems Studio",
+  "release_year": 2026,
+  "pro_access_key": "CREATOR-OS-PRO-2026",
+  "design_tokens": {
+    "theme_name": "Creator Indigo, Violet & Slate",
+    "colors": {
+      "primary": "#0F172A",
+      "accent": "#4F46E5",
+      "secondary": "#0D9488",
+      "warning": "#D97706",
+      "text": "#1E293B",
+      "muted": "#64748B",
+      "bg": "#FFFFFF"
+    },
+    "typography": {
+      "heading_font": "Inter",
+      "body_font": "Inter",
+      "fallback_sans": "Noto Sans",
+      "monospace_font": "JetBrains Mono",
+      "body_size_floor_pt": 10.5,
+      "table_prompt_size_floor_pt": 9.5,
+      "caption_size_floor_pt": 8.5
+    },
+    "svg_canvas": {
+      "viewBox": "0 0 900 480",
+      "width": 900,
+      "height": 480,
+      "background": "#FFFFFF"
+    }
+  },
+  "commercial_tiers": [
+    {
+      "tier_id": "Tier 0",
+      "name": "Lead Magnet & Free Diagnostic Kit",
+      "price_usd": 0,
+      "deliverables": [
+        "Worksheet 01: The 7-Day Content Time-Leak & RPPH Diagnostic Audit",
+        "5 Core AI Prompts Quick-Start Sheet (P01-P05)",
+        "The 5-Stage Content-to-Cash Mindmap Poster (SVG/PNG)"
+      ]
+    },
+    {
+      "tier_id": "Tier 1",
+      "name": "Core Digital Edition (Ebook + Action Workbooks)",
+      "price_usd": 29,
+      "deliverables": [
+        "Complete 10-Chapter Master Manual (US Letter & ISO A4 PDF + EPUB 3)",
+        "10 Printable & Fillable Chapter Action Worksheets",
+        "50 Copy-Paste AI Creator Workflow Prompts Vault",
+        "12 Emergency Creator & Sponsorship Scripts Vault"
+      ]
+    },
+    {
+      "tier_id": "Tier 2",
+      "name": "Creator Operator Pro Bundle (Interactive Web Tools + Spreadsheets)",
+      "price_usd": 79,
+      "deliverables": [
+        "Everything in Tier 1",
+        "Interactive Web Calculators & RPPH Diagnostic Suite (Pro Key: CREATOR-OS-PRO-2026)",
+        "Notion Creator OS Workspace Blueprint & CSV Databases",
+        "Excel/Google Sheets Financial, Sponsorship & Content Waterfall Trackers",
+        "20 High-Resolution Vector Architecture Diagrams & Cheat Sheets"
+      ]
+    },
+    {
+      "tier_id": "Tier 3",
+      "name": "Executive Solopreneur Automation Suite (n8n/Make Blueprints + Office Kit)",
+      "price_usd": 199,
+      "deliverables": [
+        "Everything in Tier 2",
+        "Production-Ready n8n & Make.com JSON Automation Workflows",
+        "Editable Microsoft Word SOPs & Executive Slide Decks",
+        "Brand Sponsorship Media Kit & Outbound Pitch Deck Templates"
+      ]
+    },
+    {
+      "tier_id": "Tier 4",
+      "name": "Agency & Creator Incubator White-Label License",
+      "price_usd": 499,
+      "deliverables": [
+        "Everything in Tier 3",
+        "Commercial Cohort & Client Training Rights",
+        "Editable Cover Design & Source SVG Master Kit",
+        "SOP Customization & Client Onboarding Playbooks"
+      ]
+    }
+  ],
+  "phase_status": {
+    "Phase 1": "COMPLETED",
+    "Phase 2": "PENDING",
+    "Phase 3": "PENDING",
+    "Phase 4": "PENDING",
+    "Phase 5": "PENDING",
+    "Phase 6": "PENDING",
+    "Phase 7": "PENDING",
+    "Phase 8": "PENDING",
+    "Phase 9": "PENDING"
+  },
+  "asset_inventory": {
+    "target_chapters": 10,
+    "completed_chapters": 1,
+    "target_worksheets": 10,
+    "completed_worksheets": 1,
+    "target_chapter_svgs": 20,
+    "completed_chapter_svgs": 2,
+    "target_ai_prompts": 50,
+    "completed_ai_prompts": 5,
+    "target_emergency_scripts": 12,
+    "completed_emergency_scripts": 0
+  }
+}

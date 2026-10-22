@@ -1,0 +1,151 @@
+# ==============================================================================
+# BOOK CONFIGURATION & PUBLISHING SPECIFICATION
+# Product #3: The AI Content Creator & Solopreneur Operating System
+# Imprint: Apex Digital Systems Studio
+# ==============================================================================
+
+product:
+  id: "PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS"
+  title: "The AI Content Creator & Solopreneur Operating System"
+  subtitle: "A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout"
+  edition: "First Studio Edition (2026)"
+  version: "1.0.0"
+  language: "en-US"
+  category:
+    bisac_primary: "BUS090000 - BUSINESS & ECONOMICS / E-Commerce / Digital Marketing"
+    bisac_secondary: "BUS025000 - BUSINESS & ECONOMICS / Entrepreneurship"
+    bisac_tertiary: "COM004000 - COMPUTERS / Artificial Intelligence / General"
+
+imprint:
+  publisher_name: "Apex Digital Systems Studio"
+  editorial_division: "Autonomous Digital Publishing & Creator Systems Group"
+  location: "New York & San Francisco"
+  copyright_year: 2026
+  copyright_holder: "Apex Digital Systems Studio"
+  rights_statement: "All rights reserved. Commercial reproduction of text, diagrams, or automation blueprints outside licensed tier permissions is strictly prohibited."
+  pro_access_key: "CREATOR-OS-PRO-2026"
+
+identifiers:
+  isbn_13_digital_pdf: "979-8-89412-031-8"
+  isbn_13_epub: "979-8-89412-032-5"
+  isbn_13_kdp_paperback: "979-8-89412-033-2"
+  isbn_13_hardcover: "979-8-89412-034-9"
+  kdp_asin_mapping: "B0DN3CROS3"
+  sku_master_bundle: "APEX-CROS-2026-V1"
+
+trim_sizes:
+  digital_us_letter:
+    name: "Digital Studio Master (US Letter)"
+    width: "8.5in"
+    height: "11.0in"
+    orientation: "portrait"
+    margins:
+      top: "0.75in"
+      bottom: "0.75in"
+      inside: "0.75in"
+      outside: "0.75in"
+    header_offset: "0.4in"
+    footer_offset: "0.4in"
+
+  digital_iso_a4:
+    name: "International Digital Standard (ISO A4)"
+    width: "210mm"
+    height: "297mm"
+    orientation: "portrait"
+    margins:
+      top: "19mm"
+      bottom: "19mm"
+      inside: "19mm"
+      outside: "19mm"
+    header_offset: "10mm"
+    footer_offset: "10mm"
+
+  kdp_paperback_trade:
+    name: "Amazon KDP Trade Paperback (6x9in Mirrored)"
+    width: "6.0in"
+    height: "9.0in"
+    orientation: "portrait"
+    mirror_margins: true
+    bleed: "0.125in"
+    margins:
+      top: "0.65in"
+      bottom: "0.65in"
+      inside: "0.75in"
+      outside: "0.50in"
+    color_profile: "CMYK / High-Contrast Grayscale Safe"
+
+  tablet_landscape_planner:
+    name: "Executive iPad & Tablet Interactive Planner (Landscape)"
+    width: "11.0in"
+    height: "8.5in"
+    orientation: "landscape"
+    margins:
+      top: "0.5in"
+      bottom: "0.5in"
+      left: "0.6in"
+      right: "0.6in"
+
+typography:
+  headings:
+    font_family: "Inter, 'Noto Sans', sans-serif"
+    weights:
+      h1: 800
+      h2: 700
+      h3: 600
+      h4: 600
+    line_height: 1.25
+    letter_spacing: "-0.02em"
+  body:
+    font_family: "Inter, 'Noto Sans', sans-serif"
+    weight: 400
+    bold_weight: 600
+    size_floor_pt: 10.5
+    digital_body_pt: 11.0
+    print_body_pt: 10.5
+    line_height: 1.55
+  monospace:
+    font_family: "'JetBrains Mono', Consolas, monospace"
+    weight: 400
+    size_floor_pt: 9.5
+    line_height: 1.45
+  tables_and_prompts:
+    size_floor_pt: 9.5
+    cell_padding: "6pt 8pt"
+  captions_and_footers:
+    size_floor_pt: 8.5
+    color_token: "--muted"
+
+design_tokens:
+  palette_name: "Creator Indigo, Violet & Slate"
+  colors:
+    primary: "#0F172A"
+    accent: "#4F46E5"
+    secondary: "#0D9488"
+    warning: "#D97706"
+    text: "#1E293B"
+    muted: "#64748B"
+    bg: "#FFFFFF"
+  print_safety:
+    pure_white_canvas: true
+    forbid_dark_fill_blocks: true
+    max_ink_density_percent: 240
+
+manuscript_structure:
+  chapter_count: 10
+  schema_sections_per_chapter: 14
+  min_words_per_chapter: 6500
+  min_words_per_worksheet: 1500
+  prompts_per_chapter: 5
+  total_prompts: 50
+  svgs_per_chapter: 2
+  total_chapter_svgs: 20
+  emergency_scripts_count: 12
+
+exports:
+  pdf_us_letter: "09-EXPORTS/PDF/AI-Creator-Solopreneur-OS-US-Letter.pdf"
+  pdf_iso_a4: "09-EXPORTS/PDF/AI-Creator-Solopreneur-OS-ISO-A4.pdf"
+  pdf_workbooks: "09-EXPORTS/PDF/AI-Creator-Solopreneur-OS-Action-Workbooks.pdf"
+  epub_reflowable: "09-EXPORTS/EPUB/AI-Creator-Solopreneur-OS.epub"
+  print_kdp_6x9: "09-EXPORTS/PRINT/AI-Creator-Solopreneur-OS-KDP-6x9-Print-Ready.pdf"
+  tablet_planner: "09-EXPORTS/HYBRID-BUNDLE/AI-Creator-Solopreneur-OS-Tablet-Planner-11x8.5.pdf"
+  master_bundle_zip: "09-EXPORTS/HYBRID-BUNDLE/AI-Creator-Solopreneur-OS-Complete-Studio-Bundle.zip"

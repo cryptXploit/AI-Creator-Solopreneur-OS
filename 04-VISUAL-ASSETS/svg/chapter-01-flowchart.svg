@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <marker id="flow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="flow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="flow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+  </defs>
+
+  <!-- Pure White Print/Digital Studio Canvas -->
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF"/>
+  <rect x="10" y="10" width="880" height="460" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="10" y="10" width="880" height="40" rx="8" fill="#0F172A"/>
+  <rect x="10" y="34" width="880" height="16" fill="#0F172A"/>
+  <text x="26" y="35" font-family="Inter, 'Noto Sans', sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.4">
+    DECISION TREE 1.2: CREATOR TIME-ALLOCATION &amp; RPPH DIAGNOSTIC GATE
+  </text>
+  <text x="874" y="35" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#5EEAD4">
+    WEEKLY FRIDAY CEO AUDIT SOP
+  </text>
+
+  <!-- Column Headers -->
+  <text x="195" y="70" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#4F46E5">
+    PRIMARY DIAGNOSTIC GATES (PASS PATH)
+  </text>
+  <text x="640" y="70" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#D97706">
+    FAIL INTERVENTION PROTOCOLS (IMMEDIATE FIX)
+  </text>
+
+  <!-- GATE 01: PRODUCTION HOURS -->
+  <rect x="35" y="82" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2"/>
+  <rect x="35" y="82" width="78" height="22" rx="4" fill="#0F172A"/>
+  <text x="74" y="97" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 01
+  </text>
+  <text x="122" y="98" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    Weekly Studio Hours &lt;= 6.0 Hrs?
+  </text>
+  <text x="47" y="118" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Formula: H_val + H_pillar + H_waterfall + H_funnel
+  </text>
+  <text x="47" y="136" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Threshold: Max 360 Minutes / Week
+  </text>
+
+  <!-- Gate 01 -> Fail Action 1 -->
+  <line x1="355" y1="116" x2="435" y2="116" stroke="#D97706" stroke-width="2" marker-end="url(#flow-amber)"/>
+  <text x="395" y="110" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&gt;6h)
+  </text>
+  <rect x="440" y="82" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="102" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PROTOCOL 1: PRUNE CHANNELS &amp; BATCH TIMELINE
+  </text>
+  <text x="454" y="120" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Freeze all secondary channels with &lt;1% profile-to-optin CTR.
+  </text>
+  <text x="454" y="137" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Switch to single-take teleprompter + automated silence removal.
+  </text>
+
+  <!-- Gate 01 -> Gate 02 Pass Arrow -->
+  <line x1="195" y1="150" x2="195" y2="176" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#flow-indigo)"/>
+  <text x="228" y="167" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#4F46E5">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 02: CTR & 30-SEC RETENTION -->
+  <rect x="35" y="180" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2"/>
+  <rect x="35" y="180" width="78" height="22" rx="4" fill="#4F46E5"/>
+  <text x="74" y="195" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 02
+  </text>
+  <text x="122" y="196" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    CTR &gt;= 6.5% AND 0:30 Hold &gt;= 68%?
+  </text>
+  <text x="47" y="216" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Measures Package-First Pull &amp; 3-Sec Curiosity Hook
+  </text>
+  <text x="47" y="234" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Newsletter Equivalent: Open Rate &gt;= 42%
+  </text>
+
+  <!-- Gate 02 -> Fail Action 2 -->
+  <line x1="355" y1="214" x2="435" y2="214" stroke="#D97706" stroke-width="2" marker-end="url(#flow-amber)"/>
+  <text x="395" y="208" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (LOW)
+  </text>
+  <rect x="440" y="180" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="200" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PROTOCOL 2: 24-HOUR PACKAGE &amp; HOOK RESCUE
+  </text>
+  <text x="454" y="218" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • If CTR &lt; 6.5%: Swap Title + simplify Thumbnail to &lt;= 3 elements.
+  </text>
+  <text x="454" y="235" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • If R30 &lt; 68%: Cut intro fluff; show visual proof artifact by 0:15.
+  </text>
+
+  <!-- Gate 02 -> Gate 03 Pass Arrow -->
+  <line x1="195" y1="248" x2="195" y2="274" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#flow-indigo)"/>
+  <text x="228" y="265" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#4F46E5">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 03: EMAIL CAPTURE VELOCITY -->
+  <rect x="35" y="278" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#0D9488" stroke-width="2"/>
+  <rect x="35" y="278" width="78" height="22" rx="4" fill="#0D9488"/>
+  <text x="74" y="293" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 03
+  </text>
+  <text x="122" y="294" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    View-to-Email Capture C_opt &gt;= 2.0%?
+  </text>
+  <text x="47" y="314" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Measures Rented-to-Owned Bridge &amp; Lead Magnet Fit
+  </text>
+  <text x="47" y="332" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Landing Page Opt-In Target: &gt;= 40%
+  </text>
+
+  <!-- Gate 03 -> Fail Action 3 -->
+  <line x1="355" y1="312" x2="435" y2="312" stroke="#D97706" stroke-width="2" marker-end="url(#flow-amber)"/>
+  <text x="395" y="306" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;2%)
+  </text>
+  <rect x="440" y="278" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="298" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PROTOCOL 3: REWIRE LEAD MAGNET &amp; MID-ROLL BRIDGE
+  </text>
+  <text x="454" y="316" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Move Lead Magnet CTA from end-screen to 45% Mid-Roll timestamp.
+  </text>
+  <text x="454" y="333" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Replace generic "Join Newsletter" with Tier 0 Diagnostic Toolkit.
+  </text>
+
+  <!-- Gate 03 -> Gate 04 Pass Arrow -->
+  <line x1="195" y1="346" x2="195" y2="372" stroke="#0D9488" stroke-width="2.2" marker-end="url(#flow-teal)"/>
+  <text x="228" y="363" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#0D9488">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 04: RPPH TARGET -->
+  <rect x="35" y="376" width="320" height="78" rx="6" fill="#F0FDFA" stroke="#0F172A" stroke-width="2.2"/>
+  <rect x="35" y="376" width="78" height="22" rx="4" fill="#0F172A"/>
+  <text x="74" y="391" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 04
+  </text>
+  <text x="122" y="392" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    Weekly RPPH &gt;= $185.00 / Hour?
+  </text>
+  <text x="47" y="413" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="600" fill="#0D9488">
+    PASS: Lock SOPs, Delegate Editing, Scale Outliers!
+  </text>
+  <text x="47" y="432" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0F172A">
+    Benchmark: Operator Target $185 - $420+/Hr
+  </text>
+
+  <!-- Gate 04 -> Fail Action 4 -->
+  <line x1="355" y1="415" x2="435" y2="415" stroke="#D97706" stroke-width="2" marker-end="url(#flow-amber)"/>
+  <text x="395" y="409" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;$185)
+  </text>
+  <rect x="440" y="376" width="425" height="78" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="396" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PROTOCOL 4: ACTIVATE VALUE LADDER &amp; SPONSOR OUTBOUND
+  </text>
+  <text x="454" y="414" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Add $49 Tier 1 Toolkit + $19 Order Bump to Welcome Emails #2-#5.
+  </text>
+  <text x="454" y="431" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Send 5 weekly outbound pitches for $1,500+ Outcome Sponsorships.
+  </text>
+</svg>
