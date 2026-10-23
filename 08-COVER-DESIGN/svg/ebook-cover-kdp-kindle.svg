@@ -1,0 +1,349 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560" font-family="'Inter', 'Segoe UI', 'Noto Sans', sans-serif">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="52%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+    <linearGradient id="indigo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+    <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <radialGradient id="glow-indigo" cx="50%" cy="38%" r="45%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow-teal" cx="50%" cy="72%" r="40%">
+      <stop offset="0%" stop-color="#0D9488" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Deep Studio Navy Canvas & Architectural Grid -->
+  <rect x="0" y="0" width="1600" height="2560" fill="url(#bg-grad)" />
+  <line x1="0" y1="0" x2="0" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="80" y1="0" x2="80" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="160" y1="0" x2="160" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="240" y1="0" x2="240" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="320" y1="0" x2="320" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="400" y1="0" x2="400" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="480" y1="0" x2="480" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="560" y1="0" x2="560" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="640" y1="0" x2="640" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="720" y1="0" x2="720" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="800" y1="0" x2="800" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="880" y1="0" x2="880" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="960" y1="0" x2="960" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1040" y1="0" x2="1040" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1120" y1="0" x2="1120" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1200" y1="0" x2="1200" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1280" y1="0" x2="1280" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1360" y1="0" x2="1360" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1440" y1="0" x2="1440" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1520" y1="0" x2="1520" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="1600" y1="0" x2="1600" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="0" x2="1600" y2="0" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="80" x2="1600" y2="80" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="160" x2="1600" y2="160" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="240" x2="1600" y2="240" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="320" x2="1600" y2="320" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="400" x2="1600" y2="400" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="480" x2="1600" y2="480" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="560" x2="1600" y2="560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="640" x2="1600" y2="640" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="720" x2="1600" y2="720" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="880" x2="1600" y2="880" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="960" x2="1600" y2="960" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1040" x2="1600" y2="1040" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1120" x2="1600" y2="1120" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1200" x2="1600" y2="1200" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1280" x2="1600" y2="1280" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1360" x2="1600" y2="1360" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1440" x2="1600" y2="1440" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1520" x2="1600" y2="1520" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1600" x2="1600" y2="1600" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1680" x2="1600" y2="1680" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1760" x2="1600" y2="1760" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1840" x2="1600" y2="1840" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="1920" x2="1600" y2="1920" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2000" x2="1600" y2="2000" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2080" x2="1600" y2="2080" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2160" x2="1600" y2="2160" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2240" x2="1600" y2="2240" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2320" x2="1600" y2="2320" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2400" x2="1600" y2="2400" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2480" x2="1600" y2="2480" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <line x1="0" y1="2560" x2="1600" y2="2560" stroke="#1E293B" stroke-width="1" opacity="0.45" />
+  <circle cx="80" cy="80" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="240" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="400" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="560" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="720" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="880" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="1040" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="1200" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="1360" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="1520" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="1680" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="1840" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="2000" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="2160" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="80" cy="2320" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="80" cy="2480" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="80" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="240" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="400" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="560" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="720" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="880" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="1040" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="1200" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="1360" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="1520" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="1680" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="1840" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="2000" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="2160" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="240" cy="2320" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="240" cy="2480" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="80" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="240" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="400" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="560" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="720" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="880" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="1040" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="1200" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="1360" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="1520" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="1680" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="1840" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="2000" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="2160" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="400" cy="2320" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="400" cy="2480" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="80" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="240" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="400" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="560" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="720" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="880" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="1040" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="1200" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="1360" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="1520" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="1680" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="1840" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="2000" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="2160" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="560" cy="2320" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="560" cy="2480" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="80" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="240" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="400" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="560" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="720" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="880" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="1040" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="1200" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="1360" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="1520" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="1680" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="1840" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="2000" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="2160" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="720" cy="2320" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="720" cy="2480" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="80" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="240" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="400" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="560" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="720" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="880" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="1040" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="1200" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="1360" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="1520" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="1680" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="1840" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="2000" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="2160" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="880" cy="2320" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="880" cy="2480" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="80" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="240" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="400" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="560" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="720" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="880" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="1040" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="1200" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="1360" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="1520" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="1680" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="1840" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="2000" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="2160" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1040" cy="2320" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1040" cy="2480" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="80" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="240" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="400" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="560" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="720" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="880" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="1040" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="1200" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="1360" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="1520" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="1680" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="1840" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="2000" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="2160" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1200" cy="2320" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1200" cy="2480" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="80" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="240" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="400" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="560" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="720" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="880" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="1040" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="1200" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="1360" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="1520" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="1680" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="1840" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="2000" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="2160" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1360" cy="2320" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1360" cy="2480" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="80" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="240" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="400" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="560" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="720" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="880" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="1040" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="1200" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="1360" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="1520" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="1680" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="1840" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="2000" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="2160" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <circle cx="1520" cy="2320" r="3.5" fill="#0D9488" opacity="0.32" />
+  <circle cx="1520" cy="2480" r="3.5" fill="#4F46E5" opacity="0.32" />
+  <rect x="0" y="0" width="1600" height="2560" fill="url(#glow-indigo)" />
+  <rect x="0" y="0" width="1600" height="2560" fill="url(#glow-teal)" />
+
+  <!-- Outer Precision Frame -->
+  <rect x="48" y="48" width="1504" height="2464" rx="18" fill="none" stroke="#334155" stroke-width="3" />
+  <rect x="64" y="64" width="1472" height="2432" rx="12" fill="none" stroke="#4F46E5" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Top Imprint Header Strip -->
+  <rect x="120" y="110" width="1360" height="74" rx="10" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
+  <text x="800" y="157" fill="#E2E8F0" font-size="26" font-weight="800" letter-spacing="5" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO · FLAGSHIP EDITION</text>
+
+  <!-- Primary Book Title Hierarchy -->
+  <text x="800" y="310" fill="#818CF8" font-size="38" font-weight="800" letter-spacing="6" text-anchor="middle">THE QUANTITATIVE SOLOPRENEUR MANUAL</text>
+  <text x="800" y="445" fill="#FFFFFF" font-size="112" font-weight="900" letter-spacing="-1" text-anchor="middle">THE AI CONTENT</text>
+  <text x="800" y="575" fill="#FFFFFF" font-size="112" font-weight="900" letter-spacing="-1" text-anchor="middle">CREATOR &amp;</text>
+  <text x="800" y="705" fill="#2DD4BF" font-size="108" font-weight="900" letter-spacing="-1" text-anchor="middle">SOLOPRENEUR</text>
+  <text x="800" y="835" fill="#FFFFFF" font-size="104" font-weight="900" letter-spacing="-1" text-anchor="middle">OPERATING SYSTEM</text>
+
+  <!-- Accent Divider Bar -->
+  <rect x="280" y="885" width="1040" height="8" rx="4" fill="url(#indigo-grad)" />
+
+  <!-- Subtitle Block -->
+  <text x="800" y="955" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">A Practical System to Research Validated Ideas, Script High-Retention</text>
+  <text x="800" y="1005" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">Content, Repurpose Across Platforms, Automate Production, and</text>
+  <text x="800" y="1055" fill="#FFFFFF" font-size="35" font-weight="700" text-anchor="middle">Monetize Your Audience Without Burnout</text>
+
+  <!-- Centerpiece Architectural Diagram: The 5-Stage Content-to-Cash Engine -->
+  <rect x="120" y="1125" width="1360" height="940" rx="20" fill="#0F172A" stroke="#4F46E5" stroke-width="3" />
+  <rect x="120" y="1125" width="1360" height="68" rx="18" fill="#1E1B4B" />
+  <text x="800" y="1169" fill="#FFFFFF" font-size="27" font-weight="800" letter-spacing="3" text-anchor="middle">5-STAGE CONTENT-TO-CASH OPERATING ARCHITECTURE</text>
+
+  <!-- Stage Cards Row 1 -->
+  <rect x="165" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
+  <rect x="165" y="1230" width="400" height="44" rx="10" fill="url(#indigo-grad)" />
+  <text x="365" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 1: NICHE &amp; AVATAR MOAT</text>
+  <text x="365" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">P.A.I.D. Positioning Matrix</text>
+  <text x="365" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">NMPI Score &gt;= 75 / 100 Gate</text>
+  <text x="365" y="1375" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">RPPH Floor: $150 - $250/hr</text>
+  <text x="365" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">3-Pillar Authority Architecture</text>
+
+  <rect x="600" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
+  <rect x="600" y="1230" width="400" height="44" rx="10" fill="url(#indigo-grad)" />
+  <text x="800" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 2: OUTLIER &amp; HOOKS</text>
+  <text x="800" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">S.I.G.N.A.L. Idea Validation</text>
+  <text x="800" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">Outlier Multiplier M &gt;= 2.5x</text>
+  <text x="800" y="1375" fill="#FBBF24" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">30s C.L.I.P. Hold &gt;= 70%</text>
+  <text x="800" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">Package-First Title &amp; Thumbnail</text>
+
+  <rect x="1035" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <rect x="1035" y="1230" width="400" height="44" rx="10" fill="url(#teal-grad)" />
+  <text x="1235" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 3: 1-TO-15 WATERFALL</text>
+  <text x="1235" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">H.E.A.R.T. Pillar Scripting</text>
+  <text x="1235" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">5-Parameter Voice DNA Engine</text>
+  <text x="1235" y="1375" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">1 Pillar -&gt; 15 Native Assets</text>
+  <text x="1235" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">YouTube · LinkedIn · X · Shorts</text>
+
+  <!-- Stage Cards Row 2 -->
+  <rect x="165" y="1500" width="615" height="240" rx="12" fill="#1E293B" stroke="#D97706" stroke-width="2.5" />
+  <rect x="165" y="1500" width="615" height="44" rx="10" fill="url(#amber-grad)" />
+  <text x="472" y="1529" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 4: 4-HOUR BATCH SPRINT &amp; OWNED FUNNEL</text>
+  <text x="472" y="1575" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">Mon-Thu 240-Minute Production Pipeline + 12-Point QA Gate</text>
+  <text x="472" y="1615" fill="#FBBF24" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">Opt-In Page CVR &gt;= 45% · 5-Day Welcome CVR &gt;= 2.5%</text>
+  <text x="472" y="1655" fill="#CBD5E1" font-size="17" text-anchor="middle">5-Minute Utility Lead Magnets · 3-Tag Intent Segmentation</text>
+  <text x="472" y="1695" fill="#94A3B8" font-size="16" text-anchor="middle">90-Day Subscriber Value V_sub &gt;= $3.50 · 60-Day List Hygiene</text>
+
+  <rect x="820" y="1500" width="615" height="240" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <rect x="820" y="1500" width="615" height="44" rx="10" fill="url(#teal-grad)" />
+  <text x="1127" y="1529" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 5: 4-TIER VALUE LADDER &amp; SPONSORSHIPS</text>
+  <text x="1127" y="1575" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">14-Day Validate-Before-You-Build Launch + Checkout Stack</text>
+  <text x="1127" y="1615" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">Effective AOV Lift +45% · R_sponsor Usage Multipliers</text>
+  <text x="1127" y="1655" fill="#CBD5E1" font-size="17" text-anchor="middle">Impulse ($29) -&gt; Flagship ($99) -&gt; Sprint ($697) -&gt; Advisory ($2.5k)</text>
+  <text x="1127" y="1695" fill="#94A3B8" font-size="16" text-anchor="middle">20-Minute Friday Creator CEO Scorecard · 85%+ Net Margin</text>
+
+  <!-- Telemetry Metric Strip Inside Centerpiece -->
+  <rect x="165" y="1780" width="1270" height="240" rx="12" fill="#111827" stroke="#334155" stroke-width="2" />
+  <text x="800" y="1828" fill="#818CF8" font-size="22" font-weight="800" letter-spacing="2" text-anchor="middle">INCLUDED IN THIS COMPLETE OPERATING SYSTEM EDITION</text>
+
+  <rect x="200" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#4F46E5" stroke-width="1.5" />
+  <text x="340" y="1910" fill="#FFFFFF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">50</text>
+  <text x="340" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">TESTED AI PROMPTS</text>
+  <text x="340" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Prompts P01 through P50</text>
+
+  <rect x="510" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#0D9488" stroke-width="1.5" />
+  <text x="650" y="1910" fill="#2DD4BF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">20</text>
+  <text x="650" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">SYSTEM DIAGRAMS</text>
+  <text x="650" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Mindmaps &amp; Decision Trees</text>
+
+  <rect x="820" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#D97706" stroke-width="1.5" />
+  <text x="960" y="1910" fill="#FBBF24" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">12</text>
+  <text x="960" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">EMERGENCY SCRIPTS</text>
+  <text x="960" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Sponsor &amp; Crisis Vault</text>
+
+  <rect x="1130" y="1855" width="270" height="130" rx="8" fill="#1E293B" stroke="#4F46E5" stroke-width="1.5" />
+  <text x="1265" y="1910" fill="#FFFFFF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">10</text>
+  <text x="1265" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">ACTION WORKBOOKS</text>
+  <text x="1265" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Fillable Audits &amp; Rubrics</text>
+
+  <!-- Bottom Author & Imprint Footer -->
+  <rect x="120" y="2135" width="1360" height="295" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <text x="800" y="2205" fill="#2DD4BF" font-size="25" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES COMPANION WEB APP ACCESS · KEY: CREATOR-OS-PRO-2026</text>
+  <text x="800" y="2265" fill="#FFFFFF" font-size="38" font-weight="900" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
+  <text x="800" y="2320" fill="#94A3B8" font-size="22" font-weight="600" text-anchor="middle">Quantitative Operating Systems for Independent Media &amp; Solopreneur Enterprises</text>
+  <text x="800" y="2375" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace" text-anchor="middle">EDITION v1.0.0 · 91,775 MANUSCRIPT WORDS · 28 CORE MATHEMATICAL FORMULAS</text>
+</svg>

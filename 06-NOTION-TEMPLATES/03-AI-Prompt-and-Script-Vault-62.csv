@@ -1,0 +1,1792 @@
+Asset_ID,Asset_Type,Title,Chapter_Source,Engine_Stage,Primary_Use_Case,Input_Variables,Full_Copy_Paste_Template
+P01,AI Workflow Prompt,7-Day Creator Time-Leak & RPPH Diagnostic Auditor,Chapter 01,Stage 1: Operating Foundation,"You are a Senior Media Operations Architect and Solopreneur Unit-Economics Analyst specializing in creator workflow optimization, time-motion auditing, and Revenue Per Production Hour (RPPH) turnarounds.","[NICHE_AND_TARGET_AUDIENCE], [ACTIVE_PLATFORMS_AND_WEEKLY_POST_COUNT], [WEEKLY_HOURS_BY_TASK], [HOURS_IDEATION], [HOURS_SCRIPTING], [HOURS_RECORDING], [HOURS_EDITING], [HOURS_REPURPOSING], [HOURS_ADMIN], [MONTHLY_NET_REVENUE_BY_STREAM], [REV_ADS], [REV_AFFILIATES]","PROMPT ID: P01 — 7-Day Creator Time-Leak & RPPH Diagnostic Auditor
+
+ROLE:
+You are a Senior Media Operations Architect and Solopreneur Unit-Economics Analyst specializing in creator workflow optimization, time-motion auditing, and Revenue Per Production Hour (RPPH) turnarounds.
+
+CONTEXT:
+I am a solo content creator transitioning from an unsystematized production schedule to the 5-Stage Content-to-Cash Operating System. I need a ruthless forensic audit of my trailing weekly time logs and monthly revenue streams to calculate my exact baseline RPPH, expose my largest hidden friction taxes (Unvalidated Ideation Tax, Format Rewrite Tax, and Zero-Funnel Attention Leak), and construct an immediate pruning plan to cap my production at 6.0 hours per week.
+
+INPUT VARIABLES:
+- [NICHE_AND_TARGET_AUDIENCE]: e.g., B2B AI Workflows & Productivity for Solo Founders
+- [ACTIVE_PLATFORMS_AND_WEEKLY_POST_COUNT]: e.g., YouTube (2 videos/wk), LinkedIn (5 posts/wk), X (14 tweets/wk), TikTok (4 videos/wk)
+- [WEEKLY_HOURS_BY_TASK]:
+  * Ideation & Scrolling: [HOURS_IDEATION] hrs
+  * Scripting & Writing: [HOURS_SCRIPTING] hrs
+  * Recording & Retakes: [HOURS_RECORDING] hrs
+  * Video/Audio/Graphic Editing: [HOURS_EDITING] hrs
+  * Cross-Platform Rewriting/Formatting: [HOURS_REPURPOSING] hrs
+  * Comments, DMs & Admin: [HOURS_ADMIN] hrs
+- [MONTHLY_NET_REVENUE_BY_STREAM]:
+  * Platform Ad-Share (AdSense/Creator Funds): $[REV_ADS]
+  * Affiliate Commissions: $[REV_AFFILIATES]
+  * Digital Products / Courses / Templates: $[REV_PRODUCTS]
+  * Brand Sponsorships: $[REV_SPONSORS]
+  * Coaching / Services Driven by Content: $[REV_SERVICES]
+- [MONTHLY_TOTAL_VIEWS_AND_EMAIL_OPTINS]: [MONTHLY_VIEWS] total views / [MONTHLY_OPTINS] new email subscribers
+
+EXECUTION STEPS:
+1. Compute Baseline Unit Economics: Calculate Total Weekly Hours, Weekly Net Revenue (Monthly Net Revenue / 4.33), Baseline RPPH ($/hr), Effective RPM (Revenue per 1,000 views), and View-to-Email Capture Rate (%).
+2. Friction Tax Categorization: Classify every logged weekly hour into (a) High-ROI Asset Creation, (b) Unvalidated Ideation Tax, (c) Platform Format Rewrite Tax, or (d) Unmonetized Admin Leak.
+3. Platform Yield Ranking: Rank each active platform by estimated commercial yield and flag any platform consuming >15% of weekly hours while generating <10% of email opt-ins or revenue.
+4. The ""Kill, Automate, Systematize"" Prescription: Prescribe exact operational cuts to reduce total weekly hours from current baseline down to 6.0 hours/week without losing core audience reach.
+5. 30-Day RPPH Turnaround Projection: Model the exact RPPH increase if weekly hours are capped at 6.0 and View-to-Email capture reaches 2.5% with a 4.0% conversion into a $49 Tier 1 digital product.
+
+QUALITY CONSTRAINTS:
+- Use explicit mathematical calculations and present all financial figures to two decimal places.
+- Zero motivational fluff or generic advice; provide hard operational thresholds and calendar cuts.
+- Never use banned AI clichés or vague placeholders in the output.
+
+OUTPUT TEMPLATE:
+1. Executive Telemetry Summary Card (Baseline Hours, Weekly Revenue, Baseline RPPH, Effective RPM, Capture Rate %)
+2. Markdown Table: Weekly Time-Leak & Friction Tax Breakdown (Task | Current Hrs | % of Week | Friction Category | Required Cut/Action | New Target Hrs)
+3. Platform Pruning Verdict (Primary Pillar to Keep | 2 Waterfall Channels to Keep | Channels to Freeze Immediately)
+4. 30-Day RPPH Mathematical Projection (Before vs. After Table)"
+P02,AI Workflow Prompt,Pillar Format & Primary Platform Selection Architect,Chapter 01,Stage 1: Operating Foundation,"You are a Lead Digital Media Strategist who designs high-margin, low-burnout omnichannel architectures for solo creator-entrepreneurs.","[CREATOR_CORE_SKILL_STRENGTH], [ON_CAMERA_PREFERENCE], [TARGET_BUYER_PERSONA], [CORE_PAID_OFFER_AND_PRICE], [MAXIMUM_WEEKLY_PRODUCTION_HOURS], [12-16 mins], [10-15 mins], [2,000-2,500 words]","PROMPT ID: P02 — Pillar Format & Primary Platform Selection Architect
+
+ROLE:
+You are a Lead Digital Media Strategist who designs high-margin, low-burnout omnichannel architectures for solo creator-entrepreneurs.
+
+CONTEXT:
+Instead of creating bespoke content from scratch across 5+ social networks, I am installing a single weekly Pillar Asset engine that feeds a 1-to-15 repurposing waterfall. Based on my skill set, audience buyer profile, camera comfort level, and monetization offer, you must select my optimal Pillar Format and lock my 2 secondary waterfall distribution channels.
+
+INPUT VARIABLES:
+- [CREATOR_CORE_SKILL_STRENGTH]: e.g., Deep analytical writing & visual diagramming vs. energetic on-camera speaking vs. screen-recorded software walkthroughs
+- [ON_CAMERA_PREFERENCE]: e.g., Full Talking-Head Studio / Faceless Screenflow + Voiceover / Written-First + Audio
+- [TARGET_BUYER_PERSONA]: e.g., Engineering Managers & SaaS Founders ($120k-$250k income)
+- [CORE_PAID_OFFER_AND_PRICE]: e.g., $149 Automated Sprint Operations System + $2,500 B2B Sponsorships
+- [MAXIMUM_WEEKLY_PRODUCTION_HOURS]: 6.0 hours
+
+EXECUTION STEPS:
+1. Evaluate Format-to-Buyer Fit: Analyze where [TARGET_BUYER_PERSONA] actively consumes deep educational content before making purchasing decisions.
+2. Select the Primary Pillar Specification: Lock exactly ONE weekly Pillar format (either Long-Form Video [12-16 mins], Faceless Screenflow Tutorial [10-15 mins], or Flagship Written Deep-Dive Newsletter [2,000-2,500 words]) and specify optimal length, cadence, and structural sections.
+3. Select the 2 Secondary Waterfall Channels: Choose the top 2 high-yield short/medium-form platforms that naturally ingest derivatives from the chosen Pillar format with near-zero manual rewriting.
+4. Define the ""Frozen Platform Protocol"": List which platforms I must immediately stop posting on manually and provide a 2-sentence static ""Pin/Bio Redirect"" message to place on those dormant profiles so visitors funnel to my active Lead Magnet.
+
+QUALITY CONSTRAINTS:
+- Base channel selection strictly on buyer purchasing power, B2B/B2C CPM benchmarks, and repurposing compatibility.
+- Keep total weekly production across Pillar + 2 Waterfall channels strictly within [MAXIMUM_WEEKLY_PRODUCTION_HOURS].
+
+OUTPUT TEMPLATE:
+1. Primary Pillar Engine Specification Table (Format, Target Length, Publishing Day/Time, Core Retention KPI, Weekly Time Budget)
+2. Secondary Waterfall Channel Matrix (Channel 1 & Channel 2: Derivative Asset Types, Weekly Frequency, Automation Method, CTA Bridge Method)
+3. Dormant Profile Redirect Copy (Exact bio and pinned post text for frozen platforms)"
+P03,AI Workflow Prompt,Content-to-Cash Monetization Bridge Mapper,Chapter 01,Stage 1: Operating Foundation,You are a Direct-Response Funnel Architect and Creator Monetization Engineer specializing in Rented-to-Owned audience bridges and 4-Tier Digital Product Value Ladders.,"[UPCOMING_PILLAR_TOPIC], [AUDIENCE_ACUTE_PAIN_POINT], [EXISTING_OR_PLANNED_PAID_PRODUCT], [RELEVANT_AFFILIATE_TOOLS]","PROMPT ID: P03 — Content-to-Cash Monetization Bridge Mapper
+
+ROLE:
+You are a Direct-Response Funnel Architect and Creator Monetization Engineer specializing in Rented-to-Owned audience bridges and 4-Tier Digital Product Value Ladders.
+
+CONTEXT:
+My content currently generates views and engagement on social platforms, but lacks a high-converting bridge to an owned email list and immediate cash flow. I need to design a seamless Content-to-Cash Monetization Bridge that turns a specific weekly Pillar topic into a 40%+ opt-in Tactical Lead Magnet, an instant Thank-You Page / Welcome Email impulse offer, and a core digital product pitch.
+
+INPUT VARIABLES:
+- [UPCOMING_PILLAR_TOPIC]: e.g., How I Automated My Client Onboarding in 22 Minutes Using Make and Notion
+- [AUDIENCE_ACUTE_PAIN_POINT]: e.g., Losing 6 hours a week manually setting up client folders, contracts, and Slack channels
+- [EXISTING_OR_PLANNED_PAID_PRODUCT]: e.g., The Agency Client OS Template Pack ($49 Tier 1) & Complete Automation Blueprint Suite ($199 Tier 2)
+- [RELEVANT_AFFILIATE_TOOLS]: e.g., Make.com, Notion Plus, PandaDoc
+
+EXECUTION STEPS:
+1. Engineer the Tier 0 Tactical Lead Magnet: Design an irresistible, high-utility companion asset (Checklist, JSON Blueprint, ROI Calculator, or Swipe File) that viewers of [UPCOMING_PILLAR_TOPIC] can apply in under 10 minutes.
+2. Script the 2 In-Content Native CTA Bridges:
+   - Mid-Roll Bridge (placed at the 45% mark right after showing the core framework).
+   - End-of-Asset Bridge (final 20 seconds / conclusion callout).
+3. Draft the High-Converting Opt-In Landing Page Wireframe: Headline, 3 quantified bullet points, and button CTA text (strictly avoiding cliché words).
+4. Architect the Thank-You Page & Email #1 ""Fast-Action Cash Bridge"": Show how to immediately present the Tier 1 Impulse Offer ($29-$49) and embed the 3 [RELEVANT_AFFILIATE_TOOLS] inside the Lead Magnet delivery so new subscribers generate revenue on Day 1.
+
+QUALITY CONSTRAINTS:
+- Every CTA must emphasize immediate time saved or revenue gained rather than generic ""newsletter updates.""
+- Ensure natural editorial transitions so the Mid-Roll Bridge maintains viewer retention above 65%.
+
+OUTPUT TEMPLATE:
+1. Tier 0 Lead Magnet Specification (Asset Title, Format, 5-Minute Utility Promise)
+2. Verbatim In-Content Bridge Scripts (Mid-Roll Script + End-Screen/Footer Script)
+3. Opt-In Landing Page Copy Block (Headline, Subheadline, 3 Bullets, CTA Button Label)
+4. Day-1 Monetization Architecture (Thank-You Page Tripwire Copy + Embedded Affiliate Placement Map)"
+P04,AI Workflow Prompt,Weekly 6-Hour Production Sprint Block Scheduler,Chapter 01,Stage 1: Operating Foundation,You are an Executive Productivity Systems Engineer who designs zero-context-switching batch production schedules for solo media operators.,"[AVAILABLE_DAYS_AND_TIME_WINDOWS], [PEAK_COGNITIVE_ENERGY_TIME], [SELECTED_PILLAR_FORMAT], [CURRENT_BOTTLENECK_STAGE]","PROMPT ID: P04 — Weekly 6-Hour Production Sprint Block Scheduler
+
+ROLE:
+You are an Executive Productivity Systems Engineer who designs zero-context-switching batch production schedules for solo media operators.
+
+CONTEXT:
+I need to compress my entire weekly content research, scripting, recording, editing, 1-to-15 repurposing, and newsletter monetization workflow into exactly 6.0 hours per week, fitted around my real-world schedule constraints and peak cognitive energy windows.
+
+INPUT VARIABLES:
+- [AVAILABLE_DAYS_AND_TIME_WINDOWS]: e.g., Weekday mornings 7:00 AM - 9:00 AM and Friday afternoon 2:00 PM - 3:00 PM
+- [PEAK_COGNITIVE_ENERGY_TIME]: e.g., Early Morning (7:00 AM - 9:30 AM)
+- [SELECTED_PILLAR_FORMAT]: e.g., 14-Minute Screenflow + Talking-Head YouTube Pillar
+- [CURRENT_BOTTLENECK_STAGE]: e.g., Getting stuck perfectionist-editing video timelines for 5 hours
+
+EXECUTION STEPS:
+1. Map the 4 Non-Overlapping Batch Sprint Blocks (totaling 360 minutes / 6.0 hours) onto [AVAILABLE_DAYS_AND_TIME_WINDOWS], matching high-cognition tasks (Outlier Validation & H.E.A.R.T. Scripting) to [PEAK_COGNITIVE_ENERGY_TIME].
+2. Break each Sprint Block into 15-to-30 minute micro-timers with explicit start triggers, hard stop rules, and deliverable Definition of Done (DoD).
+3. Design a specific ""Anti-Perfectionism Guardrail Protocol"" to neutralize [CURRENT_BOTTLENECK_STAGE] (e.g., 1-take clap marker rules, 45-minute hard timer on assembly).
+4. Create a 5-Minute Pre-Flight Setup Checklist so every sprint block starts with zero friction.
+
+QUALITY CONSTRAINTS:
+- Total scheduled minutes across the entire week must equal exactly 360 minutes (6.0 hours).
+- Never mix creative writing and technical timeline editing inside the same 60-minute window.
+
+OUTPUT TEMPLATE:
+1. Master 6-Hour Weekly Batch Sprint Calendar Table (Day | Time Window | Duration | Sprint Block Name | Micro-Timer Breakdown | Definition of Done)
+2. Bottleneck Neutralization SOP (3 hard operational rules to prevent time overruns in [CURRENT_BOTTLENECK_STAGE])
+3. 5-Minute Pre-Sprint Workstation Checklist"
+P05,AI Workflow Prompt,Existing Content Library High-ROI Asset Audit & Revival Engine,Chapter 01,Stage 1: Operating Foundation,You are a Content Portfolio Analyst and Algorithmic Revival Strategist.,"[TOP_5_HISTORICAL_POSTS_AND_METRICS], [TITLE_1], [VIEWS_1], [RETENTION_OR_ENGAGEMENT_1], [CTA_1], [TITLE_2], [VIEWS_2], [RETENTION_OR_ENGAGEMENT_2], [CTA_2], [TITLE_3], [VIEWS_3], [RETENTION_OR_ENGAGEMENT_3]","PROMPT ID: P05 — Existing Content Library High-ROI Asset Audit & Revival Engine
+
+ROLE:
+You are a Content Portfolio Analyst and Algorithmic Revival Strategist.
+
+CONTEXT:
+Before I spend hours creating net-new content from scratch, I want to audit my top historical posts/videos/articles to identify proven outlier winners, retroactively wire them with my new Lead Magnet monetization bridge, and Turn my #1 historical winner into an upgraded Pillar + 1-to-15 Waterfall campaign this week.
+
+INPUT VARIABLES:
+- [TOP_5_HISTORICAL_POSTS_AND_METRICS]:
+  1. [TITLE_1] — [VIEWS_1] views, [RETENTION_OR_ENGAGEMENT_1], current CTA: [CTA_1]
+  2. [TITLE_2] — [VIEWS_2] views, [RETENTION_OR_ENGAGEMENT_2], current CTA: [CTA_2]
+  3. [TITLE_3] — [VIEWS_3] views, [RETENTION_OR_ENGAGEMENT_3], current CTA: [CTA_3]
+  4. [TITLE_4] — [VIEWS_4] views, [RETENTION_OR_ENGAGEMENT_4], current CTA: [CTA_4]
+  5. [TITLE_5] — [VIEWS_5] views, [RETENTION_OR_ENGAGEMENT_5], current CTA: [CTA_5]
+- [CHANNEL_MEDIAN_VIEWS]: [MEDIAN_VIEWS]
+- [NEW_LEAD_MAGNET_AND_PAID_OFFER]: [LEAD_MAGNET_NAME] -> [PAID_OFFER_NAME_AND_PRICE]
+
+EXECUTION STEPS:
+1. Calculate Outlier Multiplier Score (OMS): Divide each historical asset's views by [CHANNEL_MEDIAN_VIEWS] and score its commercial alignment (0.5 to 1.5) with [NEW_LEAD_MAGNET_AND_PAID_OFFER].
+2. Retroactive Bridge Injection Plan: Write exact pinned comments, description top-lines, and newsletter callouts to paste onto all 5 historical assets today so ongoing evergreen traffic converts into email subscribers.
+3. ""2.0 Pillar Remaster"" Blueprint: Take the #1 highest-scoring asset and design an updated ""2026 Masterclass / Version 2.0"" Pillar angle, including 3 upgraded Title variations, a new 30-second hook, and the 15 derivative asset headlines for this week's waterfall.
+
+QUALITY CONSTRAINTS:
+- Rank assets mathematically by OMS.
+- Make the Version 2.0 remaster angle distinct and deeper than the original so returning subscribers gain fresh tactical value.
+
+OUTPUT TEMPLATE:
+1. Historical Outlier Ranking Table (Asset | Views | OMS Score | Offer Alignment | Total Revival Priority Score)
+2. Copy-Paste Retroactive Monetization Snippets (Pinned Comment + Top-of-Description Update for each asset)
+3. #1 Winner ""Version 2.0 Remaster"" Blueprint (3 New Titles + 0:30 Hook + 15 Waterfall Derivative Headlines)"
+P06,AI Workflow Prompt,P.A.I.D. Niche Scoring & High-CPM Sub-Niche Excavator,Chapter 02,Stage 1: Niche & Avatar Moat,You are a Senior Media Venture Strategist and Niche Unit-Economics Analyst who evaluates content categories using the P.A.I.D. Niche Positioning Matrix and the Niche Monetization Potential Index (NMPI).,"[CURRENT_BROAD_NICHE_OR_SKILL], [CREATOR_PROFESSIONAL_BACKGROUND], [TOOLS_AND_SYSTEMS_MASTERED], [TARGET_MONTHLY_REVENUE_GOAL], [MONTHLY_GOAL]","PROMPT ID: P06 — P.A.I.D. Niche Scoring & High-CPM Sub-Niche Excavator
+
+ROLE:
+You are a Senior Media Venture Strategist and Niche Unit-Economics Analyst who evaluates content categories using the P.A.I.D. Niche Positioning Matrix and the Niche Monetization Potential Index (NMPI).
+
+CONTEXT:
+I am building a high-margin solo creator and digital product business. I want to evaluate my current/proposed content niche, calculate its exact NMPI score, and excavate 5 sharper, higher-CPM sub-niches that score NMPI >= 55.0 so I can generate $10,000+/month without needing millions of broad entertainment views.
+
+INPUT VARIABLES:
+- [CURRENT_BROAD_NICHE_OR_SKILL]: e.g., Productivity, Notion, and Career Advice for Professionals
+- [CREATOR_PROFESSIONAL_BACKGROUND]: e.g., 6 years as a Technical Project Manager & Remote Engineering Team Lead
+- [TOOLS_AND_SYSTEMS_MASTERED]: e.g., Notion, Linear, Slack Workflows, Claude API, Async Video SOPs
+- [TARGET_MONTHLY_REVENUE_GOAL]: $[MONTHLY_GOAL] (e.g., $10,000/month)
+
+EXECUTION STEPS:
+1. Audit Baseline Niche: Score [CURRENT_BROAD_NICHE_OR_SKILL] on a 1-10 scale across:
+   - P (Pain Urgency)
+   - A (Audience Purchasing Power)
+   - I (Information & Execution Gap)
+   - D (Digital Product & B2B Sponsorship Fit)
+   Compute the exact baseline NMPI using: NMPI = ((P * A) * (I + D)) / 20.
+2. Diagnose Baseline Weaknesses: Explain specifically why the baseline niche leaks revenue (e.g., low-budget viewers, low execution gap, commodity competition).
+3. Excavate 5 High-Margin Sub-Niches: Combine [CREATOR_PROFESSIONAL_BACKGROUND] and [TOOLS_AND_SYSTEMS_MASTERED] with high-purchasing-power B2B/prosumer avatars to generate 5 distinct sub-niches.
+4. Score & Rank All 5 Sub-Niches: Calculate P, A, I, D, and NMPI for each of the 5 sub-niches, plus estimated Effective RPM ($/1,000 views), top 3 B2B sponsor categories, and a natural $49-$199 digital product concept.
+
+QUALITY CONSTRAINTS:
+- Show exact mathematical steps for every NMPI calculation.
+- All 5 excavated sub-niches must achieve an NMPI score >= 55.0.
+- Avoid generic consumer lifestyle angles; prioritize avatars with corporate expense cards or high prosumer ROI.
+
+OUTPUT TEMPLATE:
+1. Baseline Niche Diagnostic Card (P, A, I, D Scores | Calculated NMPI | Primary Unit-Economics Bottleneck)
+2. 5 High-Margin Sub-Niche Excavation Table (Sub-Niche Name | Target Buyer Avatar | P | A | I | D | NMPI Score | Est. eRPM)
+3. Deep-Dive Monetization Blueprint for the #1 Highest-Scoring Sub-Niche (Tier 0 Lead Magnet, Tier 1 $49 Toolkit, Tier 2 $149 System, and 5 Target Sponsor Brands)"
+P07,AI Workflow Prompt,Category-of-One Positioning Statement & Bio Authority Architect,Chapter 02,Stage 1: Niche & Avatar Moat,You are an Executive Brand Positioning Architect specializing in Category-of-One differentiation for solo media operators and B2B creators.,"[WINNING_SUB_NICHE], [SPECIFIC_BUYER_AVATAR], [QUANTIFIED_OUTCOME_AND_TIMEFRAME], [NAMED_PROPRIETARY_MECHANISM], [HATED_FRICTION_ELIMINATED], [CREDIBILITY_PROOF_POINTS], [TIER_0_LEAD_MAGNET_NAME], [AVATAR], [QUANTIFIED OUTCOME], [TIMEFRAME], [PROPRIETARY MECHANISM], [HATED FRICTION]","PROMPT ID: P07 — Category-of-One Positioning Statement & Bio Authority Architect
+
+ROLE:
+You are an Executive Brand Positioning Architect specializing in Category-of-One differentiation for solo media operators and B2B creators.
+
+CONTEXT:
+I have selected a high-NMPI sub-niche. Now I need to craft my external positioning statement, channel headers, and platform bios so that when an ideal high-purchasing-power viewer lands on my YouTube channel, newsletter landing page, or LinkedIn/X profile, they understand my exact value proposition and click my Lead Magnet within 3 seconds.
+
+INPUT VARIABLES:
+- [WINNING_SUB_NICHE]: e.g., Asynchronous Remote Leadership & Notion Operations for Engineering Managers
+- [SPECIFIC_BUYER_AVATAR]: e.g., VP of Engineering, Engineering Managers, and Tech Leads at 20-200 person remote SaaS companies
+- [QUANTIFIED_OUTCOME_AND_TIMEFRAME]: e.g., Cut status-meeting hours by 60% and ship sprints on schedule within 30 days
+- [NAMED_PROPRIETARY_MECHANISM]: e.g., The Async Sprint Operating System (ASOS)
+- [HATED_FRICTION_ELIMINATED]: e.g., Daily standup zoom fatigue and micromanagement
+- [CREDIBILITY_PROOF_POINTS]: e.g., Former Eng Manager; built async systems used by 40+ distributed teams
+- [TIER_0_LEAD_MAGNET_NAME]: e.g., The 15-Minute Async Sprint Audit & Notion Tracker Template
+
+EXECUTION STEPS:
+1. Generate 5 Master Category-of-One Positioning Statements using the formula:
+   ""I help [AVATAR] achieve [QUANTIFIED OUTCOME] in [TIMEFRAME] using [PROPRIETARY MECHANISM], without [HATED FRICTION].""
+2. Architect Channel-Specific Authority Bios:
+   - YouTube Channel Banner Tagline (<= 8 words) + Description Box First 3 Lines.
+   - LinkedIn Headline (<= 220 characters) + ""About"" Section Hook & Credibility Stack.
+   - X / Social Bio (<= 160 characters) + Pinned Post Authority Breakdown.
+   - Newsletter Landing Page Hero Headline + Subheadline + 3 Quantified Value Bullets.
+3. Create the ""Inverse Avatar Filter"": Write 3 explicit bullets stating who this channel is NOT for (filtering out low-intent beginners) and 3 bullets stating who it IS for.
+
+QUALITY CONSTRAINTS:
+- Strictly zero clichés or vague buzzwords.
+- Every headline and bio must lead with a concrete operational outcome and end with a single frictionless call-to-action to [TIER_0_LEAD_MAGNET_NAME].
+
+OUTPUT TEMPLATE:
+1. 5 Category-of-One Positioning Statement Variations (Ranked by Clarity & Punch)
+2. Cross-Platform Authority Bio Kit (YouTube, LinkedIn, X, Newsletter Hero Copy)
+3. The Inverse Avatar Filter Block (""Who This Studio Is Built For"" vs. ""Who Should Not Subscribe"")"
+P08,AI Workflow Prompt,Ideal Viewer/Reader Avatar Psychographic & Buying-Trigger Dossier,Chapter 02,Stage 1: Niche & Avatar Moat,You are a Behavioral Consumer Psychologist and B2B Buyer-Intent Researcher.,"[WINNING_SUB_NICHE], [SUB_NICHE], [SPECIFIC_BUYER_AVATAR], [BUYER_AVATAR], [CORE_PAID_PRODUCT_AND_PRICE], [PRODUCT_NAME_AND_PRICE]","PROMPT ID: P08 — Ideal Viewer/Reader Avatar Psychographic & Buying-Trigger Dossier
+
+ROLE:
+You are a Behavioral Consumer Psychologist and B2B Buyer-Intent Researcher.
+
+CONTEXT:
+Demographic fluff (age, city, favorite coffee) does not help me write high-retention hooks or high-converting digital product sales pages. I need a forensic Psychographic & Operational Buying-Trigger Dossier for my target avatar so every video hook, newsletter subject line, and product pitch strikes an urgent nerve.
+
+INPUT VARIABLES:
+- [WINNING_SUB_NICHE]: [SUB_NICHE]
+- [SPECIFIC_BUYER_AVATAR]: [BUYER_AVATAR]
+- [CORE_PAID_PRODUCT_AND_PRICE]: [PRODUCT_NAME_AND_PRICE]
+
+EXECUTION STEPS:
+1. Map the 5 Core Psychographic Coordinates:
+   - Coordinate 1: The 11:00 PM Sunday Anxiety Monologue (Write 5 verbatim internal thoughts stressing them before the workweek begins).
+   - Coordinate 2: The 5 Costly Status-Quo Mistakes (What manual processes, broken spreadsheets, or bad habits are costing them hours/dollars right now?).
+   - Coordinate 3: The Failed Alternative Skepticism (What courses, tools, or guru advice burned them in the past, and what exact proof do they demand before trusting a creator?).
+   - Coordinate 4: The Acute Buying Triggers (What real-world Tuesday afternoon event forces them to pull out a credit card for [CORE_PAID_PRODUCT_AND_PRICE] immediately?).
+   - Coordinate 5: The Exact Vocabulary & Jargon Lexicon (List 15 insider terms, KPIs, and phrases this avatar uses daily so my scripts sound like a peer practitioner, not an outsider).
+2. Extract 10 High-Urgency ""How Do I..."" Search & Forum Queries this avatar types into Google, YouTube, or Perplexity when a workflow breaks.
+
+QUALITY CONSTRAINTS:
+- Write in concrete, visceral, practitioner language specific to [SPECIFIC_BUYER_AVATAR].
+- Quantify the cost of their status-quo mistakes in hours lost or dollars wasted per month.
+
+OUTPUT TEMPLATE:
+1. The 5-Coordinate Psychographic Dossier (Detailed breakdown of Coordinates 1 to 5)
+2. Insider Practitioner Lexicon Table (15 Insider Terms/KPIs | How to Reference Them in Hooks)
+3. Top 10 High-Intent Emergency Search Queries (Mapped to Urgency Score 1-10)"
+P09,AI Workflow Prompt,3-Pillar Content Matrix & 90-Day Sub-Topic Generator,Chapter 02,Stage 1: Niche & Avatar Moat,You are a Chief Editorial Architect for a high-margin digital publishing and creator studio.,"[CATEGORY_OF_ONE_STATEMENT], [POSITIONING_STATEMENT], [BUYER_AVATAR_PAIN_POINTS], [TOP_3_PAIN_POINTS], [TIER_0_LEAD_MAGNET], [LEAD_MAGNET_NAME], [TIER_1_AND_TIER_2_PRODUCTS], [PAID_PRODUCTS_LIST]","PROMPT ID: P09 — 3-Pillar Content Matrix & 90-Day Sub-Topic Generator
+
+ROLE:
+You are a Chief Editorial Architect for a high-margin digital publishing and creator studio.
+
+CONTEXT:
+I want to eliminate random weekly ideation and build a cohesive 90-Day (12-Week) Content Matrix anchored in the 3-Pillar Portfolio Ratio:
+- Pillar 1 (40% / 5 Weeks): Reach & Contrarian Diagnosis (Top-of-Funnel Outlier Growth)
+- Pillar 2 (40% / 5 Weeks): Authority & Deep Tactical Frameworks (Mid-Funnel Email Capture)
+- Pillar 3 (20% / 2 Weeks): Conversion & Case-Study Proof (Bottom-of-Funnel Product & Sponsor Sales)
+
+INPUT VARIABLES:
+- [CATEGORY_OF_ONE_STATEMENT]: [POSITIONING_STATEMENT]
+- [BUYER_AVATAR_PAIN_POINTS]: [TOP_3_PAIN_POINTS]
+- [TIER_0_LEAD_MAGNET]: [LEAD_MAGNET_NAME]
+- [TIER_1_AND_TIER_2_PRODUCTS]: [PAID_PRODUCTS_LIST]
+
+EXECUTION STEPS:
+1. Define the 3 Content Pillars specifically for my sub-niche, naming each pillar and establishing its editorial rules and target KPI (CTR/Views vs. Opt-In Rate vs. Product Sales).
+2. Generate a complete 12-Week (90-Day) Pillar Production Schedule (Weeks W01 through W12) following the 5 / 5 / 2 ratio.
+3. For each of the 12 weekly entries, specify:
+   - Week Number & Pillar Bucket Classification
+   - Working High-CTR Pillar Title
+   - Core Contrarian Thesis or Tactical Mechanism Taught
+   - Specific Visual Diagram or Screenflow Proof Shown
+   - Exact Mid-Roll Transition to [TIER_0_LEAD_MAGNET] or [TIER_1_AND_TIER_2_PRODUCTS].
+
+QUALITY CONSTRAINTS:
+- Ensure zero topic overlap across the 12 weeks while maintaining 100% buyer continuity.
+- Every single week must logically build desire for the same core paid ecosystem.
+
+OUTPUT TEMPLATE:
+1. 3-Pillar Editorial Charter Table (Pillar Name | Share % | Primary Psychological Job | Primary KPI Threshold)
+2. 12-Week (90-Day) Master Pillar Schedule Table (Week | Pillar Bucket | Working Title | Core Mechanism | Visual Proof | Funnel CTA Bridge)"
+P10,AI Workflow Prompt,Audience-Offer Alignment Bridge (Mapping Free Topics to Paid Digital Products),Chapter 02,Stage 1: Niche & Avatar Moat,You are a Digital Product Curriculum Designer and Conversion Bridge Engineer.,"[CORE_PAID_PRODUCT_NAME_AND_PRICE], [PAID_PRODUCT_MODULES_LIST], [UPCOMING_4_FREE_PILLAR_TOPICS], [LIST_4_TOPICS]","PROMPT ID: P10 — Audience-Offer Alignment Bridge (Mapping Free Topics to Paid Digital Products)
+
+ROLE:
+You are a Digital Product Curriculum Designer and Conversion Bridge Engineer.
+
+CONTEXT:
+Many creators give away 100% of the answer in their free videos/newsletters in a way that leaves viewers feeling satisfied rather than eager to buy, OR they hold back too much value and lose viewer trust. I need to apply the ""Teach Strategy & Manual Steps Free / Sell Speed, Templates & Automation"" law across my 3 Content Pillars and my paid product modules.
+
+INPUT VARIABLES:
+- [CORE_PAID_PRODUCT_NAME_AND_PRICE]: e.g., The Async Engineering Manager OS ($149)
+- [PAID_PRODUCT_MODULES_LIST]: e.g., Module 1: Async Standup Notion Hub; Module 2: Automated Linear-to-Slack Digest Scripts; Module 3: 1-on-1 Performance Scorecard Templates; Module 4: Executive Hiring Rubric Vault
+- [UPCOMING_4_FREE_PILLAR_TOPICS]: [LIST_4_TOPICS]
+
+EXECUTION STEPS:
+1. Audit the ""Free vs. Paid Boundary"": For each of the 4 Paid Product Modules, define (a) What you teach openly and generously for free in your content so viewers get a real win, and (b) What specific implementation friction (building time, code/JSON scripts, database wiring, edge-case templates) remains that makes buying [CORE_PAID_PRODUCT_NAME_AND_PRICE] an instant time-saving decision.
+2. Map each of the [UPCOMING_4_FREE_PILLAR_TOPICS] directly to a corresponding Paid Module.
+3. Write 4 verbatim ""Value-to-Offer Bridge Transitions"" (60-90 words each) that I can read on camera or insert into my newsletter right after teaching the manual method—Pivoting smoothly from ""Here is how you can build this yourself over 12 hours"" to ""Or if you want my pre-built system installed in 10 minutes, grab [CORE_PAID_PRODUCT_NAME_AND_PRICE].""
+
+QUALITY CONSTRAINTS:
+- Never withhold core educational clarity in free content; always sell speed, pre-built architecture, and risk reduction.
+- Keep bridge transitions natural, peer-to-peer, and quantified in hours saved.
+
+OUTPUT TEMPLATE:
+1. Free-to-Paid Boundary Matrix (Paid Module | Free Pillar Tutorial Scope | Intentional Execution Gap | Time Saved by Buying)
+2. 4 Verbatim ""Teach Manual -> Sell Speed"" In-Content Bridge Scripts"
+P11,AI Workflow Prompt,Competitor Outlier Video/Post Deconstructor ($M_{\text{outlier}} \ge 2.5\times$ Analyzer),Chapter 03,Stage 2: Outlier Idea Mining,You are a Senior Algorithmic Content Analyst and Media Reverse-Engineering Specialist.,"[MY_SUB_NICHE_AND_AVATAR], [MY_CORE_PAID_OFFER], [OUTLIER_1_DATA], [TITLE_1], [SUBS_1], [MEDIAN_1], [VIEWS_1], [SUMMARY_1], [OUTLIER_2_DATA], [TITLE_2], [SUBS_2], [MEDIAN_2]","PROMPT ID: P11 — Competitor Outlier Video/Post Deconstructor (M_outlier >= 2.5x Analyzer)
+
+ROLE:
+You are a Senior Algorithmic Content Analyst and Media Reverse-Engineering Specialist.
+
+CONTEXT:
+I have identified 3 outlier uploads on peer or adjacent channels that achieved an Outlier Multiplier Score (M_outlier) >= 2.5x their channel's 90-day median views. I need to deconstruct the exact psychological, structural, and packaging mechanics behind why these assets broke into algorithmic distribution—and extract the transferable ""Outlier Skeleton"" so I can adapt it to my Category-of-One sub-niche without copying their content.
+
+INPUT VARIABLES:
+- [MY_SUB_NICHE_AND_AVATAR]: e.g., AI & Make.com Operations for Boutique B2B Agencies
+- [MY_CORE_PAID_OFFER]: e.g., The Agency Client Delivery & Automation OS ($149)
+- [OUTLIER_1_DATA]: Title: ""[TITLE_1]"" | Channel Size: [SUBS_1] | 90-Day Median Views: [MEDIAN_1] | Day-14 Views: [VIEWS_1] | Thumbnail/Hook Summary: [SUMMARY_1]
+- [OUTLIER_2_DATA]: Title: ""[TITLE_2]"" | Channel Size: [SUBS_2] | 90-Day Median Views: [MEDIAN_2] | Day-14 Views: [VIEWS_2] | Thumbnail/Hook Summary: [SUMMARY_2]
+- [OUTLIER_3_DATA]: Title: ""[TITLE_3]"" | Channel Size: [SUBS_3] | 90-Day Median Views: [MEDIAN_3] | Day-14 Views: [VIEWS_3] | Thumbnail/Hook Summary: [SUMMARY_3]
+
+EXECUTION STEPS:
+1. Compute Exact Outlier Multipliers: Calculate M_outlier = (Day-14 Views / 90-Day Median Views) to two decimal places for all 3 assets and assign their Stage A Score (0-10).
+2. Deconstruct the Psychological Trigger: For each outlier, identify:
+   - The Core Curiosity Gap (What question did the title/thumbnail force the viewer to click to resolve?)
+   - The Implied Cost/Payoff (Time saved, money earned, or painful mistake avoided)
+   - The Structural Format Archetype (e.g., Contrarian Replacement, Time-Compressed Build, Teardown Audit, or System Reveal).
+3. Extract the Transferable ""Outlier Skeleton"": Write the fill-in-the-blank structural formula for each outlier.
+4. Generate 2 Adapted Pillar Concepts per Outlier (6 Total): Apply each Outlier Skeleton directly to [MY_SUB_NICHE_AND_AVATAR] and align it with [MY_CORE_PAID_OFFER].
+
+QUALITY CONSTRAINTS:
+- Never copy the source creator's exact subject matter if it falls outside my avatar's acute pain points; transfer only the structural psychology.
+- Ensure every adapted concept has a clear Lead-Magnet & Offer Continuity score (L >= 8).
+
+OUTPUT TEMPLATE:
+1. Outlier Telemetry & Deconstruction Table (Source Asset | M_outlier | Format Archetype | Psychological Trigger | Transferable Skeleton)
+2. 6 Adapted Category-of-One Pillar Concepts (Mapped to Outlier Skeleton + Specific Offer Bridge)"
+P12,AI Workflow Prompt,Comment-Section Friction & Unanswered Question Miner,Chapter 03,Stage 2: Outlier Idea Mining,You are a Qualitative Market Researcher and Voice-of-Customer (VoC) Forensic Analyst.,"[SOURCE_ASSET_TITLE_AND_TOPIC], [COMPETITOR_TITLE], [MY_SUB_NICHE_AND_PAID_OFFER], [MY_NICHE_AND_OFFER], [RAW_COMMENTS_DUMP], [PASTE_15_TO_50_RAW_VIEWER_COMMENTS_HERE], [Verbatim Complaint]","PROMPT ID: P12 — Comment-Section Friction & Unanswered Question Miner
+
+ROLE:
+You are a Qualitative Market Researcher and Voice-of-Customer (VoC) Forensic Analyst.
+
+CONTEXT:
+I have pasted raw viewer/reader comments from high-performing competitor videos, articles, or social threads in my niche. I want you to mine these comments for high-intent buyer friction, unanswered implementation roadblocks, and explicit template requests so I can build a superior Pillar Asset that captures the exact audience the competitor left behind.
+
+INPUT VARIABLES:
+- [SOURCE_ASSET_TITLE_AND_TOPIC]: [COMPETITOR_TITLE]
+- [MY_SUB_NICHE_AND_PAID_OFFER]: [MY_NICHE_AND_OFFER]
+- [RAW_COMMENTS_DUMP]:
+  [PASTE_15_TO_50_RAW_VIEWER_COMMENTS_HERE]
+
+EXECUTION STEPS:
+1. Filter & Cluster Friction Signals: Strip out generic praise (""Great video!"") and cluster all substantive comments into 4 operational categories:
+   - Category A: Unanswered ""How Do I..."" Edge Cases (Where the creator's explanation stopped too early).
+   - Category B: Technical / Operational Roadblocks (Where viewers got stuck trying to implement the advice).
+   - Category C: Skepticism & Contrarian Objections (Why advanced practitioners doubted the method).
+   - Category D: Explicit Asset / Template Requests (What downloadable file, script, or calculator viewers begged for).
+2. Score the Value Gap (Stage G Score 1-10): Quantify how badly the source asset failed to serve action-takers.
+3. Architect the ""Superior Resolution"" Pillar & Lead Magnet:
+   - Design 1 Pillar Topic that directly resolves the #1 cluster of unanswered complaints.
+   - Design the exact Tier 0 Tactical Lead Magnet requested in Category D.
+   - Extract 5 verbatim viewer quotes/phrases to use in my first-30-second hook (""If you have ever tried [X] and got stuck at [Verbatim Complaint]..."").
+
+QUALITY CONSTRAINTS:
+- Preserve exact practitioner phrasing from the comments so hooks resonate with immediate familiarity.
+- Focus on high-purchasing-power implementation problems rather than beginner setup confusion.
+
+OUTPUT TEMPLATE:
+1. Comment Friction Cluster Matrix (Cluster Category | Frequency | Verbatim Viewer Quote | Commercial Opportunity)
+2. Stage I & Stage G Diagnostic Score Card
+3. Superior Pillar & Tier 0 Lead Magnet Blueprint (Title, 3 Gap-Filling Sections, Lead Magnet Spec, and 5 Hook Quotes)"
+P13,AI Workflow Prompt,Search Autocomplete & Reddit Pain-Cluster Synthesizer,Chapter 03,Stage 2: Outlier Idea Mining,You are a Search-Intent Architect and Practitioner Community Intelligence Analyst.,"[CORE_SUB_NICHE_AND_AVATAR], [SUB_NICHE_AND_AVATAR], [PRIMARY_SOFTWARE_AND_WORKFLOW_STACK], [RAW_AUTOCOMPLETE_OR_REDDIT_THREADS], [PASTE_SEARCH_STEMS_OR_THREAD_TITLES], [Workflow], [Bottleneck], [Tool A], [Tool B], [Avatar], [Process], [Tool]","PROMPT ID: P13 — Search Autocomplete & Reddit Pain-Cluster Synthesizer
+
+ROLE:
+You are a Search-Intent Architect and Practitioner Community Intelligence Analyst.
+
+CONTEXT:
+I want to validate Stage S (Search Intent & Autocomplete Velocity) and Stage N (Network & Community Resonance) for my upcoming content cycle. I will provide my core sub-niche topics, software stack, and any raw autocomplete predictions or Reddit/forum thread titles I have gathered. You will synthesize them into high-intent long-tail topic clusters that capture active buyers at the moment of acute operational friction.
+
+INPUT VARIABLES:
+- [CORE_SUB_NICHE_AND_AVATAR]: [SUB_NICHE_AND_AVATAR]
+- [PRIMARY_SOFTWARE_AND_WORKFLOW_STACK]: e.g., Notion, Make.com, Claude, Stripe, Linear
+- [RAW_AUTOCOMPLETE_OR_REDDIT_THREADS]: [PASTE_SEARCH_STEMS_OR_THREAD_TITLES]
+
+EXECUTION STEPS:
+1. Generate the High-Intent Autocomplete Matrix: Expand [PRIMARY_SOFTWARE_AND_WORKFLOW_STACK] and [CORE_SUB_NICHE_AND_AVATAR] across 4 buyer-intent query stems:
+   - Stem 1: Troubleshooting & Failure (""Why is my [Workflow]..."", ""How to fix [Bottleneck]..."")
+   - Stem 2: Tool Replacement & Comparison (""[Tool A] vs [Tool B] for [Avatar]..."")
+   - Stem 3: Architecture & Automation (""How to automate [Process] with [Tool]..."")
+   - Stem 4: Ready-to-Use Systems (""[Sub-Niche] template / dashboard / SOP..."")
+2. Synthesize 5 Community Pain Clusters: Group the search queries and forum threads into 5 acute operational pain clusters, rating each on Buyer Intent (1-10) and Search Evergreen Longevity (1-10).
+3. Translate into Dual-Engine Titles: For each of the 5 clusters, write (a) 1 Search-Optimized Title (for 12-month evergreen discovery) and (b) 1 Browse/Curiosity Title (for immediate home-feed CTR).
+
+QUALITY CONSTRAINTS:
+- Filter out low-intent beginner definition queries (""What is X?""); retain only practitioner implementation and comparison queries.
+
+OUTPUT TEMPLATE:
+1. 4-Stem Autocomplete Query Matrix (20 High-Intent Long-Tail Queries)
+2. 5 Practitioner Pain Clusters Table (Pain Cluster | Buyer Intent 1-10 | Evergreen Score 1-10 | Aligned Offer Module)
+3. Dual-Engine Title Pairings (Search Title vs. Browse Curiosity Title for each cluster)"
+P14,AI Workflow Prompt,Contrarian Angle & Unique Mechanism Spin Generator,Chapter 03,Stage 2: Outlier Idea Mining,You are a Category-of-One Editorial Strategist and Proprietary Framework Architect.,"[VALIDATED_OUTLIER_TOPIC], [WHAT_EVERY_COMPETITOR_CURRENTLY_SAYS], [WHY_THEIR_APPROACH_ACTUALLY_FAILS], [MY_ACTUAL_PRACTITIONER_METHOD], [MY_TIER_0_OR_TIER_1_OFFER]","PROMPT ID: P14 — Contrarian Angle & Unique Mechanism Spin Generator
+
+ROLE:
+You are a Category-of-One Editorial Strategist and Proprietary Framework Architect.
+
+CONTEXT:
+I have found a validated topic with strong outlier demand (M_outlier >= 2.5x) and clear comment friction. However, if I publish a standard tutorial with the same angle as everyone else, I will look like a commodity copycat. I need to spin this validated topic through a Contrarian Thesis and a Named Proprietary Mechanism so my Pillar Asset commands instant authority.
+
+INPUT VARIABLES:
+- [VALIDATED_OUTLIER_TOPIC]: e.g., How to Use AI to Write Weekly Newsletters Faster
+- [WHAT_EVERY_COMPETITOR_CURRENTLY_SAYS]: e.g., ""Just paste this 1-paragraph prompt into ChatGPT to write your newsletter in 5 minutes.""
+- [WHY_THEIR_APPROACH_ACTUALLY_FAILS]: e.g., Produces generic AI slop that ruins open rates and causes unsubscribes.
+- [MY_ACTUAL_PRACTITIONER_METHOD]: e.g., Extracting a Voice DNA profile + feeding 3x outlier research + drafting via the H.E.A.R.T. outline structure in 45 minutes.
+- [MY_TIER_0_OR_TIER_1_OFFER]: e.g., The Voice DNA Calibration & Newsletter Prompt Vault ($49)
+
+EXECUTION STEPS:
+1. Formulate the Contrarian Enemy Thesis: Write a sharp, 2-sentence indictment of [WHAT_EVERY_COMPETITOR_CURRENTLY_SAYS] backed by the concrete operational consequence ([WHY_THEIR_APPROACH_ACTUALLY_FAILS]).
+2. Coin 5 Memorable Proprietary Mechanism Names: Create 5 crisp, acronym-based or architectural names for [MY_ACTUAL_PRACTITIONER_METHOD] (e.g., ""The Voice-DNA Pipeline,"" ""The S.I.G.N.A.L.-to-Script Engine"").
+3. Generate 5 High-Contrast ""Old Way vs. New Way"" Comparison Rows that I can display as a visual diagram in the first 90 seconds of my video/newsletter.
+4. Draft 5 Upgraded Pillar Angles: Combine the validated outlier demand with the new Contrarian Thesis and Proprietary Mechanism Name.
+
+QUALITY CONSTRAINTS:
+- The contrarian angle must attack a broken *process or conventional belief*, never a specific person.
+- Every mechanism name must sound like an engineered B2B system, not hype marketing.
+
+OUTPUT TEMPLATE:
+1. The Contrarian Enemy Thesis Statement
+2. 5 Proprietary Mechanism Name Candidates (with Acronym/Stage Breakdowns)
+3. ""Broken Conventional Way vs. Proprietary System Way"" 5-Row Visual Comparison Table
+4. 5 Upgraded Category-of-One Pillar Angles & Hook Premises"
+P15,AI Workflow Prompt,30-Day S.I.G.N.A.L. Validated Idea Bank & Priority Scorer,Chapter 03,Stage 2: Outlier Idea Mining,You are a Portfolio Operations Director for a data-driven digital media studio.,"[MY_CATEGORY_OF_ONE_POSITIONING], [POSITIONING_STATEMENT], [MY_LEAD_MAGNET_AND_PAID_OFFER], [LEAD_MAGNET_AND_PAID_OFFER], [RAW_CANDIDATE_IDEAS_LIST_WITH_NOTES], [IDEA_1 + OUTLIER/SEARCH NOTES], [IDEA_2 + OUTLIER/SEARCH NOTES], [IDEA_3 + OUTLIER/SEARCH NOTES], [IDEA_4 + OUTLIER/SEARCH NOTES], [IDEA_5 + OUTLIER/SEARCH NOTES], [IDEA_6 + OUTLIER/SEARCH NOTES], [IDEA_7 + OUTLIER/SEARCH NOTES]","PROMPT ID: P15 — 30-Day S.I.G.N.A.L. Validated Idea Bank & Priority Scorer
+
+ROLE:
+You are a Portfolio Operations Director for a data-driven digital media studio.
+
+CONTEXT:
+I have gathered a raw list of 8 to 12 candidate Pillar ideas from my outlier scan, comment mining, and search research. I need you to score every candidate rigorously using the 6 S.I.G.N.A.L. dimensions and the Composite S.I.G.N.A.L. Priority Index (SPI) formula, veto any ""Viral Dead-Ends,"" and lock my top 4 ideas into a 30-Day (4-Week) Production Sprint Calendar.
+
+INPUT VARIABLES:
+- [MY_CATEGORY_OF_ONE_POSITIONING]: [POSITIONING_STATEMENT]
+- [MY_LEAD_MAGNET_AND_PAID_OFFER]: [LEAD_MAGNET_AND_PAID_OFFER]
+- [RAW_CANDIDATE_IDEAS_LIST_WITH_NOTES]:
+  1. [IDEA_1 + OUTLIER/SEARCH NOTES]
+  2. [IDEA_2 + OUTLIER/SEARCH NOTES]
+  3. [IDEA_3 + OUTLIER/SEARCH NOTES]
+  4. [IDEA_4 + OUTLIER/SEARCH NOTES]
+  5. [IDEA_5 + OUTLIER/SEARCH NOTES]
+  6. [IDEA_6 + OUTLIER/SEARCH NOTES]
+  7. [IDEA_7 + OUTLIER/SEARCH NOTES]
+  8. [IDEA_8 + OUTLIER/SEARCH NOTES]
+
+EXECUTION STEPS:
+1. Score Every Candidate (0-10 Scale) across:
+   - S (Search Intent & Autocomplete Velocity)
+   - I (In-Comment Friction Mining)
+   - G (Gap in Current Top Assets)
+   - N (Network & Community Resonance)
+   - A (Algorithmic Outlier Multiplier Score, double-weighted as 2*A)
+   - L (Lead-Magnet & Offer Continuity)
+2. Compute Exact SPI Score for each candidate using the formula:
+   SPI = (S + I + G + N + (2 * A)) * (L / 6)
+3. Rank & Triage All Candidates:
+   - GREENLIGHT (SPI >= 65.0 AND L >= 7): Top 4 ideas locked for Weeks 1-4.
+   - REFRAME/HOLD (SPI 45.0 - 64.9): Explain what single variable (G or L) must be upgraded.
+   - VETO (SPI < 45.0 OR L < 7): Flag as Unvalidated Guess or Viral Dead-End.
+4. Map the Top 4 Greenlit Ideas into a balanced 4-Week Calendar (2 Reach/Contrarian, 1 Authority/Tactical, 1 Conversion/Case Study).
+
+QUALITY CONSTRAINTS:
+- Display exact mathematical calculation for every row.
+- Automatically veto any idea with Offer Continuity L < 7 regardless of raw viral score.
+
+OUTPUT TEMPLATE:
+1. Complete S.I.G.N.A.L. Scoring & SPI Ranking Table (Idea | S | I | G | N | A (x2) | L | SPI Score | Gate Verdict)
+2. Locked 30-Day (4-Week) Pillar Production Calendar (Week 1 to Week 4: Pillar Bucket, Title, Outlier Source, Lead Magnet Bridge)
+3. Reframe Prescriptions for Held Ideas"
+P16,AI Workflow Prompt,15-Variation High-CTR Title & Curiosity-Gap Generator (Across 5 Psychological Angles),Chapter 04,Stage 2: Packaging & Hooks,You are a Master Packaging Copywriter and Algorithmic CTR Engineer for high-growth B2B and prosumer media channels.,"[VALIDATED_PILLAR_TOPIC], [TARGET_BUYER_AVATAR], [QUANTIFIED_OUTCOME_OR_PROOF], [PROPRIETARY_MECHANISM_NAME], [STATUS_QUO_MISTAKE_ATTACKED]","PROMPT ID: P16 — 15-Variation High-CTR Title & Curiosity-Gap Generator (Across 5 Psychological Angles)
+
+ROLE:
+You are a Master Packaging Copywriter and Algorithmic CTR Engineer for high-growth B2B and prosumer media channels.
+
+CONTEXT:
+I have selected a validated S.I.G.N.A.L. Pillar topic. Before I write a single line of my script or newsletter, I must lock my primary Launch Title (Title A) and my 24-hour A/B Test Backup Title (Title B). Generate 15 high-CTR title variations across the 5 Proven Psychological Archetypes, engineered specifically for my high-purchasing-power buyer avatar.
+
+INPUT VARIABLES:
+- [VALIDATED_PILLAR_TOPIC]: e.g., Automating Client Onboarding & Project Portals with Notion and Make.com
+- [TARGET_BUYER_AVATAR]: e.g., Boutique Agency Owners & B2B Consultants ($10k-$50k/mo revenue)
+- [QUANTIFIED_OUTCOME_OR_PROOF]: e.g., Cuts onboarding setup from 4 hours to 90 seconds; saves 18 hrs/week
+- [PROPRIETARY_MECHANISM_NAME]: e.g., The 3-Gate Webhook Portal Engine
+- [STATUS_QUO_MISTAKE_ATTACKED]: e.g., Manually duplicating folders, chasing contract PDFs, and paying for bloated CRM seats
+
+EXECUTION STEPS:
+1. Generate 15 Distinct Titles (3 Variations per Psychological Archetype):
+   - Archetype 1 (3 Titles): The Quantified System Build (Time/Money Compression + Concrete Blueprint)
+   - Archetype 2 (3 Titles): The Contrarian Replacement (Killing [STATUS_QUO_MISTAKE_ATTACKED])
+   - Archetype 3 (3 Titles): The Forensic Teardown / Case Study Proof (Specific ROI Breakdown)
+   - Archetype 4 (3 Titles): The Costly Mistake Diagnostic (Urgent Loss-Aversion Hook)
+   - Archetype 5 (3 Titles): The ""From Scratch in 2026"" Master Roadmap
+2. Mobile Truncation Audit: Count the character length of every title and ensure the core curiosity hook and quantified number appear within the first 52 characters.
+3. Recommend Title A (Primary Launch) and Title B (24-Hour A/B Backup), plus 3 matching Email Newsletter Subject Lines + 45-Character Preview Texts.
+
+QUALITY CONSTRAINTS:
+- Zero cheap clickbait, all-caps screaming, or vague buzzwords.
+- Every title must open an explicit curiosity loop that can only be resolved by clicking.
+
+OUTPUT TEMPLATE:
+1. 15-Title Matrix by Psychological Archetype (Archetype | Title Text | Char Count | Curiosity Loop Mechanism | Est. CTR Score 1-10)
+2. Locked A/B Recommendation (Title A vs. Title B + Why They Contrast)
+3. Companion Newsletter Subject Line & Preview Text Trio"
+P17,AI Workflow Prompt,Thumbnail Visual Concept & 3-Word Complementary Overlay Architect,Chapter 04,Stage 2: Packaging & Hooks,You are a Visual Hierarchy Director and Eye-Tracking Thumbnail Psychologist specializing in the 3-Element Visual Harmony Law.,"[LOCKED_TITLE_A], [PASTE_TITLE_A], [LOCKED_TITLE_B], [PASTE_TITLE_B], [CHANNEL_VISUAL_STYLE], [CORE_TRANSFORMATION_CONTRAST]","PROMPT ID: P17 — Thumbnail Visual Concept & 3-Word Complementary Overlay Architect
+
+ROLE:
+You are a Visual Hierarchy Director and Eye-Tracking Thumbnail Psychologist specializing in the 3-Element Visual Harmony Law.
+
+CONTEXT:
+I have locked my Primary Launch Title (Title A) and Backup Title (Title B). Now I need to wireframe 3 high-contrast Thumbnail / Carousel Cover concepts that pass the 1.8-second mobile feed scan test, contain strictly <= 3 visual elements, and use a 1-to-4 word Complementary Visual Badge that NEVER repeats words from my title.
+
+INPUT VARIABLES:
+- [LOCKED_TITLE_A]: [PASTE_TITLE_A]
+- [LOCKED_TITLE_B]: [PASTE_TITLE_B]
+- [CHANNEL_VISUAL_STYLE]: e.g., Talking-Head + System Diagram OR 100% Faceless UI/Architecture Graphic
+- [CORE_TRANSFORMATION_CONTRAST]: e.g., Before: 14 messy manual steps ($12/hr) -> After: 1 automated 3-node pipeline ($380/hr)
+
+EXECUTION STEPS:
+1. Design 3 Distinct Thumbnail Wireframe Concepts:
+   - Concept 1: The ""Before vs. After Split-Screen Contrast"" (Red/Amber Pain vs. Teal/Indigo Payoff)
+   - Concept 2: The ""Zoomed Architecture / Live Metric Proof"" (Highlighting a specific shocking number or locked node)
+   - Concept 3: The ""Contrarian Replacement / Cross-Out"" (Visually crossing out the broken old tool/habit in favor of the new mechanism)
+2. Enforce the 3-Element Law for Each Concept: Explicitly define:
+   - Element 1 (Visual Contrast / Proof Graphic)
+   - Element 2 (Subject / Focal Highlight)
+   - Element 3 (1-to-4 Word Complementary Text Badge — verified 0% word overlap with [LOCKED_TITLE_A])
+3. Specify Exact Studio Color Tokens: Assign exact hex colors from our locked palette (#0F172A Deep Navy, #4F46E5 Creator Indigo, #0D9488 Conversion Teal, #D97706 Retention Amber, #FFFFFF Canvas) to maximize mobile squint-test legibility.
+
+QUALITY CONSTRAINTS:
+- Strictly forbid >3 elements on the canvas.
+- Badge text must be <= 4 words (ideally 2-3 words, <= 18 characters total).
+
+OUTPUT TEMPLATE:
+1. 3 Thumbnail Wireframe Specifications Table (Concept | Element 1 | Element 2 | Element 3 Badge Text | Color Token Assignment | Non-Redundancy Check)
+2. Left-to-Right Eye-Tracking Flow Description (Where the viewer's eye lands at 0.5s, 1.0s, and 1.5s)
+3. LinkedIn / Instagram Square Carousel Slide-1 Adaptation Notes"
+P18,AI Workflow Prompt,"First-30-Seconds C.L.I.P. Hook Scriptwriter (Video, Short-Form & Newsletter Lead)",Chapter 04,Stage 2: Packaging & Hooks,You are a High-Retention Script Architect specializing in First-30-Second viewer hold rates (R30 >= 72%).,"[LOCKED_TITLE_AND_THUMBNAIL_BADGE], [TITLE_AND_BADGE], [VISUAL_PROOF_SHOWN_IN_FRAME_1], [STATUS_QUO_PAIN_AND_COST], [NAMED_PROPRIETARY_MECHANISM], [3_STEP_ROADMAP_PREVIEW], [STEP_1], [STEP_2], [STEP_3], [ON-SCREEN VISUAL CUE]","PROMPT ID: P18 — First-30-Seconds C.L.I.P. Hook Scriptwriter (Video, Short-Form & Newsletter Lead)
+
+ROLE:
+You are a High-Retention Script Architect specializing in First-30-Second viewer hold rates (R30 >= 72%).
+
+CONTEXT:
+I have locked my Title and 3-Element Thumbnail. Before drafting my body script, I need to write the exact First-30-Seconds Hook (75-85 spoken words) using the 4-Beat C.L.I.P. Architecture, along with its 3-Second Vertical Short-Form adaptation and 4-Sentence Newsletter Opening Lead.
+
+INPUT VARIABLES:
+- [LOCKED_TITLE_AND_THUMBNAIL_BADGE]: [TITLE_AND_BADGE]
+- [VISUAL_PROOF_SHOWN_IN_FRAME_1]: e.g., Live screen recording of the finished Notion dashboard + Stripe/time-saved metric
+- [STATUS_QUO_PAIN_AND_COST]: e.g., Losing 15 hours a week to manual content rewriting and earning under $10/hr RPPH
+- [NAMED_PROPRIETARY_MECHANISM]: e.g., The 5-Stage Content-to-Cash Waterfall
+- [3_STEP_ROADMAP_PREVIEW]: Step 1: [STEP_1], Step 2: [STEP_2], Step 3: [STEP_3]
+
+EXECUTION STEPS:
+1. Write 2 Complete Variations of the 30-Second Pillar Video Hook (75-85 words each) structured strictly into the 4 C.L.I.P. Beats:
+   - Beat C (0:00-0:03 | ~15 words): Click Confirmation + Frame-1 Visual Cue
+   - Beat L (0:03-0:10 | ~22 words): Lock In Stakes & Quantified Friction
+   - Beat I (0:10-0:20 | ~25 words): Information Loop Opening + Named Mechanism
+   - Beat P (0:20-0:30 | ~20 words): Proof Flash + 3-Step Roadmap Preview
+2. Write the Companion 60-Second Vertical Short / Reel Hook (First 3 seconds / 12 words + visual pattern interrupt).
+3. Write the Companion Flagship Newsletter Above-the-Fold Lead (First 4 crisp sentences that compel readers to scroll past the fold).
+
+QUALITY CONSTRAINTS:
+- Zero ""Hey guys,"" zero channel introductions, zero throat-clearing.
+- Include explicit [ON-SCREEN VISUAL CUE] brackets at every 7-second beat transition.
+
+OUTPUT TEMPLATE:
+1. Pillar Video Hook Variation 1 (Direct Proof & ROI Angle — Beat-by-Beat Table with Word Counts & Visual Cues)
+2. Pillar Video Hook Variation 2 (Contrarian Mistake Angle — Beat-by-Beat Table with Word Counts & Visual Cues)
+3. Vertical Short-Form 3-Second Hook + Newsletter 4-Sentence Above-the-Fold Lead"
+P19,AI Workflow Prompt,Hook Retention Diagnostic & Throat-Clearing Eliminator,Chapter 04,Stage 2: Packaging & Hooks,You are a Ruthless Retention Editor and Script Pacing Auditor.,"[PROMISED_TITLE_AND_THUMBNAIL], [TITLE_AND_THUMBNAIL], [DRAFT_INTRO_OR_HOOK_TEXT], [PASTE_YOUR_FIRST_150_WORDS_HERE]","PROMPT ID: P19 — Hook Retention Diagnostic & Throat-Clearing Eliminator
+
+ROLE:
+You are a Ruthless Retention Editor and Script Pacing Auditor.
+
+CONTEXT:
+I have drafted an opening hook (or full intro section) for my upcoming video, podcast, or newsletter. Audit my draft line-by-line to detect and amputate any ""Throat-Clearing,"" slow biographical setup, redundant phrasing, or missing visual pattern interrupts that would cause viewers to abandon before the 0:30 mark.
+
+INPUT VARIABLES:
+- [PROMISED_TITLE_AND_THUMBNAIL]: [TITLE_AND_THUMBNAIL]
+- [DRAFT_INTRO_OR_HOOK_TEXT]:
+  [PASTE_YOUR_FIRST_150_WORDS_HERE]
+
+EXECUTION STEPS:
+1. Run the 5-Point Retention Audit:
+   - Check 1 (First-3-Second Payoff Match): Does sentence 1 immediately confirm [PROMISED_TITLE_AND_THUMBNAIL]?
+   - Check 2 (Throat-Clearing Detection): Highlight every word of self-introduction, channel housekeeping, vague truisms (""As we all know...""), or premature subscribe begging.
+   - Check 3 (Quantified Stakes Check): Is the cost of the problem quantified with a concrete number by second 0:10?
+   - Check 4 (Curiosity Loop Check): Is a named framework or counter-intuitive mechanism introduced by second 0:20?
+   - Check 5 (Visual Cadence Check): Are there at least 4 distinct visual state changes scheduled across the first 30 seconds?
+2. Compute Predicted R30 Hold Score (0-100%) for the original draft vs. the surgical rewrite.
+3. Produce the Surgical C.L.I.P. Rewrite: Trim the draft to a razor-sharp 75-80 words with exact timestamp and visual cues.
+
+QUALITY CONSTRAINTS:
+- Cut at least 30% to 50% of unnecessary words from bloated drafts.
+- Maintain a peer-to-peer, authoritative practitioner tone.
+
+OUTPUT TEMPLATE:
+1. Forensic Line-by-Line Audit Table (Original Sentence | Retention Flaw Detected | Verdict: CUT / REWRITE / KEEP)
+2. Surgical 30-Second C.L.I.P. Rewrite (Timestamped 0:00 to 0:30 with Visual Cues)
+3. Predicted Retention Lift Summary (Original Est. R30 vs. Rewritten Target R30)"
+P20,AI Workflow Prompt,Post-Publish CTR & Retention Drop-Off A/B Packaging Rescue Protocol,Chapter 04,Stage 2: Packaging & Hooks,You are a Live-Telemetry Packaging Triage Specialist.,"[CURRENT_LIVE_TITLE], [LIVE_TITLE], [CURRENT_LIVE_THUMBNAIL_DESCRIPTION], [LIVE_THUMBNAIL], [FIRST_30_SECONDS_SPOKEN_TRANSCRIPT], [FIRST_30_SEC_TEXT], [LIVE_24H_METRICS], [IMPRESSIONS], [CTR_PERCENT], [R30_PERCENT], [APV_PERCENT]","PROMPT ID: P20 — Post-Publish CTR & Retention Drop-Off A/B Packaging Rescue Protocol
+
+ROLE:
+You are a Live-Telemetry Packaging Triage Specialist.
+
+CONTEXT:
+I published a Pillar Asset 6 to 24 hours ago, and its early performance metrics are below studio thresholds (CTR < 6.5% or 30-Second Retention R30 < 68%). Based on my live telemetry numbers, diagnose which exact packaging quadrant my asset is stuck in and generate an immediate 15-minute rescue intervention.
+
+INPUT VARIABLES:
+- [CURRENT_LIVE_TITLE]: [LIVE_TITLE]
+- [CURRENT_LIVE_THUMBNAIL_DESCRIPTION]: [LIVE_THUMBNAIL]
+- [FIRST_30_SECONDS_SPOKEN_TRANSCRIPT]: [FIRST_30_SEC_TEXT]
+- [LIVE_24H_METRICS]:
+  * Impressions: [IMPRESSIONS]
+  * Browse/Suggested CTR (%): [CTR_PERCENT]%
+  * 30-Second Retention R30 (%): [R30_PERCENT]%
+  * Average Percentage Viewed APV (%): [APV_PERCENT]%
+
+EXECUTION STEPS:
+1. Calculate Live Packaging Efficiency Score (PES) and Normalized Effective Retention Index (ERI_norm):
+   - PES = CTR * (R30 / 100)
+   - ERI_norm = (CTR * R30 * APV) / 1000
+2. Classify Diagnostic Quadrant (Gate 01: Weak Wrapper | Gate 02: Click-Disconnect | Gate 03: Mid-Roll Pacing Sag | Gate 04: Breakout Winner).
+3. Generate Immediate Rescue Assets:
+   - Provide 3 Emergency High-Contrast Replacement Titles (switching psychological archetypes).
+   - Provide 2 Emergency 3-Element Thumbnail Swaps (specifying exact badge text and visual contrast).
+   - If R30 < 68%, specify the exact timestamp (e.g., ""Trim 0:00 to 0:14 in Studio Editor"") where the video should be cut so it opens on the strongest line.
+
+QUALITY CONSTRAINTS:
+- Base the intervention strictly on whether CTR or R30 is the primary mathematical bottleneck.
+
+OUTPUT TEMPLATE:
+1. Live Telemetry Scorecard (Calculated PES | Calculated ERI_norm | Diagnosed Bottleneck Quadrant)
+2. Emergency Title Swap Trio (Ranked 1 to 3)
+3. Emergency 3-Element Thumbnail Redesign Spec + Exact In-Platform Trim Timestamp Instruction"
+P21,AI Workflow Prompt,Creator Voice DNA Extractor & Anti-Slop Style Card Builder,Chapter 05,Stage 3: Pillar Scripting,You are a Computational Linguist and Senior Executive Ghostwriter specializing in syntactic fingerprinting and Creator Voice DNA extraction.,"[CREATOR_NAME_AND_SUB_NICHE], [TARGET_AUDIENCE_AVATAR], [WRITING_OR_TRANSCRIPT_SAMPLE_1], [PASTE_400_TO_800_WORDS_OF_YOUR_BEST_WORK], [WRITING_OR_TRANSCRIPT_SAMPLE_2], [WRITING_OR_TRANSCRIPT_SAMPLE_3]","PROMPT ID: P21 — Creator Voice DNA Extractor & Anti-Slop Style Card Builder
+
+ROLE:
+You are a Computational Linguist and Senior Executive Ghostwriter specializing in syntactic fingerprinting and Creator Voice DNA extraction.
+
+CONTEXT:
+Whenever I use standard AI prompts to draft scripts or newsletters, the output sounds generic, repetitive, and robotic (""AI Slop""). I am providing 3 samples of my best, most natural human writing/transcripts. Analyze my exact syntactic fingerprint and compile a reusable 12-Rule Creator Voice DNA System Card that I can paste into every future AI scripting prompt.
+
+INPUT VARIABLES:
+- [CREATOR_NAME_AND_SUB_NICHE]: e.g., Liam O'Connor — B2B SaaS RevOps & Pipeline Automation
+- [TARGET_AUDIENCE_AVATAR]: e.g., VP of Sales, RevOps Managers, and B2B Founders
+- [WRITING_OR_TRANSCRIPT_SAMPLE_1]: [PASTE_400_TO_800_WORDS_OF_YOUR_BEST_WORK]
+- [WRITING_OR_TRANSCRIPT_SAMPLE_2]: [PASTE_400_TO_800_WORDS_OF_YOUR_BEST_WORK]
+- [WRITING_OR_TRANSCRIPT_SAMPLE_3]: [PASTE_400_TO_800_WORDS_OF_YOUR_BEST_WORK]
+
+EXECUTION STEPS:
+1. Quantitative Syntactic Analysis: Measure across the 3 samples:
+   - Average sentence length and burstiness range (shortest punchline vs. longest analytical clause).
+   - Average paragraph length (sentences and words per block).
+   - Pronoun ratio (""you/your"" vs. ""I/my/we"") and contraction frequency.
+   - Punctuation rhythm (use of em-dashes, colons, numbered lists, bold callouts, or rhetorical questions).
+2. Lexicon & Idiom Extraction: Identify 10 signature phrases, contrarian framing structures, and practitioner metaphors I naturally use.
+3. Anti-Slop Negative Constraints: Compile a hard-blocked list of 25 robotic LLM transition words, filler openings, and banned hype clichés that violate my voice.
+4. Synthesize the Copy-Paste ""Voice DNA System Prompt Card"": Format all findings into a compact, 12-rule system instruction block ready to paste into Prompts P22-P30.
+
+QUALITY CONSTRAINTS:
+- Avoid vague tone words like ""friendly"" or ""engaging""; specify exact word-count rules, sentence structures, and verbatim examples from my samples.
+
+OUTPUT TEMPLATE:
+1. Syntactic Fingerprint Telemetry Table (Metric | Measured Baseline | Mandatory Generation Rule)
+2. 10 Signature Idioms & Contrarian Framing Patterns
+3. Copy-Paste ""12-Rule Creator Voice DNA System Card"" (Formatted in a single code block for daily studio use)"
+P22,AI Workflow Prompt,H.E.A.R.T. Master Pillar Outline & Micro-Payoff Pacing Architect,Chapter 05,Stage 3: Pillar Scripting,You are a Lead Retention Producer and H.E.A.R.T. Narrative Architect for high-margin educational video channels and flagship newsletters.,"[LOCKED_TITLE_AND_30S_CLIP_HOOK], [PASTE_LOCKED_TITLE_AND_30S_HOOK], [CORE_3_STEP_FRAMEWORK_NOTES], [STEP_1], [STEP_2], [STEP_3], [REAL_CASE_STUDY_OR_PROOF_METRICS], [TIER_0_LEAD_MAGNET_AND_PAID_OFFER], [VISUAL CUE]","PROMPT ID: P22 — H.E.A.R.T. Master Pillar Outline & Micro-Payoff Pacing Architect
+
+ROLE:
+You are a Lead Retention Producer and H.E.A.R.T. Narrative Architect for high-margin educational video channels and flagship newsletters.
+
+CONTEXT:
+I have locked my validated S.I.G.N.A.L. topic and my Chapter 4 Package (Title, 3-Element Thumbnail, and 30-Second C.L.I.P. Hook). Before expanding full paragraphs, I need to architect a time-coded H.E.A.R.T. Master Outline (~12-minute runtime / 1,850 spoken words OR 2,200-word newsletter) with engineered 90-Second Micro-Payoffs and 30-Second Visual State Changes so mid-roll retention stays above 54%.
+
+INPUT VARIABLES:
+- [LOCKED_TITLE_AND_30S_CLIP_HOOK]: [PASTE_LOCKED_TITLE_AND_30S_HOOK]
+- [CORE_3_STEP_FRAMEWORK_NOTES]: Step 1: [STEP_1], Step 2: [STEP_2], Step 3: [STEP_3]
+- [REAL_CASE_STUDY_OR_PROOF_METRICS]: e.g., How we cut CRM lead leakage from 34% to 3% and added $18k/mo pipeline
+- [TIER_0_LEAD_MAGNET_AND_PAID_OFFER]: e.g., Free RevOps Webhook Audit Sheet -> $149 RevOps Automation OS
+
+EXECUTION STEPS:
+1. Map the 5 H.E.A.R.T. Stages with Exact Timestamp & Word Budgets:
+   - Stage H (0:00-0:45 | 120w): C.L.I.P. Hook + Central Open Loop + Master Architecture Diagram reveal.
+   - Stage E (0:45-2:30 | 260w): Structural Friction Diagnosis + Micro-Payoff #1 (10-Second Diagnostic Rule at 01:45).
+   - Stage A (2:30-8:30 | 970w): 3 Actionable Build Steps (A1, A2, A3 — 2 minutes / ~320 words each). Each step must specify its Mistake Warning, Live Visual/Screenflow, 90-Second Micro-Payoff, and Forward Tension Bridge.
+   - Inject Native Mid-Roll Bridge at 04:30 (right after Step A1 Micro-Payoff) handing off [TIER_0_LEAD_MAGNET_AND_PAID_OFFER].
+   - Stage R (8:30-11:00 | 400w): Real Case Proof Walkthrough ([REAL_CASE_STUDY_OR_PROOF_METRICS]).
+   - Stage T (11:00-11:45 | 150w): Problem-Solution Continuity Handoff (Zero ""wrap-up"" signaling).
+2. Schedule Visual Pattern Interrupts: Assign a concrete [VISUAL CUE] every 30 seconds across the entire outline.
+
+QUALITY CONSTRAINTS:
+- Ensure every 90-second block delivers a tangible tactical insight or formula so viewers never feel lectured.
+- Never allow Stage T to use closing clichés (""To sum up,"" ""That's all for today"").
+
+OUTPUT TEMPLATE:
+1. H.E.A.R.T. Master Pacing & Micro-Payoff Table (Stage | Timestamp | Word Budget | Core Teaching Point | 90s Micro-Payoff | 30s Visual Cue)
+2. Forward-Tension Transition Sentences (Exact bridge sentences connecting H->E, E->A1, A1->Mid-Roll->A2, A2->A3, A3->R, R->T)"
+P23,AI Workflow Prompt,Section-by-Section Spoken-Word Video & Audio Script Expander (With B-Roll & Visual Cues),Chapter 05,Stage 3: Pillar Scripting,You are a Voice-Calibrated Executive Scriptwriter writing for a teleprompter or spoken-word studio recording.,"[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21], [HEART_SECTIONS_TO_EXPAND_IN_THIS_PASS], [SPECIFIC_TECHNICAL_STEPS_AND_NUMBERS], [PASTE_RAW_BULLETS_AND_METRICS_FOR_THESE_SECTIONS], [MICRO-PAYOFF CALLOUT], [Insert explanation here], [VISUAL CUE]","PROMPT ID: P23 — Section-by-Section Spoken-Word Video & Audio Script Expander (With B-Roll & Visual Cues)
+
+ROLE:
+You are a Voice-Calibrated Executive Scriptwriter writing for a teleprompter or spoken-word studio recording.
+
+CONTEXT:
+I am expanding my locked H.E.A.R.T. Master Outline into a verbatim, teleprompter-ready spoken script in modular passes so there is zero context-window dilution and 100% adherence to my Voice DNA System Card.
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21]
+- [HEART_SECTIONS_TO_EXPAND_IN_THIS_PASS]: e.g., Pass A: Stages H, E, and Step A1 (0:00 to 4:30 | ~700 words) OR Pass B: Steps A2, A3, R, and T (4:30 to 11:45 | ~1,200 words)
+- [SPECIFIC_TECHNICAL_STEPS_AND_NUMBERS]: [PASTE_RAW_BULLETS_AND_METRICS_FOR_THESE_SECTIONS]
+
+EXECUTION STEPS:
+1. Enforce Voice DNA Rules: Apply exact sentence-length burstiness (mixing 25-word explanations with 4-word punchlines), natural spoken contractions, and 3-sentence paragraph caps (`<= 45 words` per teleprompter block).
+2. Insert Synchronized Production Markers:
+   - Place `[VISUAL CUE: Exact Screenflow / SVG Diagram / Metric Overlay]` every 65-80 spoken words (~30 seconds).
+   - Place `[TONAL PIVOT: Slow down & emphasize]` or `[MICRO-PAYOFF CALLOUT]` at every 90-second beat.
+3. Write Verbatim Spoken Prose: Draft every word exactly as it will be spoken out loud at 150 words per minute, weaving in [SPECIFIC_TECHNICAL_STEPS_AND_NUMBERS].
+4. Run Self-Audit: Verify zero banned words, zero robotic transitions, and calculate the Voice DNA Fidelity Score (0-50).
+
+QUALITY CONSTRAINTS:
+- Write strictly for the human ear and teleprompter eye—short visual lines, concrete nouns, active verbs.
+- Never summarize with ""[Insert explanation here]""; write the complete technical walkthrough verbatim.
+
+OUTPUT TEMPLATE:
+1. Verbatim Teleprompter Script Block (Formatted with Timestamp Markers, [VISUAL CUE] tags, and <=45-word spoken paragraphs)
+2. Section Pacing & Voice DNA Verification Card (Total Word Count | Speaking Time @ 150 WPM | Visual Cue Count | Voice DNA Score /50)"
+P24,AI Workflow Prompt,Deep-Dive Authority Newsletter & Long-Form Essay Draft Engine,Chapter 05,Stage 3: Pillar Scripting,You are a Flagship B2B Newsletter Editor and Technical Essayist.,"[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21], [HEART_OUTLINE_OR_VIDEO_TRANSCRIPT], [PASTE_OUTLINE_OR_SCRIPT], [Subject_LINE_AND_PREVIEW_TEXT], [PASTE_FROM_WORKSHEET_04], [TIER_0_AND_PAID_OFFER_LINKS], [OFFER_NAMES_AND_CTA_URLS]","PROMPT ID: P24 — Deep-Dive Authority Newsletter & Long-Form Essay Draft Engine
+
+ROLE:
+You are a Flagship B2B Newsletter Editor and Technical Essayist.
+
+CONTEXT:
+I want to transform my H.E.A.R.T. Master Outline (or my completed Video Pillar Script) into a 2,000-to-2,500-word authoritative written newsletter issue (for Beehiiv, Substack, Kit, or LinkedIn Articles) that achieves a 50%+ read-to-bottom completion rate and drives high-intent clicks to my Lead Magnet and Paid Product Stack.
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21]
+- [HEART_OUTLINE_OR_VIDEO_TRANSCRIPT]: [PASTE_OUTLINE_OR_SCRIPT]
+- [Subject_LINE_AND_PREVIEW_TEXT]: [PASTE_FROM_WORKSHEET_04]
+- [TIER_0_AND_PAID_OFFER_LINKS]: [OFFER_NAMES_AND_CTA_URLS]
+
+EXECUTION STEPS:
+1. Format for High-Velocity Skimmability (The ""F-Pattern"" Reader Law):
+   - Open with the 4-Sentence Above-the-Fold C.L.I.P. Lead + a ""In Today's 5-Minute System Breakdown:"" 3-bullet executive box.
+   - Use bold H2/H3 subheaders every 250-300 words that state a complete contrarian or tactical takeaway (so a skimmer who reads only subheaders still gets convinced).
+   - Include at least 2 Markdown Comparison Tables and 1 Step-by-Step Formula or Code/Prompt Box.
+2. Draft the Complete 5-Stage H.E.A.R.T. Essay:
+   - Expand all 3 Framework Steps with deep practitioner clarity and exact numbers.
+   - Place the Native Mid-Article Callout Box at the 40% scroll mark linking to [TIER_0_AND_PAID_OFFER_LINKS].
+   - Walk through the Real Case Proof with a Before vs. After metrics table.
+   - Conclude with the Problem-Solution Continuity Handoff (""Whenever you're ready, here are 2 ways I can help you implement this today..."").
+
+QUALITY CONSTRAINTS:
+- Keep paragraphs to 1-3 sentences max for mobile email readability.
+- Strictly zero AI clichés or banned words.
+
+OUTPUT TEMPLATE:
+1. Newsletter Header Block (Subject Line A/B, Preview Text, Above-the-Fold 4-Sentence Hook + Executive Summary Box)
+2. Complete 2,000+ Word H.E.A.R.T. Authority Newsletter Issue (With Markdown Tables, Callout Boxes, and Dual Offer Bridges)"
+P25,AI Workflow Prompt,Native Mid-Roll & End-of-Script Lead-Magnet Bridge Scriptwriter,Chapter 05,Stage 3: Pillar Scripting,"You are a Conversion Copywriter specializing in invisible, high-retention in-content CTA bridges.","[STEP_1_JUST_TAUGHT_IN_SCRIPT], [FINAL_STEP_TAUGHT_AT_END_OF_SCRIPT], [TIER_0_LEAD_MAGNET_SPEC], [TIER_1_PAID_PRODUCT_SPEC], [NEXT_RELATED_VIDEO_TOPIC], [VISUAL CUE]","PROMPT ID: P25 — Native Mid-Roll & End-of-Script Lead-Magnet Bridge Scriptwriter
+
+ROLE:
+You are a Conversion Copywriter specializing in invisible, high-retention in-content CTA bridges.
+
+CONTEXT:
+When creators say ""Pause the video and sign up for my newsletter"" or ""That wraps up today's video, check the link below,"" retention craters and conversion sits under 0.3%. I need you to write 2 seamless, native conversion bridges (a 18-second Mid-Roll Bridge at the end of Step 1, and a 40-second End-of-Script Continuity Bridge in Stage T) where grabbing my free Lead Magnet or Paid Toolkit feels like the natural next step of the tutorial.
+
+INPUT VARIABLES:
+- [STEP_1_JUST_TAUGHT_IN_SCRIPT]: e.g., How to calculate your baseline RPPH and identify your 3 friction taxes
+- [FINAL_STEP_TAUGHT_AT_END_OF_SCRIPT]: e.g., Installing the 6-hour weekly batch production calendar
+- [TIER_0_LEAD_MAGNET_SPEC]: e.g., The Free 7-Day Time-Leak & RPPH Calculator Sheet + 5 AI Prompts
+- [TIER_1_PAID_PRODUCT_SPEC]: e.g., The Complete AI Creator & Solopreneur Operating System ($49)
+- [NEXT_RELATED_VIDEO_TOPIC]: e.g., How I Mine 3x Outlier Ideas in 15 Minutes
+
+EXECUTION STEPS:
+1. Script the 18-Second Mid-Roll Bridge (~45 words | Placed at 04:30):
+   - Beat 1 (1 sentence): Acknowledge the manual friction of building [STEP_1_JUST_TAUGHT_IN_SCRIPT] from scratch.
+   - Beat 2 (1 sentence): Hand them [TIER_0_LEAD_MAGNET_SPEC] at the top link in the description (with on-screen visual mockup cue) so they can run the math in 2 minutes.
+   - Beat 3 (1 sentence): Immediately re-open tension into Step 2 (""And once you have that sheet open, look at tab 2—because that brings us to Step 2..."").
+2. Script the 40-Second Stage-T End Bridge (~95 words | Placed at 11:00):
+   - Zero closing signals (no ""wrapping up"" or ""thanks for watching"").
+   - Pivot directly from [FINAL_STEP_TAUGHT_AT_END_OF_SCRIPT] to the immediate Monday morning implementation gap solved by [TIER_0_LEAD_MAGNET_SPEC] and [TIER_1_PAID_PRODUCT_SPEC].
+   - End with a 10-second curiosity hook pointing viewers directly to [NEXT_RELATED_VIDEO_TOPIC] on the end-screen.
+
+QUALITY CONSTRAINTS:
+- Every word must frame the CTA as a time-saving gift to the viewer, never as a favor to the creator.
+
+OUTPUT TEMPLATE:
+1. Verbatim 18-Second Mid-Roll Bridge Script (With [VISUAL CUE] + Forward Re-Hook into Step 2)
+2. Verbatim 40-Second Stage-T End Bridge Script (With Offer Handoff + End-Screen Video Hook)
+3. Pinned Comment & Top-2-Lines Description Box Copy"
+P26,AI Workflow Prompt,Pillar-to-5 Standalone Short-Form Vertical Video Script Extractor (Shorts/Reels/TikTok),Chapter 06,Stage 3: 1-to-15 Repurposing,You are a Short-Form Retention Director and Vertical Video Script Architect specializing in 35-to-50-second high-completion scripts (>75% AVD and >68% 3-second swipe-stay rate).,"[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [PILLAR_VIDEO_TITLE_FOR_RELATED_LINK], [PILLAR_TITLE], [TIER_0_LEAD_MAGNET_AND_KEYWORD], [Common Habit], [Metric], [9:16 VISUAL CUE]","PROMPT ID: P26 — Pillar-to-5 Standalone Short-Form Vertical Video Script Extractor (Shorts/Reels/TikTok)
+
+ROLE:
+You are a Short-Form Retention Director and Vertical Video Script Architect specializing in 35-to-50-second high-completion scripts (>75% AVD and >68% 3-second swipe-stay rate).
+
+CONTEXT:
+I have completed my weekly Long-Form H.E.A.R.T. Pillar Script. Instead of using lazy AI auto-clippers that chop mid-sentence segments with zero context, I want you to extract 5 standalone 40-to-50-second vertical video scripts from the 5 highest-tension micro-payoffs of my Pillar. Each Short must work as a 100% self-contained micro-lesson while driving viewers to my full Pillar video or Tier 0 Lead Magnet.
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD]
+- [COMPLETED_PILLAR_SCRIPT_TEXT]: [PASTE_FULL_HEART_PILLAR_SCRIPT]
+- [PILLAR_VIDEO_TITLE_FOR_RELATED_LINK]: [PILLAR_TITLE]
+- [TIER_0_LEAD_MAGNET_AND_KEYWORD]: e.g., Comment ""SYSTEM"" or grab the free RPPH Calculator in my bio
+
+EXECUTION STEPS:
+1. Extract 5 Distinct Vertical Short Scripts (95-125 spoken words / 38-50 seconds each) mapped to these 5 proven Short-Form Archetypes:
+   - Short #1 (Extracted from Stage E): The Contrarian Myth-Bust (""Stop doing [Common Habit]—it's costing you [Metric]..."")
+   - Short #2 (Extracted from Stage A Overview): The 50-Second Master System Walkthrough (Zooming through the 3 steps)
+   - Short #3 (Extracted from Step A1/A2): The Single Tactical Shortcut / Formula Reveal
+   - Short #4 (Extracted from Step A3): The 10-Second Mistake Diagnostic Test
+   - Short #5 (Extracted from Stage R): The Case-Study Before/After Number Breakdown
+2. Structure Every Short into 4 Rapid Beats:
+   - 0:00-0:03 (<= 12 words): Pattern-Interrupt Visual + Spoken Hook + 4-Word On-Screen Top Banner.
+   - 0:03-0:15 (~30 words): The Friction Twist (Why the normal way fails).
+   - 0:15-0:38 (~55 words): The Rapid Tactical Payoff (1 concrete diagram, formula, or 3-bullet rule).
+   - 0:38-0:45 (<= 18 words): The Native Bridge Loop (""I just dropped the full 12-minute build—tap the related video link right here above my title, or grab the template in my bio"").
+
+QUALITY CONSTRAINTS:
+- Zero mid-sentence starts, zero slow introductions, and 1 visual cut every 4 seconds.
+- Strictly adhere to [VOICE_DNA_SYSTEM_CARD] and zero banned words.
+
+OUTPUT TEMPLATE:
+For each of the 5 Shorts (#1 to #5), output a structured production card:
+- Short Archetype & Target Runtime
+- 4-Word Top-of-Screen Hook Banner Text
+- Verbatim Timestamped Script (0:00-0:03 | 0:03-0:15 | 0:15-0:38 | 0:38-0:45) with [9:16 VISUAL CUE] tags
+- Native Caption & Related-Video CTA Setup"
+P27,AI Workflow Prompt,Pillar-to-LinkedIn Authority Post & Contrarian Story Formatter,Chapter 06,Stage 3: 1-to-15 Repurposing,"You are an Executive B2B LinkedIn Ghostwriter whose posts consistently achieve high dwell time, executive comments, and 3.0%+ profile-to-lead-magnet click rates.","[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [TIER_0_LEAD_MAGNET_NAME_AND_URL], [LEAD_MAGNET_NAME_AND_URL], [TIER_1_PAID_PRODUCT_NAME_AND_URL], [PAID_PRODUCT_NAME_AND_URL], [Avatar]","PROMPT ID: P27 — Pillar-to-LinkedIn Authority Post & Contrarian Story Formatter
+
+ROLE:
+You are an Executive B2B LinkedIn Ghostwriter whose posts consistently achieve high dwell time, executive comments, and 3.0%+ profile-to-lead-magnet click rates.
+
+CONTEXT:
+I need to extract 2 high-authority LinkedIn text posts (Assets #7 and #8 of my 1-to-15 Waterfall) from my weekly H.E.A.R.T. Pillar Script. Both posts must obey LinkedIn's native feed physics: a razor-sharp 2-line hook before the ""...see more"" fold, clean white-space formatting rhythm, zero external URLs in the post body, and a high-converting Pinned First-Comment bridge.
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD]
+- [COMPLETED_PILLAR_SCRIPT_TEXT]: [PASTE_FULL_HEART_PILLAR_SCRIPT]
+- [TIER_0_LEAD_MAGNET_NAME_AND_URL]: [LEAD_MAGNET_NAME_AND_URL]
+- [TIER_1_PAID_PRODUCT_NAME_AND_URL]: [PAID_PRODUCT_NAME_AND_URL]
+
+EXECUTION STEPS:
+1. Draft LinkedIn Post #1 (Monday AM — The Contrarian Diagnosis & Framework Post | 200-260 words):
+   - Lines 1-2 (Above ""...see more"" fold | <= 190 chars): State a shocking metric or contrarian truth from Stage E that forces the reader to click ""...see more.""
+   - Body: Contrast the ""Broken Old Way (3 bullets)"" against the ""Systematized Operator Way (3 bullets)"" with exact numbers.
+   - Sign-Off: Ask 1 specific practitioner discussion question + add a ""P.S."" pointing to the first comment and your Chapter Mindmap image.
+   - Draft the exact Pinned First Comment linking to [TIER_0_LEAD_MAGNET_NAME_AND_URL].
+2. Draft LinkedIn Post #2 (Thursday AM — The Case-Study Teardown Story | 220-280 words):
+   - Lines 1-2 (Above fold): Open with the concrete Before -> After transformation from Stage R (""60 days ago, [Avatar] was working 32 hrs/wk for $8.75/hr. Last month: 5.5 hrs/wk and $9,450 net. Here is the exact 4-step teardown:"").
+   - Body: Walk through the 4 chronological interventions and the mathematical ROI delta.
+   - Draft the exact Pinned First Comment linking to [TIER_1_PAID_PRODUCT_NAME_AND_URL].
+
+QUALITY CONSTRAINTS:
+- Never place an http:// link inside the main post body.
+- Avoid cringe ""bro-etry"" (do not make every single sentence 4 words double-spaced); use natural 1-to-2 sentence paragraphs mixed with scannable bullet blocks.
+
+OUTPUT TEMPLATE:
+1. LinkedIn Post #1 (Above-Fold Hook Check | Full Post Body | Attached Graphic Cue | Verbatim Pinned First Comment)
+2. LinkedIn Post #2 (Above-Fold Hook Check | Full Post Body | Attached Graphic Cue | Verbatim Pinned First Comment)"
+P28,AI Workflow Prompt,Pillar-to-X/Threads High-Bookmark Multi-Post Thread Converter,Chapter 06,Stage 3: 1-to-15 Repurposing,You are a High-Density Technical Thread Architect for X and Threads specializing in bookmark-worthy practitioner breakdowns.,"[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [CHAPTER_SVG_DIAGRAM_NAMES], [TIER_0_LEAD_MAGNET_URL], [LEAD_MAGNET_URL]","PROMPT ID: P28 — Pillar-to-X/Threads High-Bookmark Multi-Post Thread Converter
+
+ROLE:
+You are a High-Density Technical Thread Architect for X and Threads specializing in bookmark-worthy practitioner breakdowns.
+
+CONTEXT:
+Users on X and Threads ignore generic fluff threads (""10 AI tools you need "") but aggressively bookmark and share dense, metric-backed system breakdowns with architectural diagrams. Convert my weekly H.E.A.R.T. Pillar Script into 2 native assets: (1) A 7-Post Master Breakdown Thread (Asset #9) and (2) A Punchy Single-Post Framework Listicle (Asset #10).
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD]
+- [COMPLETED_PILLAR_SCRIPT_TEXT]: [PASTE_FULL_HEART_PILLAR_SCRIPT]
+- [CHAPTER_SVG_DIAGRAM_NAMES]: e.g., The 5-Stage Mindmap & Diagnostic Flowchart
+- [TIER_0_LEAD_MAGNET_URL]: [LEAD_MAGNET_URL]
+
+EXECUTION STEPS:
+1. Architect Asset #9 — The 7-Post Master Thread (Strictly <= 275 characters per post):
+   - Post 1/7 (The Bookmark Hook + Mindmap Image): Lead with the quantified outcome, the problem cost, and ""Here is the complete 5-part architecture (save this for Monday):"" + attach [CHAPTER_SVG_DIAGRAM_NAMES]. Zero external links in Post 1.
+   - Post 2/7: The Friction Tax Math (Why standard approaches fail + concrete numbers).
+   - Post 3/7: Framework Step 1 + Formula/Rule.
+   - Post 4/7: Framework Step 2 + Tactical Shortcut.
+   - Post 5/7: Framework Step 3 + Decision Tree Image attachment.
+   - Post 6/7: Real-World Case Study Before/After Telemetry Table.
+   - Post 7/7 (The Rented-to-Owned Conversion Bridge): Summarize the 3-bullet takeaway, link directly to [TIER_0_LEAD_MAGNET_URL], and invite reposts of Post 1.
+2. Architect Asset #10 — The Saturday Single-Post Long-Form Listicle (140-180 words):
+   - A standalone, high-contrast ""Old Way vs. New System"" cheat-sheet post designed for weekend saves and profile clicks.
+
+QUALITY CONSTRAINTS:
+- Zero thread clichés (""A thread 🧵👇"", ""Buckle up"", ""Let's jump right in"").
+- Every single post in the 7-post chain must contain at least one concrete number, formula, or actionable rule.
+
+OUTPUT TEMPLATE:
+1. Asset #9: 7-Post Master Thread (Posts 1/7 through 7/7 with exact Character Counts & Image Attachment Cues)
+2. Asset #10: Standalone High-Save Framework Post"
+P29,AI Workflow Prompt,8-Slide Visual Carousel & PDF Cheat-Sheet Slide-by-Slide Copy Architect,Chapter 06,Stage 3: 1-to-15 Repurposing,You are a Visual Information Designer and LinkedIn/Instagram Document Carousel Architect.,"[COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [TIER_0_LEAD_MAGNET_NAME_AND_SHORT_URL], [LOCKED_COLOR_PALETTE]","PROMPT ID: P29 — 8-Slide Visual Carousel & PDF Cheat-Sheet Slide-by-Slide Copy Architect
+
+ROLE:
+You are a Visual Information Designer and LinkedIn/Instagram Document Carousel Architect.
+
+CONTEXT:
+Native 8-to-10 slide PDF carousels generate 2.9x higher dwell time and 3.4x more profile-to-link clicks than standard posts. I need to generate the exact slide-by-slide copy and visual layout instructions for my 3 weekly PDF Carousels (Assets #11, #12, and #13) from my H.E.A.R.T. Pillar Script so I can paste them directly into my 1080x1350px Figma/Canva master template in 15 minutes.
+
+INPUT VARIABLES:
+- [COMPLETED_PILLAR_SCRIPT_TEXT]: [PASTE_FULL_HEART_PILLAR_SCRIPT]
+- [TIER_0_LEAD_MAGNET_NAME_AND_SHORT_URL]: e.g., Get the Free RPPH Audit Kit -> yoursite.com/kit
+- [LOCKED_COLOR_PALETTE]: #0F172A Deep Navy, #4F46E5 Creator Indigo, #0D9488 Conversion Teal, #D97706 Retention Amber, #FFFFFF Pure White
+
+EXECUTION STEPS:
+1. Generate Slide-by-Slide Copy for All 3 Carousels (8 Slides Each | Strictly <= 28 words per slide):
+   - Carousel #1 (Asset #11 — Tuesday): ""The Step-by-Step System Blueprint"" (Translating Stage A's 3-Step Framework into a visual operating manual).
+   - Carousel #2 (Asset #12 — Wednesday): ""The Diagnostic Scorecard: Amateur vs. Operator"" (Translating Stage E's Friction Tax & Section 8's Decision Tree).
+   - Carousel #3 (Asset #13 — Friday): ""The Copy-Paste AI Prompt & SOP Vault"" (Showcasing 2 actual prompts/templates from the chapter).
+2. Enforce the 8-Slide Conversion Architecture on Every Deck:
+   - Slide 1 (Cover): 3-Element Visual Harmony Hook Headline + Subheadline + ""Swipe ->"" cue.
+   - Slide 2 (The Friction Cliff): Quantifies the cost of the broken status-quo method.
+   - Slides 3-6 (The Core System Steps): 1 core concept per slide with a bold header, 3 crisp bullets (<=25 words), and a mini diagram/table callout.
+   - Slide 7 (The Case-Study Proof): Before vs. After metric box.
+   - Slide 8 (The Conversion Bridge): Visual mockup of [TIER_0_LEAD_MAGNET_NAME_AND_SHORT_URL] + Pinned Comment reminder.
+
+QUALITY CONSTRAINTS:
+- Keep body text on Slides 2-7 under 28 words per slide so font size stays >= 28pt on mobile screens.
+
+OUTPUT TEMPLATE:
+1. Carousel #1 (Asset #11) 8-Slide Copy & Visual Layout Table (Slide # | Header | Body Copy <=28w | Visual Diagram/Badge Element)
+2. Carousel #2 (Asset #12) 8-Slide Copy & Visual Layout Table
+3. Carousel #3 (Asset #13) 8-Slide Copy & Visual Layout Table
+4. Companion LinkedIn/Instagram Post Caption (80 words each + Pinned Comment CTA)"
+P30,AI Workflow Prompt,2-Part Weekly Newsletter & Offer-Bridge Email Repurposing Sequence,Chapter 06,Stage 3: 1-to-15 Repurposing,You are a Direct-Response Email Newsletter Strategist for a high-margin creator-solopreneur business.,"[VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [PILLAR_VIDEO_OR_ARTICLE_URL], [PILLAR_URL], [PAID_DIGITAL_PRODUCT_NAME_PRICE_AND_URL], [PRODUCT_URL], [WEEKLY_SPONSOR_OR_AFFILIATE_TOOL], [SPONSOR_OR_TOOL_NAME_AND_URL]","PROMPT ID: P30 — 2-Part Weekly Newsletter & Offer-Bridge Email Repurposing Sequence
+
+ROLE:
+You are a Direct-Response Email Newsletter Strategist for a high-margin creator-solopreneur business.
+
+CONTEXT:
+To complete my 1-to-15 Waterfall, I send 2 targeted emails per week to my owned subscriber list (Assets #14 and #15):
+- Email #1 (Tuesday AM): Drives initial high-retention traffic to my new Pillar Asset while delivering standalone executive value and featuring a native Sponsor/Affiliate or Tier 1 Toolkit slot.
+- Email #2 (Friday AM): A 400-word tactical case-study email (built from Stage R of my Pillar) that bridges subscribers directly into buying my Tier 1 ($49) or Tier 2 ($149) Paid Digital Product.
+
+INPUT VARIABLES:
+- [VOICE_DNA_SYSTEM_CARD]: [PASTE_12_RULE_VOICE_DNA_CARD]
+- [COMPLETED_PILLAR_SCRIPT_TEXT]: [PASTE_FULL_HEART_PILLAR_SCRIPT]
+- [PILLAR_VIDEO_OR_ARTICLE_URL]: [PILLAR_URL]
+- [PAID_DIGITAL_PRODUCT_NAME_PRICE_AND_URL]: e.g., The Complete AI Creator & Solopreneur OS ($49 Tier 1 / $149 Tier 2) -> [PRODUCT_URL]
+- [WEEKLY_SPONSOR_OR_AFFILIATE_TOOL]: [SPONSOR_OR_TOOL_NAME_AND_URL]
+
+EXECUTION STEPS:
+1. Draft Asset #14 — Tuesday Pillar Breakdown Email (450-600 words):
+   - Provide 3 Subject Line + Preview Text pairs (targeting >= 45% open rate).
+   - Above-the-Fold Hook: Diagnose the core weekly friction point in 4 sentences + link to watch/read the full Pillar ([PILLAR_VIDEO_OR_ARTICLE_URL]).
+   - Native Sponsor / Tool Integration Block (75 words): Seamlessly weave [WEEKLY_SPONSOR_OR_AFFILIATE_TOOL] as the tool powering Step 1.
+   - Executive Cheat-Sheet Summary: Summarize the 3 steps + formula so email readers get an instant win, then re-link to the full Pillar and [PAID_DIGITAL_PRODUCT_NAME_PRICE_AND_URL].
+2. Draft Asset #15 — Friday Case-Study & Direct Offer Bridge Email (350-450 words):
+   - Provide 3 Subject Line + Preview Text pairs.
+   - Walk through the Stage R Before/After transformation story with concrete numbers.
+   - Highlight the exact Execution Gap between understanding the theory and installing the templates in 10 minutes.
+   - Close with a direct, high-contrast call-to-action for [PAID_DIGITAL_PRODUCT_NAME_PRICE_AND_URL].
+
+QUALITY CONSTRAINTS:
+- Zero fake scarcity or pushy hype; rely on mathematical ROI and time saved.
+
+OUTPUT TEMPLATE:
+1. Asset #14: Tuesday Pillar Breakdown Email (3 Subject/Preview Pairs + Complete Formatted Email Body)
+2. Asset #15: Friday Case-Study Offer Bridge Email (3 Subject/Preview Pairs + Complete Formatted Email Body)"
+P31,AI Workflow Prompt,"Visual B-Roll, Screen-Capture & Diagram Cue-Sheet Generator",Chapter 07,Stage 4: Batch Production,Senior Technical Video Producer & High-Retention Visual Director,"[PILLAR_SCRIPT_TEXT], [PRODUCTION_TRACK], [SOFTWARE_OR_TOOLS_SHOWN], [BRAND_HEX_PALETTE], [DIAG-SVG], [SCREEN-DEMO], [DATA-CARD], [A-ROLL-CAM], [MM:SS], [Count], [Seconds], [slug]","PROMPT ID: P31
+ROLE: Senior Technical Video Producer & High-Retention Visual Director
+CONTEXT: I have a completed long-form H.E.A.R.T. Pillar Script (Chapter 5). To avoid hunting for B-roll during editing and to prevent platform ""low-effort stock footage"" penalties, I need a numbered, timestamped Visual Cue-Sheet (V01 through V15) that maps every 60-to-90-second script block to high-trust original visuals (live workspace screen captures, terminal executions, custom SVG architecture diagrams, or kinetic data proof cards).
+
+INPUT VARIABLES:
+- [PILLAR_SCRIPT_TEXT]: {Paste full H.E.A.R.T. Pillar Script with timestamps}
+- [PRODUCTION_TRACK]: {Select: Track A (On-Camera + Visual Overlays) OR Track B (100% Faceless High-Trust Stack)}
+- [SOFTWARE_OR_TOOLS_SHOWN]: {List workspaces/tools available to screen-record, e.g., VS Code, Notion, Excel, n8n, Figma, Browser Analytics}
+- [BRAND_HEX_PALETTE]: {Default: Navy #0F172A, Indigo #4F46E5, Teal #0D9488, Amber #D97706}
+
+EXECUTION STEPS:
+1. Scan [PILLAR_SCRIPT_TEXT] and partition the runtime into visual segments no longer than 60–90 seconds each.
+2. Assign a sequential File Prefix ID (`V01`, `V02`, `V03`... up to `V15`) to every visual transition.
+3. Classify each visual asset into one of the four High-Trust Visual Categories:
+   - `[DIAG-SVG]`: Custom Vector Architecture Diagram / Node Flowchart
+   - `[SCREEN-DEMO]`: High-DPI Live Software/Workspace Recording with Cursor Zoom
+   - `[DATA-CARD]`: Kinetic Typography Benchmark / Formula / Case Study Proof Card
+   - `[A-ROLL-CAM]`: Direct-to-Lens Authority Delivery (if Track A is selected)
+4. Write exact capture instructions for each cue: what window to open, where to zoom (e.g., 1.75x cursor zoom), what text callout to highlight in `#4F46E5` or `#0D9488`, and the exact file naming convention (`V0X_short-slug.mp4` or `.svg`).
+
+QUALITY CONSTRAINTS:
+- Zero generic stock footage (never suggest ""stock video of person typing"" or ""stock video of clock ticking""). Every visual must carry concrete informational utility.
+- Ensure at least 85% of runtime in Track B is covered by original diagrams, live workspace demos, or mathematical proof cards.
+- Zero banned AI clichés or vague descriptions.
+
+OUTPUT TEMPLATE:
+### 1. Visual Production Summary
+- Total Runtime Covered: [MM:SS] | Total Visual Cues: [Count] | Average Visual Reset Interval: [Seconds]
+
+### 2. Numbered Batch Capture Cue-Sheet (`V01` – `V15`)
+| Cue ID & Filename | Timestamp Range | Visual Category | Script Anchor Line | Exact Screen/Diagram Capture Instructions | Zoom & Color Highlight Spec |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `V01_[slug]` | `00:00 - 00:45` | `[DIAG-SVG / SCREEN-DEMO]` | ""[First 6 words...]"" | [Exact window/diagram to record] | [Zoom % + Hex Callout] |
+
+### 3. Batch Recording Grouping Checklist (By Workspace)
+- **Screen Capture Batch (Record all at once in [Tool 1]):** [List Cue IDs]
+- **Diagram/Slide Batch (Export from Figma/Excalidraw):** [List Cue IDs]
+- **Data Proof Card Batch (NLE Template Overlays):** [List Cue IDs]"
+P32,AI Workflow Prompt,"Faceless Voiceover Pacing, Phonetic Emphasis & Audio-Retention Script Optimizer",Chapter 07,Stage 4: Batch Production,Broadcast Vocal Coach & Acoustic Retention Engineer,"[RAW_PILLAR_SCRIPT], [VOCAL_DELIVERY_MODE], [TARGET_SPEAKING_RATE], [TECHNICAL_ACRONYMS_OR_TERMS], [PAUSE 0.4s], [CLAP-RETAKE-ANCHOR], [loudness units], [Count], [Target WPM], [MM:SS], [Bullet list]","PROMPT ID: P32
+ROLE: Broadcast Vocal Coach & Acoustic Retention Engineer
+CONTEXT: Monotone vocal delivery destroys audience retention in the first 30 seconds, especially on faceless videos and podcasts. I need to transform my standard written Pillar Script into a broadcast-ready Vocal Performance Script annotated with exact breathing pauses, pitch inflection markers, cadence shifts, and phonetic spellings (or SSML pause tags if using a calibrated Professional Voice Clone).
+
+INPUT VARIABLES:
+- [RAW_PILLAR_SCRIPT]: {Paste Pillar Script text}
+- [VOCAL_DELIVERY_MODE]: {Select: Live Human Microphone Recording OR Calibrated Professional Voice Clone (PVC)}
+- [TARGET_SPEAKING_RATE]: {Default: 155–165 Words Per Minute (WPM) with dynamic contrast}
+- [TECHNICAL_ACRONYMS_OR_TERMS]: {List domain acronyms, e.g., LUFS, SQL, SaaS, CAGR, API}
+
+EXECUTION STEPS:
+1. Rewrite any overly dense, multi-clause written sentences into punchy, breathable spoken phrases (maximum 18–22 words per breath unit).
+2. Insert explicit Acoustic Performance Markers directly into the script text:
+   - `[PAUSE 0.4s]` for comma/clause micro-breaths and `[PAUSE 0.8s — HARD DROP]` before major reveals or mathematical takeaways.
+   - **BOLD ALL-CAPS** on the exact 1–2 power words per sentence that require downward authoritative vocal stress (avoiding upward questioning inflection at the end of declarative statements).
+   - `[PACE: FAST 175 WPM — URGENT]` for friction points and rapid lists; `[PACE: SLOW 135 WPM — DELIBERATE]` for core framework axioms and formulas.
+   - `[CLAP-RETAKE-ANCHOR]` at the start of every 60-second paragraph so the speaker has clean restart checkpoints if they stumble.
+3. Convert all [TECHNICAL_ACRONYMS_OR_TERMS] and complex numbers into clear phonetic pronunciation guides (e.g., `LUFS` -> `L-U-F-S [loudness units]`, `$14,850` -> `fourteen thousand, eight hundred fifty dollars`).
+
+QUALITY CONSTRAINTS:
+- Preserve 100% of the factual metrics, case study numbers, and Voice DNA rules from the original script.
+- Never insert cheesy radio-announcer clichés; maintain sharp, authoritative practitioner cadence.
+
+OUTPUT TEMPLATE:
+### 1. Acoustic Pacing & Breath Telemetry
+- Total Word Count: [Count] | Estimated Spoken Duration at [Target WPM]: [MM:SS]
+- Phonetic Pronunciation Key for Technical Terms: [Bullet list]
+
+### 2. Annotated Teleprompter / Booth Performance Script"
+P33,AI Workflow Prompt,"Video/Audio Transcript Filler-Word, Silence & Retention-Drop Edit Sheet Builder",Chapter 07,Stage 4: Batch Production,Senior Post-Production Rough-Cut Editor & Retention Surgeon,"[RAW_TIMECODED_TRANSCRIPT], [MM:SS], [TARGET_FINISHED_RUNTIME], [NUMBERED_VISUAL_CUE_LIST], [inaudible / clap], [HARD DELETE], [SHORT-EXTRACT-01], [MM:SS - MM:SS]","PROMPT ID: P33
+ROLE: Senior Post-Production Rough-Cut Editor & Retention Surgeon
+CONTEXT: I have recorded my raw pillar audio/video using the Clap-and-Pause Retake Protocol and generated a raw timecoded transcript (from Descript, Whisper, or Premiere Pro). Before touching the visual timeline, I need an automated Text-Based Rough-Cut Edit Sheet that identifies every aborted retake, filler word, redundant tangent, and pacing drag so I can execute the rough cut in under 15 minutes.
+
+INPUT VARIABLES:
+- [RAW_TIMECODED_TRANSCRIPT]: {Paste raw transcript with [MM:SS] timestamps}
+- [TARGET_FINISHED_RUNTIME]: {e.g., 10:00 to 12:00 minutes}
+- [NUMBERED_VISUAL_CUE_LIST]: {Paste Cue IDs V01–V15 from Prompt P31}
+
+EXECUTION STEPS:
+1. Scan [RAW_TIMECODED_TRANSCRIPT] for retake patterns (repeated sentence starts, false starts, or `[inaudible / clap]` markers) and mark the exact timestamp range of the failed attempt for `[HARD DELETE]`.
+2. Flag all crutch filler words (""um"", ""uh"", ""you know"", ""basically"", ""sort of"", ""like I said"") and throat-clearing pauses for removal.
+3. Identify any multi-sentence explanations where the speaker repeats the same point twice without adding new data, marking the weaker duplicate as `[TANGENT TRIM — SAVES XX SECONDS]`.
+4. Align the surviving clean transcript blocks with the exact [NUMBERED_VISUAL_CUE_LIST] (`V01`–`V15`), outputting a master Timeline Assembly Map.
+5. Flag the top 3 highest-density 45–60 second segments (`[SHORT-EXTRACT-01]`, `02`, `03`) for immediate 9:16 vertical extraction in Block 3.
+
+QUALITY CONSTRAINTS:
+- Never delete sentences containing essential logical transitions, proof numbers, or framework definitions.
+- Calculate exact time saved (in seconds/minutes) from all combined cuts.
+
+OUTPUT TEMPLATE:
+### 1. Rough-Cut Compression Summary
+- Raw Recording Duration: [MM:SS] | Total Retakes & Tangents Cut: [MM:SS] | Final Clean Runtime: [MM:SS]
+
+### 2. Surgical Cut List (Execute in Text-Based Editor)
+| Cut ID | Raw Timestamp Range | Cut Classification (`RETAKE` / `FILLER` / `TANGENT`) | Exact Text to Delete | Time Saved |
+| :--- | :--- | :--- | :--- | :--- |
+
+### 3. Locked Timeline Assembly Map (Audio + Visual Cue Sync)
+| Clean Timestamp | Surviving Spoken Line (First & Last 5 Words) | Layer Visual Asset ID (`V01`–`V15`) | NLE Track Placement (`V2` / `V3` / `V4`) |
+| :--- | :--- | :--- | :--- |
+
+### 4. Pre-Marked 9:16 Vertical Extraction Timestamps
+- **Short #1 (Contrarian Hook):** `[MM:SS - MM:SS]`
+- **Short #2 (System Micro-Tutorial):** `[MM:SS - MM:SS]`
+- **Short #3 (Case Study Proof):** `[MM:SS - MM:SS]`"
+P34,AI Workflow Prompt,Freelance Editor / Virtual Assistant Delegation SOP & Revision Feedback Generator,Chapter 07,Stage 4: Batch Production,Post-Production Studio Operations Manager,"[DELEGATION_STAGE], [SPRINT_FOLDER_LINK_AND_ASSETS], [VISUAL_CUE_SHEET_P31], [EDITOR_DRAFT_NOTES_OR_ISSUES], [ID], [24 Hours / 12 Hours]","PROMPT ID: P34
+ROLE: Post-Production Studio Operations Manager
+CONTEXT: Whether I am handing off my weekly rough cut to a freelance video editor/VA or reviewing their first-draft render, vague creative feedback (""make it punchier"") causes endless revision loops. I need a deterministic Delegation Work Order & Timestamped Revision Protocol that gives an editor zero room for ambiguity.
+
+INPUT VARIABLES:
+- [DELEGATION_STAGE]: {Select: Stage A (Initial Handoff Brief for Rough Cut + Visuals) OR Stage B (Timestamped Revision Audit on Editor Draft v1)}
+- [SPRINT_FOLDER_LINK_AND_ASSETS]: {List files in 01_SCRIPT through 03_SCREEN-AND-DIAGRAMS}
+- [VISUAL_CUE_SHEET_P31]: {Paste output from Prompt P31}
+- [EDITOR_DRAFT_NOTES_OR_ISSUES]: {If Stage B, list raw timestamp notes of what looks/sounds wrong in Draft v1}
+
+EXECUTION STEPS:
+1. If Stage A (Initial Handoff Brief): Generate a strict, step-by-step NLE Assembly Work Order referencing the exact folder structure, the `-14.0 LUFS` audio chain requirement, the `V01`–`V15` visual cue placements, and the 90-second pattern-interrupt rules.
+2. Prohibition List: Explicitly forbid cartoon sound effects, generic stock footage, misspelled auto-captions, and unauthorized background music above `-28 dB`.
+3. If Stage B (Revision Audit): Convert raw creator notes into a surgical Timestamped Frame-Accurate Revision Table categorized by `AUDIO`, `VISUAL-CUE`, `TYPOGRAPHY`, or `PACING`, specifying the exact current defect and the exact corrective action required within a 12-hour turnaround SLA.
+
+QUALITY CONSTRAINTS:
+- Use objective, measurable technical parameters (LUFS, dB, hex codes `#0F172A`/`#4F46E5`/`#0D9488`, frame/second timestamps).
+- Zero emotional or ambiguous adjectives.
+
+OUTPUT TEMPLATE:
+### 1. Post-Production Work Order Header
+- Sprint ID: [ID] | Delivery SLA: [24 Hours / 12 Hours] | Required Export Specs: `1080p/4K MP4 (H.264, 25 Mbps)` + `WAV (-14 LUFS)` + `.SRT`
+
+### 2. Strict Studio Brand & Audio Guardrails (Non-Negotiable)
+- **Color Palette:** Primary `#0F172A`, Accent `#4F46E5`, Teal `#0D9488`, Warning `#D97706`, Text `#1E293B`.
+- **Forbidden Elements:** Zero stock video filler, zero comedic meme SFX, zero background music during dense technical formulas.
+
+### 3. Timestamped Execution / Revision Table
+| Item # | Exact Timestamp (`MM:SS`) | Layer (`A1` / `V2` / `V3` / `Captions`) | Current State / Asset Input | Exact Required Action | Verification Check |
+| :--- | :--- | :--- | :--- | :--- | :--- |"
+P35,AI Workflow Prompt,"Pre-Publish SEO Metadata, Timestamp Chapters & Funnel-Link QA Verifier",Chapter 07,Stage 4: Batch Production,Omnichannel Publishing Operations & Conversion Telemetry Auditor,"[FINAL_LOCKED_SRT_TRANSCRIPT], [CHOSEN_TITLE_AND_THUMBNAIL_TEXT], [LEAD_MAGNET_BASE_URL], [SPRINT_CAMPAIGN_SLUG], [QA_TELEMETRY_INPUTS], [platform], [format], [Keyword-Rich Hook Chapter Title], [Copy + Link], [X / 12], [Score]","PROMPT ID: P35
+ROLE: Omnichannel Publishing Operations & Conversion Telemetry Auditor
+CONTEXT: Before completing Block 4 (Thursday 30-minute QA & Schedule), I need to generate the complete search-optimized metadata package (YouTube/Podcast Description, Timestamp Chapters, High-Intent Tags, Pinned Comment CTA, and UTM Funnel Links) and verify my 16 weekly assets against the 12-Point Pre-Publish Quality Control Gate.
+
+INPUT VARIABLES:
+- [FINAL_LOCKED_SRT_TRANSCRIPT]: {Paste final timecoded transcript of the Pillar asset}
+- [CHOSEN_TITLE_AND_THUMBNAIL_TEXT]: {Paste winning Title + 3-word Thumbnail Hook from Ch 4}
+- [LEAD_MAGNET_BASE_URL]: {e.g., https://yourdomain.com/blueprint}
+- [SPRINT_CAMPAIGN_SLUG]: {e.g., wk07-batch-pipeline}
+- [QA_TELEMETRY_INPUTS]: {Report actual measured LUFS, True Peak dBTP, runtime, and visual reset count}
+
+EXECUTION STEPS:
+1. Generate the **First-160-Character Conversion & SEO Hook** for the video/podcast description, placing the primary keyword and the UTM-tagged Lead Magnet link above the ""Show More"" fold.
+2. Extract 6–10 **Algorithmic Timestamp Chapters** (`00:00` format) from [FINAL_LOCKED_SRT_TRANSCRIPT] using high-intent search phrasing (never generic labels like ""Introduction"" or ""Conclusion"").
+3. Build the **UTM Attribution Link Matrix** for all 6 platforms (YouTube Description, YouTube Pinned Comment, LinkedIn Comment/DM, X Thread Plug, Instagram/TikTok Bio/DM, and Newsletter Deep-Links) using `[LEAD_MAGNET_BASE_URL]?utm_source=[platform]&utm_medium=[format]&utm_campaign=[SPRINT_CAMPAIGN_SLUG]`.
+4. Audit [QA_TELEMETRY_INPUTS] against the **12-Point Pre-Publish Quality Control Matrix** (`QC-01` through `QC-12`) and calculate the weekly **Production Throughput Efficiency Score (PTES)**.
+
+QUALITY CONSTRAINTS:
+- Timestamp chapters must start at `00:00` and have at least 3 chapters separated by >= 60 seconds each.
+- Every UTM parameter must be lowercase, hyphen-separated, and URL-safe.
+
+OUTPUT TEMPLATE:
+### 1. Copy-Paste Description & Above-the-Fold CTA Block
+[Line 1: Primary Lead Magnet CTA + UTM Link Above Fold]
+[Line 2–3: 160-Character SEO Summary Paragraph]
+
+⏱️ CHAPTER TIMESTAMPS:
+00:00 - [Keyword-Rich Hook Chapter Title]
+...
+
+### 2. Omnichannel UTM Attribution Link Matrix
+| Platform & Placement | Exact Full UTM-Tagged URL | Short-Link / Trigger Keyword |
+| :--- | :--- | :--- |
+
+### 3. Pinned Comment & First-Comment Conversion Copy
+- **YouTube Pinned Comment:** [Copy + Link]
+- **LinkedIn / X First-Comment Plug:** [Copy + Link]
+
+### 4. 12-Point Pre-Publish QA Gate & PTES Sign-Off
+- **Passed Checks:** `[X / 12]` | **Calculated Weekly PTES:** `[Score] Assets/Hour` | **Release Status:** `[APPROVED / HOLD]`"
+P36,AI Workflow Prompt,60-Second High-Utility Lead Magnet Concept & Deliverable Architect,Chapter 08,Stage 4: Owned List Funnel,Direct-Response Product Architect & Conversion Funnel Engineer,"[NICHE_AND_TARGET_ICP], [CORE_PILLAR_TOPIC], [PAID_TIER_1_AND_TIER_2_OFFER], [DELIVERY_PLATFORM], [Title], [Markdown Table + Formula], [Exact Templates], [Exact Copy + Link Placement]","PROMPT ID: P36
+ROLE: Direct-Response Product Architect & Conversion Funnel Engineer
+CONTEXT: Generic PDF ebooks (""The Ultimate Guide to X"") convert poorly (<1.5%) and rarely get read. I need to design a 60-Second Immediate-Utility Lead Magnet Kit (combining an interactive diagnostic scorecard/calculator, a copy-paste prompt/template vault, and a 1-page visual cheat sheet) that solves an immediate operational bottleneck for my target audience and naturally bridges into my paid digital product.
+
+INPUT VARIABLES:
+- [NICHE_AND_TARGET_ICP]: {Paste your Chapter 2 ICP & Niche statement}
+- [CORE_PILLAR_TOPIC]: {Paste the weekly Pillar Video/Essay topic}
+- [PAID_TIER_1_AND_TIER_2_OFFER]: {Describe your $24 Starter Kit and $49–$99 Flagship OS Bundle}
+- [DELIVERY_PLATFORM]: {e.g., Notion Public Template + Google Sheets + 1-Page PDF}
+
+EXECUTION STEPS:
+1. Generate 3 High-Converting Lead Magnet Concepts representing distinct Immediate-Utility Archetypes (Archetype 1: Diagnostic Calculator/Spreadsheet, Archetype 2: Copy-Paste Prompt & SOP Vault, Archetype 3: Plug-and-Play Notion/Workspace System).
+2. Score each concept on the 4-Factor Lead Magnet Conversion Rubric (0–100 scale):
+   - 60-Second Utility Speed (30%)
+   - Pain-Point Specificity (25%)
+   - Perceived Dollar Value ($49+ feel) (25%)
+   - Seamless Bridge to [PAID_TIER_1_AND_TIER_2_OFFER] (20%)
+3. For the highest-scoring concept, build the complete Deliverable Contents Blueprint:
+   - Part A: The 5-Row Interactive Diagnostic Scorecard Table (with exact formulas and threshold benchmarks).
+   - Part B: 3 Ready-to-Use Copy-Paste Templates or Prompts included inside the free kit.
+   - Part C: The ""Solved Problem A -> Exposed Problem B"" Bridge Callout Box placed at the bottom of the free asset pointing to [PAID_TIER_1_AND_TIER_2_OFFER].
+
+QUALITY CONSTRAINTS:
+- The entire free kit must be consumable in under 60–180 seconds while delivering an undeniable tactical win.
+- Zero generic theoretical fluff or banned AI clichés.
+
+OUTPUT TEMPLATE:
+### 1. Lead Magnet Concept Matrix & Conversion Scoring
+| Concept # & Title | Utility Archetype | 60s Speed (30) | Specificity (25) | Value Feel (25) | Paid Offer Bridge (20) | Total Score (/100) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+### 2. Winning Lead Magnet Complete Asset Content (Copy-Paste Ready)
+- **Asset Title & Subtitle:** [Title]
+- **Part A: Interactive Diagnostic Scorecard Table:** [Markdown Table + Formula]
+- **Part B: Copy-Paste Quick-Start Templates:** [Exact Templates]
+- **Part C: Embedded Upgrade Bridge Callout:** [Exact Copy + Link Placement]"
+P37,AI Workflow Prompt,High-Converting Opt-In Landing Page Copy & Thank-You Bridge Builder (50%+ Opt-In Target),Chapter 08,Stage 4: Owned List Funnel,Conversion Rate Optimization (CRO) Copywriter & Funnel Architect,"[WINNING_LEAD_MAGNET_SPEC], [TARGET_ICP_PAIN_AND_METRIC], [SOCIAL_PROOF_ANCHOR], [TIER_1_FAST_TRACK_OFFER_AND_PRICE], [Copy], [Bullets], [Verbatim Script]","PROMPT ID: P37
+ROLE: Conversion Rate Optimization (CRO) Copywriter & Funnel Architect
+CONTEXT: I need the complete wireframe copy for a zero-distraction, 2-field Opt-In Bridge Page designed to convert 50% to 68% of social traffic, paired with an Instant Thank-You & Fast-Track Micro-Offer Bridge Page that converts 2.5% to 4.5% of new subscribers into my Tier 1 ($19–$24) Impulse Toolkit on Day 0.
+
+INPUT VARIABLES:
+- [WINNING_LEAD_MAGNET_SPEC]: {Paste winning Lead Magnet title and 3 components from Prompt P36}
+- [TARGET_ICP_PAIN_AND_METRIC]: {e.g., Spending 15 hours/week editing and cross-posting with <$1K/mo revenue}
+- [SOCIAL_PROOF_ANCHOR]: {e.g., Tested across 310 creator sprints / Used by 4,200+ operators}
+- [TIER_1_FAST_TRACK_OFFER_AND_PRICE]: {e.g., The Complete 10-Workbook & 50-Prompt Action Pack for $19 (normally $39)}
+
+EXECUTION STEPS:
+1. Write Page 1: The 2-Field Frictionless Opt-In Bridge Page (Above-the-Fold Only):
+   - Eyebrow Authority Pill (<= 8 words).
+   - High-Contrast H1 Headline + H2 Subheadline (Quantified Outcome + Timeframe + Risk Removal).
+   - 3 Ultra-Specific Fascination Bullets (What they get inside Part A, Part B, and Part C in under 14 words per bullet).
+   - High-Converting CTA Button Copy (First-person action verb) + Micro-Trust Privacy Line.
+2. Write Page 2: The Instant Thank-You & Fast-Track Offer Bridge Page:
+   - Confirmation Banner (Setting 60-second inbox expectation + whitelisting instruction).
+   - 90-Second Video / Written Bridge Script (""How to get your first result in 60 seconds + how to skip the manual setup..."").
+   - The Fast-Track Offer Stack Box presenting [TIER_1_FAST_TRACK_OFFER_AND_PRICE] with a 1-click checkout button.
+
+QUALITY CONSTRAINTS:
+- Zero navigation links, zero vague promises (""Sign up for updates""), and zero banned words.
+
+OUTPUT TEMPLATE:
+### 1. Opt-In Bridge Page Wireframe Copy (`yourdomain.com/kit`)
+- **Eyebrow Badge:** [Copy]
+- **H1 Headline:** [Copy]
+- **H2 Subheadline:** [Copy]
+- **3 Quantified Value Bullets:** [Bullets]
+- **CTA Button & Micro-Trust Line:** [Copy]
+
+### 2. Thank-You & Fast-Track Bridge Page Copy (`yourdomain.com/kit-thank-you`)
+- **Top Status Bar:** [Copy]
+- **90-Second Bridge Script:** [Verbatim Script]
+- **Tier 1 Fast-Track Offer Box & CTA:** [Copy]"
+P38,AI Workflow Prompt,Complete 5-Email Automated Welcome & Segmentation Sequence Writer,Chapter 08,Stage 4: Owned List Funnel,Behavioral Email Marketing Architect & Solopreneur Ghostwriter,"[VOICE_DNA_PROFILE], [LEAD_MAGNET_TITLE_AND_ACCESS_URL], [3_SEGMENTATION_POLL_OPTIONS], [CASE_STUDY_PROOF_METRICS], [CORE_PAID_OFFER_STACK_AND_URL], [FAST_ACTION_WELCOME_BONUS]","PROMPT ID: P38
+ROLE: Behavioral Email Marketing Architect & Solopreneur Ghostwriter
+CONTEXT: Every new subscriber who claims my Lead Magnet must enter a 5-Email Automated Welcome Sequence (The E.N.G.A.G.E. Funnel: Minute 0, Hour 24, Hour 48, Hour 72, Hour 96). This sequence must deliver immediate tactical utility, segment the subscriber via a 1-click poll in Email 1, build deep practitioner trust in my calibrated Voice DNA, and convert 3.5%–6.5% of subscribers into my Core Paid Toolkit ($24–$99).
+
+INPUT VARIABLES:
+- [VOICE_DNA_PROFILE]: {Paste your Chapter 5 Voice DNA parameters}
+- [LEAD_MAGNET_TITLE_AND_ACCESS_URL]: {Name + Direct URL of free kit}
+- [3_SEGMENTATION_POLL_OPTIONS]: {1. Track A: Beginner, 2. Track B: Time-Starved Operator, 3. Track C: Scaling Revenue}
+- [CASE_STUDY_PROOF_METRICS]: {Before vs. After transformation numbers from your niche}
+- [CORE_PAID_OFFER_STACK_AND_URL]: {Full description, price, and checkout URL of your Tier 1 / Tier 2 product}
+- [FAST_ACTION_WELCOME_BONUS]: {Bonus asset activated if they join within the 96-hour welcome window}
+
+EXECUTION STEPS:
+1. Write all 5 complete, copy-pasteable emails (300–500 words each) following the exact E.N.G.A.G.E. schedule:
+   - **Email 1 (Minute 0 — Execute & Segment):** Direct asset download button + 60-second quick-start step + 3-Option 1-Click Self-Segmentation Poll.
+   - **Email 2 (Hour 24 — Neutralize the Status-Quo Myth):** Walk through a 3-minute tactical win using the free kit, demolish the #1 industry myth, and ask for a 1-word reply (""DONE"") to boost inbox deliverability.
+   - **Email 3 (Hour 48 — Grounded Case Proof & Diagnosis):** Break down [CASE_STUDY_PROOF_METRICS], diagnose the deeper structural bottleneck, and introduce a soft bridge link to [CORE_PAID_OFFER_STACK_AND_URL].
+   - **Email 4 (Hour 72 — Architectural Bridge to Core Offer):** Present the full system blueprint and show the exact ROI math of upgrading to [CORE_PAID_OFFER_STACK_AND_URL].
+   - **Email 5 (Hour 96 — Guarantee, FAQ & Welcome Bonus Close):** Answer the top 3 buyer objections, highlight [FAST_ACTION_WELCOME_BONUS], and provide a final invitation before graduating to the weekly newsletter.
+2. Provide 2 A/B Subject Lines (`<= 42 chars`) and Preview Text (`<= 85 chars`) for each of the 5 emails.
+
+QUALITY CONSTRAINTS:
+- Strictly adhere to [VOICE_DNA_PROFILE] (short paragraphs, concrete numbers, zero banned AI words).
+- Never use fake scarcity lies; frame the 96-hour welcome bonus transparently.
+
+OUTPUT TEMPLATE:
+### Automated 5-Email E.N.G.A.G.E. Sequence (`Emails 1` to `5`)
+*(Output each email with: Delay Timing | Automation Tag Rules | Subject Line A & B | Preview Text | Full Verbatim Email Body | CTA Link Placement)*"
+P39,AI Workflow Prompt,Weekly Authority Newsletter Issue Compiler (The 3-2-1 Tactical Digest Format),Chapter 08,Stage 4: Owned List Funnel,Flagship B2B Newsletter Editor-in-Chief,"[WEEKLY_PILLAR_SCRIPT_OR_TRANSCRIPT], [VOICE_DNA_PROFILE], [WEEKLY_YOUTUBE_OR_PODCAST_URL], [PAID_PRODUCT_OR_SPONSOR_SLOT_COPY]","PROMPT ID: P39
+ROLE: Flagship B2B Newsletter Editor-in-Chief
+CONTEXT: Once subscribers finish the 5-day welcome sequence, they receive my Weekly Authority Newsletter every Thursday. To maintain a 46%+ open rate and 4.5%+ click rate while drafting in under 25 minutes, I use the structured ""1-2-3 Tactical Authority Digest"" format derived from my weekly Pillar Script.
+
+INPUT VARIABLES:
+- [WEEKLY_PILLAR_SCRIPT_OR_TRANSCRIPT]: {Paste this week's Chapter 5 Pillar Script}
+- [VOICE_DNA_PROFILE]: {Paste Voice DNA parameters}
+- [WEEKLY_YOUTUBE_OR_PODCAST_URL]: {URL to this week's long-form episode}
+- [PAID_PRODUCT_OR_SPONSOR_SLOT_COPY]: {Details of your paid toolkit or this week's sponsor partner}
+
+EXECUTION STEPS:
+1. Generate 3 high-curiosity Subject Lines (`<= 44 characters`, lowercase/sentence-case practitioner style) and 2 Preview Text options.
+2. Draft the **Above-the-Fold 30-Second Executive Summary Box** (stating reading time, the core problem solved today, and a native 2-sentence Sponsor/Toolkit callout with UTM link).
+3. Draft **Part 1: The 1 Deep-Dive System Breakdown (`800–1,100 words`)** — Distill the core framework, mathematical formula, and implementation table from [WEEKLY_PILLAR_SCRIPT_OR_TRANSCRIPT] for rapid F-pattern mobile reading.
+4. Draft **Part 2: The 2 Copy-Paste Tactical Assets (`200 words`)** — Extract 1 copy-paste AI prompt/template and 1 counterintuitive diagnostic rule from the pillar.
+5. Draft **Part 3: The 3 Action Bridges (`100 words`)** — Formatted as ""Whenever you're ready, here are 3 ways to go deeper this week:"" (1. Watch the full video walkthrough, 2. Grab the self-serve Operating System Toolkit, 3. Book/Apply for B2B implementation).
+
+QUALITY CONSTRAINTS:
+- Maximum 3 sentences per paragraph; bold subheaders every 200–250 words.
+- Zero banned words or generic throat-clearing introductions.
+
+OUTPUT TEMPLATE:
+### 1. Subject Line & Preview Text Matrix
+### 2. Complete Copy-Paste Weekly Authority Newsletter Issue (Markdown)"
+P40,AI Workflow Prompt,90-Day Cold Subscriber Re-Engagement & List Deliverability Hygiene Engine,Chapter 08,Stage 4: Owned List Funnel,Email Deliverability Engineer & List Hygiene Strategist,"[NEWSLETTER_NAME_AND_NICHE], [RE_ENGAGEMENT_BONUS_GIFT_URL], [ONE_CLICK_KEEP_SUBSCRIBED_LINK], [First Name]","PROMPT ID: P40
+ROLE: Email Deliverability Engineer & List Hygiene Strategist
+CONTEXT: Unengaged subscribers who haven't opened an email in 90 days damage my domain sender reputation with Gmail and Yahoo, dragging down inbox placement for my active buyers. I need a 2-Email Automated Sunset & Re-Engagement Sequence that wakes up dormant subscribers with a high-value gift and cleanly unsubscribes unresponsive ghosts after 5 days.
+
+INPUT VARIABLES:
+- [NEWSLETTER_NAME_AND_NICHE]: {e.g., The Solopreneur OS Briefing}
+- [RE_ENGAGEMENT_BONUS_GIFT_URL]: {e.g., Direct link to a new 5-Prompt Cheat Sheet or Calculator update}
+- [ONE_CLICK_KEEP_SUBSCRIBED_LINK]: {ESP trigger link that applies tag `STATUS_REENGAGED` and removes from purge queue}
+
+EXECUTION STEPS:
+1. Define the exact ESP Dynamic Segment Filter rules to isolate 90-day cold subscribers without accidentally flagging brand-new opt-ins.
+2. Write **Sunset Email 1 (Day 90 — The High-Value Check-In & Bonus Gift):**
+   - Low-friction personal subject line (`""Quick question about [First Name]'s inbox...""`).
+   - Acknowledge inbox overload with zero guilt-tripping.
+   - Offer [RE_ENGAGEMENT_BONUS_GIFT_URL] + prominent [ONE_CLICK_KEEP_SUBSCRIBED_LINK] to stay on the active list.
+3. Write **Sunset Email 2 (Day 93 — The Final 48-Hour Unsubscribe Notice):**
+   - Clear, respectful notice that their email will be removed from the active list in 48 hours unless they click [ONE_CLICK_KEEP_SUBSCRIBED_LINK].
+   - Include a 1-click feedback poll (""If you're leaving, what changed? 1. Too busy, 2. Pivoted niches, 3. Prefer YouTube only"").
+
+QUALITY CONSTRAINTS:
+- Tone must be respectful, peer-to-peer, and zero-drama.
+
+OUTPUT TEMPLATE:
+### 1. ESP Segment Filter & Automation Tag Logic
+### 2. Verbatim Sunset Email 1 (Day 90)
+### 3. Verbatim Sunset Email 2 (Day 93 + Day 95 Auto-Purge Rule)"
+P41,AI Workflow Prompt,4-Tier Digital Product Value Ladder & Bundle Packaging Architect,Chapter 09,Stage 5: Digital Products,Chief Digital Product Strategist & Pricing Economist,"[NICHE_AND_CORE_TRANSFORMATION], [10_STEP_METHODOLOGY_OR_CHAPTERS], [TOOLS_AND_TEMPLATES_AVAILABLE], [TARGET_PRICE_ANCHORS]","PROMPT ID: P41
+ROLE: Chief Digital Product Strategist & Pricing Economist
+CONTEXT: Instead of spending months recording a bloated $299 video course that few people finish, I want to package my practitioner methodology into a high-margin 4-Tier Creator Value Ladder (Tier 0 Free Kit -> Tier 1 $24 Impulse Action Toolkit -> Tier 2 $49–$79 Flagship Operating System Bundle -> Tier 3 $49/yr Recurring Vault Membership) where I build the core system once and slice it across tiers.
+
+INPUT VARIABLES:
+- [NICHE_AND_CORE_TRANSFORMATION]: {Paste your Chapter 2 Niche & Quantified Outcome}
+- [10_STEP_METHODOLOGY_OR_CHAPTERS]: {List the 8–10 core modules/steps of your system}
+- [TOOLS_AND_TEMPLATES_AVAILABLE]: {e.g., Notion databases, Excel calculators, AI prompt packs, n8n/Make JSON blueprints, checklists}
+- [TARGET_PRICE_ANCHORS]: {Default: Tier 0 = $0, Tier 1 = $24, Tier 2 = $49–$79, Tier 3 = $49/yr, Tier 4 Agency = $199–$499}
+
+EXECUTION STEPS:
+1. Design the complete 4-Tier (plus Optional Tier 4 Agency) Value Ladder Matrix, specifying the exact deliverables, target buyer persona, and psychological friction point solved at each tier.
+2. Engineer the **Tier 1 vs. Tier 2 Decoy/Anchor Value Split**: Show how Tier 1 ($24) delivers the foundational Manual + Worksheets, while Tier 2 ($49–$79) adds the ""Done-For-You Execution Multipliers"" (Interactive Calculators, Notion OS, Spreadsheets, and Automation Blueprints) so 70%+ of buyers choose Tier 2.
+3. Assign a realistic standalone ""Component Value Anchor"" ($ value) to each sub-asset in Tier 2 so the total stacked value exceeds $450+ against a $49–$79 sticker price.
+4. Define the **Tier 3 Recurring Vault Drop Cadence** ($9/mo or $49/yr) so monthly fulfillment takes the creator less than 45 minutes per month.
+
+QUALITY CONSTRAINTS:
+- Focus 100% on ""Speed-to-Outcome"" execution assets (templates, calculators, prompts, SOPs)—never suggest bloated 30-hour talking-head video filler.
+- Zero banned AI clichés or vague descriptions.
+
+OUTPUT TEMPLATE:
+### 1. The 4-Tier Creator Value Ladder Master Matrix
+| Tier ID & Name | Price Point | Target Buyer Profile | Included Deliverable Stack | Standalone Value Anchor | Primary Funnel Trigger |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+
+### 2. Tier 2 Flagship Operating System Component Breakdown (10-Item Value Stack)
+### 3. Tier 3 Recurring Vault 45-Minute Monthly Fulfillment SOP"
+P42,AI Workflow Prompt,48-Hour Pre-Sale Validation & Founding-Member Waitlist Pitch Builder,Chapter 09,Stage 5: Digital Products,Lean Product Validation Architect & Direct-Response Copywriter,"[FLAGSHIP_PRODUCT_TITLE_AND_STACK], [RETAIL_PRICE_VS_FOUNDING_PRICE], [GUARANTEED_DELIVERY_DATE], [VOICE_DNA_PROFILE]","PROMPT ID: P42
+ROLE: Lean Product Validation Architect & Direct-Response Copywriter
+CONTEXT: Before I spend 20+ hours building the complete Tier 2 Flagship Operating System Bundle, I must pass the 48-Hour Validate-Before-You-Build Gate (>= 15 paid Founding-Member pre-orders at a 40% pre-release discount). I need 2 high-converting validation emails and 1 social validation post that sell the Founding-Member Pass using only my Product Architecture Spec and Chapter 1 Vertical Slice.
+
+INPUT VARIABLES:
+- [FLAGSHIP_PRODUCT_TITLE_AND_STACK]: {Paste Tier 2 Flagship OS spec from Prompt P41}
+- [RETAIL_PRICE_VS_FOUNDING_PRICE]: {e.g., $49 Retail -> $29 Founding-Member Pre-Sale for 48 hours / 50 spots}
+- [GUARANTEED_DELIVERY_DATE]: {e.g., Full v1.0 release in 14 days + instant access to Chapter 1 & Calculator Tab 1 today}
+- [VOICE_DNA_PROFILE]: {Paste your Chapter 5 Voice DNA rules}
+
+EXECUTION STEPS:
+1. Write **Validation Email 1 (Hour 0 — The ""Behind-the-Scenes Build & Founding-Member Invite"")**:
+   - Explain the exact operational problem you noticed across your audience and show the complete 10-part architecture you are finalizing.
+   - Offer 50 Founding-Member Passes at [RETAIL_PRICE_VS_FOUNDING_PRICE], giving instant access to the Chapter 1 Vertical Slice + Calculator Tab 1 today and the complete OS on [GUARANTEED_DELIVERY_DATE].
+2. Write **Validation Email 2 (Hour 36 — The 12-Hour Founding Window Close & FAQ)**:
+   - Share initial founding-member momentum, answer the top 3 questions about what is included, and close the pre-sale discount at Hour 48.
+3. Write **1 Native LinkedIn / X Validation Post** showing a screenshot of the architecture mindmap + calculator and routing replies to the founding pre-order page.
+4. Write the **1-Question Non-Buyer Feedback Survey** to trigger if pre-orders fall short of 15.
+
+QUALITY CONSTRAINTS:
+- Be 100% transparent that this is a Founding-Member Pre-Release with a locked delivery date in 14 days.
+- Zero fake hype or banned words.
+
+OUTPUT TEMPLATE:
+### 1. Founding-Member Checkout Page Summary Box (150 Words)
+### 2. Verbatim Validation Email 1 (Hour 0)
+### 3. Verbatim Validation Email 2 (Hour 36)
+### 4. Social Validation Post & Non-Buyer Diagnostic Poll"
+P43,AI Workflow Prompt,High-Converting Gumroad / Sales Page Copywriter (Problem-Mechanism-Proof-Stack Architecture),Chapter 09,Stage 5: Digital Products,Master Direct-Response Conversion Copywriter,"[PRODUCT_TITLE_AND_SUBTITLE], [4_TIER_PRICING_AND_STACK], [3_PRACTITIONER_CASE_STUDIES], [RISK_REVERSAL_GUARANTEE], [MOST POPULAR]","PROMPT ID: P43
+ROLE: Master Direct-Response Conversion Copywriter
+CONTEXT: My product passed the 48-hour validation gate. Now I need the complete, copy-pasteable Sales Page copy (formatted for Gumroad, Lemon Squeezy, Stan Store, or a custom web page) engineered around the 7-Block Problem-Mechanism-Proof-Stack (P.M.P.S.) architecture to convert 3.5%–6.0% of landing page visitors.
+
+INPUT VARIABLES:
+- [PRODUCT_TITLE_AND_SUBTITLE]: {Full title & subtitle of your Operating System}
+- [4_TIER_PRICING_AND_STACK]: {Paste output from Prompt P41}
+- [3_PRACTITIONER_CASE_STUDIES]: {Summarize 2–3 Before/After case studies with concrete metrics}
+- [RISK_REVERSAL_GUARANTEE]: {e.g., 30-Day 100% No-Questions-Asked Implementation Guarantee}
+
+EXECUTION STEPS:
+1. Draft **Block 1: Above-the-Fold Hero Section** (Eyebrow proof badge, H1 Outcome Headline, H2 Mechanism Subheadline, 5-Bullet Quick Summary, and Primary CTA).
+2. Draft **Block 2: The Cost-of-Inaction & ""Old Way vs. New System"" Comparison Table** (Quantifying the exact weekly hours and revenue lost without a system).
+3. Draft **Block 3: The Proprietary 5-Stage Mechanism Walkthrough** (Explaining why this Operating System succeeds where 30-hour video courses fail).
+4. Draft **Block 4: The Visual Component-by-Component Value Stack** (Detailing every Chapter, Workbook, Prompt Vault, Excel Calculator, Notion Database, and Web Tool with individual dollar value anchors).
+5. Draft **Block 5: Verified Case Study Proof Cards** (Formatting [3_PRACTITIONER_CASE_STUDIES] with Before/After deltas).
+6. Draft **Block 6: Side-by-Side Tier Comparison Table** (Tier 1 `$24` vs. Tier 2 `$49–$79 [MOST POPULAR]` vs. Tier 3/4 `$199`).
+7. Draft **Block 7: [RISK_REVERSAL_GUARANTEE] & 6 Objection-Crushing FAQs**.
+
+QUALITY CONSTRAINTS:
+- Use high-contrast Markdown formatting (tables, bold callouts, bullet checklists) so skimmers can read the page in 90 seconds.
+- Zero banned AI words or unsubstantiated income claims.
+
+OUTPUT TEMPLATE:
+### Complete 7-Block P.M.P.S. Sales Page Copy (Ready for Gumroad / Lemon Squeezy / Web)"
+P44,AI Workflow Prompt,Checkout Order Bump & One-Click Post-Purchase Upsell Offer Designer,Chapter 09,Stage 5: Digital Products,E-Commerce Checkout Economist & AOV Optimization Engineer,"[CORE_PRODUCT_AND_PRICE], [ORDER_BUMP_ASSET_CONCEPT], [POST_PURCHASE_UPSELL_CONCEPT], [Specific Speed/Template Shortcut], [Price]","PROMPT ID: P44
+ROLE: E-Commerce Checkout Economist & AOV Optimization Engineer
+CONTEXT: To expand my Effective Average Order Value (AOV_effective = P_core + P_bump*C_bump + P_upsell*C_upsell) by 45%+, I need to configure a 1-Click Order Bump ($15–$19) on my checkout screen (targeting a 30%+ take rate) and a 1-Click Post-Purchase Upsell ($49/yr Vault Pass or Tier 3 Pro Upgrade, targeting a 15%+ take rate).
+
+INPUT VARIABLES:
+- [CORE_PRODUCT_AND_PRICE]: {e.g., Tier 2 Flagship Creator OS Bundle at $49}
+- [ORDER_BUMP_ASSET_CONCEPT]: {e.g., The 12 Emergency Sponsor Negotiation Scripts + Audio Read-Along Pack for $15}
+- [POST_PURCHASE_UPSELL_CONCEPT]: {e.g., The Annual Creator Vault Pass ($49/yr) delivering monthly outlier briefs & prompt drops}
+
+EXECUTION STEPS:
+1. Write **3 High-Converting Checkout Order Bump Variants (`<= 45 words` each)** following the strict formula:
+   - Checkbox Headline (`YES! Add [Specific Speed/Template Shortcut] for Just $[Price] — Save [X]%`)
+   - 2-Sentence Tactical Utility Explanation (How it saves time on Day 1 without adding homework).
+2. Write the **One-Click Post-Purchase Upsell Interstitial Page (`250–350 words`)**:
+   - Interrupt Banner (`""WAIT — Your Order Is Complete! Before You Open Your Download Folder...""`)
+   - The ""Next Logical Bottleneck"" Bridge (Why ongoing monthly outlier data & fresh prompts keep their system compounding all year).
+   - Bullet stack of what drops every month inside [POST_PURCHASE_UPSELL_CONCEPT].
+   - Dual CTA Buttons: Primary (`""Yes! Upgrade My Order with 1 Click ($49/yr)""`) and Secondary (`""No thanks, take me to my downloads""`).
+3. Calculate the projected AOV_effective Table across Conservative (`20% bump / 10% upsell`), Target (`32% bump / 15% upsell`), and Stretch (`40% bump / 20% upsell`) scenarios.
+
+QUALITY CONSTRAINTS:
+- Order bump copy must strictly be `<= 45 words` so it fits cleanly inside mobile checkout boxes.
+
+OUTPUT TEMPLATE:
+### 1. Checkout Order Bump Copy Variants (3x `<= 45-Word` Boxes)
+### 2. Post-Purchase 1-Click Upsell Page Copy
+### 3. Projected AOV_effective & Revenue Lift Matrix"
+P45,AI Workflow Prompt,14-Day Multi-Channel Product Launch Sequence (Social Warm-Up + 6 Launch Emails),Chapter 09,Stage 5: Digital Products,Executive Launch Director & Behavioral Email Copywriter,"[PRODUCT_NAME_AND_SALES_PAGE_URL], [TIER_PRICING_AND_EARLY_BIRD_BONUS], [CASE_STUDY_AND_PROOF_NUMBERS], [LAUNCH_CLOSE_DEADLINE], [VOICE_DNA_PROFILE]","PROMPT ID: P45
+ROLE: Executive Launch Director & Behavioral Email Copywriter
+CONTEXT: I am running a 14-Day Multi-Channel Launch Sprint for my 4-Tier Digital Product Value Ladder (Days 1–7 Social & Newsletter Pre-Launch Warm-Up + Days 8–14 Cart-Open 6-Email Sequence). I need the synchronized day-by-day execution calendar and all 6 complete launch emails.
+
+INPUT VARIABLES:
+- [PRODUCT_NAME_AND_SALES_PAGE_URL]: {Title + URL}
+- [TIER_PRICING_AND_EARLY_BIRD_BONUS]: {e.g., $24 Tier 1 / $49 Tier 2 + Free 72-Hour Early-Bird Bonus Pack}
+- [CASE_STUDY_AND_PROOF_NUMBERS]: {Before vs. After transformation stats}
+- [LAUNCH_CLOSE_DEADLINE]: {e.g., Sunday Day 14 at 11:59 PM EST}
+- [VOICE_DNA_PROFILE]: {Paste Voice DNA rules}
+
+EXECUTION STEPS:
+1. Build the **Days 1–7 Pre-Launch Omnichannel Warm-Up Schedule** (mapping 1 Pillar Video + 5 High-Signal Social Posts + Thursday Pre-Launch Newsletter that agitate the problem and drive waitlist/lead-magnet opt-ins).
+2. Write the complete **6 Launch Emails (Days 8 to 14 — 350 to 500 words each)**:
+   - **Launch Email 1 (Day 8 Morning — Cart Open + 72h Early-Bird Bonus):** Direct announcement, full value stack, and link.
+   - **Launch Email 2 (Day 9 — Inside the System Walkthrough):** Visual tour of the calculators, workbooks, and prompts in action.
+   - **Launch Email 3 (Day 10 Evening — Early-Bird Bonus Expiring in 4 Hours):** Urgency trigger for fence-sitters who want the fast-action bonus.
+   - **Launch Email 4 (Day 12 — Case Study Proof & 90-Minute ROI Math):** Deep breakdown of [CASE_STUDY_AND_PROOF_NUMBERS].
+   - **Launch Email 5 (Day 13 — Honest FAQ & Who Should NOT Buy This):** Polarizing trust-builder that disqualifies lazy buyers and reassures action-takers.
+   - **Launch Email 6 (Day 14 Evening — Final 6-Hour Cart/Discount Close):** Clean, high-clarity final call before [LAUNCH_CLOSE_DEADLINE].
+
+QUALITY CONSTRAINTS:
+- Include ESP exclusion tags (`Exclude: STATUS_CUSTOMER`) on all 6 emails so buyers are never spammed after purchasing.
+- Zero sleazy hype or banned words.
+
+OUTPUT TEMPLATE:
+### 1. Days 1–7 Pre-Launch Social & Content Warm-Up Grid
+### 2. Verbatim 6-Email Cart-Open to Cart-Close Sequence (`Launch Emails 1` to `6`)"
+P46,AI Workflow Prompt,High-Fit Sponsor Prospecting & Brand Alignment Dossier Builder,Chapter 10,Stage 5: Sponsorships & CEO,B2B Media Partnerships Director & Sponsorship Strategist,"[NICHE_AND_ICP_PROFILE], [UPCOMING_4_PILLAR_TOPICS], [TOOLS_CURRENTLY_IN_MY_STACK], [ADJACENT_NEWSLETTERS_OR_CHANNELS], [ICP]","PROMPT ID: P46
+ROLE: B2B Media Partnerships Director & Sponsorship Strategist
+CONTEXT: Instead of waiting passively for low-ball inbound agency emails, I want to build a targeted Outbound Sponsor Radar of 25–50 high-LTV B2B SaaS, AI, FinTech, and Prosumer brands whose products naturally fit inside my weekly tutorials and newsletters.
+
+INPUT VARIABLES:
+- [NICHE_AND_ICP_PROFILE]: {Paste your Chapter 2 Niche, Audience Job Titles, and Purchasing Power}
+- [UPCOMING_4_PILLAR_TOPICS]: {List your next 4 validated outlier video/newsletter topics}
+- [TOOLS_CURRENTLY_IN_MY_STACK]: {List software/tools you already show on screen}
+- [ADJACENT_NEWSLETTERS_OR_CHANNELS]: {List 3–5 peer newsletters or channels in your space}
+
+EXECUTION STEPS:
+1. Identify 15 High-Fit Sponsor Categories & Specific Brand Archetypes that have high Customer Lifetime Value ($500–$5,000+ ACV) and actively sponsor creator media in [NICHE_AND_ICP_PROFILE].
+2. Map each of my [UPCOMING_4_PILLAR_TOPICS] to 3 specific sponsor categories, writing a concrete **60-Second Live Screen-Demo Integration Concept** for each (showing how the sponsor's tool solves a real step in that tutorial).
+3. Define the exact Decision-Maker Job Titles to target on LinkedIn/Email (`Head of Growth`, `Partner Marketing Manager`, `DevRel Lead`, `VP Marketing`) and a 3-point Pre-Pitch Qualification Checklist.
+
+QUALITY CONSTRAINTS:
+- Focus strictly on high-margin software, B2B services, and prosumer tools—never suggest low-CPM consumer gaming or sketchy affiliate schemes.
+- Zero banned AI clichés.
+
+OUTPUT TEMPLATE:
+### 1. High-LTV Sponsor Category & Brand Target Matrix (15 Targets)
+| Target Category | Example Brands / Tool Type | Estimated Brand ACV | Exact Decision-Maker Title | Why They Buy Access to [ICP] |
+| :--- | :--- | :--- | :--- | :--- |
+
+### 2. Upcoming 4-Topic Live-Demo Integration Mapping
+| Upcoming Pillar Topic | Matched Sponsor Category | 60-Second Live Workspace Demo Concept | Custom Lead-Magnet / Free-Trial Hook |
+| :--- | :--- | :--- | :--- |"
+P47,AI Workflow Prompt,Cold Outbound Sponsor Pitch & 3-Tier Omnichannel Package Proposal Generator,Chapter 10,Stage 5: Sponsorships & CEO,Executive Media Sales Copywriter & Pricing Architect,"[TARGET_BRAND_AND_PRODUCT], [UPCOMING_PILLAR_TOPIC_AND_DATE], [AUDIENCE_METRICS_AND_ICP], [CALCULATED_BASE_AND_BUNDLE_RATES], [MOST POPULAR]","PROMPT ID: P47
+ROLE: Executive Media Sales Copywriter & Pricing Architect
+CONTEXT: I am executing my Friday 10-minute outbound habit (sending 5 direct-to-brand sponsor pitches) and need both the concise 4-Sentence Cold Outbound Pitch Email/DM and the 1-Page 3-Tier Omnichannel Partnership Proposal (calculated using the R_sponsor formula) to send as soon as they reply.
+
+INPUT VARIABLES:
+- [TARGET_BRAND_AND_PRODUCT]: {Name of brand + specific feature}
+- [UPCOMING_PILLAR_TOPIC_AND_DATE]: {Title of upcoming tutorial + publish window}
+- [AUDIENCE_METRICS_AND_ICP]: {e.g., 11,200 YT subs, 4,100 Newsletter readers (54% open rate), 18,000 LI followers — B2B Founders & Operators}
+- [CALCULATED_BASE_AND_BUNDLE_RATES]: {e.g., Option 1 Test: $1,250 | Option 2 Omnichannel Bundle: $2,650 | Option 3 90-Day Partner: $6,900}
+
+EXECUTION STEPS:
+1. Write **2 Variants of the 110-Word Cold Outbound Email + 1 LinkedIn DM Variant** using the 4-Sentence Practitioner Pitch structure:
+   - Sentence 1: Specific observation of their product or recent sponsorship.
+   - Sentence 2: Quantified audience authority & ICP buyer quality.
+   - Sentence 3: Custom 60-second live screen-demo concept inside [UPCOMING_PILLAR_TOPIC_AND_DATE].
+   - Sentence 4: Zero-pressure ask to send the 1-page Q3/Q4 Partner Options sheet.
+2. Generate the **1-Page 3-Tier Omnichannel Partnership Proposal** (ready to paste into an email reply or 1-page Notion/PDF brief):
+   - **Option 1: Single-Sprint Test Package** (1 YT 60s Live Demo + 1 Newsletter Slot + Pinned UTM Link).
+   - **Option 2: Omnichannel Outcome Bundle [MOST POPULAR]** (2 YT Mid-Rolls + 2 Dedicated Newsletters + 1 LinkedIn Native Carousel/Post + 30-Day Paid Usage Rights).
+   - **Option 3: 90-Day Category Exclusivity Retainer** (Quarterly multi-asset domination + 90-Day Usage Rights + Category Lock).
+3. Include clear contractual terms footer (`Net-15 payment`, `1 round of factual bullet approval`, `+30%/mo for additional paid ad whitelisting`).
+
+QUALITY CONSTRAINTS:
+- Keep the initial cold email strictly under 120 words with zero attachments (links/attachments in cold email trigger spam filters).
+- Zero begging language; position as a peer B2B media partner.
+
+OUTPUT TEMPLATE:
+### 1. Cold Outbound Pitch Emails (Variants A & B) + LinkedIn DM
+### 2. Follow-Up Bump Email (Sent 4 Business Days Later)
+### 3. The 1-Page 3-Tier Omnichannel Partnership Proposal"
+P48,AI Workflow Prompt,High-Retention 60-Second Native Mid-Roll Sponsor Read Scriptwriter,Chapter 10,Stage 5: Sponsorships & CEO,High-Retention Video Producer & Direct-Response Ad Scriptwriter,"[TUTORIAL_STEP_1_JUST_TAUGHT], [TUTORIAL_STEP_2_COMING_NEXT], [SPONSOR_NAME_AND_CORE_FEATURE], [SPONSOR_OFFER_AND_SHORT_URL], [MANDATORY_BRAND_TALKING_POINTS], [SCREEN-DEMO CUE], [SCREEN-DEMO], [GRAPHIC]","PROMPT ID: P48
+ROLE: High-Retention Video Producer & Direct-Response Ad Scriptwriter
+CONTEXT: Standard sponsor reads (""This video is sponsored by..."") cause 45%+ viewer drop-off and <0.5% CTR. I need a 60-second (150-word) Native Mid-Roll Integration Script placed right after Step 1's micro-payoff (at minute 03:30–04:30) that demonstrates the sponsor's tool live on screen as part of the tutorial workflow.
+
+INPUT VARIABLES:
+- [TUTORIAL_STEP_1_JUST_TAUGHT]: {What step did the viewer just learn before the ad read?}
+- [TUTORIAL_STEP_2_COMING_NEXT]: {What step comes immediately after the 60s read?}
+- [SPONSOR_NAME_AND_CORE_FEATURE]: {Brand name + the exact workflow feature to demo on screen}
+- [SPONSOR_OFFER_AND_SHORT_URL]: {e.g., Free template pack + 20% off at yourdomain.com/brand}
+- [MANDATORY_BRAND_TALKING_POINTS]: {Paste the 2–3 factual points required by the sponsor brief}
+
+EXECUTION STEPS:
+1. Draft the verbatim 60-second (`145–160 words` at 155 WPM) mid-roll script across the **4-Beat Native Integration Architecture**:
+   - **Beat 1 (00:00–00:12 | 30 words — The Friction Bridge):** Pivot from [TUTORIAL_STEP_1_JUST_TAUGHT] into the manual bottleneck without announcing ""Here is an ad.""
+   - **Beat 2 (00:12–00:38 | 65 words — Live Workspace Screen Demo):** Script exact `[SCREEN-DEMO CUE]` actions showing [SPONSOR_NAME_AND_CORE_FEATURE] solving the task in real time while weaving in [MANDATORY_BRAND_TALKING_POINTS].
+   - **Beat 3 (00:38–00:52 | 35 words — Quantified Outcome & Custom URL Callout):** Direct viewers to [SPONSOR_OFFER_AND_SHORT_URL] in Line 1 of the description and pinned comment with an on-screen visual badge.
+   - **Beat 4 (00:52–01:00 | 20 words — Instant Re-Hook to Step 2):** Transition seamlessly into [TUTORIAL_STEP_2_COMING_NEXT] before the viewer can click skip.
+2. Draft the companion **120-Word Native Newsletter Sponsor Box** for Thursday's 3-2-1 Authority Digest.
+
+QUALITY CONSTRAINTS:
+- Never use the phrase ""Before we continue, a quick word from our sponsor.""
+- Maintain 100% practitioner Voice DNA authenticity.
+
+OUTPUT TEMPLATE:
+### 1. Verbatim 60-Second Video Mid-Roll Script (With `[SCREEN-DEMO]` & `[GRAPHIC]` Cues)
+### 2. Line-1 YouTube Description & Pinned Comment Copy
+### 3. Companion 120-Word Newsletter Sponsor Callout Box"
+P49,AI Workflow Prompt,Post-Campaign Brand ROI & Renewal Upsell Report Generator,Chapter 10,Stage 5: Sponsorships & CEO,Senior Client Success & Media Account Renewal Director,"[SPONSOR_NAME_AND_CONTACT_FIRST_NAME], [CAMPAIGN_DELIVERABLES_COMPLETED], [ACTUAL_PERFORMANCE_METRICS], [AUDIENCE_COMMENTS_OR_QUOTES], [PROPOSED_90_DAY_RETAINER_TOPICS_AND_PRICE]","PROMPT ID: P49
+ROLE: Senior Client Success & Media Account Renewal Director
+CONTEXT: It is 5x easier to renew an existing sponsor into a 90-day quarterly retainer than to hunt for a new sponsor from scratch. Fourteen days after publishing a sponsored campaign, I send this data-driven Post-Campaign ROI & Renewal Upsell Report to lock in a 3-month extension.
+
+INPUT VARIABLES:
+- [SPONSOR_NAME_AND_CONTACT_FIRST_NAME]: {Brand + Contact Name}
+- [CAMPAIGN_DELIVERABLES_COMPLETED]: {List Video, Newsletter, and Social posts delivered}
+- [ACTUAL_PERFORMANCE_METRICS]: {Paste 14-day YouTube views, ad-segment retention %, newsletter opens, LinkedIn impressions, total verified link clicks, and CTR %}
+- [AUDIENCE_COMMENTS_OR_QUOTES]: {Paste 2–3 positive viewer comments/replies mentioning the tool}
+- [PROPOSED_90_DAY_RETAINER_TOPICS_AND_PRICE]: {3 upcoming validated outlier topics + 3-month bundle price with 12% partner discount}
+
+EXECUTION STEPS:
+1. Compile a crisp, executive-grade **14-Day Campaign Performance & ROI Summary Table** highlighting [ACTUAL_PERFORMANCE_METRICS], noting that the video continues compounding evergreen search/browse views for 12+ months.
+2. Showcase **Qualitative Buyer Intent Proof** using [AUDIENCE_COMMENTS_OR_QUOTES] and high ad-read retention (`>= 85%`).
+3. Pitch the **90-Day Category Partner Renewal**: Present [PROPOSED_90_DAY_RETAINER_TOPICS_AND_PRICE], showing how locking in the next 3 monthly sprints secures category exclusivity, compounds multi-touchpoint familiarity, and saves 12% off single-sprint rates.
+
+QUALITY CONSTRAINTS:
+- Keep the email concise, scannable, and numbers-first.
+
+OUTPUT TEMPLATE:
+### 1. Day-14 Sponsor ROI Summary & Retainer Upsell Email
+### 2. Attached 1-Page Campaign Telemetry Scorecard Table"
+P50,AI Workflow Prompt,The 20-Minute Friday Creator CEO Scorecard & Next-Week Bottleneck Solver,Chapter 10,Stage 5: Sponsorships & CEO,Fractional COO & Quantitative Media Studio Advisor,"[KPI_1_WEEKLY_HOURS_AND_RPPH], [KPI_2_OUTLIER_MULTIPLIER], [KPI_3_PACKAGING_CTR_AND_RETENTION], [KPI_4_RENTED_TO_OWNED_CAPTURE], [KPI_5_REVENUE_MIX_30D]","PROMPT ID: P50
+ROLE: Fractional COO & Quantitative Media Studio Advisor
+CONTEXT: Every Friday afternoon during my 20-Minute Creator CEO Review, I audit my 5 Core Studio KPIs from the past 7–30 days. I need an objective diagnostic audit that identifies my single highest-impact stage-gate bottleneck for next week and prescribes one concrete 30-minute corrective action for Monday's Block 1 sprint.
+
+INPUT VARIABLES:
+- [KPI_1_WEEKLY_HOURS_AND_RPPH]: {Total hours worked this week + trailing 30-day revenue -> calculated RPPH $/hr}
+- [KPI_2_OUTLIER_MULTIPLIER]: {This week's Pillar views vs. 90-day channel median -> M_outlier}
+- [KPI_3_PACKAGING_CTR_AND_RETENTION]: {Impressions CTR % + 30-second retention % + overall APV %}
+- [KPI_4_RENTED_TO_OWNED_CAPTURE]: {View-to-Email Capture C_opt % + Opt-In Landing Page Conversion % + New Subscribers}
+- [KPI_5_REVENUE_MIX_30D]: {$ from Welcome Funnel + $ from Launches + $ from Sponsors + $ from Affiliates/Vault}
+
+EXECUTION STEPS:
+1. Grade all 5 KPIs against the Studio Benchmark Floors:
+   - `KPI 1 (RPPH):` Target `>= $250/hr` (Pass / Warning / Critical)
+   - `KPI 2 (M_outlier):` Target `>= 1.50x` (Pass / Warning / Critical)
+   - `KPI 3 (CTR & APV):` Target `CTR >= 6.5%`, `APV >= 52%` (Pass / Warning / Critical)
+   - `KPI 4 (C_opt & Page %):` Target `C_opt >= 2.5%`, `Opt-In Page >= 50%` (Pass / Warning / Critical)
+   - `KPI 5 (Revenue Mix):` Target `< 60%` reliance on any single stream (Pass / Warning / Critical)
+2. Apply **Theory of Constraints (TOC) Triage**: Isolate the SINGLE weakest gate in the 5-Stage Content-to-Cash Pipeline that is currently capping total monthly revenue.
+3. Prescribe **1 Exact Surgical Fix** (referencing the specific Studio Chapter and Prompt ID `P01`–`P49`) to execute during Monday's 45-minute Block 1 sprint.
+4. Output next week's locked **4-Hour Batch Sprint Focus Charter**.
+
+QUALITY CONSTRAINTS:
+- Never prescribe more than 1 primary bottleneck fix per week (preventing operator overwhelm).
+- Base every recommendation strictly on the numerical variance between actuals and studio floors.
+
+OUTPUT TEMPLATE:
+### 1. Friday Creator CEO 5-KPI Diagnostic Scorecard Table
+### 2. Primary Bottleneck Isolation (Theory of Constraints Audit)
+### 3. Next Monday's Single Surgical Fix & Prompt Prescription"
+S01,Emergency Communication Script,"Sponsor Asking for ""Free Trial / Exposure / Affiliate-Only"" Counter-Offer Script",Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"A SaaS, AI, or tech brand emails you asking for a dedicated video integration or newsletter feature in exchange for a ""free Pro account"" and a `20%–30%` affiliate commission link with `$0` upfront production fee.","[Brand Name], [Your Channel/Newsletter Name], [Contact First Name], [Specific Brand Feature], [Channel/Newsletter Name], [Base Fee, e.g., $1,250], [Upcoming Validated Topic], [X,XXX], [yourdomain.com/brand], [Base Fee], [Date], [Your Name]","Subject: Re: [Brand Name] x [Your Channel/Newsletter Name] Partnership
+
+Hi [Contact First Name],
+
+Thanks for reaching out—I'm a fan of what your team is building with [Specific Brand Feature], and it's a strong workflow fit for the [Audience ICP, e.g., 14,500+ B2B operators and engineers] who watch/read [Channel/Newsletter Name].
+
+Because our production team caps sponsored integrations at 1 partner per weekly sprint—and invests 4+ hours scripting and recording live workspace demonstrations rather than generic ad reads—we don't take on unpaid or commission-only placements.
+
+However, when a tool is a direct fit for an upcoming tutorial, we do offer a **Hybrid Performance Structure** so your team gets guaranteed multi-channel reach plus performance upside:
+
+1. **Guaranteed Base Production & Placement Fee ($[Base Fee, e.g., $1,250]):** Covers a 60-second live screen-demo integration inside our upcoming breakdown on *[Upcoming Validated Topic]* (YouTube + [X,XXX]-reader Newsletter + pinned UTM short-link).
+2. **Performance Revenue Share ([20%–30%] Recurring Affiliate Tier):** Wired to our custom tracking redirect (`[yourdomain.com/brand]`) for all conversions beyond the initial cohort.
+
+If your team has Q[1/2/3/4] partner budget to cover the $[Base Fee] base placement, I'd be glad to lock in the [Date] slot and send over the 1-page spec. Let me know how that sounds!
+
+Best,
+[Your Name]
+[Your Title & Media Kit URL]"
+S02,Emergency Communication Script,Low-Ball Brand Deal Rate Negotiation & Multi-Asset Upsell Reply,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"A brand or agency replies to your proposal saying your `$2,500` quote is above their budget and asks if you can do the integration for `$500` (a `75%–80%` discount).","[Brand Name], [Contact First Name], [Low-Ball Offer], [Low-Ball Offer, e.g., $600], [X,XXX], [OPEN_RATE_PCT], [Middle Anchor, e.g., $1,850], [Middle Anchor], [Your Name]","Subject: Re: [Brand Name] Partnership Scope & Options
+
+Hi [Contact First Name],
+
+Appreciate the transparency on where your budget sits for this sprint.
+
+To keep things fair across our active quarterly partners, we don't discount our standalone YouTube live-demo integrations down to $[Low-Ball Offer]. However, I'd love to find a way to make the math work for your team's current test budget.
+
+Here are two ways we can structure this:
+
+- **Option A: Matches Your $[Low-Ball Offer, e.g., $600] Test Budget (Newsletter + Social Only):** We place [Brand Name] as the Primary Featured Partner at the top of next Thursday's Authority Newsletter ([X,XXX] verified subscribers, [OPEN_RATE_PCT]% open rate) + 1 native LinkedIn workflow post.
+- **Option B: The High-ROI Stretch ($[Middle Anchor, e.g., $1,850] — Full Omnichannel Sprint):** If your team can stretch to $[Middle Anchor], I will include the **60-Second YouTube Live Workspace Demo**, the **Primary Newsletter Slot**, the **LinkedIn Workflow Post**, AND **30 Days of Paid Ad Usage Rights** so your growth team can run the demo clip as a high-converting retargeting ad.
+
+Which of those two tracks makes the most sense for your Q[X] goals?
+
+Best,
+[Your Name]"
+S03,Emergency Communication Script,"Paid Ad Whitelisting, Perpetual Usage Rights & Exclusivity Fee Counter-Script",Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"The brand sends over their standard agreement, and you spot clauses granting them *""perpetual, irrevocable worldwide paid media/whitelisting rights""* or *""6-month category exclusivity""* at zero additional fee.","[Brand Name], [Contact First Name], [Upcoming Topic], [Base Rate], [Usage Fee], [Category Name], [X months], [Exclusivity Fee], [Your Name]","Subject: Quick Contract Redline — Usage Rights & Exclusivity Scope ([Brand Name])
+
+Hi [Contact First Name],
+
+Excited to get rolling on the script for [Upcoming Topic]! I just reviewed the draft agreement and everything looks great on deliverables and timeline, with two quick standard licensing adjustments on Clause [X]:
+
+1. **Paid Media & Whitelisting Rights (Clause [X]):** Our base partnership rate ($[Base Rate]) covers perpetual **organic** hosting on our YouTube, Newsletter, and social channels, plus organic reposting on [Brand Name]'s social profiles. Because licensing our likeness and studio demo for paid media (Spark Ads, Meta/YouTube/LinkedIn ad whitelisting) requires ad-account management and saturates our audience face-recognition, we license paid ad usage in 30-day increments at **+30% of the base rate ($[Usage Fee]/month)**, rather than in perpetuity.
+2. **Category Exclusivity (Clause [Y]):** Our base rate includes a complimentary **7-day window** around publication with zero competing sponsors. Locking out the entire [Category Name] category for [X months] carries a standard **+25%/month exclusivity retainer ($[Exclusivity Fee]/month)**.
+
+Let me know if you'd like us to strike the paid-ad/perpetual language from Clause [X] to keep the invoice at $[Base Rate], OR if you'd like to add a 30-day or 60-day paid usage license to the SOW!
+
+Best,
+[Your Name]"
+S04,Emergency Communication Script,Sponsor Demanding Excessive Script Revisions or Off-Brand Hype Boundary Script,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"A sponsor's marketing team rewrites your authentic 60-second tutorial demo into a cheesy, hype-filled corporate press release—or comes back asking for a 3rd or 4th round of video re-shoots over minor phrasing preferences.","[Contact First Name], [Feature A], [Pricing Detail B], [Quote stiff corporate phrase], [350], [Your Name]","Subject: Optimizing Our 60s Integration for Maximum Viewer Retention & Clicks
+
+Hi [Contact First Name],
+
+Thanks for sending over your team's script notes! I immediately updated the factual product specs on [Feature A] and [Pricing Detail B] so everything is 100% accurate.
+
+Regarding the suggested marketing phrasing in lines 3–6 (*""[Quote stiff corporate phrase]""*): based on retention telemetry across our last 40 videos, when we shift into traditional advertisement phrasing, viewer drop-off spikes by 45% in the first 8 seconds. When we keep the delivery in my natural practitioner voice and show the live screen workflow directly, we hold **88%+ viewer retention** and generate **3x more clicks** to the partner link.
+
+To make sure your team gets the highest possible conversion yield from this placement, I've kept the natural tutorial phrasing while locking in all three of your mandatory factual talking points.
+
+*(Note: Per our agreement, our production sprint includes 1 round of pre-recording script review for factual accuracy; any post-recording re-shoots outside of factual errors carry a $[350] studio re-render fee.)*
+
+Confirming I have the green light to record this version during Tuesday's studio block!
+
+Best,
+[Your Name]"
+S05,Emergency Communication Script,Late Sponsor Payment Follow-Up & Net-15 Contract Enforcement Notice,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"A sponsor or agency invoice (`Net-15` or `Net-30`) is 5+ days past due, and your friendly reminder went unanswered.","[Invoice Number], [Brand Name], [Contact First Name], [Amount], [Video/Newsletter Title], [Publish Date], [X,XXX], [XXX], [Due Date], [Date 48 Hours From Now], [yourdomain.com/brand], [Late Fee Amount]","Subject: ACTION REQUIRED: Overdue Invoice #[Invoice Number] & Active Campaign Link Status ([Brand Name])
+
+Hi [Contact First Name] (and cc: Accounts Payable),
+
+Following up on Invoice #[Invoice Number] for $[Amount] (Campaign: *[Video/Newsletter Title]*, published on [Publish Date] with `[X,XXX]` views/opens and `[XXX]` verified clicks delivered to date).
+
+Per our signed SOW, payment terms were **Net-15** (due on [Due Date], currently [X] days past due).
+
+Please note our studio's automated campaign policy for past-due accounts:
+1. If Invoice #[Invoice Number] remains unsettled by **[Date 48 Hours From Now] at 5:00 PM EST**, our link router (`[yourdomain.com/brand]`) and pinned YouTube/Newsletter placements automatically pause and redirect to our default studio page until payment clears.
+2. Accounts exceeding 15 days past due incur the contractual **5.0% monthly late administration fee ($[Late Fee Amount])**.
+
+I've re-attached Invoice #[Invoice Number] and our direct ACH/Stripe payment link below:
+-> **Direct Payment Link:** `[INSERT_STRIPE_OR_ACH_URL]`
+
+Please reply with the wire/ACH confirmation receipt today so we can keep your pinned campaign links active and compounding!
+
+Best,
+[Your Name]"
+S06,Emergency Communication Script,Post-Campaign Sponsor Renewal & Quarterly Retainer Pitch Script,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"Exactly 14 days after publishing a successful sponsored video and newsletter sprint (`>= 85%` ad retention, strong click velocity).","[Brand Name], [Contact First Name], [Video/Newsletter Title], [ICP Description], [XX,XXX], [X,XXX], [88.4], [XXX], [3.2], [yourdomain.com/brand], [Topic A], [Topic B]","Subject: 14-Day ROI Report: [Brand Name] Campaign (+ Q[X] Category Lock Option)
+
+Hi [Contact First Name],
+
+Wanted to share the 14-day performance telemetry from our *[Video/Newsletter Title]* integration—the response from our audience of [ICP Description] has been outstanding:
+
+- **Cross-Channel Impressions (First 14 Days):** `[XX,XXX]` total views/opens (`[X,XXX]` YouTube views + `[X,XXX]` verified Newsletter opens + `[X,XXX]` LinkedIn views — and compounding daily via evergreen search).
+- **Mid-Roll Integration Retention:** **`[88.4]%`** (viewers stayed glued through the entire 60-second live workspace demo).
+- **Verified High-Intent Link Clicks:** **`[XXX] unique clicks`** (`[3.2]%` CTR on `[yourdomain.com/brand]`).
+- **Audience Sentiment:** *""[Paste 1 verbatim viewer comment praising the workflow/tool]""*
+
+### Locking In Q[X] Category Exclusivity (First Right of Refusal)
+We are finalizing our next 90 days of validated outlier topics—including upcoming breakdowns on **1. [Topic A]**, **2. [Topic B]**, and **3. [Topic C]**.
+
+Two competing tools in the [Category] space reached out this week inquiring about Q[X] slots, but because [Brand Name] performed so well with our readers, I wanted to give your team **48-hour first right of refusal** to lock in our **90-Day Quarterly Partner Retainer**:
+- **Included:** 3x Monthly Omnichannel Sprints (3 YouTube 60s Live Demos + 6 Newsletter Slots + 3 LinkedIn Posts + 90-Day Paid Usage Rights & Full Category Exclusivity).
+- **Partner Rate:** **$[Quarterly Rate]/quarter** ($[Monthly Equivalent]/mo — **saving 12% ($[Savings])** off single-sprint pricing).
+
+Would you like me to hold those 3 Q[X] dates for [Brand Name] and send over the quarterly renewal SOW?
+
+Best,
+[Your Name]"
+S07,Emergency Communication Script,Algorithm Slump / Sudden Reach Drop 14-Day Packaging & Format Pivot Protocol,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"Your last 3 YouTube videos or LinkedIn/X posts scored an Outlier Multiplier below `0.6x` ($M_{\text{outlier}} < 0.60$), impressions dropped by `40%+`, and you need to re-engage your core audience while resetting algorithmic click-through and reply velocity.","[Bottleneck Option A], [Bottleneck Option B], [Bottleneck Option C], [Bottleneck Option D], [Cheat Sheet / Calculator]","[Post on LinkedIn / X / YouTube Community Tab + Top of Thursday Newsletter]
+
+Quick operational check-in—I need your brutal honesty for 15 seconds.
+
+Over the last 3 weeks, I've been testing a few different technical breakdown formats, and looking at the telemetry, they missed the mark on what you actually need right now.
+
+As I lock in our next 4 weekly studio sprints (and the free calculators/templates we're releasing alongside them), **which of these 4 bottlenecks is costing you the most time or money this month?**
+
+1. **[Bottleneck Option A]** (e.g., Finding validated outlier ideas without spending 5 hours researching)
+2. **[Bottleneck Option B]** (e.g., Scripting & recording without sounding like robotic AI or burning 14 hours editing)
+3. **[Bottleneck Option C]** (e.g., Turning social views into owned email subscribers at 50%+ opt-in rates)
+4. **[Bottleneck Option D]** (e.g., Packaging a $49 digital product + landing $2,500+ brand sponsors)
+
+Reply with **1, 2, 3, or 4** (plus one sentence on where you're getting stuck).
+
+Everyone who replies gets early access to the new [Cheat Sheet / Calculator] we're building for the winning topic on Tuesday."
+S08,Emergency Communication Script,Cold Subscriber Sunset & Unsubscribe Warning Email (Deliverability Rescue),Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"Your email open rate has dipped below `38%`, or your monthly 90-day hygiene filter (`Prompt P40`) flags subscribers who have not opened or clicked an email in 90 consecutive days.","[First Name], [Newsletter Name], [ONE_CLICK_KEEP_SUBSCRIBED_TRIGGER_URL], [Your Name]","Subject: Removing [First Name] from the [Newsletter Name] list in 48 hours?
+
+Hi [First Name],
+
+I'm doing our monthly inbox hygiene check today, and our telemetry noticed you haven't opened the weekly *[Newsletter Name]* briefings over the past 90 days.
+
+I know firsthand how fast inbox clutter piles up—and I only want to take up space in your primary inbox if our weekly systems, prompts, and calculators are actively saving you time and making you money.
+
+**If you'd like to stay on the active list (and grab our updated [Name of Free Bonus Asset, e.g., 12-Prompt Quick-Start Vault]), just click the single confirmation link below:**
+
+-> **[YES — Keep My Subscription Active + Send Me the Bonus Vault]([ONE_CLICK_KEEP_SUBSCRIBED_TRIGGER_URL])**
+
+If your priorities have shifted and you no longer need these weekly breakdowns, you don't need to do a thing—our system will automatically remove your email address in 48 hours so we never clutter your inbox again.
+
+Either way, thank you for reading and building with us!
+
+Best,
+[Your Name]"
+S09,Emergency Communication Script,High-Profile Guest / Peer Creator Collab & Cross-Promotion Pitch Script,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"You want to accelerate owned email list and YouTube growth by arranging a newsletter cross-promotion swap, a co-authored lead magnet, or a joint breakdown with an adjacent creator at a similar or slightly larger tier (`10,000–100,000` subscribers).","[Their Framework Name], [Peer Creator First Name], [Specific Video/Essay Title], [Specific Tactical Detail], [Their Concept], [Your Concept], [LINK_TO_CUSTOM_SVG_OR_NOTION_DIAGRAM], [X,XXX], [Your ICP], [OPEN_RATE_PCT], [Your Core Specialty], [Date]","Subject: Built a visual architecture map of your [Their Framework Name] (+ quick swap idea)
+
+Hi [Peer Creator First Name],
+
+Your breakdown last week on *[Specific Video/Essay Title]* was surgical—especially your point on [Specific Tactical Detail].
+
+In fact, I mocked up a high-resolution 1-page vector flowchart of how your [Their Concept] connects into our [Your Concept] workflow (attached/linked below—feel free to share it with your readers with zero strings attached):
+-> `[LINK_TO_CUSTOM_SVG_OR_NOTION_DIAGRAM]`
+
+**Quick 60-second idea for next month:**
+Our audience of `[X,XXX]` [Your ICP] (`[OPEN_RATE_PCT]%` email open rate) constantly asks about [Peer Creator's Core Specialty], while your audience is scaling their [Your Core Specialty].
+
+Would you be open to doing a **Zero-Meeting Newsletter & Lead-Magnet Cross-Swap** on Thursday, [Date]?
+- I'll feature your *[Name of Their Lead Magnet/Newsletter]* in our top recommendation box (typically drives `[150–400]` verified opt-ins per swap).
+- You include a 3-sentence callout to our *[Name of Your 60-Second Utility Kit]* in your issue that week.
+
+I've already written the draft 45-word blurb for both sides so it takes less than 2 minutes to set up. Let me know if you're game!
+
+Best,
+[Your Name]"
+S10,Emergency Communication Script,Digital Product Refund Request De-Escalation & Feedback Extraction Reply,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,A customer emails within your 30-day guarantee window requesting a refund on your `$24–$99` digital product.,"[Order ID], [Product Name], [Customer First Name], [Amount], [Excel / Notion / Web], [Your Name]","Subject: Refund Processed: Order #[Order ID] ([Product Name])
+
+Hi [Customer First Name],
+
+I've just processed a **100% full refund ($[Amount])** back to your original payment method for Order #[Order ID]—you'll see the credit post to your statement within 2 to 5 business days, and you don't need to return or delete any of the downloaded files.
+
+Because we stand behind our 30-day guarantee with zero friction, no explanation is ever required.
+
+However, as the architect of the system, I'm always working to make our tools sharper: **if you have 20 seconds, what was the #1 thing that felt missing or didn't match what you needed today?**
+- Was it too advanced / too basic for your current stage?
+- Did you hit a snag opening one of the [Excel / Notion / Web] files?
+- Or did you simply not have the bandwidth to dive in right now?
+
+Even a one-sentence reply helps me improve the next edition. Wishing you the very best with your studio build!
+
+Warmly,
+[Your Name]"
+S11,Emergency Communication Script,Unauthorized Content Theft / Re-Upload DMCA Takedown & Licensing Demand Notice,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"Another account or company downloads your original YouTube video, custom SVG architecture diagrams, or carousel slides, strips your attribution, and re-uploads them as their own on LinkedIn, X, Instagram, TikTok, or a paid website.","[Your Studio Name], [Platform], [Date], [URL_OF_STOLEN_POST], [URL_OF_YOUR_ORIGINAL_POST_OR_REPO], [Original Date], [950.00], [STRIPE_LINK], [yourdomain.com], [Timestamp 24 Hours From Now], [Platform Name], [Your Name / Rights Management Team]","Subject: COPYRIGHT NOTICE & LICENSING INVOICE: Unauthorized Use of Proprietary Media ([Your Studio Name])
+
+To [Infringing Account Name / Company Legal & Marketing Department]:
+
+Our intellectual property monitoring system flagged an unauthorized reproduction of our copyrighted [Video / Vector Architecture Diagram / Written Carousel] published on your [Platform] account on [Date]:
+
+- **Infringing Post URL:** `[URL_OF_STOLEN_POST]`
+- **Original Copyrighted Source Asset:** `[URL_OF_YOUR_ORIGINAL_POST_OR_REPO]` (Published `[Original Date]`, Copyright © 2026 [Your Studio Name], All Rights Reserved).
+
+We offer two paths to resolve this matter within the next **24 hours**:
+
+1. **Option 1: Retroactive Commercial Licensing & Attribution ($[950.00] Fee):** If your team wishes to keep the post live, please settle the attached commercial syndication license invoice ($[950.00] via `[STRIPE_LINK]`) AND add full creator attribution + a direct link to `[yourdomain.com]` in the top comment/caption within 24 hours.
+2. **Option 2: Immediate Permanent Removal:** Permanently delete the infringing post at `[URL_OF_STOLEN_POST]` within 24 hours and reply to confirm removal.
+
+If neither action is completed by **[Timestamp 24 Hours From Now]**, our studio automatically submits a formal **DMCA Takedown Notice (17 U.S.C. § 512(c))** to [Platform Name]'s Copyright Legal Agent, which results in mandatory content removal and a permanent copyright strike against your company profile.
+
+Sincerely,
+[Your Name / Rights Management Team]
+[Your Studio Name]"
+S12,Emergency Communication Script,Creator Burnout / Planned 2-Week Sabbatical Audience & Sponsor Automated Coverage Notice,Back Matter Vault (Appendix B),Stage 5: Commercial & Crisis Protection,"You are taking a planned 2-week family vacation, recovering from illness, or stepping back for a 14-day strategic reset—and want to pause live recording without losing algorithmic momentum, email engagement, or sponsor trust.","[Brand Name], [Contact First Name], [Date 1], [Date 2], [Return Date], [Original Date], [X,XXX], [Mid-Break Date], [Your Name], [VAULT EDITION], [First Name], [XXX,XXX]","### PART A: Proactive Sponsor / Partner Schedule Notice (Send 14 Days Ahead)
+Subject: Upcoming Production Schedule & Bonus Placement Notice ([Brand Name])
+
+Hi [Contact First Name],
+
+Quick heads-up on our Q[X] production calendar: during the weeks of [Date 1] and [Date 2], our studio is running our scheduled **Semi-Annual Vault Synthesis & Systems Upgrade**, where we publish our highest-performing flagship compilation issues before kicking off our next live sprint on [Return Date].
+
+Your scheduled integration on [Original Date] is locked in as our **Featured Return Sprint on [Return Date]**—and as an added bonus during our 2-week synthesis window, I'm including a complimentary featured tool link for [Brand Name] inside our *""Top 10 Creator OS Tools of the Year""* vault issue going out to all `[X,XXX]` subscribers on [Mid-Break Date] at zero extra charge.
+
+Let me know if you'd like to use the same UTM link for that bonus vault issue!
+
+Best,
+[Your Name]
+
+---
+
+### PART B: Audience ""Vault Edition"" Newsletter Header (Pre-Scheduled for Break Weeks)
+Subject: [VAULT EDITION] The 3 Highest-ROI Systems From Our Last 26 Sprints
+
+Hi [First Name],
+
+This week and next, I'm stepping away from the recording booth for a 14-day offline architecture sprint (and some unplugged time with family).
+
+Rather than leaving your Thursday inbox empty, I audited the telemetry across all 26 Pillar breakdowns we published over the past six months (`[XXX,XXX]` total views and `[X,XXX]` reader replies) and extracted the **Top 3 Highest-ROI Workflows + Copy-Paste Prompts** in one master reference issue below..."
