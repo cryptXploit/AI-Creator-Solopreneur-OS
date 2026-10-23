@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <marker id="f2-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="f2-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="f2-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+  </defs>
+
+  <!-- Pure White Studio Canvas -->
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF"/>
+  <rect x="10" y="10" width="880" height="460" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="10" y="10" width="880" height="40" rx="8" fill="#0F172A"/>
+  <rect x="10" y="34" width="880" height="16" fill="#0F172A"/>
+  <text x="26" y="35" font-family="Inter, 'Noto Sans', sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.4">
+    DECISION TREE 2.2: THE NMPI NICHE QUALIFICATION &amp; PIVOT FLOWCHART
+  </text>
+  <text x="874" y="35" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#5EEAD4">
+    P.A.I.D. POSITIONING GATE
+  </text>
+
+  <!-- Column Headers -->
+  <text x="195" y="70" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#4F46E5">
+    NICHE QUALIFICATION GATES (PASS)
+  </text>
+  <text x="645" y="70" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#D97706">
+    SUB-NICHE PIVOT &amp; NARROWING PROTOCOLS (FAIL)
+  </text>
+
+  <!-- GATE 01: PAIN x PURCHASING POWER -->
+  <rect x="35" y="82" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2"/>
+  <rect x="35" y="82" width="78" height="22" rx="4" fill="#0F172A"/>
+  <text x="74" y="97" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 01
+  </text>
+  <text x="122" y="98" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    Demand Product (P * A) &gt;= 49?
+  </text>
+  <text x="47" y="118" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Requires Pain Urgency &gt;= 7 AND Purchasing Power &gt;= 7
+  </text>
+  <text x="47" y="136" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Filters out broke or low-urgency audiences
+  </text>
+
+  <!-- Gate 01 -> Fail Action -->
+  <line x1="355" y1="116" x2="435" y2="116" stroke="#D97706" stroke-width="2" marker-end="url(#f2-amber)"/>
+  <text x="395" y="110" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;49)
+  </text>
+  <rect x="440" y="82" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="102" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PIVOT 1: UPGRADE AVATAR TO B2B / PROSUMER
+  </text>
+  <text x="454" y="120" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • If A &lt; 7: Re-aim skill from students/consumers to B2B managers/founders.
+  </text>
+  <text x="454" y="137" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • If P &lt; 7: Tie topic directly to revenue, time saved, or career promotion.
+  </text>
+
+  <!-- Gate 01 -> Gate 02 -->
+  <line x1="195" y1="150" x2="195" y2="176" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#f2-indigo)"/>
+  <text x="228" y="167" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#4F46E5">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 02: EXECUTION GAP + PRODUCT FIT -->
+  <rect x="35" y="180" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2"/>
+  <rect x="35" y="180" width="78" height="22" rx="4" fill="#4F46E5"/>
+  <text x="74" y="195" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 02
+  </text>
+  <text x="122" y="196" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    Monetization Sum (I + D) &gt;= 14?
+  </text>
+  <text x="47" y="216" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Requires Execution Gap &gt;= 7 AND Offer/Sponsor Fit &gt;= 7
+  </text>
+  <text x="47" y="234" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Verifies template demand &amp; $50+ SaaS CPMs
+  </text>
+
+  <!-- Gate 02 -> Fail Action -->
+  <line x1="355" y1="214" x2="435" y2="214" stroke="#D97706" stroke-width="2" marker-end="url(#f2-amber)"/>
+  <text x="395" y="208" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;14)
+  </text>
+  <rect x="440" y="180" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="200" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PIVOT 2: SHIFT FROM TRIVIA TO MULTI-TOOL SYSTEMS
+  </text>
+  <text x="454" y="218" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Stop teaching 60-sec single-button tips; teach end-to-end workflows.
+  </text>
+  <text x="454" y="235" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Anchor workflow in 5+ recurring SaaS tools with sponsor budgets.
+  </text>
+
+  <!-- Gate 02 -> Gate 03 -->
+  <line x1="195" y1="248" x2="195" y2="274" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#f2-indigo)"/>
+  <text x="228" y="265" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#4F46E5">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 03: COMPOSITE NMPI SCORE -->
+  <rect x="35" y="278" width="320" height="68" rx="6" fill="#F8FAFC" stroke="#0D9488" stroke-width="2"/>
+  <rect x="35" y="278" width="78" height="22" rx="4" fill="#0D9488"/>
+  <text x="74" y="293" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 03
+  </text>
+  <text x="122" y="294" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    Composite NMPI Score &gt;= 50.0?
+  </text>
+  <text x="47" y="314" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    Formula: ((P * A) * (I + D)) / 20 &gt;= 50.0
+  </text>
+  <text x="47" y="332" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#64748B">
+    Platinum B2B Benchmark: NMPI &gt;= 70.0
+  </text>
+
+  <!-- Gate 03 -> Fail Action -->
+  <line x1="355" y1="312" x2="435" y2="312" stroke="#D97706" stroke-width="2" marker-end="url(#f2-amber)"/>
+  <text x="395" y="306" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;50)
+  </text>
+  <rect x="440" y="278" width="425" height="68" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="298" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PIVOT 3: APPLY THE 2-CONSTRAINT NARROWING RULE
+  </text>
+  <text x="454" y="316" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Add 1 Industry Vertical Constraint + 1 Named Mechanism Constraint.
+  </text>
+  <text x="454" y="333" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Run Prompt P06 to excavate 5 sub-niches scoring NMPI &gt;= 55.0.
+  </text>
+
+  <!-- Gate 03 -> Gate 04 -->
+  <line x1="195" y1="346" x2="195" y2="372" stroke="#0D9488" stroke-width="2.2" marker-end="url(#f2-teal)"/>
+  <text x="228" y="363" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#0D9488">
+    YES (PASS)
+  </text>
+
+  <!-- GATE 04: 100% OFFER ALIGNMENT -->
+  <rect x="35" y="376" width="320" height="78" rx="6" fill="#F0FDFA" stroke="#0F172A" stroke-width="2.2"/>
+  <rect x="35" y="376" width="78" height="22" rx="4" fill="#0F172A"/>
+  <text x="74" y="391" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+    GATE 04
+  </text>
+  <text x="122" y="392" font-family="Inter, 'Noto Sans', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+    100% 3-Pillar to Offer Alignment?
+  </text>
+  <text x="47" y="413" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0D9488">
+    GREENLIGHT: Lock 90-Day Matrix &amp; Advance to Ch 3!
+  </text>
+  <text x="47" y="432" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0F172A">
+    Portfolio: 40% Reach | 40% Authority | 20% Proof
+  </text>
+
+  <!-- Gate 04 -> Fail Action -->
+  <line x1="355" y1="415" x2="435" y2="415" stroke="#D97706" stroke-width="2" marker-end="url(#f2-amber)"/>
+  <text x="395" y="409" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D97706">
+    NO (&lt;100%)
+  </text>
+  <rect x="440" y="376" width="425" height="78" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+  <text x="454" y="396" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#B45309">
+    PIVOT 4: PRUNE TANGENT BUCKETS VIA PROMPT P10
+  </text>
+  <text x="454" y="414" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Delete any content pillar that does not pre-frame your $49-$199 offer.
+  </text>
+  <text x="454" y="431" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="500" fill="#1E293B">
+    • Map every free tutorial to a specific module in your paid toolkit.
+  </text>
+</svg>

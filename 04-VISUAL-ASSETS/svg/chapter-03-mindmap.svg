@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <marker id="m3-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="m3-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="m3-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Pure White Studio Canvas -->
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF"/>
+  <rect x="10" y="10" width="880" height="460" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="10" y="10" width="880" height="40" rx="8" fill="#0F172A"/>
+  <rect x="10" y="34" width="880" height="16" fill="#0F172A"/>
+  <text x="26" y="35" font-family="Inter, 'Noto Sans', sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" letter-spacing="0.4">
+    ARCHITECTURAL MINDMAP 3.1: THE S.I.G.N.A.L. OUTLIER IDEA MINING ENGINE
+  </text>
+  <text x="874" y="35" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#A5B4FC">
+    OUTLIER GATE: M_outlier &gt;= 2.5x | SPI &gt;= 65.0
+  </text>
+
+  <!-- Connector Paths -->
+  <path d="M 246 105 C 295 105, 305 198, 345 198" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#m3-indigo)"/>
+  <path d="M 246 185 C 295 185, 305 215, 345 215" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#m3-indigo)"/>
+  <path d="M 246 265 C 295 265, 305 235, 345 235" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#m3-amber)"/>
+  <path d="M 246 345 C 295 345, 305 252, 345 252" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#m3-indigo)"/>
+
+  <line x1="450" y1="130" x2="450" y2="162" stroke="#D97706" stroke-width="2.5" marker-end="url(#m3-amber)"/>
+  <line x1="450" y1="340" x2="450" y2="300" stroke="#0D9488" stroke-width="2.5" marker-end="url(#m3-teal)"/>
+
+  <line x1="555" y1="230" x2="642" y2="230" stroke="#0D9488" stroke-width="2.8" marker-end="url(#m3-teal)"/>
+
+  <!-- TOP NODE: STAGE A (OUTLIER MULTIPLIER MATH) -->
+  <g filter="url(#shadow3)">
+    <rect x="275" y="60" width="350" height="70" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
+    <rect x="275" y="60" width="350" height="21" rx="4" fill="#D97706"/>
+    <text x="450" y="75" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+      STAGE A — ALGORITHMIC OUTLIER MULTIPLIER (DOUBLE WEIGHTED)
+    </text>
+    <text x="450" y="96" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#0F172A">
+      M_outlier = (Day-14 Views) / (90-Day Channel Median)
+    </text>
+    <text x="450" y="116" text-anchor="middle" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="600" fill="#B45309">
+      25-Channel Radar: 15 Direct Peers + 10 Adjacent Niches (&gt;= 2.5x)
+    </text>
+  </g>
+
+  <!-- CENTRAL HUB: S.I.G.N.A.L. PRIORITY ENGINE -->
+  <g filter="url(#shadow3)">
+    <rect x="345" y="164" width="210" height="134" rx="10" fill="#0F172A" stroke="#4F46E5" stroke-width="3"/>
+    <rect x="362" y="176" width="176" height="20" rx="4" fill="#4F46E5"/>
+    <text x="450" y="190" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+      ZERO-GUESSWORK CORE
+    </text>
+    <text x="450" y="214" text-anchor="middle" font-family="Inter, 'Noto Sans', sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">
+      THE S.I.G.N.A.L.
+    </text>
+    <text x="450" y="232" text-anchor="middle" font-family="Inter, 'Noto Sans', sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">
+      VALIDATION ENGINE
+    </text>
+    <line x1="365" y1="242" x2="535" y2="242" stroke="#334155" stroke-width="1"/>
+    <text x="450" y="259" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#FBBF24">
+      SPI = (S+I+G+N+2A)*(L/6)
+    </text>
+    <text x="450" y="278" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#5EEAD4">
+      Greenlight: SPI &gt;= 65.0
+    </text>
+  </g>
+
+  <!-- BOTTOM NODE: STAGE L (OFFER CONTINUITY GATE) -->
+  <g filter="url(#shadow3)">
+    <rect x="275" y="340" width="350" height="72" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="2"/>
+    <rect x="275" y="340" width="350" height="21" rx="4" fill="#0D9488"/>
+    <text x="450" y="355" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+      STAGE L — LEAD-MAGNET &amp; OFFER CONTINUITY GATE (VETO FILTER)
+    </text>
+    <text x="450" y="376" text-anchor="middle" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0F172A">
+      Blocks "Viral Dead-Ends" That Attract Non-Buyers (Requires L &gt;= 7)
+    </text>
+    <text x="450" y="396" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#0D9488">
+      100% Continuity to Tier 0 Diagnostic &amp; Tier 1-2 Paid Offer
+    </text>
+  </g>
+
+  <!-- LEFT TELEMETRY INPUTS: S, I, G, N -->
+  <!-- Node S -->
+  <g filter="url(#shadow3)">
+    <rect x="26" y="72" width="220" height="66" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="1.8"/>
+    <rect x="26" y="72" width="220" height="21" rx="4" fill="#4F46E5"/>
+    <text x="36" y="87" font-family="Inter, 'Noto Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">
+      S — SEARCH &amp; AUTOCOMPLETE
+    </text>
+    <text x="36" y="106" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="600" fill="#0F172A">
+      • YouTube, Google &amp; Perplexity trees
+    </text>
+    <text x="36" y="123" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#4F46E5">
+      High-Intent Long-Tail Queries
+    </text>
+  </g>
+
+  <!-- Node I -->
+  <g filter="url(#shadow3)">
+    <rect x="26" y="152" width="220" height="66" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="1.8"/>
+    <rect x="26" y="152" width="220" height="21" rx="4" fill="#4F46E5"/>
+    <text x="36" y="167" font-family="Inter, 'Noto Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">
+      I — IN-COMMENT FRICTION
+    </text>
+    <text x="36" y="186" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="600" fill="#0F172A">
+      • Unanswered "How do I..." roadblocks
+    </text>
+    <text x="36" y="203" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#4F46E5">
+      Direct Template &amp; SOP Requests
+    </text>
+  </g>
+
+  <!-- Node G -->
+  <g filter="url(#shadow3)">
+    <rect x="26" y="232" width="220" height="66" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8"/>
+    <rect x="26" y="232" width="220" height="21" rx="4" fill="#D97706"/>
+    <text x="36" y="247" font-family="Inter, 'Noto Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">
+      G — GAP IN TOP ASSETS
+    </text>
+    <text x="36" y="266" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="600" fill="#0F172A">
+      • Outdated UI, purely theoretical fluff
+    </text>
+    <text x="36" y="283" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#B45309">
+      Your Angle: 3x Faster + Blueprint
+    </text>
+  </g>
+
+  <!-- Node N -->
+  <g filter="url(#shadow3)">
+    <rect x="26" y="312" width="220" height="66" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="1.8"/>
+    <rect x="26" y="312" width="220" height="21" rx="4" fill="#4F46E5"/>
+    <text x="36" y="327" font-family="Inter, 'Noto Sans', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">
+      N — NETWORK RESONANCE
+    </text>
+    <text x="36" y="346" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="600" fill="#0F172A">
+      • Reddit, Slack, Discord &amp; Notes heat
+    </text>
+    <text x="36" y="363" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#4F46E5">
+      50+ Practitioner Thread Replies
+    </text>
+  </g>
+
+  <!-- RIGHT OUTPUT VAULT: 30-DAY VALIDATED IDEA BANK -->
+  <g filter="url(#shadow3)">
+    <rect x="645" y="102" width="228" height="256" rx="8" fill="#F0FDFA" stroke="#0F172A" stroke-width="2.2"/>
+    <rect x="645" y="102" width="228" height="28" rx="6" fill="#0F172A"/>
+    <text x="759" y="120" text-anchor="middle" font-family="Inter, 'Noto Sans', sans-serif" font-size="11.5" font-weight="700" fill="#FFFFFF">
+      30-DAY VALIDATED IDEA BANK
+    </text>
+    <text x="659" y="148" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0D9488">
+      WEEK 1 PILLAR (SPI: 86.7)
+    </text>
+    <text x="659" y="164" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="500" fill="#1E293B">
+      • 4.2x Outlier + Contrarian Spin
+    </text>
+    <line x1="659" y1="174" x2="859" y2="174" stroke="#CCFBF1" stroke-width="1.5"/>
+
+    <text x="659" y="194" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0D9488">
+      WEEK 2 PILLAR (SPI: 79.5)
+    </text>
+    <text x="659" y="210" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="500" fill="#1E293B">
+      • Comment Friction Tactical Build
+    </text>
+    <line x1="659" y1="220" x2="859" y2="220" stroke="#CCFBF1" stroke-width="1.5"/>
+
+    <text x="659" y="240" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0D9488">
+      WEEK 3 PILLAR (SPI: 74.0)
+    </text>
+    <text x="659" y="256" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="500" fill="#1E293B">
+      • Adjacent Niche 3.7x Adaptation
+    </text>
+    <line x1="659" y1="266" x2="859" y2="266" stroke="#CCFBF1" stroke-width="1.5"/>
+
+    <text x="659" y="286" font-family="Inter, 'Noto Sans', sans-serif" font-size="10.5" font-weight="700" fill="#0D9488">
+      WEEK 4 PILLAR (SPI: 71.2)
+    </text>
+    <text x="659" y="302" font-family="Inter, 'Noto Sans', sans-serif" font-size="10" font-weight="500" fill="#1E293B">
+      • Case Study ROI Proof Teardown
+    </text>
+    <rect x="657" y="318" width="204" height="28" rx="4" fill="#0D9488"/>
+    <text x="759" y="336" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#FFFFFF">
+      FEEDSCHEDULE -&gt; CH 4 HOOKS
+    </text>
+  </g>
+
+  <!-- Bottom Sprint Rule Bar -->
+  <rect x="26" y="424" width="848" height="32" rx="6" fill="#F1F5F9" stroke="#64748B" stroke-width="1.5"/>
+  <text x="450" y="444" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#0F172A">
+    WEEKLY 45-MIN S.I.G.N.A.L. SPRINT: ELIMINATES THE 73% UNVALIDATED UPLOAD FLOP RATE
+  </text>
+</svg>
