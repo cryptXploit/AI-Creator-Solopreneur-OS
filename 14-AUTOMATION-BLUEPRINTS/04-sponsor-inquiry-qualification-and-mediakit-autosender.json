@@ -1,0 +1,97 @@
+{
+  "blueprint_version": "2.0.0",
+  "studio_product": "The AI Content Creator & Solopreneur Operating System",
+  "publisher": "Apex Digital Systems Studio",
+  "compatible_platforms": [
+    "Make.com (Integromat)",
+    "n8n (Self-Hosted or Cloud)",
+    "Zapier Webhook/Code Steps"
+  ],
+  "workflow_name": "Creator OS Workflow #04 \u2014 B2B Sponsor Inquiry Qualification, Rate Calculation & Media Kit Auto-Sender",
+  "description": "Monitors inbound sponsor inquiries via form or email, scores brand fit and budget against your Chapter 10 Outcome Valuation Formula, filters out zero-fee affiliate spam, creates a deal card in Notion DB5 CRM, and automatically dispatches your 3-Tier Media Kit + booking link.",
+  "chapter_alignment": "Chapter 10 (Outcome-Based B2B Sponsorships, Paid-Ad Whitelisting & Contract Shield)",
+  "trigger_type": "webhook.inbound.sponsor_inquiry",
+  "environment_variables_required": [
+    "OPENAI_OR_ANTHROPIC_API_KEY",
+    "NOTION_INTEGRATION_SECRET_TOKEN",
+    "NOTION_DB1_SIGNAL_IDEA_BANK_ID",
+    "NOTION_DB2_CONTENT_PIPELINE_ID",
+    "NOTION_DB5_SPONSOR_CRM_ID",
+    "ESP_API_KEY_CONVERTKIT_OR_BEEHIIV",
+    "YOUTUBE_DATA_API_KEY",
+    "OPERATOR_CEO_EMAIL"
+  ],
+  "error_handling_policy": {
+    "retry_attempts": 3,
+    "backoff_strategy": "exponential_60s",
+    "fallback_notification": "Send alert to OPERATOR_CEO_EMAIL and preserve payload in Notion Dead-Letter Queue"
+  },
+  "nodes": [
+    {
+      "id": "node_01_sponsor_webhook",
+      "name": "Watch Inbound Sponsorship Inquiry Form / Dedicated Sponsor Inbox",
+      "type": "webhook.custom",
+      "parameters": {
+        "fields": [
+          "contact_name",
+          "company_name",
+          "company_domain",
+          "product_description",
+          "stated_budget_usd",
+          "target_timeline",
+          "wants_paid_ad_whitelisting"
+        ]
+      }
+    },
+    {
+      "id": "node_02_calculate_outcome_quote",
+      "name": "Calculate 3-Tier Outcome Package Quote & Whitelisting Add-On (+30%/Mo)",
+      "type": "code.javascript",
+      "parameters": {
+        "base_rate_usd": 925,
+        "niche_authority_multiplier": 2.0,
+        "tier_a_validation_usd": 1850,
+        "tier_b_dominance_usd": 3200,
+        "tier_c_quarterly_usd": 8400,
+        "whitelisting_pct_per_30d": 0.3
+      }
+    },
+    {
+      "id": "node_03_llm_brand_fit_qualifier",
+      "name": "LLM Qualification Gate (Prompt P48) \u2014 Detect Affiliate Spam vs Qualified B2B Partner",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.2,
+        "system_prompt": "Classify the inbound sponsor inquiry into: (A) QUALIFIED_B2B_PARTNER (budget >= $1,500 or B2B software/tool matching our audience), (B) NEEDS_BUDGET_EDUCATION (legitimate B2B brand asking for CPM or commission-only), or (C) REJECT_UNFIT (crypto/gambling/irrelevant consumer spam). Draft a customized response using Prompt P47/P48.",
+        "user_prompt": "COMPANY: {{node_01.company_name}} ({{node_01.company_domain}})\nPRODUCT: {{node_01.product_description}}\nSTATED BUDGET: ${{node_01.stated_budget_usd}}"
+      }
+    },
+    {
+      "id": "node_04_create_notion_crm_deal",
+      "name": "Create Sponsor Deal Record in Notion DB5 Sponsorship & Brand Deal CRM",
+      "type": "notion.createPage",
+      "parameters": {
+        "database_id": "{{NOTION_DB5_SPONSOR_CRM_ID}}",
+        "properties": {
+          "Brand_Name": "{{node_01.company_name}}",
+          "Contact_Person": "{{node_01.contact_name}}",
+          "Qualification_Tier": "{{node_03.classification}}",
+          "Proposed_Package": "Tier B Dominance ($3,200)",
+          "Deal_Stage": "1. Qualified \u2014 Media Kit Sent"
+        }
+      }
+    },
+    {
+      "id": "node_05_send_media_kit_reply",
+      "name": "Auto-Send Personalized Reply + 1-Page Media Kit PDF/DOCX Attachment",
+      "type": "email.sendWithAttachment",
+      "parameters": {
+        "to": "{{node_01.contact_email}}",
+        "subject": "Re: {{node_01.company_name}} x {{STUDIO_BRAND_NAME}} \u2014 Partnership Packages & Available Sprint Dates",
+        "body_markdown": "{{node_03.personalized_email_reply}}",
+        "attachment_path": "12-EDITABLE-OFFICE-SUITE/Word-Docs/03-Sponsorship-Media-Kit-and-Rate-Card-Proposal.docx"
+      }
+    }
+  ]
+}

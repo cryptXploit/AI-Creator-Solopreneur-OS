@@ -1,0 +1,16 @@
+Niche_ID,Candidate_Niche_Positioning,Target_Buyer_Avatar,P_Pain_Urgency_10,A_Affluence_10,I_Intent_to_Buy_10,D_Distribution_10,Weighted_NMPI_100,Estimated_Blended_RPM,Go_No_Go_Decision
+NIC-01,AI Operations & Automation for Solo Founders,Bootstrapped SaaS & Agency Owners,9.4,9.2,9.0,8.8,91.2,259.92,GREEN LIGHT (LAUNCH)
+NIC-02,B2B RevOps & CRM Pipeline Architecture,VP Sales & RevOps Practitioners,9.0,9.5,8.8,7.8,88.6,252.51,GREEN LIGHT (LAUNCH)
+NIC-03,Solopreneur Digital Product & Newsletter OS,Technical Creators & Consultants,9.2,8.6,9.2,9.0,89.8,255.93,GREEN LIGHT (LAUNCH)
+NIC-04,Cloud FinOps & Kubernetes Cost Reduction,DevOps Leads & CTOs,8.8,9.6,8.6,7.5,87.3,248.81,GREEN LIGHT (LAUNCH)
+NIC-05,Executive Financial Modeling & FP&A Excel,Fractional CFOs & Finance Managers,8.6,9.0,8.8,8.2,86.9,247.67,GREEN LIGHT (LAUNCH)
+NIC-06,Cybersecurity Compliance (SOC2/ISO) for Startups,Seed-to-Series-B Engineering Leads,9.5,9.4,9.0,7.2,88.85,253.22,GREEN LIGHT (LAUNCH)
+NIC-07,AI-Assisted Legal & Contract Ops for Agencies,Boutique Legal & Agency Principals,8.4,8.8,8.2,7.6,83.1,236.83,GREEN LIGHT (LAUNCH)
+NIC-08,High-Retention Technical YouTube Production,B2B Educators & DevRel Teams,8.5,8.2,8.4,8.8,84.45,240.68,GREEN LIGHT (LAUNCH)
+NIC-09,E-Commerce Retention & Klaviyo Email Flows,7-Figure DTC Brand Operators,8.8,8.9,9.0,8.0,87.2,248.52,GREEN LIGHT (LAUNCH)
+NIC-10,Python Data Engineering & Local LLM Pipelines,Senior Data & ML Engineers,8.2,8.7,8.0,8.5,83.6,238.26,GREEN LIGHT (LAUNCH)
+NIC-11,Fractional Product Management Systems,Senior PMs Transitioning Solo,8.0,8.4,7.8,7.9,80.5,229.43,GREEN LIGHT (LAUNCH)
+NIC-12,Notion & Airtable Operations for Law Firms,Managing Partners & Ops Directors,8.3,8.9,8.1,7.4,82.5,235.12,GREEN LIGHT (LAUNCH)
+NIC-13,General Productivity Tips for College Students,Undergraduate Students,6.2,3.0,3.5,9.2,51.65,147.2,REJECT / PIVOT AVATAR
+NIC-14,Daily AI News Roundups Without Tutorials,Passive Tech Bystanders,4.5,5.2,4.0,9.0,54.85,156.32,REJECT / PIVOT AVATAR
+NIC-15,Generic Lifestyle Vlogging & Gaming Clips,Broad Consumer Viewers,3.0,2.5,2.0,9.5,39.0,111.15,REJECT / PIVOT AVATAR

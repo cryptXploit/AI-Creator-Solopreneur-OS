@@ -1,0 +1,16 @@
+Scenario_ID,Product_Tier_Offer_Name,Checkout_Visitors,Base_CVR_Pct,Base_Orders,Base_Price_USD,Bump_Price_USD,Bump_Take_Rate,Upsell_Price_USD,Upsell_Take_Rate,Effective_AOV_USD,Gross_Launch_Rev_USD,Net_Profit_After_Fees_USD,Launch_Hours,Launch_RPPH_USD
+LCH-01,Tier 1 · Reader Book + Prompt Swipe,650,0.065,42,9.99,9.0,0.42,24.0,0.22,19.05,800.1,752.09,4.0,188.02
+LCH-02,Tier 2 · Implementation Workbook Pack,720,0.062,45,24.0,14.0,0.38,49.0,0.18,38.14,1716.3,1613.32,6.0,268.89
+LCH-03,Tier 3 · Complete Creator OS (Founding),850,0.058,49,49.0,19.0,0.38,79.0,0.16,68.86,3374.14,3171.69,12.0,264.31
+LCH-04,Tier 3 · Complete Creator OS (Evergreen),1100,0.052,57,69.0,24.0,0.36,99.0,0.15,92.49,5271.93,4955.61,12.0,412.97
+LCH-05,Tier 4 · Pro Agency & Living Vault,540,0.042,23,149.0,39.0,0.34,199.0,0.14,190.12,4372.76,4110.39,14.0,293.6
+LCH-06,Quarterly Bundle Flash Promotion,1400,0.06,84,59.0,19.0,0.4,89.0,0.17,81.73,6865.32,6453.4,8.0,806.67
+LCH-07,Black Friday Complete Studio Stack,2200,0.068,150,79.0,27.0,0.44,129.0,0.19,115.39,17308.5,16269.99,10.0,1627.0
+LCH-08,B2B Team License (5-Seat Pack),380,0.048,18,249.0,49.0,0.35,299.0,0.15,311.0,5598.0,5262.12,10.0,526.21
+LCH-09,S.I.G.N.A.L. Outlier Workshop + Kit,620,0.055,34,39.0,15.0,0.39,69.0,0.16,55.89,1900.26,1786.24,7.0,255.18
+LCH-10,Automation Blueprints Standalone Pack,780,0.056,44,29.0,12.0,0.41,49.0,0.18,42.74,1880.56,1767.73,6.0,294.62
+LCH-11,Sponsorship Rate Card & Contract Kit,590,0.054,32,34.0,15.0,0.37,59.0,0.17,49.58,1586.56,1491.37,5.0,298.27
+LCH-12,New Year Creator CEO Sprint Bundle,1650,0.061,101,64.0,22.0,0.4,97.0,0.18,90.26,9116.26,8569.28,9.0,952.14
+LCH-13,Affiliate Partner Co-Hosted Drop,920,0.053,49,49.0,19.0,0.36,79.0,0.15,67.69,3316.81,3117.8,8.0,389.73
+LCH-14,Bangladesh Local Rail Launch (bKash),880,0.064,56,29.0,9.0,0.42,49.0,0.16,40.62,2274.72,2138.24,6.0,356.37
+LCH-15,Annual Vault Renewal Cohort,450,0.68,306,49.0,19.0,0.3,79.0,0.12,64.18,19639.08,18460.74,4.0,4615.19

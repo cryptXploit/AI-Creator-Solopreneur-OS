@@ -1,0 +1,107 @@
+{
+  "blueprint_version": "2.0.0",
+  "studio_product": "The AI Content Creator & Solopreneur Operating System",
+  "publisher": "Apex Digital Systems Studio",
+  "compatible_platforms": [
+    "Make.com (Integromat)",
+    "n8n (Self-Hosted or Cloud)",
+    "Zapier Webhook/Code Steps"
+  ],
+  "workflow_name": "Creator OS Workflow #05 \u2014 Friday 20-Minute Creator CEO Telemetry & RPPH Executive Digest",
+  "description": "Triggers every Friday at 13:45 PM (15 minutes before your 2:00 PM Creator CEO Review), aggregates trailing 7-day views, retention, email opt-ins, Stripe/Gumroad/bKash product sales, and sponsor invoices, computes weekly RPPH, logs Row W[01-52] in your dashboard, and delivers your 1-Page Executive Briefing.",
+  "chapter_alignment": "Chapters 01 & 10 (RPPH Unit Economics + The 20-Minute Friday Creator CEO Operating Review)",
+  "trigger_type": "schedule.cron.weekly_friday_1345",
+  "environment_variables_required": [
+    "OPENAI_OR_ANTHROPIC_API_KEY",
+    "NOTION_INTEGRATION_SECRET_TOKEN",
+    "NOTION_DB1_SIGNAL_IDEA_BANK_ID",
+    "NOTION_DB2_CONTENT_PIPELINE_ID",
+    "NOTION_DB5_SPONSOR_CRM_ID",
+    "ESP_API_KEY_CONVERTKIT_OR_BEEHIIV",
+    "YOUTUBE_DATA_API_KEY",
+    "OPERATOR_CEO_EMAIL"
+  ],
+  "error_handling_policy": {
+    "retry_attempts": 3,
+    "backoff_strategy": "exponential_60s",
+    "fallback_notification": "Send alert to OPERATOR_CEO_EMAIL and preserve payload in Notion Dead-Letter Queue"
+  },
+  "nodes": [
+    {
+      "id": "node_01_friday_cron",
+      "name": "Friday 13:45 PM Executive Digest Trigger",
+      "type": "schedule.cron",
+      "parameters": {
+        "cron_expression": "45 13 * * 5",
+        "timezone": "UTC"
+      }
+    },
+    {
+      "id": "node_02_pull_content_telemetry",
+      "name": "Aggregate 7-Day Views, CTR, 30s Hold & Waterfall Completion from Notion DB2",
+      "type": "notion.aggregateDatabase",
+      "parameters": {
+        "database_id": "{{NOTION_DB2_CONTENT_PIPELINE_ID}}",
+        "window_days": 7,
+        "metrics": [
+          "total_impressions",
+          "avg_ctr_pct",
+          "avg_30s_hold_pct",
+          "avg_avd_pct",
+          "completed_assets_count"
+        ]
+      }
+    },
+    {
+      "id": "node_03_pull_checkout_revenue",
+      "name": "Fetch Trailing 7-Day Net Revenue from Gumroad / Stripe / LemonSqueezy & Sponsor Invoices",
+      "type": "http.multiRequest",
+      "parameters": {
+        "sources": [
+          "stripe_balance_transactions",
+          "gumroad_sales_api",
+          "notion_db5_paid_invoices"
+        ],
+        "window_days": 7
+      }
+    },
+    {
+      "id": "node_04_compute_rpph_and_gates",
+      "name": "Compute Weekly Operator RPPH, Blended RPM, ERI & Stage-Gate Status (G/Y/R)",
+      "type": "code.javascript",
+      "parameters": {
+        "formula_rpph": "const rpph = Number((netWeeklyProfit / batchHoursSpent).toFixed(2));",
+        "formula_eri": "const eri = Number((ctrPct * (hold30sPct / 100) * (avdPct / 100)).toFixed(2));",
+        "formula_rpm": "const rpm = Number(((grossWeeklyRev / totalViews) * 1000).toFixed(2));",
+        "green_thresholds": {
+          "rpph": 200.0,
+          "eri": 2.3,
+          "opt_in_cvr": 45.0,
+          "blended_rpm": 150.0,
+          "max_hours": 6.0
+        }
+      }
+    },
+    {
+      "id": "node_05_llm_ceo_briefing",
+      "name": "LLM Executive Synthesis (Prompt P50) \u2014 Prescribe #1 Bottleneck Fix & 1 Task to Prune",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.25,
+        "system_prompt": "You are the Creator CEO Chief of Staff. Review this week's 5-stage telemetry against our hard gates (RPPH >= $200/hr, Hours <= 4.5h, Outlier M >= 2.5x, ERI >= 2.30, Opt-In >= 45%, RPM >= $150). Identify the single weakest stage gate and prescribe 1 specific 15-minute corrective action for next Monday.",
+        "user_prompt": "WEEKLY TELEMETRY JSON:\n{{node_04_compute_rpph_and_gates.output_json}}"
+      }
+    },
+    {
+      "id": "node_06_deliver_friday_digest",
+      "name": "Write Weekly Row to Notion DB4/Excel & Send Friday 2:00 PM CEO Briefing Email",
+      "type": "email.send",
+      "parameters": {
+        "to": "{{OPERATOR_CEO_EMAIL}}",
+        "subject": "FRIDAY CEO BRIEFING: RPPH ${{node_04.rpph}}/Hr | Net ${{node_04.net_profit}} | {{node_04.completed_assets}}/15 Assets",
+        "body_markdown": "{{node_05_llm_ceo_briefing.report_markdown}}"
+      }
+    }
+  ]
+}

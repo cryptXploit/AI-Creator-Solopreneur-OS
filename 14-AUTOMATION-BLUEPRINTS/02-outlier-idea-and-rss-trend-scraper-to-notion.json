@@ -1,0 +1,115 @@
+{
+  "blueprint_version": "2.0.0",
+  "studio_product": "The AI Content Creator & Solopreneur Operating System",
+  "publisher": "Apex Digital Systems Studio",
+  "compatible_platforms": [
+    "Make.com (Integromat)",
+    "n8n (Self-Hosted or Cloud)",
+    "Zapier Webhook/Code Steps"
+  ],
+  "workflow_name": "Creator OS Workflow #02 \u2014 S.I.G.N.A.L. 25-Channel Outlier Radar & Comment Gap Miner",
+  "description": "Runs every Monday at 07:30 AM to fetch recent uploads across your 25 peer channels, computes the Outlier Multiplier (M_outlier = Views_14d / Median_90d), filters for M >= 2.5x, mines top audience questions from comments, and logs green-light candidates in Notion DB1.",
+  "chapter_alignment": "Chapter 03 (S.I.G.N.A.L. Outlier Idea Validation & Comment Pain Mining)",
+  "trigger_type": "schedule.cron.weekly_monday_0730",
+  "environment_variables_required": [
+    "OPENAI_OR_ANTHROPIC_API_KEY",
+    "NOTION_INTEGRATION_SECRET_TOKEN",
+    "NOTION_DB1_SIGNAL_IDEA_BANK_ID",
+    "NOTION_DB2_CONTENT_PIPELINE_ID",
+    "NOTION_DB5_SPONSOR_CRM_ID",
+    "ESP_API_KEY_CONVERTKIT_OR_BEEHIIV",
+    "YOUTUBE_DATA_API_KEY",
+    "OPERATOR_CEO_EMAIL"
+  ],
+  "error_handling_policy": {
+    "retry_attempts": 3,
+    "backoff_strategy": "exponential_60s",
+    "fallback_notification": "Send alert to OPERATOR_CEO_EMAIL and preserve payload in Notion Dead-Letter Queue"
+  },
+  "nodes": [
+    {
+      "id": "node_01_monday_cron",
+      "name": "Monday 07:30 AM S.I.G.N.A.L. Radar Trigger",
+      "type": "schedule.cron",
+      "parameters": {
+        "cron_expression": "30 7 * * 1",
+        "timezone": "UTC"
+      }
+    },
+    {
+      "id": "node_02_load_peer_cohort",
+      "name": "Fetch 25 Peer Channel IDs & Rolling 90-Day Median Benchmarks",
+      "type": "notion.queryDatabase",
+      "parameters": {
+        "database_id": "{{NOTION_PEER_COHORT_REGISTRY_ID}}",
+        "filter_active": true,
+        "limit": 25
+      }
+    },
+    {
+      "id": "node_03_youtube_rss_and_stats",
+      "name": "Pull Last 14-Day Uploads & View Telemetry via YouTube Data API v3",
+      "type": "http.request",
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/youtube/v3/videos",
+        "query_params": {
+          "part": "snippet,statistics",
+          "id": "{{node_02_load_peer_cohort.recent_video_ids}}",
+          "key": "{{YOUTUBE_DATA_API_KEY}}"
+        }
+      }
+    },
+    {
+      "id": "node_04_compute_outlier_multiplier",
+      "name": "Calculate M_outlier = Views_14d / Peer_90d_Median & Filter M >= 2.50x",
+      "type": "code.javascript",
+      "parameters": {
+        "threshold_multiplier": 2.5,
+        "formula": "const m = Number((views14d / median90d).toFixed(2)); return m >= 2.50;"
+      }
+    },
+    {
+      "id": "node_05_fetch_top_comments",
+      "name": "Pull Top 50 Viewer Comments on Validated Outlier Videos (M >= 2.5x)",
+      "type": "http.request",
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/youtube/v3/commentThreads",
+        "query_params": {
+          "part": "snippet",
+          "videoId": "{{node_04_compute_outlier_multiplier.video_id}}",
+          "maxResults": 50,
+          "order": "relevance"
+        }
+      }
+    },
+    {
+      "id": "node_06_llm_pain_and_angle_miner",
+      "name": "LLM Analysis (Prompts P12 & P13) \u2014 Extract Comment Pain Gaps & 3 Contrarian Angles",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.3,
+        "system_prompt": "Analyze the top 50 viewer comments on this proven outlier video (M >= 2.5x). Identify the top 3 unfulfilled 'How do I...' questions or implementation complaints, and synthesize 3 contrarian Category-of-One titles (52-68 chars) + 3-word thumbnail concepts.",
+        "user_prompt": "OUTLIER TITLE: {{node_04.title}} (M = {{node_04.multiplier}}x)\nCOMMENTS:\n{{node_05.comments_text}}"
+      }
+    },
+    {
+      "id": "node_07_insert_notion_db1",
+      "name": "Create Green-Light Idea Record in Notion DB1 S.I.G.N.A.L. Idea Bank",
+      "type": "notion.createPage",
+      "parameters": {
+        "database_id": "{{NOTION_DB1_SIGNAL_IDEA_BANK_ID}}",
+        "properties": {
+          "Topic_Title": "{{node_06.recommended_title_a}}",
+          "Outlier_Multiplier_M": "{{node_04.multiplier}}",
+          "Source_Peer_URL": "{{node_04.video_url}}",
+          "Comment_Gap_Summary": "{{node_06.unfulfilled_pain_points}}",
+          "Thumbnail_3_Words": "{{node_06.thumbnail_3_words}}",
+          "Gate_Status": "GREEN LIGHT (M >= 2.5x)"
+        }
+      }
+    }
+  ]
+}

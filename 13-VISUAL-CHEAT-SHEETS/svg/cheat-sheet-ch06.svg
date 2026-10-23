@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="hdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="eqGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <style>
+      .badge { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #2DD4BF; letter-spacing: 1.2px; }
+      .title { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 27px; font-weight: 800; fill: #FFFFFF; }
+      .subtitle { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14.5px; font-weight: 500; fill: #CBD5E1; }
+      .eq-label { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 12px; font-weight: 700; fill: #FBBF24; letter-spacing: 1px; }
+      .eq-text { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 15.5px; font-weight: 700; fill: #F8FAFC; }
+      .gate-pill { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 13px; font-weight: 800; fill: #FFFFFF; }
+      .stage-title { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 16.5px; font-weight: 800; fill: #FFFFFF; }
+      .stage-sub { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 12px; font-weight: 600; fill: #E2E8F0; }
+      .stage-bullet { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.8px; font-weight: 600; fill: #0F172A; }
+      .panel-hdr { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 16px; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.5px; }
+      .row-key { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 700; fill: #3730A3; }
+      .row-key-teal { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 700; fill: #0F766E; }
+      .row-val { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 500; fill: #1E293B; }
+      .ftr-takeaway { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14.5px; font-weight: 700; fill: #FFFFFF; }
+      .ftr-meta { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 11.5px; font-weight: 600; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#F1F5F9"/>
+
+  <!-- Top Header Banner -->
+  <rect x="0" y="0" width="1600" height="118" fill="url(#hdrGrad)"/>
+  <rect x="0" y="118" width="1600" height="5" fill="#4F46E5"/>
+  <text x="44" y="34" class="badge">CHAPTER 06 VISUAL SHORTCUT SHEET · THE 1-TO-15 REPURPOSING WATERFALL</text>
+  <text x="44" y="72" class="title">Atomizing One Weekly Pillar Script Into 15 Platform-Native Assets in 45 Minutes</text>
+  <text x="44" y="100" class="subtitle">5 Vertical Shorts + 2 LinkedIn Posts + 2 X Assets + 3 Visual Carousels + 2 Owned Newsletter Issues</text>
+
+  <!-- Formula & Gate Bar -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="138" width="1520" height="48" rx="10" fill="url(#eqGrad)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="52" y="147" width="235" height="30" rx="6" fill="#D97706"/>
+    <text x="66" y="167" class="gate-pill">OMNICHANNEL SCALE MULTIPLIER</text>
+    <text x="304" y="168" class="eq-text">1 Master H.E.A.R.T. Pillar (2,000 Words)  ==[45-Min AI Extraction]==&gt;  15 Native Assets Across 6 Platforms</text>
+    <rect x="1250" y="146" width="296" height="32" rx="6" fill="#0D9488"/>
+    <text x="1266" y="167" class="gate-pill">GATE: 15 ASSETS / WK · 100% NATIVE</text>
+  </g>
+
+  <!-- 5 Stage Workflow Cards -->
+  
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="40" y="205" width="290" height="305" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2.2"/>
+              <rect x="40" y="205" width="290" height="64" rx="12" fill="#4F46E5"/>
+              <rect x="40" y="255" width="290" height="14" fill="#4F46E5"/>
+              <text x="56" y="233" class="stage-title">1. MASTER PILLAR (A01)</text>
+              <text x="56" y="255" class="stage-sub">YouTube / Long Essay</text>
+              <rect x="54" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="311" r="4.5" fill="#4F46E5"/><text x="80" y="316" class="stage-bullet">1x 12–16 Min Deep-Dive Video</text><rect x="54" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="357" r="4.5" fill="#4F46E5"/><text x="80" y="362" class="stage-bullet">Full 2,000-wd H.E.A.R.T. script</text><rect x="54" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="403" r="4.5" fill="#4F46E5"/><text x="80" y="408" class="stage-bullet">Anchors authority &amp; search SEO</text><rect x="54" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="449" r="4.5" fill="#4F46E5"/><text x="80" y="454" class="stage-bullet">Feeds all 14 downstream assets</text>
+            </g>
+            <path d="M 332 355 L 346 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="348" y="205" width="290" height="305" rx="12" fill="#F0FDFA" stroke="#0D9488" stroke-width="2.2"/>
+              <rect x="348" y="205" width="290" height="64" rx="12" fill="#0D9488"/>
+              <rect x="348" y="255" width="290" height="14" fill="#0D9488"/>
+              <text x="364" y="233" class="stage-title">2. VERTICAL SHORTS (5)</text>
+              <text x="364" y="255" class="stage-sub">Assets A02–A06 (60s)</text>
+              <rect x="362" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="311" r="4.5" fill="#0D9488"/><text x="388" y="316" class="stage-bullet">A02: Contrarian Status-Quo Hook</text><rect x="362" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="357" r="4.5" fill="#0D9488"/><text x="388" y="362" class="stage-bullet">A03: Before/After Case Study</text><rect x="362" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="403" r="4.5" fill="#0D9488"/><text x="388" y="408" class="stage-bullet">A04: Core Formula Walkthrough</text><rect x="362" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="449" r="4.5" fill="#0D9488"/><text x="388" y="454" class="stage-bullet">A05: #1 Mistake · A06: Tool Demo</text>
+            </g>
+            <path d="M 640 355 L 654 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="656" y="205" width="290" height="305" rx="12" fill="#FFFBEB" stroke="#D97706" stroke-width="2.2"/>
+              <rect x="656" y="205" width="290" height="64" rx="12" fill="#D97706"/>
+              <rect x="656" y="255" width="290" height="14" fill="#D97706"/>
+              <text x="672" y="233" class="stage-title">3. LINKEDIN &amp; X (4)</text>
+              <text x="672" y="255" class="stage-sub">Assets A07–A10 (Text)</text>
+              <rect x="670" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="311" r="4.5" fill="#D97706"/><text x="696" y="316" class="stage-bullet">A07: LinkedIn Framework Post</text><rect x="670" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="357" r="4.5" fill="#D97706"/><text x="696" y="362" class="stage-bullet">A08: LinkedIn Case Study Story</text><rect x="670" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="403" r="4.5" fill="#D97706"/><text x="696" y="408" class="stage-bullet">A09: X 8-Post Bookmark Thread</text><rect x="670" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="449" r="4.5" fill="#D97706"/><text x="696" y="454" class="stage-bullet">A10: X Atomic Essay + Diagram</text>
+            </g>
+            <path d="M 948 355 L 962 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="964" y="205" width="290" height="305" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.2"/>
+              <rect x="964" y="205" width="290" height="64" rx="12" fill="#2563EB"/>
+              <rect x="964" y="255" width="290" height="14" fill="#2563EB"/>
+              <text x="980" y="233" class="stage-title">4. CAROUSELS (3)</text>
+              <text x="980" y="255" class="stage-sub">Assets A11–A13 (8-Slide)</text>
+              <rect x="978" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="311" r="4.5" fill="#2563EB"/><text x="1004" y="316" class="stage-bullet">A11: Step-by-Step Blueprint PDF</text><rect x="978" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="357" r="4.5" fill="#2563EB"/><text x="1004" y="362" class="stage-bullet">A12: Old vs New Math Comparison</text><rect x="978" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="403" r="4.5" fill="#2563EB"/><text x="1004" y="408" class="stage-bullet">A13: Copy-Paste Prompt Swipe</text><rect x="978" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="449" r="4.5" fill="#2563EB"/><text x="1004" y="454" class="stage-bullet">1080x1350 Portrait Slide Specs</text>
+            </g>
+            <path d="M 1256 355 L 1270 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="1272" y="205" width="290" height="305" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2.2"/>
+              <rect x="1272" y="205" width="290" height="64" rx="12" fill="#059669"/>
+              <rect x="1272" y="255" width="290" height="14" fill="#059669"/>
+              <text x="1288" y="233" class="stage-title">5. EMAIL ISSUES (2)</text>
+              <text x="1288" y="255" class="stage-sub">Assets A14–A15 (Owned)</text>
+              <rect x="1286" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="311" r="4.5" fill="#059669"/><text x="1312" y="316" class="stage-bullet">A14: Tuesday Deep-Dive Essay</text><rect x="1286" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="357" r="4.5" fill="#059669"/><text x="1312" y="362" class="stage-bullet">A15: Friday Tactical + Offer CTA</text><rect x="1286" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="403" r="4.5" fill="#059669"/><text x="1312" y="408" class="stage-bullet">Drives 70%+ of product sales</text><rect x="1286" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="449" r="4.5" fill="#059669"/><text x="1312" y="454" class="stage-bullet">Completes the 15-Asset Waterfall</text>
+            </g>
+            
+            
+
+  <!-- Bottom Left Panel -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="532" width="750" height="348" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="40" y="532" width="750" height="52" rx="12" fill="#0F172A"/>
+    <rect x="40" y="570" width="750" height="14" fill="#0F172A"/>
+    <text x="60" y="564" class="panel-hdr">PLATFORM-NATIVE RE-HOOKING RULES (ZERO LAZY CROSS-POSTS)</text>
+    <rect x="56" y="602" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="602" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="629" class="row-key">YouTube Shorts / Reels / TikTok</text><text x="284" y="629" class="row-val">Never chop random mid-sentence clips; write a standalone 3s hook</text><rect x="56" y="654" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="654" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="681" class="row-key">LinkedIn Authority Feed</text><text x="284" y="681" class="row-val">2-line metric contrast above fold + generous single-line spacing</text><rect x="56" y="706" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="706" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="733" class="row-key">X (Twitter) Threads</text><text x="284" y="733" class="row-val">Tweet 1 must state hard numbers + promise a skimmable system</text><rect x="56" y="758" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="758" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="785" class="row-key">LinkedIn PDF / IG Carousels</text><text x="284" y="785" class="row-val">Slide 1 = Bold 6-word promise · Slide 8 = Lead Magnet CTA bridge</text><rect x="56" y="810" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="810" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="837" class="row-key">Owned Email Newsletter</text><text x="284" y="837" class="row-val">Personal 1-to-1 operator tone + 3 scannable subheads + 1 clear CTA</text>
+  </g>
+
+  <!-- Bottom Right Panel -->
+  <g filter="url(#shadow)">
+    <rect x="810" y="532" width="750" height="348" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="810" y="532" width="750" height="52" rx="12" fill="#0D9488"/>
+    <rect x="810" y="570" width="750" height="14" fill="#0D9488"/>
+    <text x="830" y="564" class="panel-hdr">CHAPTER 06 PROMPT VAULT &amp; EXTRACTION PIPELINE</text>
+    <rect x="826" y="602" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="602" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="629" class="row-key-teal">Prompt P26 · 5 Shorts Extractor</text><text x="1064" y="629" class="row-val">Extracts 5 standalone 60-second vertical scripts (135–150 words each)</text><rect x="826" y="654" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="654" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="681" class="row-key-teal">Prompt P27 · LinkedIn &amp; X Suite</text><text x="1064" y="681" class="row-val">Converts Pillar blocks into 2 LinkedIn posts, 1 X thread &amp; 1 essay</text><rect x="826" y="706" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="706" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="733" class="row-key-teal">Prompt P28 · 3 Carousel Scripts</text><text x="1064" y="733" class="row-val">Formats slide-by-slide copy (Slides 1–8) for 3 visual carousels</text><rect x="826" y="758" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="758" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="785" class="row-key-teal">Prompt P29 · Dual Newsletters</text><text x="1064" y="785" class="row-val">Adapts Pillar script into Tuesday Value + Friday Monetization emails</text><rect x="826" y="810" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="810" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="837" class="row-key-teal">Prompt P30 · UTM &amp; CTA Matrix</text><text x="1064" y="837" class="row-val">Generates unique tracked bridge links for all 15 weekly deliverables</text>
+  </g>
+
+  <!-- Bottom Takeaway & Brand Strip -->
+  <rect x="40" y="898" width="1520" height="54" rx="10" fill="#0F172A" stroke="#4F46E5" stroke-width="2"/>
+  <circle cx="72" cy="925" r="10" fill="#2DD4BF"/>
+  <text x="94" y="930" class="ftr-takeaway">STAGE GATE 06: Repurposing is translation, not copy-pasting. Run Prompts P26–P30 immediately after finishing your Pillar script on Tuesday morning.</text>
+
+  <text x="44" y="982" class="ftr-meta">THE AI CONTENT CREATOR &amp; SOLOPRENEUR OPERATING SYSTEM  ·  APEX DIGITAL SYSTEMS STUDIO  ·  VISUAL SHORTCUT ATLAS (1600x1000)</text>
+  <text x="1310" y="982" class="ftr-meta">SHEET ID: CHEAT-SHEET-CH06</text>
+</svg>

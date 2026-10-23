@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="hdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="60%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="eqGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <style>
+      .badge { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #2DD4BF; letter-spacing: 1.2px; }
+      .title { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 27px; font-weight: 800; fill: #FFFFFF; }
+      .subtitle { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14.5px; font-weight: 500; fill: #CBD5E1; }
+      .eq-label { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 12px; font-weight: 700; fill: #FBBF24; letter-spacing: 1px; }
+      .eq-text { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 15.5px; font-weight: 700; fill: #F8FAFC; }
+      .gate-pill { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 13px; font-weight: 800; fill: #FFFFFF; }
+      .stage-title { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 16.5px; font-weight: 800; fill: #FFFFFF; }
+      .stage-sub { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 12px; font-weight: 600; fill: #E2E8F0; }
+      .stage-bullet { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.8px; font-weight: 600; fill: #0F172A; }
+      .panel-hdr { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 16px; font-weight: 800; fill: #FFFFFF; letter-spacing: 0.5px; }
+      .row-key { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 700; fill: #3730A3; }
+      .row-key-teal { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 700; fill: #0F766E; }
+      .row-val { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 500; fill: #1E293B; }
+      .ftr-takeaway { font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 14.5px; font-weight: 700; fill: #FFFFFF; }
+      .ftr-meta { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 11.5px; font-weight: 600; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#F1F5F9"/>
+
+  <!-- Top Header Banner -->
+  <rect x="0" y="0" width="1600" height="118" fill="url(#hdrGrad)"/>
+  <rect x="0" y="118" width="1600" height="5" fill="#4F46E5"/>
+  <text x="44" y="34" class="badge">MASTER ARCHITECTURE POSTER · FIVE-STAGE CREATOR OPERATING SYSTEM</text>
+  <text x="44" y="72" class="title">The AI Content Creator &amp; Solopreneur Operating System — End-to-End Master Map</text>
+  <text x="44" y="100" class="subtitle">From 35-Hour Algorithmic Treadmill ($8/Hr) to a 4-Hour Automated Media &amp; Product Engine ($150–$650+/Hr RPPH)</text>
+
+  <!-- Formula & Gate Bar -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="138" width="1520" height="48" rx="10" fill="url(#eqGrad)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="52" y="147" width="235" height="30" rx="6" fill="#D97706"/>
+    <text x="66" y="167" class="gate-pill">CORE STUDIO EQUATION</text>
+    <text x="304" y="168" class="eq-text">RPPH = Net Creator Income / Total Production Hours  |  Target Gate: &gt;= $200/Hr at &lt;= 4.0 Hrs/Wk</text>
+    <rect x="1250" y="146" width="296" height="32" rx="6" fill="#0D9488"/>
+    <text x="1266" y="167" class="gate-pill">ALL 5 STAGE GATES LOCKED</text>
+  </g>
+
+  <!-- 5 Stage Workflow Cards -->
+  
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="40" y="205" width="290" height="305" rx="12" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2.2"/>
+              <rect x="40" y="205" width="290" height="64" rx="12" fill="#4F46E5"/>
+              <rect x="40" y="255" width="290" height="14" fill="#4F46E5"/>
+              <text x="56" y="233" class="stage-title">STAGE 1: VALIDATE</text>
+              <text x="56" y="255" class="stage-sub">Ch 1–3 · S.I.G.N.A.L.</text>
+              <rect x="54" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="311" r="4.5" fill="#4F46E5"/><text x="80" y="316" class="stage-bullet">7-Day RPPH Time Audit</text><rect x="54" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="357" r="4.5" fill="#4F46E5"/><text x="80" y="362" class="stage-bullet">P.A.I.D. Niche Matrix &gt;= 75</text><rect x="54" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="403" r="4.5" fill="#4F46E5"/><text x="80" y="408" class="stage-bullet">Peer Outlier M &gt;= 2.5x</text><rect x="54" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="68" cy="449" r="4.5" fill="#4F46E5"/><text x="80" y="454" class="stage-bullet">Comment Pain Extraction</text>
+            </g>
+            <path d="M 332 355 L 346 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="348" y="205" width="290" height="305" rx="12" fill="#F0FDFA" stroke="#0D9488" stroke-width="2.2"/>
+              <rect x="348" y="205" width="290" height="64" rx="12" fill="#0D9488"/>
+              <rect x="348" y="255" width="290" height="14" fill="#0D9488"/>
+              <text x="364" y="233" class="stage-title">STAGE 2: SCRIPT</text>
+              <text x="364" y="255" class="stage-sub">Ch 4–5 · C.L.I.P. &amp; H.E.A.R.T.</text>
+              <rect x="362" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="311" r="4.5" fill="#0D9488"/><text x="388" y="316" class="stage-bullet">Package-First Title &amp; Thumb</text><rect x="362" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="357" r="4.5" fill="#0D9488"/><text x="388" y="362" class="stage-bullet">30s C.L.I.P. Hook &gt;= 70%</text><rect x="362" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="403" r="4.5" fill="#0D9488"/><text x="388" y="408" class="stage-bullet">Voice DNA 5-Param Card</text><rect x="362" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="376" cy="449" r="4.5" fill="#0D9488"/><text x="388" y="454" class="stage-bullet">90s Retention Resets</text>
+            </g>
+            <path d="M 640 355 L 654 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="656" y="205" width="290" height="305" rx="12" fill="#FFFBEB" stroke="#D97706" stroke-width="2.2"/>
+              <rect x="656" y="205" width="290" height="64" rx="12" fill="#D97706"/>
+              <rect x="656" y="255" width="290" height="14" fill="#D97706"/>
+              <text x="672" y="233" class="stage-title">STAGE 3: ATOMIZE</text>
+              <text x="672" y="255" class="stage-sub">Ch 6–7 · 1-TO-15 ENGINE</text>
+              <rect x="670" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="311" r="4.5" fill="#D97706"/><text x="696" y="316" class="stage-bullet">1 Pillar -&gt; 14 Derivatives</text><rect x="670" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="357" r="4.5" fill="#D97706"/><text x="696" y="362" class="stage-bullet">5 Verticals + 4 Text Posts</text><rect x="670" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="403" r="4.5" fill="#D97706"/><text x="696" y="408" class="stage-bullet">3 Carousels + 2 Emails</text><rect x="670" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="684" cy="449" r="4.5" fill="#D97706"/><text x="696" y="454" class="stage-bullet">Mon–Thu 4-Hr Batch SOP</text>
+            </g>
+            <path d="M 948 355 L 962 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="964" y="205" width="290" height="305" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.2"/>
+              <rect x="964" y="205" width="290" height="64" rx="12" fill="#2563EB"/>
+              <rect x="964" y="255" width="290" height="14" fill="#2563EB"/>
+              <text x="980" y="233" class="stage-title">STAGE 4: CAPTURE</text>
+              <text x="980" y="255" class="stage-sub">Ch 8 · OWNED FUNNEL</text>
+              <rect x="978" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="311" r="4.5" fill="#2563EB"/><text x="1004" y="316" class="stage-bullet">5-Min Utility Lead Magnet</text><rect x="978" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="357" r="4.5" fill="#2563EB"/><text x="1004" y="362" class="stage-bullet">Opt-In Page CVR &gt;= 45%</text><rect x="978" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="403" r="4.5" fill="#2563EB"/><text x="1004" y="408" class="stage-bullet">5-Day Welcome Sequence</text><rect x="978" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="992" cy="449" r="4.5" fill="#2563EB"/><text x="1004" y="454" class="stage-bullet">2-Click Health Hygiene</text>
+            </g>
+            <path d="M 1256 355 L 1270 355" stroke="#4F46E5" stroke-width="3" marker-end="url(#arrow)"/>
+            
+            <g class="stage-card" filter="url(#shadow)">
+              <rect x="1272" y="205" width="290" height="305" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2.2"/>
+              <rect x="1272" y="205" width="290" height="64" rx="12" fill="#059669"/>
+              <rect x="1272" y="255" width="290" height="14" fill="#059669"/>
+              <text x="1288" y="233" class="stage-title">STAGE 5: MONETIZE</text>
+              <text x="1288" y="255" class="stage-sub">Ch 9–10 · VALUE LADDER</text>
+              <rect x="1286" y="293" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="311" r="4.5" fill="#059669"/><text x="1312" y="316" class="stage-bullet">4-Tier Product Ladder</text><rect x="1286" y="339" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="357" r="4.5" fill="#059669"/><text x="1312" y="362" class="stage-bullet">15-Order Pre-Sale Gate</text><rect x="1286" y="385" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="403" r="4.5" fill="#059669"/><text x="1312" y="408" class="stage-bullet">Outcome B2B Sponsorships</text><rect x="1286" y="431" width="262" height="36" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><circle cx="1300" cy="449" r="4.5" fill="#059669"/><text x="1312" y="454" class="stage-bullet">20-Min Friday CEO Review</text>
+            </g>
+            
+            
+
+  <!-- Bottom Left Panel -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="532" width="750" height="348" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="40" y="532" width="750" height="52" rx="12" fill="#0F172A"/>
+    <rect x="40" y="570" width="750" height="14" fill="#0F172A"/>
+    <text x="60" y="564" class="panel-hdr">THE 4-HOUR WEEKLY SOLO BATCH SPRINT (CH 07)</text>
+    <rect x="56" y="602" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="602" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="629" class="row-key">Monday Block 1 (60m)</text><text x="284" y="629" class="row-val">S.I.G.N.A.L. Outlier Lock (M &gt;= 2.5x) + Title &amp; 3-Word Thumbnail</text><rect x="56" y="654" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="654" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="681" class="row-key">Tuesday Block 2 (90m)</text><text x="284" y="681" class="row-val">H.E.A.R.T. Pillar Script (Prompts P22–P25) + 14 Derivative Assets</text><rect x="56" y="706" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="706" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="733" class="row-key">Wednesday Block 3 (60m)</text><text x="284" y="733" class="row-val">Single-Lighting A-Roll Teleprompter Shoot + 60s Sponsor Demo</text><rect x="56" y="758" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="758" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="785" class="row-key">Thursday Block 4 (30m)</text><text x="284" y="785" class="row-val">12-Point QA Gate (Prompt P34) + Schedule All 15 Platform Assets</text><rect x="56" y="810" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="56" y="810" width="215" height="44" rx="6" fill="#EEF2FF"/><text x="68" y="837" class="row-key">Friday CEO Pulse (20m)</text><text x="284" y="837" class="row-val">5-KPI Telemetry Audit + 5 Outbound Sponsor Pitches + Prune 1 Task</text>
+  </g>
+
+  <!-- Bottom Right Panel -->
+  <g filter="url(#shadow)">
+    <rect x="810" y="532" width="750" height="348" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <rect x="810" y="532" width="750" height="52" rx="12" fill="#0D9488"/>
+    <rect x="810" y="570" width="750" height="14" fill="#0D9488"/>
+    <text x="830" y="564" class="panel-hdr">QUANTITATIVE STAGE-GATE BENCHMARKS &amp; PROMPTS</text>
+    <rect x="826" y="602" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="602" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="629" class="row-key-teal">Gate 01 · Niche &amp; Demand</text><text x="1064" y="629" class="row-val">NMPI &gt;= 75/100 · Outlier M &gt;= 2.5x · Prompts P01–P16</text><rect x="826" y="654" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="654" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="681" class="row-key-teal">Gate 02 · Hook &amp; Script</text><text x="1064" y="681" class="row-val">CTR &gt;= 6.5% · 30s Hold &gt;= 70% · ERI &gt;= 2.30 · Prompts P17–P25</text><rect x="826" y="706" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="706" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="733" class="row-key-teal">Gate 03 · 1-to-15 Engine</text><text x="1064" y="733" class="row-val">15 Assets / Wk in &lt;= 4.0 Hrs · 0 Generic Copy · Prompts P26–P35</text><rect x="826" y="758" width="718" height="44" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="758" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="785" class="row-key-teal">Gate 04 · Owned List</text><text x="1064" y="785" class="row-val">Landing CVR &gt;= 45% · Open &gt;= 45% · Sub LTV &gt;= $5 · Prompts P36–P40</text><rect x="826" y="810" width="718" height="44" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/><rect x="826" y="810" width="225" height="44" rx="6" fill="#F0FDFA"/><text x="838" y="837" class="row-key-teal">Gate 05 · Monetization</text><text x="1064" y="837" class="row-val">Blended RPM &gt;= $150 · Pre-Sale &gt;= 15 Orders · Prompts P41–P50</text>
+  </g>
+
+  <!-- Bottom Takeaway & Brand Strip -->
+  <rect x="40" y="898" width="1520" height="54" rx="10" fill="#0F172A" stroke="#4F46E5" stroke-width="2"/>
+  <circle cx="72" cy="925" r="10" fill="#2DD4BF"/>
+  <text x="94" y="930" class="ftr-takeaway">RULE #1 OF THE OPERATING SYSTEM: Never draft a script before validating demand (M &gt;= 2.5x), and never publish an asset without an owned email bridge.</text>
+
+  <text x="44" y="982" class="ftr-meta">THE AI CONTENT CREATOR &amp; SOLOPRENEUR OPERATING SYSTEM  ·  APEX DIGITAL SYSTEMS STUDIO  ·  VISUAL SHORTCUT ATLAS (1600x1000)</text>
+  <text x="1310" y="982" class="ftr-meta">SHEET ID: 00-ECOSYSTEM-MASTER-MAP-POSTER</text>
+</svg>

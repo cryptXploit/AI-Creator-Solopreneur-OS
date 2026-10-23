@@ -1,0 +1,107 @@
+{
+  "blueprint_version": "2.0.0",
+  "studio_product": "The AI Content Creator & Solopreneur Operating System",
+  "publisher": "Apex Digital Systems Studio",
+  "compatible_platforms": [
+    "Make.com (Integromat)",
+    "n8n (Self-Hosted or Cloud)",
+    "Zapier Webhook/Code Steps"
+  ],
+  "workflow_name": "Creator OS Workflow #03 \u2014 Lead Magnet Opt-In, UTM Attribution & 5-Day Welcome Sequence Router",
+  "description": "Captures new opt-ins from your 45%+ conversion landing page, verifies email syntax, logs UTM source attribution (which video/short/post drove the subscriber), delivers the Tier 0 Audit & Calculator Kit immediately, and enrolls the subscriber into the 5-Day Automated Welcome Sequence.",
+  "chapter_alignment": "Chapter 08 (Audience Ownership, 45%+ Opt-In Architecture & 5-Day Welcome Sequence)",
+  "trigger_type": "webhook.inbound.optin_form",
+  "environment_variables_required": [
+    "OPENAI_OR_ANTHROPIC_API_KEY",
+    "NOTION_INTEGRATION_SECRET_TOKEN",
+    "NOTION_DB1_SIGNAL_IDEA_BANK_ID",
+    "NOTION_DB2_CONTENT_PIPELINE_ID",
+    "NOTION_DB5_SPONSOR_CRM_ID",
+    "ESP_API_KEY_CONVERTKIT_OR_BEEHIIV",
+    "YOUTUBE_DATA_API_KEY",
+    "OPERATOR_CEO_EMAIL"
+  ],
+  "error_handling_policy": {
+    "retry_attempts": 3,
+    "backoff_strategy": "exponential_60s",
+    "fallback_notification": "Send alert to OPERATOR_CEO_EMAIL and preserve payload in Notion Dead-Letter Queue"
+  },
+  "nodes": [
+    {
+      "id": "node_01_optin_webhook",
+      "name": "Inbound Opt-In Webhook from Landing Page / ConvertKit / Beehiiv",
+      "type": "webhook.custom",
+      "parameters": {
+        "method": "POST",
+        "required_fields": [
+          "email",
+          "first_name",
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "lead_magnet_slug"
+        ]
+      }
+    },
+    {
+      "id": "node_02_email_hygiene_gate",
+      "name": "Zero-Bounce Syntax & Disposable Domain Verification Gate",
+      "type": "validation.emailFilter",
+      "parameters": {
+        "block_disposable_domains": true,
+        "require_mx_record": true,
+        "normalize_lowercase": true
+      }
+    },
+    {
+      "id": "node_03_esp_tag_and_enroll",
+      "name": "Upsert Subscriber in ESP & Trigger 5-Day Welcome Sequence (Prompt P38)",
+      "type": "esp.upsertSubscriber",
+      "parameters": {
+        "esp_provider": "convertkit_or_beehiiv_or_mailerlite",
+        "sequence_id": "{{ESP_5DAY_WELCOME_SEQUENCE_ID}}",
+        "custom_fields": {
+          "acquisition_source": "{{node_01_optin_webhook.utm_source}}",
+          "acquisition_asset": "{{node_01_optin_webhook.utm_content}}",
+          "lead_magnet_downloaded": "{{node_01_optin_webhook.lead_magnet_slug}}",
+          "signup_timestamp_iso": "{{NOW_ISO}}"
+        }
+      }
+    },
+    {
+      "id": "node_04_instant_asset_delivery",
+      "name": "Send Day-0 Immediate Delivery Email (Tier 0 Free Sample + 7-Day RPPH Audit)",
+      "type": "esp.sendTransactionalEmail",
+      "parameters": {
+        "subject": "Here is your 7-Day RPPH Audit & Creator OS Starter Kit [Download Inside]",
+        "download_url": "{{TIER0_STARTER_KIT_ZIP_URL}}",
+        "one_click_poll_links": [
+          {
+            "tag": "segment_time_crunched",
+            "label": "I spend 20+ hrs/wk creating content and need to batch"
+          },
+          {
+            "tag": "segment_monetization",
+            "label": "I have traffic/subscribers but need a 4-Tier Product Ladder"
+          },
+          {
+            "tag": "segment_b2b_sponsors",
+            "label": "I want to land $1,850-$3,200 B2B Sponsorship packages"
+          }
+        ]
+      }
+    },
+    {
+      "id": "node_05_increment_asset_attribution",
+      "name": "Increment Opt-In Counter on Source Asset in Notion DB2 & DB4 Funnel Tracker",
+      "type": "notion.incrementProperty",
+      "parameters": {
+        "database_id": "{{NOTION_DB2_CONTENT_PIPELINE_ID}}",
+        "lookup_property": "Asset_UTM_Code",
+        "lookup_value": "{{node_01_optin_webhook.utm_content}}",
+        "increment_field": "Attributed_Email_Opt_Ins"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Asset_Code,Platform_Channel,Derivative_Format_Spec,Source_HEART_Block,Prompt_ID,Batch_Prep_Mins,Weekly_Impressions,UTM_Bridge_Clicks,Email_Opt_Ins,Direct_Attributed_Rev_USD,Effective_Asset_RPM_USD
+A01-PILLAR,YouTube Long-Form,14-Min Master H.E.A.R.T. Tutorial Video,Full Script (H-E-A-R-T),P22-P25,90,18500,1120,560,2450.0,132.43
+A02-SHORT1,YT Shorts / Reels / TT,60s Contrarian Status-Quo Math Hook,Block H (Teardown),P26,6,14200,285,138,310.0,21.83
+A03-SHORT2,YT Shorts / Reels / TT,60s Before vs After Operator Case Study,Block E (Evidence),P26,6,11800,240,115,265.0,22.46
+A04-SHORT3,YT Shorts / Reels / TT,60s Core Formula Screen Walkthrough,Block A (Action Step 1),P26,6,15600,340,168,390.0,25.0
+A05-SHORT4,YT Shorts / Reels / TT,60s #1 Implementation Mistake Fix,Block R (Roadblock),P26,6,9800,195,92,195.0,19.9
+A06-SHORT5,YT Shorts / Reels / TT,60s Live Prompt / Template Demo,Mid-Roll Bridge,P26,6,12400,290,145,340.0,27.42
+A07-LI-POST1,LinkedIn Feed,Long-Form Metric Contrast Framework Post,Block H + Block A,P27,8,9400,380,188,520.0,55.32
+A08-LI-POST2,LinkedIn Feed,Operator Case Study & Unit-Economics Breakdown,Block E + Block T,P27,8,7600,310,152,440.0,57.89
+A09-X-THREAD,X (Twitter),8-Post Bookmark-Worthy System Thread,"Blocks H, E, A, R",P27,8,16200,420,205,490.0,30.25
+A10-X-ESSAY,X (Twitter),Single-Image Atomic Essay + SVG Diagram,Chapter Mindmap SVG,P27,5,8900,230,110,260.0,29.21
+A11-CAROUSEL1,LinkedIn PDF / IG,8-Slide Step-by-Step Blueprint Carousel,Block A (3-Step System),P28,10,11200,460,228,610.0,54.46
+A12-CAROUSEL2,LinkedIn PDF / IG,8-Slide Treadmill vs Operator Math Cards,Block H + Block E,P28,10,8400,330,160,430.0,51.19
+A13-CAROUSEL3,LinkedIn PDF / IG,8-Slide Copy-Paste Prompt Swipe Deck,Chapter Prompt Vault,P28,10,9900,410,202,540.0,54.55
+A14-EMAIL-TUE,Owned Newsletter,"Tuesday Deep-Dive Written Issue (1,000 Wds)",Full Written Adaptation,P29,15,6800,640,95,1180.0,173.53
+A15-EMAIL-FRI,Owned Newsletter,Friday Tactical Checklist + Offer/Sponsor Bridge,Block R + Value Ladder,P29,15,6500,720,80,1890.0,290.77

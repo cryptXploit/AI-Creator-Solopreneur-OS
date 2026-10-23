@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creator OS — Interactive Cover, YouTube Thumbnail &amp; Social Card Customizer Studio</title>
+  <style>
+    :root {
+      --primary: #0F172A;
+      --accent: #4F46E5;
+      --secondary: #0D9488;
+      --warning: #D97706;
+      --text: #1E293B;
+      --muted: #64748B;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #090D16;
+      color: #F8FAFC;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .mono { font-family: 'JetBrains Mono', 'Consolas', monospace; }
+    .studio-topbar {
+      background: #0F172A;
+      border-bottom: 2px solid var(--accent);
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #FFF;
+    }
+    .topbar-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: -0.3px;
+    }
+    .topbar-sub {
+      font-size: 0.76rem;
+      color: #94A3B8;
+      display: block;
+    }
+    .topbar-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.86rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.12s, opacity 0.12s;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+    .btn-png { background: var(--secondary); color: #FFFFFF; }
+    .btn-svg { background: var(--accent); color: #FFFFFF; }
+    .btn-reset { background: #1E293B; color: #CBD5E1; border: 1px solid #334155; }
+
+    .studio-workspace {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      flex: 1;
+      min-height: calc(100vh - 68px);
+    }
+    .controls-sidebar {
+      background: #0F172A;
+      border-right: 1px solid #1E293B;
+      padding: 22px;
+      overflow-y: auto;
+      max-height: calc(100vh - 68px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .control-card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+    .control-card h3 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #818CF8;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+    .field-group {
+      display: grid;
+      gap: 5px;
+    }
+    .field-group label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #CBD5E1;
+      display: flex;
+      justify-content: space-between;
+    }
+    .field-group input[type="text"],
+    .field-group select,
+    .field-group textarea {
+      width: 100%;
+      background: #090D16;
+      border: 1px solid #475569;
+      color: #FFFFFF;
+      padding: 9px 11px;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+    .field-group textarea {
+      resize: vertical;
+      min-height: 54px;
+    }
+    .color-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .color-picker-box {
+      background: #090D16;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+    }
+    .color-picker-box label {
+      font-size: 0.7rem;
+      color: #94A3B8;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .color-picker-box input[type="color"] {
+      width: 100%;
+      height: 30px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* Preview Canvas Stage */
+    .preview-stage {
+      background: radial-gradient(circle at center, #1E293B 0%, #090D16 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      overflow: auto;
+      position: relative;
+    }
+    .stage-meta-bar {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #334155;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: #CBD5E1;
+    }
+    .svg-preview-container {
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.65);
+      border: 2px solid #334155;
+      border-radius: 8px;
+      background: #0F172A;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+    }
+    .svg-preview-container svg {
+      display: block;
+      max-width: min(100%, 880px);
+      max-height: 72vh;
+      width: auto;
+      height: auto;
+    }
+    .template-gallery-strip {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-width: 980px;
+    }
+    .preset-chip {
+      background: #0F172A;
+      border: 1.5px solid #334155;
+      color: #CBD5E1;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .preset-chip.active, .preset-chip:hover {
+      border-color: var(--secondary);
+      background: rgba(13, 148, 136, 0.18);
+      color: #FFFFFF;
+    }
+    @media (max-width: 1024px) {
+      .studio-workspace { grid-template-columns: 1fr; }
+      .controls-sidebar { max-height: none; }
+      .template-gallery-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="studio-topbar">
+    <div class="topbar-left">
+      <span class="brand-icon">DS</span>
+      <div>
+        <span class="topbar-title">Creator OS — Cover, YouTube Thumbnail &amp; Social Card Customizer Studio</span>
+        <span class="topbar-sub">100% Offline Vector &amp; High-Res Raster Design Engine · Zero External Dependencies</span>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-reset" onclick="resetCurrentPreset()">Reset Preset Defaults</button>
+      <button class="btn btn-svg" onclick="exportEditableSvg()">Download Editable Vector (.SVG)</button>
+      <button class="btn btn-png" onclick="exportHighResPng()">Download High-Res Raster (.PNG)</button>
+    </div>
+  </header>
+
+  <main class="studio-workspace">
+    <!-- Left Controls Sidebar -->
+    <aside class="controls-sidebar">
+      <div class="control-card">
+        <h3>1. Canvas Format &amp; Dimension Preset</h3>
+        <div class="field-group">
+          <label for="sel-preset">Select Target Platform Canvas</label>
+          <select id="sel-preset" onchange="onPresetChange(this.value)"></select>
+        </div>
+        <div class="field-group">
+          <label for="sel-layout">Visual Architecture Layout Style</label>
+          <select id="sel-layout" onchange="renderStudioSvg()">
+            <option value="grid-glow">Architectural Grid + Radial Glow + 5-Stage Telemetry</option>
+            <option value="split-contrast">High-CTR Split Contrast Card (Ideal for Thumbnails)</option>
+            <option value="executive-frame">Minimalist Executive Double-Frame (Ideal for Covers)</option>
+            <option value="blueprint-matrix">Technical Blueprint Matrix + Corner Fiducials</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-card">
+        <h3>2. Live Typography &amp; Hook Copy</h3>
+        <div class="field-group">
+          <label for="inp-badge">Top Authority / Stage-Gate Badge</label>
+          <input type="text" id="inp-badge" oninput="renderStudioSvg()" />
+        </div>
+        <div class="field-group">
+          <label for="inp-h1">Primary Headline / 3-Word Thumbnail Hook (Line 1)</label>
+          <input type="text" id="inp-h1" oninput="renderStudioSvg()" />
+        </div>
+        <div class="field-group">
+          <label for="inp-h2">Secondary Accent Headline (Line 2)</label>
+          <input type="text" id="inp-h2" oninput="renderStudioSvg()" />
+        </div>
+        <div class="field-group">
+          <label for="inp-sub">Subtitle / Value Proposition Copy</label>
+          <textarea id="inp-sub" oninput="renderStudioSvg()"></textarea>
+        </div>
+        <div class="field-group">
+          <label for="inp-metric">Quantitative Proof / Metric Callout Pill</label>
+          <input type="text" id="inp-metric" oninput="renderStudioSvg()" />
+        </div>
+        <div class="field-group">
+          <label for="inp-author">Footer Imprint / Creator Handle</label>
+          <input type="text" id="inp-author" oninput="renderStudioSvg()" />
+        </div>
+      </div>
+
+      <div class="control-card">
+        <h3>3. Brand Palette &amp; Custom Hex Colors</h3>
+        <div class="field-group">
+          <label for="sel-theme">Quick Studio Theme Preset</label>
+          <select id="sel-theme" onchange="onThemeChange(this.value)"></select>
+        </div>
+        <div class="color-row">
+          <div class="color-picker-box">
+            <label for="col-bg1">Canvas Navy</label>
+            <input type="color" id="col-bg1" value="#0F172A" oninput="renderStudioSvg()" />
+          </div>
+          <div class="color-picker-box">
+            <label for="col-accent">Primary Accent</label>
+            <input type="color" id="col-accent" value="#4F46E5" oninput="renderStudioSvg()" />
+          </div>
+          <div class="color-picker-box">
+            <label for="col-sec">Secondary Teal</label>
+            <input type="color" id="col-sec" value="#2DD4BF" oninput="renderStudioSvg()" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="inp-scale">Headline Font Scale (%) <span id="lbl-scale" class="mono">100%</span></label>
+          <input type="range" id="inp-scale" min="70" max="135" value="100" oninput="document.getElementById('lbl-scale').textContent=this.value+'%';renderStudioSvg();" />
+        </div>
+      </div>
+
+      <div class="control-card">
+        <h3>4. Custom Headshot / Brand Logo Overlay</h3>
+        <div class="field-group">
+          <label for="inp-logo">Upload Local PNG/JPG/SVG (Injected as Offline Data-URI)</label>
+          <input type="file" id="inp-logo" accept="image/*" onchange="handleLogoUpload(event)" />
+        </div>
+        <button class="btn btn-reset" style="width:100%;justify-content:center;" onclick="clearUploadedLogo()">Remove Uploaded Image</button>
+      </div>
+
+      <div class="control-card">
+        <h3>5. 24-Hook &amp; 3-Word Thumbnail Swipe Vault</h3>
+        <div class="field-group">
+          <label for="sel-swipe">Load Pre-Validated Outlier Packaging Swipe</label>
+          <select id="sel-swipe" onchange="applyPackagingSwipe(this.value)"></select>
+        </div>
+        <div class="field-group">
+          <label for="sel-carousel-slide">8-Slide Carousel Sequence Builder (Ch 06)</label>
+          <select id="sel-carousel-slide" onchange="applyCarouselSlidePreset(this.value)"></select>
+        </div>
+        <button class="btn btn-svg" style="width:100%;justify-content:center;margin-top:6px;" onclick="toggleMobileSquintTest()">Toggle 1.5s Mobile Squint-Test Mode</button>
+      </div>
+    </aside>
+
+    <!-- Right Live Canvas Preview Stage -->
+    <section class="preview-stage">
+      <div class="stage-meta-bar mono">
+        <span id="meta-preset-name">YouTube High-CTR Thumbnail</span>
+        <span>·</span>
+        <span id="meta-dims">1280 × 720 px</span>
+        <span>·</span>
+        <span id="meta-contrast-badge" style="color:#2DD4BF;">WCAG CONTRAST: AAA PASS (13.8:1)</span>
+      </div>
+
+      <div class="svg-preview-container" id="svg-mount"></div>
+
+      <div class="template-gallery-strip" id="preset-chips-bar"></div>
+      <canvas id="export-canvas" style="display:none;"></canvas>
+
+      <!-- Interactive Packaging QA & 15-Asset Omnichannel Dimension Reference Matrix -->
+      <div style="width:100%;max-width:1060px;margin-top:18px;background:#0F172A;border:1px solid #334155;border-radius:12px;padding:16px 20px;color:#E2E8F0;font-size:12.5px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1E293B;padding-bottom:10px;margin-bottom:12px;">
+          <strong style="color:#2DD4BF;font-family:'JetBrains Mono',monospace;letter-spacing:0.8px;">PACKAGE-FIRST 10-POINT QA GATE &amp; OMNICHANNEL DIMENSION SPEC SHEET (CHAPTERS 04, 06 &amp; 07)</strong>
+          <span style="background:#312E81;color:#A5B4FC;padding:3px 10px;border-radius:6px;font-family:'JetBrains Mono',monospace;font-size:11px;">TARGET CTR &gt;= 6.5% · 30S HOLD &gt;= 70%</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:#1E293B;border:1px solid #334155;border-radius:8px;padding:12px;">
+            <h4 style="color:#F8FAFC;margin-bottom:8px;font-size:13px;">A. Monday Block 1 Thumbnail &amp; Title Pairing Checklist</h4>
+            <ul style="list-style:none;padding:0;margin:0;line-height:1.65;color:#CBD5E1;">
+              <li>&#9745; <strong>Rule 01 (3-Word Max):</strong> Primary thumbnail headline contains 3 to 5 high-contrast words maximum so mobile viewers parse it in &lt; 1.5 seconds.</li>
+              <li>&#9745; <strong>Rule 02 (Zero Text Duplication):</strong> Your 52–68 character video title complements the thumbnail hook rather than repeating the exact same phrase.</li>
+              <li>&#9745; <strong>Rule 03 (Quantified Contrast):</strong> Include at least one concrete number, dollar figure, timeframe, or Before-vs-After split (`35 Hrs -&gt; 4 Hrs`).</li>
+              <li>&#9745; <strong>Rule 04 (WCAG AAA Legibility):</strong> Maintain &gt;= 7.0:1 luminance contrast between foreground typography (`#FFFFFF` / `#2DD4BF`) and background (`#0F172A`).</li>
+              <li>&#9745; <strong>Rule 05 (Right-Bottom Timestamp Safe Zone):</strong> Never place critical words in the bottom-right 140x48px corner where YouTube overlays the video duration badge.</li>
+              <li>&#9745; <strong>Rule 06 (A/B Backup Ready):</strong> Export two distinct thumbnail variants (`Variant A: Math Contrast` and `Variant B: Status-Quo Warning`) before hitting record on Wednesday.</li>
+            </ul>
+          </div>
+          <div style="background:#1E293B;border:1px solid #334155;border-radius:8px;padding:12px;">
+            <h4 style="color:#F8FAFC;margin-bottom:8px;font-size:13px;">B. Omnichannel Visual &amp; Packaging Dimension Reference</h4>
+            <table style="width:100%;border-collapse:collapse;font-size:11.5px;color:#CBD5E1;">
+              <thead>
+                <tr style="background:#090D16;color:#2DD4BF;text-align:left;">
+                  <th style="padding:5px 6px;">Platform Deliverable</th>
+                  <th style="padding:5px 6px;">Exact Pixel Spec</th>
+                  <th style="padding:5px 6px;">Ratio</th>
+                  <th style="padding:5px 6px;">Safe Zone Rule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #334155;"><td style="padding:4px 6px;">1. YouTube Pillar Thumbnail</td><td style="padding:4px 6px;font-family:monospace;">1280 × 720 px</td><td style="padding:4px 6px;">16:9</td><td style="padding:4px 6px;">Avoid bottom-right timestamp</td></tr>
+                <tr style="border-bottom:1px solid #334155;"><td style="padding:4px 6px;">2. Kindle / Apple Books eBook</td><td style="padding:4px 6px;font-family:monospace;">1600 × 2560 px</td><td style="padding:4px 6px;">1:1.6</td><td style="padding:4px 6px;">75px outer margin clearance</td></tr>
+                <tr style="border-bottom:1px solid #334155;"><td style="padding:4px 6px;">3. Gumroad / LemonSqueezy Card</td><td style="padding:4px 6px;font-family:monospace;">1600 × 1000 px</td><td style="padding:4px 6px;">16:10</td><td style="padding:4px 6px;">Center 4-tier value badges</td></tr>
+                <tr style="border-bottom:1px solid #334155;"><td style="padding:4px 6px;">4. LinkedIn PDF / IG Carousel</td><td style="padding:4px 6px;font-family:monospace;">1080 × 1350 px</td><td style="padding:4px 6px;">4:5</td><td style="padding:4px 6px;">Max 28 words per slide card</td></tr>
+                <tr style="border-bottom:1px solid #334155;"><td style="padding:4px 6px;">5. Newsletter / OpenGraph Card</td><td style="padding:4px 6px;font-family:monospace;">1200 × 630 px</td><td style="padding:4px 6px;">1.91:1</td><td style="padding:4px 6px;">Readable at 320px mobile card</td></tr>
+                <tr><td style="padding:4px 6px;">6. Lead Magnet Hero Mockup</td><td style="padding:4px 6px;font-family:monospace;">1200 × 900 px</td><td style="padding:4px 6px;">4:3</td><td style="padding:4px 6px;">Pair with 1-field email box</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="margin-top:12px;background:#090D16;border:1px solid #1E293B;border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span><strong>PRO OPERATOR WORKFLOW:</strong> Export all 8 Carousel PNGs (`1080×1350`) using the <em>8-Slide Carousel Sequence Builder</em> in Panel 5, or export clean `.SVG` vectors to customize in Figma/Illustrator.</span>
+          <span class="mono" style="color:#FBBF24;">100% OFFLINE · ZERO EXTERNAL CDNS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const PRESETS = [{"id": "yt-thumb", "name": "1. YouTube High-CTR Thumbnail (1280 \u00d7 720 px)", "width": 1280, "height": 720, "badge": "OUTLIER MULTIPLIER: 4.3x VERIFIED", "headline1": "35 HRS TO 4 HRS", "headline2": "THE 1-TO-15 AI OS", "subtitle": "How Solo Creators Automate Production & Scale RPPH to $380/Hr", "author": "@CREATOR_OPERATOR \u00b7 5-STAGE ENGINE", "metricPill": "CTR: 9.4% | HOLD: 74%"}, {"id": "kdp-ebook", "name": "2. Kindle / KDP eBook Cover (1600 \u00d7 2560 px)", "width": 1600, "height": 2560, "badge": "APEX DIGITAL SYSTEMS STUDIO \u00b7 FLAGSHIP EDITION", "headline1": "THE AI CONTENT CREATOR", "headline2": "& SOLOPRENEUR OS", "subtitle": "A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Without Burnout", "author": "APEX DIGITAL SYSTEMS STUDIO", "metricPill": "50 AI PROMPTS \u00b7 20 DIAGRAMS \u00b7 10 WORKBOOKS"}, {"id": "gumroad-cover", "name": "3. Gumroad Product Cover (1600 \u00d7 1000 px)", "width": 1600, "height": 1000, "badge": "TIER 3 COMPLETE FLAGSHIP SOLOPRENEUR BUNDLE", "headline1": "COMPLETE CREATOR OS", "headline2": "BOOK + WEB APP + NOTION KIT", "subtitle": "340-Page Manual + 4 Fillable Workbooks + Pro Web Suite + 8-Tab Excel + 5 Automations", "author": "INSTANT DOWNLOAD \u00b7 DRM-FREE \u00b7 $49 FLAGSHIP EDITION", "metricPill": "PRO KEY: CREATOR-OS-PRO-2026"}, {"id": "carousel-slide", "name": "4. LinkedIn / IG Carousel Cover Slide (1080 \u00d7 1350 px)", "width": 1080, "height": 1350, "badge": "SWIPE-BY-SWIPE OPERATOR PLAYBOOK (1/8)", "headline1": "STOP GUESSING TOPICS.", "headline2": "USE THE 2.5x OUTLIER RULE.", "subtitle": "The 6-Step S.I.G.N.A.L. Validation Formula That Lifted Average Views by 8.8x in 6 Weeks", "author": "SWIPE LEFT FOR THE EXACT FORMULA ->", "metricPill": "STAGE GATE: M >= 2.5x MEDIAN"}, {"id": "newsletter-banner", "name": "5. Newsletter Header Banner (1200 \u00d7 630 px)", "width": 1200, "height": 630, "badge": "THE WEEKLY CREATOR-OPERATOR BRIEFING \u00b7 ISSUE #42", "headline1": "THE 4-HOUR BATCH SPRINT", "headline2": "1 PILLAR -> 15 NATIVE ASSETS", "subtitle": "Inside This Issue: 5-Parameter Voice DNA Calibration + 12-Point Pre-Flight QA Gate", "author": "READ TIME: 4 MINUTES \u00b7 BY APEX DIGITAL SYSTEMS", "metricPill": "RPPH TARGET: >= $200/HR"}, {"id": "lead-magnet-card", "name": "6. Lead Magnet Cheat-Sheet Mockup Card (1200 \u00d7 900 px)", "width": 1200, "height": 900, "badge": "FREE 5-MINUTE UTILITY DOWNLOAD \u00b7 TIER 0 STARTER KIT", "headline1": "7-DAY TIME-LEAK & RPPH", "headline2": "DIAGNOSTIC AUDIT KIT", "subtitle": "Includes Chapter 1 PDF + 48-Field Fillable Workbook + Offline RPPH Web Simulator + CSV Tracker", "author": "100% FREE INSTANT DOWNLOAD \u00b7 ZERO CREDIT CARD REQUIRED", "metricPill": "RECLAIM 15+ HOURS/WEEK"}];
+    const THEMES = [{"id": "indigo", "name": "Creator Indigo (Default)", "bg1": "#0F172A", "bg2": "#1E1B4B", "accent": "#4F46E5", "secondary": "#2DD4BF", "pill": "#D97706"}, {"id": "slate", "name": "Deep Studio Slate", "bg1": "#090D16", "bg2": "#1E293B", "accent": "#38BDF8", "secondary": "#A5B4FC", "pill": "#0D9488"}, {"id": "teal", "name": "Conversion Teal", "bg1": "#042F2E", "bg2": "#0F172A", "accent": "#0D9488", "secondary": "#5EEAD4", "pill": "#F59E0B"}, {"id": "amber", "name": "Retention Amber", "bg1": "#1C1917", "bg2": "#0F172A", "accent": "#D97706", "secondary": "#FCD34D", "pill": "#4F46E5"}, {"id": "emerald", "name": "Emerald Authority", "bg1": "#064E3B", "bg2": "#0F172A", "accent": "#059669", "secondary": "#6EE7B7", "pill": "#4F46E5"}, {"id": "crimson", "name": "Crimson Outlier", "bg1": "#4C0519", "bg2": "#0F172A", "accent": "#E11D48", "secondary": "#FDA4AF", "pill": "#D97706"}];
+
+    const PACKAGING_SWIPES = [
+      { id: "sw01", label: "01. [Time Audit] 35 Hrs -> 4 Hrs (M = 4.3x)", badge: "OUTLIER MULTIPLIER: 4.3x VERIFIED", h1: "35 HRS TO 4 HRS", h2: "THE SOLO CREATOR OS", sub: "How I replaced a 35-hour content treadmill with a 4-hour batch system", metric: "RPPH: $685/HR | 15 ASSETS" },
+      { id: "sw02", label: "02. [Treadmill Trap] Stop Posting Daily (M = 3.8x)", badge: "CHAPTER 01 UNIT ECONOMICS", h1: "STOP POSTING DAILY", h2: "THE $8/HR TRAP EXPOSED", sub: "Why daily unvalidated posting destroys solopreneur profit margins", metric: "NET MARGIN: 86% VERIFIED" },
+      { id: "sw03", label: "03. [Niche Matrix] 5,000 Buyers > 1M Views (M = 4.1x)", badge: "P.A.I.D. NICHE MATRIX >= 75", h1: "5,000 TRUE BUYERS", h2: "BEAT 1,000,000 VIEWS", sub: "Engineering a $240+ Blended RPM in high-intent B2B & prosumer niches", metric: "NMPI SCORE: 89.5 / 100" },
+      { id: "sw04", label: "04. [Category of One] Clone Your Voice DNA (M = 3.6x)", badge: "5-PARAMETER VOICE DNA CARD", h1: "ZERO AI SLOP", h2: "CLONE YOUR VOICE DNA", sub: "Calibrate Claude & GPT to write with your exact rhythm and contrarian edge", metric: "0 BANNED WORDS | 54% AVD" },
+      { id: "sw05", label: "05. [Outlier Radar] Find 3x Ideas in 15 Mins (M = 4.6x)", badge: "S.I.G.N.A.L. DEMAND RADAR", h1: "3X OUTLIER RADAR", h2: "VALIDATE BEFORE WRITING", sub: "The 25-channel peer cohort formula that guarantees audience demand", metric: "GATE: M_OUTLIER >= 2.5X" },
+      { id: "sw06", label: "06. [Comment Mining] Mine Competitor Gaps (M = 3.4x)", badge: "PROMPT P12 GAP EXTRACTOR", h1: "MINE PEER COMMENTS", h2: "STEAL UNSOLVED DEMAND", sub: "How to extract your next 12 breakout video topics from competitor comments", metric: "100% VALIDATED PAIN" },
+      { id: "sw07", label: "07. [C.L.I.P. Hook] 74% 30-Second Hold (M = 5.1x)", badge: "FIRST 30-SECOND HOOK LAB", h1: "74% 30-SEC HOLD", h2: "THE C.L.I.P. FORMULA", sub: "Word-for-word 85-word video openers that eliminate early viewer drop-off", metric: "ERI SCORE: 2.94 PASS" },
+      { id: "sw08", label: "08. [3-Word Thumb] Double Your CTR Overnight (M = 4.2x)", badge: "PACKAGE-FIRST DESIGN RULE", h1: "3-WORD THUMBNAILS", h2: "DOUBLE YOUR CLICK RATE", sub: "Why designing the thumbnail before writing the script lifts CTR to 9.4%", metric: "1.5S SQUINT TEST: PASS" },
+      { id: "sw09", label: "09. [H.E.A.R.T. Script] 2,000 Words in 45m (M = 3.9x)", badge: "MODULAR CHAINED PROMPTING", h1: "2,000-WORD SCRIPT", h2: "IN 45 MINUTES FLAT", sub: "The 5-block H.E.A.R.T. narrative engine with 90-second pattern resets", metric: "HOLD AT 10:00: 53.8%" },
+      { id: "sw10", label: "10. [Sudden Outro] Never Say 'To Wrap Up' (M = 3.5x)", badge: "END-SCREEN RETENTION FIX", h1: "KILL BORING OUTROS", h2: "+42% END-SCREEN CLICKS", sub: "How the Sudden-Death Outro prevents the 40% final-minute viewer exodus", metric: "BRIDGE CTR: 11.2%" },
+      { id: "sw11", label: "11. [1-to-15 Waterfall] 1 Script -> 15 Posts (M = 4.8x)", badge: "OMNICHANNEL MULTIPLIER ENGINE", h1: "1 PILLAR SCRIPT", h2: "INTO 15 NATIVE POSTS", sub: "Atomize one weekly video into 5 Shorts, 4 text posts, 3 carousels & 2 emails", metric: "45-MIN AI EXTRACTION" },
+      { id: "sw12", label: "12. [Carousel Engine] High-Save PDF Carousels (M = 3.7x)", badge: "LINKEDIN & IG AUTHORITY", h1: "8-SLIDE CAROUSELS", h2: "THAT DRIVE 48% OPT-INS", sub: "Turn Block 3 of your Pillar script into bookmark-worthy visual slide decks", metric: "1080x1350 PORTRAIT SPEC" },
+      { id: "sw13", label: "13. [4-Hour Batch] Mon-Thu Production OS (M = 4.5x)", badge: "ZERO CONTEXT-SWITCHING TAX", h1: "THE 4-HOUR WEEK", h2: "BATCH PRODUCTION SOP", sub: "Mon Ideate (60m) · Tue Script (90m) · Wed Record (60m) · Thu Queue (30m)", metric: "SAVES 18.4 HRS / WEEK" },
+      { id: "sw14", label: "14. [Zero-Setup Desk] Press Record in 45s (M = 3.3x)", badge: "FRICTIONLESS STUDIO HARDWARE", h1: "45-SECOND SETUP", h2: "PERMANENT DESK STUDIO", sub: "Eliminate camera and lighting friction with a single smart-plug desk rig", metric: "ONE-TAKE TELEPROMPTER" },
+      { id: "sw15", label: "15. [Utility Magnet] Kill 50-Page PDF eBooks (M = 4.0x)", badge: "CHAPTER 08 AUDIENCE OWNERSHIP", h1: "KILL 50-PAGE PDFS", h2: "BUILD 5-MIN CALCULATORS", sub: "Why interactive utility lead magnets convert cold viewers at 51.4% opt-in", metric: "LANDING CVR >= 45.0%" },
+      { id: "sw16", label: "16. [Welcome Funnel] 5 Emails -> $99 Buyers (M = 4.4x)", badge: "AUTOMATED WELCOME SEQUENCE", h1: "5 PLAIN-TEXT EMAILS", h2: "$6.80 SUBSCRIBER LTV", sub: "Install the 5-day automated onboarding sequence that sells while you sleep", metric: "49.4% OPEN | 6.2% CVR" },
+      { id: "sw17", label: "17. [Pre-Sale Gate] $14K Before Building (M = 4.7x)", badge: "15-ORDER VALIDATION GATE", h1: "PRE-SELL FIRST", h2: "NEVER BUILD UNSOLD PRODUCTS", sub: "Validate demand with 15+ Founding Member pre-orders before building Module 2", metric: "14-DAY LAUNCH RUNBOOK" },
+      { id: "sw18", label: "18. [Checkout Stack] +41% Instant Cart Value (M = 3.9x)", badge: "ORDER BUMP + 1-CLICK UPSELL", h1: "+41% MORE REVENUE", h2: "FROM THE SAME TRAFFIC", sub: "How a $19 Order Bump and $79 1-Click Upsell lift $49 base orders to $68.86", metric: "AOV LIFT: 1.41X BASE" },
+      { id: "sw19", label: "19. [B2B Sponsors] Charge $3,200 With 20K Subs (M = 4.9x)", badge: "OUTCOME SPONSORSHIP PRICING", h1: "KILL $25 CPM ADS", h2: "SELL $3,200 B2B BUNDLES", sub: "Bundle YouTube workflow demos, newsletter slots & paid-ad whitelisting rights", metric: "TIER B PACKAGE: $3,200" },
+      { id: "sw20", label: "20. [Contract Shield] +30%/Mo Ad Whitelisting (M = 3.6x)", badge: "CREATOR IP & USAGE SHIELD", h1: "+30% USAGE FEE", h2: "PROTECT YOUR IP RIGHTS", sub: "The 2 contract clauses that ban AI cloning and monetize paid-social dark ads", metric: "50% DEPOSIT + NET-15" },
+      { id: "sw21", label: "21. [Friday CEO] 20-Minute Weekly CEO Audit (M = 3.8x)", badge: "FRIDAY 2:00 PM EXECUTIVE CADENCE", h1: "20-MIN CEO REVIEW", h2: "SCALE WITHOUT BURNOUT", sub: "Audit 5 stage-gate KPIs, send 5 sponsor pitches & prune 1 low-RPPH task", metric: "25-HR CEILING LOCKED" },
+      { id: "sw22", label: "22. [Make/n8n Flows] 5 No-Code Automations (M = 4.5x)", badge: "14-AUTOMATION-BLUEPRINTS", h1: "5 AI WORKFLOWS", h2: "SAVE 8 HOURS EVERY WEEK", sub: "Connect Notion, Claude/GPT, YouTube & your ESP for under $12/month", metric: "JSON BLUEPRINTS READY" },
+      { id: "sw23", label: "23. [BD Global Rail] Sell Globally From Dhaka (M = 4.1x)", badge: "GLOBAL + LOCAL PAYMENT RAILS", h1: "GLOBAL USD + BKASH", h2: "DUAL CHECKOUT ARCHITECTURE", sub: "Combine LemonSqueezy/Gumroad/Payoneer with local bKash/Nagad rails", metric: "100% BORDERLESS OS" },
+      { id: "sw24", label: "24. [Complete OS] Flagship Tier 3 & 4 Vault (M = 5.0x)", badge: "FLAGSHIP PRODUCT #3 COMPLETE EDITION", h1: "THE AI CREATOR", h2: "& SOLOPRENEUR OS V2.0", sub: "10-Chapter Manual + Web App + 8-Tab Excel + 7 Word Docs + 3 PPTX + 5 JSONs", metric: "ALL 9 PHASES VERIFIED" }
+    ];
+
+    const CAROUSEL_SLIDE_PRESETS = [
+      { id: "cs01", label: "Slide 01 · Bold Contrarian Cover Hook", badge: "SLIDE 01 OF 08 · STOP THE SCROLL", h1: "THE 4-HOUR CREATOR", h2: "OPERATING SYSTEM", sub: "How solo operators replace 35 hours of manual grind with a 5-stage pipeline (Swipe ->)", metric: "SWIPE FOR BLUEPRINT ->" },
+      { id: "cs02", label: "Slide 02 · The $8.11/Hr Treadmill Math", badge: "SLIDE 02 OF 08 · THE PROBLEM", h1: "35 HOURS A WEEK", h2: "AT $8.11 PER HOUR", sub: "88% of creators burn out inside 18 months because they optimize for vanity views over RPPH", metric: "STAGE 01 DIAGNOSTIC" },
+      { id: "cs03", label: "Slide 03 · P.A.I.D. Niche Selection Gate", badge: "SLIDE 03 OF 08 · NICHE ECONOMICS", h1: "SCORE YOUR NICHE", h2: "NMPI >= 75 / 100 GATE", sub: "Weight Pain (2.5x) + Affluence (3.0x) + Intent (2.5x) + Distribution (2.0x) before launching", metric: "STAGE 01 POSITIONING" },
+      { id: "cs04", label: "Slide 04 · S.I.G.N.A.L. Outlier Validation", badge: "SLIDE 04 OF 08 · DEMAND PROOF", h1: "OUTLIER M >= 2.5X", h2: "NEVER GUESS TOPICS", sub: "Only script topics that already beat a peer channel's 90-day median views by 2.5x+", metric: "STAGE 01 VALIDATION" },
+      { id: "cs05", label: "Slide 05 · C.L.I.P. + H.E.A.R.T. Scripting", badge: "SLIDE 05 OF 08 · HIGH RETENTION", h1: "70%+ 30-SEC HOLD", h2: "& 90S PATTERN RESETS", sub: "Confirm click promise in 5s, flash visual proof by 18s, and reset visuals every 90s", metric: "STAGE 02 SCRIPTING" },
+      { id: "cs06", label: "Slide 06 · 1-to-15 Repurposing Waterfall", badge: "SLIDE 06 OF 08 · OMNICHANNEL", h1: "1 PILLAR SCRIPT", h2: "-> 15 NATIVE ASSETS", sub: "Extract 5 Shorts, 2 LinkedIn posts, 2 X assets, 3 Carousels & 2 Newsletters every Tuesday", metric: "STAGE 03 ATOMIZATION" },
+      { id: "cs07", label: "Slide 07 · 45% Opt-In + 4-Tier Ladder", badge: "SLIDE 07 OF 08 · MONETIZATION", h1: "OWN YOUR AUDIENCE", h2: "$150–$450+ BLENDED RPM", sub: "Route rented views into a 5-Minute Utility Lead Magnet, 5-Day Sequence & $49-$149 Offers", metric: "STAGES 04 & 05" },
+      { id: "cs08", label: "Slide 08 · Action CTA & Free Audit Kit", badge: "SLIDE 08 OF 08 · IMPLEMENTATION", h1: "DOWNLOAD THE FREE", h2: "7-DAY RPPH AUDIT KIT", sub: "Grab Worksheet 01 + Chapter 1 + The Interactive RPPH Calculator via the link in bio/comments", metric: "LINK IN FIRST COMMENT" }
+    ];
+
+    let activePresetId = PRESETS[0].id;
+    let uploadedImageDataUri = null;
+    let squintTestActive = false;
+
+    function escapeXml(unsafe) {
+      return String(unsafe || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+    }
+
+    function wrapSvgText(text, maxCharsPerLine) {
+      const words = String(text || '').split(/\s+/);
+      const lines = [];
+      let current = '';
+      words.forEach(w => {
+        if ((current + ' ' + w).trim().length <= maxCharsPerLine) {
+          current = (current + ' ' + w).trim();
+        } else {
+          if (current) lines.push(current);
+          current = w;
+        }
+      });
+      if (current) lines.push(current);
+      return lines.slice(0, 4);
+    }
+
+    function initControls() {
+      const selPreset = document.getElementById('sel-preset');
+      const chipsBar = document.getElementById('preset-chips-bar');
+      selPreset.innerHTML = '';
+      chipsBar.innerHTML = '';
+
+      PRESETS.forEach((p, idx) => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = p.name;
+        selPreset.appendChild(opt);
+
+        const chip = document.createElement('button');
+        chip.className = 'preset-chip' + (idx === 0 ? ' active' : '');
+        chip.id = 'chip-' + p.id;
+        chip.textContent = p.name.replace(/^\d+\.\s*/, '');
+        chip.onclick = () => {
+          selPreset.value = p.id;
+          onPresetChange(p.id);
+        };
+        chipsBar.appendChild(chip);
+      });
+
+      const selTheme = document.getElementById('sel-theme');
+      selTheme.innerHTML = '';
+      THEMES.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t.id;
+        opt.textContent = t.name;
+        selTheme.appendChild(opt);
+      });
+
+      const selSwipe = document.getElementById('sel-swipe');
+      if (selSwipe) {
+        selSwipe.innerHTML = '';
+        PACKAGING_SWIPES.forEach(sw => {
+          const opt = document.createElement('option');
+          opt.value = sw.id;
+          opt.textContent = sw.label;
+          selSwipe.appendChild(opt);
+        });
+      }
+
+      const selCarousel = document.getElementById('sel-carousel-slide');
+      if (selCarousel) {
+        selCarousel.innerHTML = '';
+        CAROUSEL_SLIDE_PRESETS.forEach(cs => {
+          const opt = document.createElement('option');
+          opt.value = cs.id;
+          opt.textContent = cs.label;
+          selCarousel.appendChild(opt);
+        });
+      }
+
+      loadPresetIntoInputs(PRESETS[0]);
+      renderStudioSvg();
+    }
+
+    function applyPackagingSwipe(swipeId) {
+      const sw = PACKAGING_SWIPES.find(x => x.id === swipeId);
+      if (!sw) return;
+      document.getElementById('inp-badge').value = sw.badge;
+      document.getElementById('inp-h1').value = sw.h1;
+      document.getElementById('inp-h2').value = sw.h2;
+      document.getElementById('inp-sub').value = sw.sub;
+      document.getElementById('inp-metric').value = sw.metric;
+      renderStudioSvg();
+    }
+
+    function applyCarouselSlidePreset(slideId) {
+      const cs = CAROUSEL_SLIDE_PRESETS.find(x => x.id === slideId);
+      if (!cs) return;
+      const selPreset = document.getElementById('sel-preset');
+      if (selPreset && selPreset.value !== 'social-carousel') {
+        selPreset.value = 'social-carousel';
+        onPresetChange('social-carousel');
+      }
+      document.getElementById('inp-badge').value = cs.badge;
+      document.getElementById('inp-h1').value = cs.h1;
+      document.getElementById('inp-h2').value = cs.h2;
+      document.getElementById('inp-sub').value = cs.sub;
+      document.getElementById('inp-metric').value = cs.metric;
+      renderStudioSvg();
+    }
+
+    function toggleMobileSquintTest() {
+      squintTestActive = !squintTestActive;
+      const mount = document.getElementById('svg-mount');
+      if (squintTestActive) {
+        mount.style.transform = 'scale(0.24)';
+        mount.style.filter = 'blur(0.6px)';
+        mount.style.transition = 'all 0.25s ease';
+      } else {
+        mount.style.transform = 'scale(1)';
+        mount.style.filter = 'none';
+      }
+    }
+
+    function loadPresetIntoInputs(p) {
+      document.getElementById('inp-badge').value = p.badge;
+      document.getElementById('inp-h1').value = p.headline1;
+      document.getElementById('inp-h2').value = p.headline2;
+      document.getElementById('inp-sub').value = p.subtitle;
+      document.getElementById('inp-metric').value = p.metricPill;
+      document.getElementById('inp-author').value = p.author;
+      document.getElementById('meta-preset-name').textContent = p.name;
+      document.getElementById('meta-dims').textContent = p.width + ' × ' + p.height + ' px';
+    }
+
+    function onPresetChange(presetId) {
+      activePresetId = presetId;
+      const p = PRESETS.find(x => x.id === presetId) || PRESETS[0];
+      document.querySelectorAll('.preset-chip').forEach(c => {
+        c.classList.toggle('active', c.id === 'chip-' + presetId);
+      });
+      loadPresetIntoInputs(p);
+      renderStudioSvg();
+    }
+
+    function resetCurrentPreset() {
+      onPresetChange(activePresetId);
+    }
+
+    function onThemeChange(themeId) {
+      const t = THEMES.find(x => x.id === themeId) || THEMES[0];
+      document.getElementById('col-bg1').value = t.bg1;
+      document.getElementById('col-accent').value = t.accent;
+      document.getElementById('col-sec').value = t.secondary;
+      renderStudioSvg();
+    }
+
+    function handleLogoUpload(ev) {
+      const file = ev.target.files && ev.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        uploadedImageDataUri = e.target.result;
+        renderStudioSvg();
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearUploadedLogo() {
+      uploadedImageDataUri = null;
+      document.getElementById('inp-logo').value = '';
+      renderStudioSvg();
+    }
+
+    function buildCurrentSvgMarkup() {
+      const p = PRESETS.find(x => x.id === activePresetId) || PRESETS[0];
+      const W = p.width;
+      const H = p.height;
+      const bg1 = document.getElementById('col-bg1').value || '#0F172A';
+      const accent = document.getElementById('col-accent').value || '#4F46E5';
+      const sec = document.getElementById('col-sec').value || '#2DD4BF';
+      const layout = document.getElementById('sel-layout').value || 'grid-glow';
+      const scale = (parseFloat(document.getElementById('inp-scale').value) || 100) / 100.0;
+
+      const badge = escapeXml(document.getElementById('inp-badge').value);
+      const h1 = escapeXml(document.getElementById('inp-h1').value);
+      const h2 = escapeXml(document.getElementById('inp-h2').value);
+      const subRaw = document.getElementById('inp-sub').value;
+      const metric = escapeXml(document.getElementById('inp-metric').value);
+      const author = escapeXml(document.getElementById('inp-author').value);
+
+      // Grid lines
+      const step = Math.round(Math.min(W, H) / 10);
+      let gridLines = '';
+      for (let x = 0; x <= W; x += step) {
+        gridLines += `<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="#334155" stroke-width="1" opacity="0.32" />`;
+      }
+      for (let y = 0; y <= H; y += step) {
+        gridLines += `<line x1="0" y1="${y}" x2="${W}" y2="${y}" stroke="#334155" stroke-width="1" opacity="0.32" />`;
+      }
+
+      let layoutDecor = '';
+      if (layout === 'split-contrast') {
+        layoutDecor = `<rect x="${Math.round(W * 0.58)}" y="0" width="${Math.round(W * 0.42)}" height="${H}" fill="${accent}" opacity="0.18" />
+                       <line x1="${Math.round(W * 0.58)}" y1="0" x2="${Math.round(W * 0.58)}" y2="${H}" stroke="${sec}" stroke-width="4" />`;
+      } else if (layout === 'executive-frame') {
+        layoutDecor = `<rect x="36" y="36" width="${W - 72}" height="${H - 72}" rx="18" fill="none" stroke="${accent}" stroke-width="4" />
+                       <rect x="52" y="52" width="${W - 104}" height="${H - 104}" rx="12" fill="none" stroke="${sec}" stroke-width="1.5" opacity="0.7" />`;
+      } else if (layout === 'blueprint-matrix') {
+        layoutDecor = `<circle cx="${W - 140}" cy="140" r="90" fill="none" stroke="${sec}" stroke-width="2" stroke-dasharray="8,6" opacity="0.5" />
+                       <circle cx="140" cy="${H - 140}" r="90" fill="none" stroke="${accent}" stroke-width="2" stroke-dasharray="8,6" opacity="0.5" />`;
+      }
+
+      const isPortrait = H > W * 1.15;
+      const baseTitleSize = Math.round((isPortrait ? W * 0.068 : W * 0.058) * scale);
+      const subFontSize = Math.round(isPortrait ? W * 0.024 : W * 0.021);
+      const badgeHeight = Math.round(H * 0.065);
+      const padX = Math.round(W * 0.065);
+
+      const subLines = wrapSvgText(subRaw, isPortrait ? 44 : 62);
+      const subYStart = Math.round(H * 0.52);
+      const subTspans = subLines.map((ln, idx) =>
+        `<text x="${padX}" y="${subYStart + idx * Math.round(subFontSize * 1.45)}" fill="#CBD5E1" font-size="${subFontSize}" font-weight="500">${escapeXml(ln)}</text>`
+      ).join('\n  ');
+
+      let logoMarkup = '';
+      if (uploadedImageDataUri) {
+        const logoSize = Math.round(Math.min(W, H) * 0.22);
+        logoMarkup = `<image href="${uploadedImageDataUri}" x="${W - padX - logoSize}" y="${Math.round(H * 0.16)}" width="${logoSize}" height="${logoSize}" preserveAspectRatio="xMidYMid slice" />`;
+      }
+
+      // 3 Architecture Mini-Cards above footer
+      const cardsY = Math.round(H * 0.69);
+      const cardH = Math.round(H * 0.13);
+      const cardW = Math.round((W - padX * 2 - 32) / 3);
+      const miniCards = [
+        ['STAGE 1–2: VALIDATE', 'Outlier M >= 2.5x | 70% Hold', accent],
+        ['STAGE 3: MULTIPLY', '1 Pillar -> 15 Native Assets', sec],
+        ['STAGE 4–5: MONETIZE', '45% Opt-In | +45% Checkout AOV', '#F59E0B']
+      ].map((c, i) => {
+        const cx = padX + i * (cardW + 16);
+        return `<rect x="${cx}" y="${cardsY}" width="${cardW}" height="${cardH}" rx="10" fill="#1E293B" stroke="${c[2]}" stroke-width="2" />
+                <text x="${cx + 18}" y="${cardsY + Math.round(cardH * 0.42)}" fill="${c[2]}" font-size="${Math.round(subFontSize * 0.78)}" font-weight="800" font-family="'JetBrains Mono', monospace">${c[0]}</text>
+                <text x="${cx + 18}" y="${cardsY + Math.round(cardH * 0.76)}" fill="#F8FAFC" font-size="${Math.round(subFontSize * 0.82)}" font-weight="700">${c[1]}</text>`;
+      }).join('\n  ');
+
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="'Inter', 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="st-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="${bg1}" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+    <radialGradient id="st-glow" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="${accent}" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="${bg1}" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="${W}" height="${H}" fill="url(#st-bg)" />
+  ${gridLines}
+  <rect x="0" y="0" width="${W}" height="${H}" fill="url(#st-glow)" />
+  ${layoutDecor}
+
+  <!-- Outer Precision Border -->
+  <rect x="20" y="20" width="${W - 40}" height="${H - 40}" rx="14" fill="none" stroke="#334155" stroke-width="2" />
+
+  <!-- Top Authority Badge & Metric Pill -->
+  <rect x="${padX}" y="${Math.round(H * 0.08)}" width="${Math.round(W * 0.56)}" height="${badgeHeight}" rx="8" fill="#1E293B" stroke="${accent}" stroke-width="2" />
+  <text x="${padX + 22}" y="${Math.round(H * 0.08 + badgeHeight * 0.64)}" fill="#E2E8F0" font-size="${Math.round(subFontSize * 0.85)}" font-weight="800" letter-spacing="2">${badge}</text>
+
+  <rect x="${W - padX - Math.round(W * 0.28)}" y="${Math.round(H * 0.08)}" width="${Math.round(W * 0.28)}" height="${badgeHeight}" rx="8" fill="${sec}" />
+  <text x="${W - padX - Math.round(W * 0.14)}" y="${Math.round(H * 0.08 + badgeHeight * 0.64)}" fill="#090D16" font-size="${Math.round(subFontSize * 0.88)}" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">${metric}</text>
+
+  <!-- Main Headlines -->
+  <text x="${padX}" y="${Math.round(H * 0.28)}" fill="#FFFFFF" font-size="${baseTitleSize}" font-weight="900" letter-spacing="-1">${h1}</text>
+  <text x="${padX}" y="${Math.round(H * 0.39)}" fill="${sec}" font-size="${Math.round(baseTitleSize * 0.94)}" font-weight="900" letter-spacing="-1">${h2}</text>
+
+  <!-- Accent Divider -->
+  <rect x="${padX}" y="${Math.round(H * 0.43)}" width="${Math.round(W * 0.45)}" height="6" rx="3" fill="${accent}" />
+
+  <!-- Subtitle Lines -->
+  ${subTspans}
+
+  <!-- Optional Uploaded Logo / Headshot -->
+  ${logoMarkup}
+
+  <!-- 3 Stage-Gate Architecture Cards -->
+  ${miniCards}
+
+  <!-- Bottom Author / Imprint Footer Strip -->
+  <rect x="${padX}" y="${Math.round(H * 0.86)}" width="${W - padX * 2}" height="${Math.round(H * 0.075)}" rx="10" fill="#090D16" stroke="#334155" stroke-width="2" />
+  <text x="${Math.round(W / 2)}" y="${Math.round(H * 0.86 + H * 0.048)}" fill="#F8FAFC" font-size="${Math.round(subFontSize * 0.88)}" font-weight="800" font-family="'JetBrains Mono', monospace" letter-spacing="1.5" text-anchor="middle">${author}</text>
+</svg>`;
+    }
+
+    function renderStudioSvg() {
+      const svgMarkup = buildCurrentSvgMarkup();
+      document.getElementById('svg-mount').innerHTML = svgMarkup;
+    }
+
+    function exportEditableSvg() {
+      const svgMarkup = buildCurrentSvgMarkup();
+      const blob = new Blob([svgMarkup], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'creator-os-' + activePresetId + '-custom.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function exportSVG() {
+      return exportEditableSvg();
+    }
+
+    function exportHighResPng() {
+      const p = PRESETS.find(x => x.id === activePresetId) || PRESETS[0];
+      const svgMarkup = buildCurrentSvgMarkup();
+      const canvas = document.getElementById('export-canvas');
+      canvas.width = p.width;
+      canvas.height = p.height;
+      const ctx = canvas.getContext('2d');
+
+      const img = new Image();
+      const svgBlob = new Blob([svgMarkup], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+      img.onload = function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        canvas.toBlob(function(pngBlob) {
+          const pngUrl = URL.createObjectURL(pngBlob);
+          const a = document.createElement('a');
+          a.href = pngUrl;
+          a.download = 'creator-os-' + activePresetId + '-' + p.width + 'x' + p.height + '.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(pngUrl);
+        }, 'image/png', 1.0);
+      };
+      img.src = url;
+    }
+
+    function exportPNG() {
+      return exportHighResPng();
+    }
+
+    window.addEventListener('DOMContentLoaded', initControls);
+  </script>
+</body>
+</html>
