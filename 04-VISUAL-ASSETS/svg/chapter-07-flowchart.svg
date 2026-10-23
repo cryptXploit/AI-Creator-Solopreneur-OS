@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+    <filter id="node-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Pure White Canvas -->
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF"/>
+  <rect x="10" y="10" width="880" height="460" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="10" y="10" width="880" height="48" rx="8" fill="#0F172A"/>
+  <text x="28" y="33" fill="#FFFFFF" font-size="14" font-weight="700" letter-spacing="0.4">CHAPTER 07 DECISION TREE: 12-POINT PRE-PUBLISH QA &amp; EDITING DELEGATION ROUTER</text>
+  <text x="28" y="49" fill="#94A3B8" font-size="10.5" font-weight="500">Enforcing Setup &lt;= 3m | -14.0 LUFS | &gt;= 85% Original Visuals | 12/12 Pre-Publish Gate | PTES &gt;= 3.75 Assets/Hr</text>
+  <rect x="735" y="21" width="138" height="26" rx="4" fill="#4F46E5"/>
+  <text x="804" y="38" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">ZERO-DEFECT GATE</text>
+
+  <!-- INPUT SPRINT NODE -->
+  <g filter="url(#node-shadow)">
+    <rect x="28" y="76" width="175" height="76" rx="6" fill="#0F172A"/>
+    <text x="115" y="96" fill="#0D9488" font-size="9.5" font-weight="700" text-anchor="middle">BLOCK 1 &amp; 2 INPUT</text>
+    <text x="115" y="114" fill="#FFFFFF" font-size="11" font-weight="700" text-anchor="middle">Script + P31 Cue-Sheet</text>
+    <text x="115" y="130" fill="#CBD5E1" font-size="9.5" text-anchor="middle">+ P32 Phonetic Script</text>
+    <text x="115" y="144" fill="#94A3B8" font-size="8.5" text-anchor="middle">(V01–V12 Visuals Mapped)</text>
+  </g>
+  <path d="M 203 114 L 240 114" fill="none" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arrow-indigo)"/>
+
+  <!-- GATE 1: CAPTURE TRACK & SETUP FRICTION -->
+  <g filter="url(#node-shadow)">
+    <rect x="244" y="72" width="200" height="84" rx="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="244" y="72" width="200" height="22" rx="4" fill="#4F46E5"/>
+    <text x="344" y="87" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">GATE 1: SETUP &amp; TRACK AUDIT</text>
+    <text x="344" y="107" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Setup &lt;= 3.0 Mins (CSFP=0) &amp;</text>
+    <text x="344" y="121" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Original Visuals &gt;= 85%?</text>
+    <text x="344" y="140" fill="#64748B" font-size="9" text-anchor="middle">Clap-and-Pause Capture Active</text>
+  </g>
+
+  <!-- Gate 1 FAIL -->
+  <path d="M 344 156 L 344 192" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)"/>
+  <text x="353" y="177" fill="#D97706" font-size="9" font-weight="700">FAIL</text>
+  <rect x="244" y="196" width="200" height="52" rx="5" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="344" y="214" fill="#0F172A" font-size="9.5" font-weight="700" text-anchor="middle">FIX: Clamp Hardware / Cut Stock</text>
+  <text x="344" y="228" fill="#1E293B" font-size="9" text-anchor="middle">Replace Stock w/ Diagrams &amp; Demos</text>
+  <text x="344" y="241" fill="#D97706" font-size="8.5" font-weight="600" text-anchor="middle">Protects YPP Monetization (QC-06)</text>
+
+  <!-- Gate 1 PASS -->
+  <path d="M 444 114 L 484 114" fill="none" stroke="#0D9488" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <text x="464" y="106" fill="#0D9488" font-size="9" font-weight="700" text-anchor="middle">PASS</text>
+
+  <!-- GATE 2: ACOUSTIC & TRANSCRIPT ROUGH-CUT -->
+  <g filter="url(#node-shadow)">
+    <rect x="488" y="72" width="200" height="84" rx="6" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+    <rect x="488" y="72" width="200" height="22" rx="4" fill="#D97706"/>
+    <text x="588" y="87" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">GATE 2: AUDIO &amp; TEXT ROUGH-CUT</text>
+    <text x="588" y="107" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Audio at -14.0 LUFS (-1 dBTP) &amp;</text>
+    <text x="588" y="121" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Clap Retakes + Silences Cut?</text>
+    <text x="588" y="140" fill="#64748B" font-size="9" text-anchor="middle">15-Min Text Edit via Prompt P33</text>
+  </g>
+
+  <!-- Gate 2 FAIL -->
+  <path d="M 588 156 L 588 192" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)"/>
+  <text x="597" y="177" fill="#D97706" font-size="9" font-weight="700">FAIL</text>
+  <rect x="488" y="196" width="200" height="52" rx="5" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="588" y="214" fill="#0F172A" font-size="9.5" font-weight="700" text-anchor="middle">FIX: Apply 5-Stage Vocal Chain</text>
+  <text x="588" y="228" fill="#1E293B" font-size="9" text-anchor="middle">80Hz Cut + 3.5:1 Comp + Limiter</text>
+  <text x="588" y="241" fill="#D97706" font-size="8.5" font-weight="600" text-anchor="middle">Truncate Silences &gt; 0.45s to 0.18s</text>
+
+  <!-- Gate 2 PASS Routing Down to Gate 3 -->
+  <path d="M 688 114 L 785 114 L 785 280 L 195 280 L 195 320" fill="none" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arrow-indigo)"/>
+  <text x="738" y="106" fill="#0D9488" font-size="9" font-weight="700" text-anchor="middle">PASS -&gt; STAGE 3</text>
+
+  <!-- GATE 3: IN-HOUSE SPRINT VS EDITOR DELEGATION -->
+  <g filter="url(#node-shadow)">
+    <rect x="85" y="324" width="220" height="88" rx="6" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="85" y="324" width="220" height="22" rx="4" fill="#4F46E5"/>
+    <text x="195" y="339" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">GATE 3: DELEGATION ROUTER</text>
+    <text x="195" y="359" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">Revenue &gt;= $5,000/mo OR</text>
+    <text x="195" y="373" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">In-House 25m Visual Layering?</text>
+    <text x="195" y="391" fill="#4F46E5" font-size="9" font-weight="600" text-anchor="middle">In-House: Drop V01–V12 on V2/V3</text>
+    <text x="195" y="404" fill="#0D9488" font-size="8.5" font-weight="600" text-anchor="middle">Delegated: Send P34 Work Order (24h)</text>
+  </g>
+
+  <path d="M 305 368 L 365 368" fill="none" stroke="#0D9488" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <text x="335" y="360" fill="#0D9488" font-size="9" font-weight="700" text-anchor="middle">RENDERED</text>
+
+  <!-- GATE 4: THE 12-POINT PRE-PUBLISH QUALITY GATE -->
+  <g filter="url(#node-shadow)">
+    <rect x="369" y="324" width="220" height="88" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect x="369" y="324" width="220" height="22" rx="4" fill="#0D9488"/>
+    <text x="479" y="339" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">GATE 4: 12-POINT PRE-PUBLISH QA</text>
+    <text x="479" y="359" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">All 16 Assets Pass QC-01..QC-12</text>
+    <text x="479" y="373" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">&amp; Incognito UTM Links Live?</text>
+    <text x="479" y="391" fill="#1E293B" font-size="9" text-anchor="middle">Prompt P35: Chapters + UTM Matrix</text>
+    <text x="479" y="404" fill="#D97706" font-size="8.5" font-weight="600" text-anchor="middle">If &lt; 12/12: Hold &amp; Patch Defect</text>
+  </g>
+
+  <path d="M 589 368 L 645 368" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <text x="617" y="360" fill="#0D9488" font-size="9" font-weight="700" text-anchor="middle">12/12 PASS</text>
+
+  <!-- TERMINAL APPROVED NODE -->
+  <g filter="url(#node-shadow)">
+    <rect x="649" y="324" width="222" height="88" rx="8" fill="#0F172A" stroke="#0D9488" stroke-width="2.5"/>
+    <rect x="669" y="334" width="182" height="20" rx="4" fill="#0D9488"/>
+    <text x="760" y="348" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">PUBLISHED &amp; SCHEDULED</text>
+    <text x="760" y="368" fill="#FFFFFF" font-size="11.5" font-weight="700" text-anchor="middle">Sprint Complete (&lt;= 4.0 Hrs)</text>
+    <text x="760" y="384" fill="#CBD5E1" font-size="9.5" text-anchor="middle">1 Pillar + 15 Derivatives Queued</text>
+    <text x="760" y="400" fill="#0D9488" font-size="9.5" font-weight="700" text-anchor="middle">PTES &gt;= 3.75 Verified Assets/Hr</text>
+  </g>
+
+  <!-- Bottom Telemetry Legend -->
+  <rect x="28" y="432" width="844" height="26" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="42" y="449" fill="#0F172A" font-size="9.5" font-weight="700">12-POINT QA DOMAINS:</text>
+  <text x="175" y="449" fill="#4F46E5" font-size="9.5" font-weight="600">QC 01–03: Audio/Video Spec</text>
+  <text x="345" y="449" fill="#D97706" font-size="9.5" font-weight="600">QC 04–06: 90s Resets &amp; YPP</text>
+  <text x="515" y="449" fill="#0D9488" font-size="9.5" font-weight="600">QC 07–09: CTR &amp; Safe Zones</text>
+  <text x="685" y="449" fill="#0F172A" font-size="9.5" font-weight="700">QC 10–12: Watermarks &amp; UTMs</text>
+</svg>

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F46E5"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#D97706"/>
+    </marker>
+    <marker id="arrow-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F172A"/>
+    </marker>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Pure White Canvas -->
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF"/>
+  <rect x="10" y="10" width="880" height="460" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Top Header Banner -->
+  <rect x="10" y="10" width="880" height="48" rx="8" fill="#0F172A"/>
+  <text x="28" y="33" fill="#FFFFFF" font-size="14" font-weight="700" letter-spacing="0.4">CHAPTER 07 SYSTEM MINDMAP: 4-HOUR BATCH SPRINT &amp; DUAL-TRACK STUDIO PIPELINE</text>
+  <text x="28" y="49" fill="#94A3B8" font-size="10.5" font-weight="500">Part III — Faceless &amp; Studio Production | Core Formula: PTES = [A_pass / (H_batch + H_edit)] x (1 - CSFP) &gt;= 3.75 Assets/Hr</text>
+  <rect x="728" y="21" width="146" height="26" rx="4" fill="#0D9488"/>
+  <text x="801" y="38" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">12-POINT QA &gt;= 95%</text>
+
+  <!-- Connecting Bezier Curves from Center Node (450, 250) -->
+  <path d="M 350 225 C 305 225, 290 140, 255 140" fill="none" stroke="#4F46E5" stroke-width="2.5" marker-end="url(#arrow-indigo)"/>
+  <path d="M 350 275 C 305 275, 290 348, 255 348" fill="none" stroke="#0D9488" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+  <path d="M 550 225 C 595 225, 610 140, 645 140" fill="none" stroke="#D97706" stroke-width="2.5" marker-end="url(#arrow-amber)"/>
+  <path d="M 550 275 C 595 275, 610 348, 645 348" fill="none" stroke="#0F172A" stroke-width="2.5" marker-end="url(#arrow-navy)"/>
+
+  <!-- CENTRAL ROOT NODE -->
+  <g filter="url(#card-shadow)">
+    <rect x="350" y="196" width="200" height="110" rx="10" fill="#0F172A" stroke="#4F46E5" stroke-width="2.5"/>
+    <rect x="370" y="206" width="160" height="20" rx="4" fill="#4F46E5"/>
+    <text x="450" y="220" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">STUDIO PRODUCTION OS</text>
+    <text x="450" y="242" fill="#FFFFFF" font-size="12.5" font-weight="700" text-anchor="middle">4-Hour Batch Sprint &amp;</text>
+    <text x="450" y="259" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Dual-Track Pipeline</text>
+    <text x="450" y="278" fill="#CBD5E1" font-size="9.5" text-anchor="middle">Zero Setup Friction (CSFP = 0)</text>
+    <text x="450" y="294" fill="#0D9488" font-size="9.5" font-weight="700" text-anchor="middle">PTES &gt;= 3.75 Assets / Hour</text>
+  </g>
+
+  <!-- BRANCH 1 (TOP-LEFT): THE 4-HOUR WEEKLY BATCH SPRINT -->
+  <g filter="url(#card-shadow)">
+    <rect x="25" y="72" width="230" height="142" rx="8" fill="#FFFFFF" stroke="#4F46E5" stroke-width="2"/>
+    <rect x="25" y="72" width="230" height="28" rx="6" fill="#4F46E5"/>
+    <text x="35" y="90" fill="#FFFFFF" font-size="10.5" font-weight="700">1. 4-HOUR BATCH SPRINT SCHEDULE</text>
+    <text x="35" y="114" fill="#0F172A" font-size="9.5" font-weight="700">• Block 1 (Mon, 45m — Architecture):</text>
+    <text x="43" y="127" fill="#1E293B" font-size="9">Pillar Script (P21–P25) + Visual Cues (P31)</text>
+    <text x="35" y="144" fill="#0F172A" font-size="9.5" font-weight="700">• Block 2 (Tue, 75m — Batch Capture):</text>
+    <text x="43" y="157" fill="#1E293B" font-size="9">Clap-and-Pause Vocal Track + V01–V12 Demos</text>
+    <text x="35" y="174" fill="#0F172A" font-size="9.5" font-weight="700">• Block 3 (Wed, 90m — Cut &amp; Waterfall):</text>
+    <text x="43" y="187" fill="#1E293B" font-size="9">Transcript Cut (P33) + V01–V12 + 15 Assets</text>
+    <text x="35" y="204" fill="#0D9488" font-size="9.5" font-weight="700">• Block 4 (Thu, 30m): 12-Point QA &amp; Queue</text>
+  </g>
+
+  <!-- BRANCH 2 (BOTTOM-LEFT): DUAL-TRACK CAPTURE STACK -->
+  <g filter="url(#card-shadow)">
+    <rect x="25" y="272" width="230" height="148" rx="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect x="25" y="272" width="230" height="28" rx="6" fill="#0D9488"/>
+    <text x="35" y="290" fill="#FFFFFF" font-size="10.5" font-weight="700">2. DUAL-TRACK CAPTURE STACK</text>
+    <text x="35" y="315" fill="#0F172A" font-size="10" font-weight="700">• Track A: On-Camera Authority Rig:</text>
+    <text x="43" y="329" fill="#1E293B" font-size="9.5">Permanent clamp mounts (N_setups = 0)</text>
+    <text x="43" y="343" fill="#64748B" font-size="9">Dynamic XLR/USB mic + Eye-line teleprompter</text>
+    <text x="35" y="363" fill="#0F172A" font-size="10" font-weight="700">• Track B: Faceless High-Trust Stack:</text>
+    <text x="43" y="377" fill="#1E293B" font-size="9.5">40% Vector SVG Diagrams (#0F172A/#4F46E5)</text>
+    <text x="43" y="391" fill="#1E293B" font-size="9.5">35% High-DPI Cursor-Zoom Screen Demos</text>
+    <text x="43" y="405" fill="#0D9488" font-size="9" font-weight="700">15% Data Proof Cards + P32 Vocal Track</text>
+  </g>
+
+  <!-- BRANCH 3 (TOP-RIGHT): TRANSCRIPT-FIRST EDITING & DELEGATION -->
+  <g filter="url(#card-shadow)">
+    <rect x="645" y="72" width="230" height="142" rx="8" fill="#FFFFFF" stroke="#D97706" stroke-width="2"/>
+    <rect x="645" y="72" width="230" height="28" rx="6" fill="#D97706"/>
+    <text x="655" y="90" fill="#FFFFFF" font-size="10.5" font-weight="700">3. TRANSCRIPT EDIT &amp; DELEGATION</text>
+    <text x="655" y="115" fill="#0F172A" font-size="10" font-weight="700">• Studio Vocal Chain (-14.0 LUFS):</text>
+    <text x="663" y="129" fill="#1E293B" font-size="9.5">80Hz High-Pass, 250Hz Cut, -1.0 dBTP Limiter</text>
+    <text x="655" y="148" fill="#0F172A" font-size="10" font-weight="700">• 15-Min Text-Based Rough Cut (P33):</text>
+    <text x="663" y="162" fill="#1E293B" font-size="9.5">Truncate silences &gt; 0.45s down to 0.18s</text>
+    <text x="663" y="176" fill="#D97706" font-size="9" font-weight="600">Delete double-clap retake spikes in text</text>
+    <text x="655" y="194" fill="#0F172A" font-size="9.5" font-weight="700">• Editor SOP (P34): V01–V12 Track V2/V3</text>
+    <text x="663" y="206" fill="#64748B" font-size="8.5">Zero cartoon SFX; 24-hour SLA work order</text>
+  </g>
+
+  <!-- BRANCH 4 (BOTTOM-RIGHT): 12-POINT PRE-PUBLISH QA GATE -->
+  <g filter="url(#card-shadow)">
+    <rect x="645" y="272" width="230" height="148" rx="8" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <rect x="645" y="272" width="230" height="28" rx="6" fill="#0F172A"/>
+    <text x="655" y="290" fill="#FFFFFF" font-size="10.5" font-weight="700">4. 12-POINT PRE-PUBLISH QA GATE</text>
+    <text x="655" y="314" fill="#0F172A" font-size="9.5" font-weight="700">• Domain 1 (QC 01–03): Audio &amp; Legibility</text>
+    <text x="663" y="327" fill="#1E293B" font-size="9">-14 LUFS, zero retakes, 16pt+ mobile code zoom</text>
+    <text x="655" y="344" fill="#0F172A" font-size="9.5" font-weight="700">• Domain 2 (QC 04–06): Retention &amp; YPP</text>
+    <text x="663" y="357" fill="#1E293B" font-size="9">3s hook sync, 90s visual resets, &gt;= 85% original</text>
+    <text x="655" y="374" fill="#0F172A" font-size="9.5" font-weight="700">• Domain 3 &amp; 4 (QC 07–12): SEO &amp; UTM</text>
+    <text x="663" y="387" fill="#1E293B" font-size="9">A/B thumbnails, 00:00 chapters, safe-zone subs</text>
+    <text x="663" y="403" fill="#0D9488" font-size="9.5" font-weight="700">Prompt P35: Incognito UTM Funnel Link Check</text>
+  </g>
+
+  <!-- Bottom Telemetry Bar -->
+  <rect x="25" y="432" width="850" height="28" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="40" y="450" fill="#0F172A" font-size="10" font-weight="700">SPRINT PROMPT SUITE:</text>
+  <text x="180" y="450" fill="#4F46E5" font-size="9.5" font-weight="600">P31 Visual Cue-Sheet (V01–V15) -&gt; P32 Phonetic Voice Script -&gt; P33 Transcript Rough-Cut -&gt; P34 Editor SOP -&gt; P35 SEO/UTM Verifier</text>
+</svg>

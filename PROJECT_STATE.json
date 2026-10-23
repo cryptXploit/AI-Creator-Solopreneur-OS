@@ -93,7 +93,7 @@
   "phase_status": {
     "Phase 1": "COMPLETED",
     "Phase 2": "COMPLETED",
-    "Phase 3": "PENDING",
+    "Phase 3": "COMPLETED",
     "Phase 4": "PENDING",
     "Phase 5": "PENDING",
     "Phase 6": "PENDING",
@@ -103,13 +103,13 @@
   },
   "asset_inventory": {
     "target_chapters": 10,
-    "completed_chapters": 4,
+    "completed_chapters": 7,
     "target_worksheets": 10,
-    "completed_worksheets": 4,
+    "completed_worksheets": 7,
     "target_chapter_svgs": 20,
-    "completed_chapter_svgs": 8,
+    "completed_chapter_svgs": 14,
     "target_ai_prompts": 50,
-    "completed_ai_prompts": 20,
+    "completed_ai_prompts": 35,
     "target_emergency_scripts": 12,
     "completed_emergency_scripts": 0
   }
