@@ -1,0 +1,31 @@
+# Netlify Static Deployment Configuration — AI Creator & Solopreneur OS
+[build]
+  publish = "."
+  command = "echo 'Static bundle pre-compiled — zero build step required'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/webapp"
+  to = "/app/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/customizer"
+  to = "/studio/index.html"
+  status = 301

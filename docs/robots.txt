@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cryptxploit.github.io/AI-Creator-Solopreneur-OS/sitemap.xml

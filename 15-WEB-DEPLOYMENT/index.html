@@ -1,0 +1,3153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The AI Content Creator &amp; Solopreneur Operating System — Official Flagship Suite &amp; Live Portal</title>
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#0F172A" />
+  <meta name="description" content="A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout." />
+  <style>
+    :root {
+      --primary: #0F172A;
+      --primary-dark: #090D16;
+      --primary-light: #1E293B;
+      --accent: #4F46E5;
+      --accent-light: #818CF8;
+      --accent-soft: #EEF2FF;
+      --secondary: #0D9488;
+      --secondary-light: #2DD4BF;
+      --secondary-soft: #F0FDFA;
+      --warning: #D97706;
+      --warning-light: #FBBF24;
+      --warning-soft: #FFFBEB;
+      --text: #1E293B;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --radius: 14px;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.10);
+      --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background: var(--bg);
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    /* Top Sticky Announcement & Navigation */
+    .top-announcement {
+      background: linear-gradient(90deg, #090D16 0%, #1E1B4B 50%, #0F172A 100%);
+      color: #F8FAFC;
+      font-size: 0.85rem;
+      padding: 10px 20px;
+      text-align: center;
+      border-bottom: 1px solid #334155;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .top-announcement span.pill {
+      background: var(--secondary);
+      color: #FFFFFF;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.75rem;
+      margin-right: 8px;
+      text-transform: uppercase;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1E293B;
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 1.05rem;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary-light);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #FFFFFF !important;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      border: 1px solid var(--accent-light);
+    }
+
+    .nav-cta:hover {
+      background: #4338CA;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.24) 0%, transparent 45%),
+                  radial-gradient(circle at 80% 75%, rgba(13, 148, 136, 0.22) 0%, transparent 45%),
+                  linear-gradient(180deg, #090D16 0%, #0F172A 65%, #111827 100%);
+      color: #FFFFFF;
+      padding: 76px 24px 88px;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(79, 70, 229, 0.2);
+      border: 1px solid var(--accent-light);
+      color: #E0E7FF;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.1rem;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+    }
+
+    .hero h1 .accent-teal {
+      color: var(--secondary-light);
+    }
+
+    .hero h1 .accent-indigo {
+      color: var(--accent-light);
+    }
+
+    .hero-subtitle {
+      font-size: 1.18rem;
+      color: #CBD5E1;
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .hero-promise-box {
+      background: rgba(30, 41, 59, 0.78);
+      border-left: 4px solid var(--secondary-light);
+      border-top: 1px solid #334155;
+      border-right: 1px solid #334155;
+      border-bottom: 1px solid #334155;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 28px;
+      font-size: 0.98rem;
+      color: #F1F5F9;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent) 0%, #6366F1 100%);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1.02rem;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--accent-light);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(79, 70, 229, 0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(13, 148, 136, 0.18);
+      color: var(--secondary-light);
+      font-weight: 800;
+      font-size: 1.02rem;
+      padding: 16px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid var(--secondary);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary);
+      color: #FFFFFF;
+    }
+
+    .hero-telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .hero-stat-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      display: block;
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 700;
+    }
+
+    /* 3D Ecosystem Showcase Card */
+    .hero-showcase-card {
+      background: linear-gradient(160deg, #1E293B 0%, #0F172A 100%);
+      border: 2px solid var(--accent);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .showcase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .showcase-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--accent-light);
+      text-transform: uppercase;
+    }
+
+    .showcase-version {
+      background: var(--secondary);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .showcase-stack-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .stack-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(9, 13, 22, 0.7);
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 11px 14px;
+    }
+
+    .stack-row-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stack-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--secondary-light);
+      flex-shrink: 0;
+    }
+
+    .stack-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+
+    .stack-sub {
+      font-size: 0.76rem;
+      color: #94A3B8;
+      display: block;
+    }
+
+    .stack-val {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--warning-light);
+      background: rgba(217, 119, 6, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      padding: 4px 9px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 84px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
+    }
+
+    .section-dark {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .section-header {
+      max-width: 820px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .section-dark .section-tag {
+      background: rgba(79, 70, 229, 0.25);
+      color: var(--accent-light);
+    }
+
+    .section-header h2 {
+      font-size: 2.35rem;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .section-header p {
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .section-dark .section-header p {
+      color: #CBD5E1;
+    }
+
+    /* Interactive RPPH & Revenue Lift Calculator */
+    .calc-wrapper {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      background: #FFFFFF;
+      border: 2px solid var(--accent);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      color: var(--text);
+    }
+
+    .calc-controls {
+      display: grid;
+      gap: 20px;
+    }
+
+    .slider-group {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .slider-val-badge {
+      background: var(--primary);
+      color: var(--secondary-light);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+      cursor: pointer;
+      height: 7px;
+    }
+
+    .slider-hint {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .calc-results {
+      background: linear-gradient(165deg, #0F172A 0%, #1E1B4B 100%);
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--accent-light);
+    }
+
+    .calc-results-header {
+      border-bottom: 1px solid #334155;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .calc-results-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .calc-kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .calc-kpi-box {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .calc-kpi-box.highlight {
+      border-color: var(--secondary-light);
+      background: rgba(13, 148, 136, 0.14);
+    }
+
+    .calc-kpi-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: #94A3B8;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .calc-kpi-val {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #FFFFFF;
+    }
+
+    .calc-kpi-val.teal {
+      color: var(--secondary-light);
+    }
+
+    .calc-kpi-val.amber {
+      color: var(--warning-light);
+    }
+
+    .calc-breakdown-box {
+      background: rgba(9, 13, 22, 0.8);
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      color: #CBD5E1;
+      margin-bottom: 18px;
+    }
+
+    .calc-breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px dashed #1E293B;
+    }
+
+    .calc-breakdown-row:last-child {
+      border-bottom: none;
+      font-weight: 800;
+      color: #FFFFFF;
+      padding-top: 8px;
+    }
+
+    /* 5-Stage Engine Grid */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .stage-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-top: 5px solid var(--accent);
+      border-radius: 14px;
+      padding: 22px 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stage-card:nth-child(3), .stage-card:nth-child(5) {
+      border-top-color: var(--secondary);
+    }
+
+    .stage-card:nth-child(4) {
+      border-top-color: var(--warning);
+    }
+
+    .stage-num {
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: var(--accent);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .stage-card h3 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .stage-card p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .stage-gate-pill {
+      background: var(--primary);
+      color: var(--secondary-light);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 7px 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Interactive 10-Chapter Explorer */
+    .explorer-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .chapter-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .chapter-tab-btn {
+      text-align: left;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chapter-tab-btn:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .chapter-tab-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-num {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 0.78rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      min-width: 44px;
+      text-align: center;
+    }
+
+    .chapter-tab-btn.active .tab-num {
+      background: var(--secondary);
+    }
+
+    .tab-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .chapter-detail-panel {
+      background: #FFFFFF;
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .detail-top-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .meta-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 4px 11px;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .meta-tag.teal {
+      background: var(--secondary-soft);
+      color: var(--secondary);
+    }
+
+    .meta-tag.amber {
+      background: var(--warning-soft);
+      color: var(--warning);
+    }
+
+    .chapter-detail-panel h3 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .detail-summary {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    .detail-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .detail-subbox {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .detail-subbox h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .detail-subbox ul {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      font-size: 0.86rem;
+    }
+
+    .detail-subbox li::before {
+      content: "▸ ";
+      color: var(--secondary);
+      font-weight: 900;
+    }
+
+    .detail-case-banner {
+      background: var(--primary);
+      color: #F8FAFC;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border-left: 4px solid var(--secondary-light);
+      font-size: 0.9rem;
+    }
+
+    /* Case Study Comparison Table */
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid #334155;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cs-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #0F172A;
+      color: #F8FAFC;
+      font-size: 0.88rem;
+    }
+
+    .cs-table th {
+      background: #1E1B4B;
+      color: #E0E7FF;
+      text-align: left;
+      padding: 14px 16px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .cs-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid #1E293B;
+    }
+
+    .cs-table tr:hover {
+      background: rgba(79, 70, 229, 0.12);
+    }
+
+    .cs-niche {
+      font-size: 0.76rem;
+      color: #94A3B8;
+    }
+
+    .muted-cell {
+      color: #94A3B8;
+    }
+
+    .highlight-teal {
+      color: var(--secondary-light);
+      font-weight: 700;
+    }
+
+    .highlight-indigo {
+      color: #A5B4FC;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .badge-teal {
+      background: rgba(13, 148, 136, 0.2);
+      color: var(--secondary-light);
+      border: 1px solid var(--secondary);
+    }
+
+    /* 5-Tier Pricing Table */
+    .pricing-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .toggle-btn-group {
+      display: inline-flex;
+      background: #E2E8F0;
+      padding: 4px;
+      border-radius: 10px;
+    }
+
+    .toggle-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 18px;
+      font-weight: 800;
+      font-size: 0.86rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .toggle-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .price-card.featured {
+      border: 3px solid var(--accent);
+      background: linear-gradient(180deg, #FFFFFF 0%, #EEF2FF 100%);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .popular-ribbon {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .tier-label {
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .price-card h3 {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .price-amount {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .price-sub {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      min-height: 32px;
+    }
+
+    .price-features {
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      font-size: 0.83rem;
+      margin-bottom: 22px;
+      color: var(--text);
+    }
+
+    .price-features li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .price-features li span.chk {
+      color: var(--secondary);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .price-cta {
+      display: block;
+      text-align: center;
+      padding: 12px 14px;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      text-decoration: none;
+      background: var(--primary);
+      color: #FFFFFF;
+      transition: background 0.15s;
+    }
+
+    .price-card.featured .price-cta {
+      background: var(--accent);
+    }
+
+    .price-cta:hover {
+      background: #334155;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: #FFFFFF;
+      border: none;
+      padding: 18px 22px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-question:hover {
+      background: var(--bg-alt);
+    }
+
+    .faq-icon {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 22px 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      border-top: 1px solid var(--bg-alt);
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      background: #090D16;
+      color: #94A3B8;
+      padding: 56px 24px;
+      font-size: 0.88rem;
+      border-top: 2px solid #1E293B;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid, .calc-wrapper, .explorer-layout {
+        grid-template-columns: 1fr;
+      }
+      .stage-grid, .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .stage-grid, .pricing-grid, .hero-telemetry-grid, .detail-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PHASE 10 GLOBAL ECOSYSTEM LIVE PORTAL BAR -->
+<style>
+  .eco-portal-bar {
+    background: linear-gradient(90deg, #060911 0%, #0F172A 45%, #1E1B4B 100%);
+    border-bottom: 2px solid #4F46E5;
+    padding: 8px 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12.5px;
+    color: #F8FAFC;
+    position: relative;
+    z-index: 2000;
+  }
+  .eco-portal-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .eco-portal-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+  }
+  .eco-portal-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2DD4BF;
+    box-shadow: 0 0 8px #2DD4BF;
+    display: inline-block;
+  }
+  .eco-portal-tag {
+    background: rgba(79, 70, 229, 0.3);
+    border: 1px solid #818CF8;
+    color: #E0E7FF;
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  .eco-portal-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .eco-portal-link {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 11px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.14s ease;
+    white-space: nowrap;
+  }
+  .eco-portal-link:hover {
+    color: #FFFFFF;
+    background: rgba(79, 70, 229, 0.22);
+    border-color: #6366F1;
+  }
+  .eco-portal-link.active {
+    background: #4F46E5;
+    color: #FFFFFF;
+    border-color: #818CF8;
+  }
+  .eco-portal-cta {
+    background: #0D9488;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #2DD4BF;
+    white-space: nowrap;
+    transition: opacity 0.14s ease;
+  }
+  .eco-portal-cta:hover {
+    opacity: 0.92;
+  }
+</style>
+<div class="eco-portal-bar" role="navigation" aria-label="Global Creator OS Ecosystem Portal Navigation">
+  <div class="eco-portal-inner">
+    <a href="./index.html" class="eco-portal-brand">
+      <span class="eco-portal-dot"></span>
+      <span>CREATOR OS LIVE PORTAL</span>
+      <span class="eco-portal-tag">v1.0.0 OFFLINE-READY</span>
+    </a>
+    <div class="eco-portal-nav">
+      <a href="./index.html" class="eco-portal-link active">Sales &amp; ROI Calculator</a>
+      <a href="./app/index.html" class="eco-portal-link">Launch Creator OS Web App</a>
+      <a href="./studio/index.html" class="eco-portal-link">Thumbnail &amp; Cover Studio</a>
+      <a href="./atlas/index.html" class="eco-portal-link">Visual Shortcut Atlas (31 SVGs)</a>
+      <a href="./downloads/index.html" class="eco-portal-link">Tier 0 Download Hub</a>
+      <a href="./downloads/tier0-free-sample-starter-kit.zip" class="eco-portal-cta" download>Download Free Tier 0 Audit Kit (.ZIP)</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Top Announcement Strip -->
+  <div class="top-announcement">
+    <span class="pill">RELEASE v1.0.0</span>
+    Complete 10-Chapter Manual (91,775 Words) + 4 Fillable Workbooks + Offline Web App + 5-Database Notion OS Kit Now Live
+  </div>
+
+  <!-- Sticky Navigation -->
+  <nav class="navbar">
+    <a href="#top" class="nav-brand">
+      <span class="nav-brand-badge">OS</span>
+      <span>AI Creator &amp; Solopreneur OS</span>
+    </a>
+    <div class="nav-links">
+      <a href="#calculator">RPPH Calculator</a>
+      <a href="#engine">5-Stage Engine</a>
+      <a href="#curriculum">10-Chapter Explorer</a>
+      <a href="#case-studies">10 Case Studies</a>
+      <a href="#pricing">5-Tier Pricing</a>
+      <a href="#faq">12-Point FAQ</a>
+      <a href="#pricing" class="nav-cta">Get Flagship Bundle ($49)</a>
+    </div>
+  </nav>
+
+  <!-- 1. ABOVE-THE-FOLD HERO SECTION -->
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow-badge">
+          <span>APEX DIGITAL SYSTEMS STUDIO · FLAGSHIP PRODUCT #3</span>
+        </div>
+        <h1>
+          The AI Content Creator &amp; <span class="accent-teal">Solopreneur</span> <span class="accent-indigo">Operating System</span>
+        </h1>
+        <p class="hero-subtitle">
+          A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout.
+        </p>
+        <div class="hero-promise-box">
+          <strong>Quantified Operator Promise:</strong> Turn <strong>1 Weekly Pillar Script</strong> into <strong>15+ Platform-Native Assets</strong> and build predictable <strong>Digital Product + Outcome Sponsorship Revenue</strong> in <strong>Under 6 Hours/Week</strong>.
+        </div>
+        <div class="hero-cta-row">
+          <a href="#pricing" class="btn-primary">Get the Complete Flagship OS Bundle (Tier 3 — $49) &rarr;</a>
+          <a href="./downloads/tier0-free-sample-starter-kit.zip" class="btn-secondary" download>Download Free 7-Day Audit Kit (Tier 0 — $0)</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;">
+          <a href="./app/index.html" style="background:rgba(79,70,229,0.22);border:1px solid #818CF8;color:#E0E7FF;padding:8px 14px;border-radius:8px;font-size:0.84rem;font-weight:700;text-decoration:none;">&#9654; Launch Creator OS Web App (Free + Pro Mode)</a>
+          <a href="./studio/index.html" style="background:rgba(13,148,136,0.20);border:1px solid #2DD4BF;color:#CCFBF1;padding:8px 14px;border-radius:8px;font-size:0.84rem;font-weight:700;text-decoration:none;">&#9998; Open Thumbnail &amp; Cover Studio</a>
+          <a href="./atlas/index.html" style="background:rgba(217,119,6,0.20);border:1px solid #FBBF24;color:#FEF3C7;padding:8px 14px;border-radius:8px;font-size:0.84rem;font-weight:700;text-decoration:none;">&#9783; Explore 31-Diagram Visual Atlas</a>
+          <a href="./downloads/index.html" style="background:rgba(148,163,184,0.16);border:1px solid #64748B;color:#F1F5F9;padding:8px 14px;border-radius:8px;font-size:0.84rem;font-weight:700;text-decoration:none;">&#8681; Open Tier 0 Download Hub</a>
+        </div>
+        <div class="hero-telemetry-grid">
+          <div class="hero-stat-card">
+            <span class="hero-stat-num mono">91,775</span>
+            <span class="hero-stat-label">Manuscript Words</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num mono">50 + 12</span>
+            <span class="hero-stat-label">Prompts &amp; Scripts</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num mono">1,420</span>
+            <span class="hero-stat-label">Fillable PDF Fields</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num mono">100%</span>
+            <span class="hero-stat-label">Offline Web App</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 3D Ecosystem Stack Showcase -->
+      <div class="hero-showcase-card">
+        <div class="showcase-header">
+          <span class="showcase-title">COMPLETE MULTI-FORMAT SYSTEM STACK</span>
+          <span class="showcase-version mono">PRO KEY: CREATOR-OS-PRO-2026</span>
+        </div>
+        <div class="showcase-stack-list">
+          <div class="stack-row">
+            <div class="stack-row-left">
+              <span class="stack-dot"></span>
+              <div>
+                <span class="stack-name">1. 10-Chapter Flagship Operating Manual</span>
+                <span class="stack-sub">340-Page Color PDF + 314-Page KDP 6"×9" + EPUB 3.0</span>
+              </div>
+            </div>
+            <span class="stack-val mono">91,775 Words</span>
+          </div>
+          <div class="stack-row">
+            <div class="stack-row-left">
+              <span class="stack-dot"></span>
+              <div>
+                <span class="stack-name">2. Interactive Fillable Action Workbooks</span>
+                <span class="stack-sub">US Letter + ISO A4 + 11"×8.5" iPad/Tablet Landscape</span>
+              </div>
+            </div>
+            <span class="stack-val mono">1,420 Fields</span>
+          </div>
+          <div class="stack-row">
+            <div class="stack-row-left">
+              <span class="stack-dot"></span>
+              <div>
+                <span class="stack-name">3. Offline SaaS-Lite Web Companion App</span>
+                <span class="stack-sub">6 Interactive Calculators + 62-Item Searchable Vault</span>
+              </div>
+            </div>
+            <span class="stack-val mono">528 KB HTML5</span>
+          </div>
+          <div class="stack-row">
+            <div class="stack-row-left">
+              <span class="stack-dot"></span>
+              <div>
+                <span class="stack-name">4. 5-Database Minimalist Notion Creator OS</span>
+                <span class="stack-sub">Outlier Bank, 1-to-15 Waterfall, 62 Prompts &amp; Sponsor CRM</span>
+              </div>
+            </div>
+            <span class="stack-val mono">Formula 2.0</span>
+          </div>
+          <div class="stack-row">
+            <div class="stack-row-left">
+              <span class="stack-dot"></span>
+              <div>
+                <span class="stack-name">5. 20 Vector System Diagrams &amp; 28 Formulas</span>
+                <span class="stack-sub">Mindmaps, Stage-Gate Flowcharts &amp; Benchmark Tables</span>
+              </div>
+            </div>
+            <span class="stack-val mono">SVG + 300 DPI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. INTERACTIVE CREATOR RPPH & REVENUE LIFT CALCULATOR -->
+  <section class="section section-alt" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Diagnostic Simulator</span>
+        <h2>Creator RPPH &amp; 5-Stage Revenue Lift Calculator</h2>
+        <p>Adjust the sliders below to model how compressing weekly production into a 4-hour batch sprint and installing an owned email + digital toolkit + outcome sponsorship stack transforms your Revenue Per Production Hour (RPPH).</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-controls">
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="inp-hours">1. Current Weekly Content Production Hours</label>
+              <span class="slider-val-badge mono" id="lbl-hours">32 hrs/wk</span>
+            </div>
+            <input type="range" id="inp-hours" min="6" max="60" step="1" value="32" oninput="recalcRpph()" />
+            <div class="slider-hint">Industry burnout baseline: 28–42 hours/week across ideation, scripting, editing &amp; posting.</div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="inp-views">2. Monthly Cross-Platform Views / Impressions</label>
+              <span class="slider-val-badge mono" id="lbl-views">25,000 views/mo</span>
+            </div>
+            <input type="range" id="inp-views" min="2000" max="250000" step="1000" value="25000" oninput="recalcRpph()" />
+            <div class="slider-hint">Combined monthly views across YouTube, LinkedIn, X, Shorts/Reels, and Newsletter.</div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="inp-optin">3. Rented-to-Owned Email Opt-In Rate (% of Views)</label>
+              <span class="slider-val-badge mono" id="lbl-optin">2.2%</span>
+            </div>
+            <input type="range" id="inp-optin" min="0.5" max="6.0" step="0.1" value="2.2" oninput="recalcRpph()" />
+            <div class="slider-hint">Chapter 8 5-Minute Utility Lead Magnet + 45% Opt-In Page target: 1.8% to 3.5% of total views.</div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="inp-price">4. Core Digital Toolkit / Product Price ($24–$99)</label>
+              <span class="slider-val-badge mono" id="lbl-price">$49</span>
+            </div>
+            <input type="range" id="inp-price" min="24" max="99" step="1" value="49" oninput="recalcRpph()" />
+            <div class="slider-hint">Chapter 9 checkout stack (+35% Order Bump &amp; 1-Click Upsell lifts Effective AOV by +45%).</div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="inp-sponsors">5. Monthly Outcome Sponsorship Packages Closed</label>
+              <span class="slider-val-badge mono" id="lbl-sponsors">2 deals/mo</span>
+            </div>
+            <input type="range" id="inp-sponsors" min="0" max="6" step="1" value="2" oninput="recalcRpph()" />
+            <div class="slider-hint">Chapter 10 omnichannel B2B sponsorship formula (Pillar + Newsletter + 30% Whitelisting Rights).</div>
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div>
+            <div class="calc-results-header">
+              <h3>Live Quantitative Projection (Before vs. After OS)</h3>
+            </div>
+            <div class="calc-kpi-grid">
+              <div class="calc-kpi-box">
+                <span class="calc-kpi-label">Legacy Treadmill RPPH</span>
+                <span class="calc-kpi-val mono" id="out-old-rpph">$6.45/hr</span>
+              </div>
+              <div class="calc-kpi-box highlight">
+                <span class="calc-kpi-label">Systematized Operator RPPH</span>
+                <span class="calc-kpi-val teal mono" id="out-new-rpph">$384.20/hr</span>
+              </div>
+              <div class="calc-kpi-box highlight">
+                <span class="calc-kpi-label">Projected Monthly Net Lift</span>
+                <span class="calc-kpi-val teal mono" id="out-monthly-lift">+$7,410/mo</span>
+              </div>
+              <div class="calc-kpi-box">
+                <span class="calc-kpi-label">Projected Annual Revenue</span>
+                <span class="calc-kpi-val amber mono" id="out-annual-rev">$99,680/yr</span>
+              </div>
+            </div>
+
+            <div class="calc-breakdown-box">
+              <div class="calc-breakdown-row">
+                <span>Monthly New Owned Email Subscribers:</span>
+                <span class="mono" id="out-new-subs">550 subs/mo</span>
+              </div>
+              <div class="calc-breakdown-row">
+                <span>4-Tier Product + Checkout Stack Revenue (4.2% CVR):</span>
+                <span class="mono" id="out-prod-rev">$3,305/mo</span>
+              </div>
+              <div class="calc-breakdown-row">
+                <span>Outcome B2B Sponsorship Package Revenue:</span>
+                <span class="mono" id="out-spon-rev">$4,400/mo</span>
+              </div>
+              <div class="calc-breakdown-row">
+                <span>Blended Effective RPM ($ per 1,000 Views):</span>
+                <span class="mono" id="out-blended-rpm">$318.20 RPM</span>
+              </div>
+              <div class="calc-breakdown-row">
+                <span>Annual Production Hours Reclaimed (at 5.5 hr/wk Sprint):</span>
+                <span class="mono" id="out-hours-saved">1,378 hrs/yr saved</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#pricing" class="btn-primary" style="width:100%;">Install This Operating System Today (From $0 to $49) &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THE 5-STAGE CONTENT-TO-CASH OPERATING ENGINE -->
+  <section class="section" id="engine">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Deterministic Production Architecture</span>
+        <h2>The 5-Stage Content-to-Cash Operating Engine</h2>
+        <p>Every chapter, worksheet, Notion database, and web calculator in this ecosystem maps to five sequential stage gates. No asset advances to the next stage until it passes its quantitative threshold.</p>
+      </div>
+
+      <div class="stage-grid">
+        <div class="stage-card">
+          <div>
+            <div class="stage-num mono">STAGE 01 · CHAPTERS 1–3</div>
+            <h3>Validate (S.I.G.N.A.L.)</h3>
+            <p>Audit your baseline RPPH, lock a high-margin P.A.I.D. niche moat, and mine peer-channel outlier concepts with proven view velocity before writing a single word.</p>
+          </div>
+          <div class="stage-gate-pill mono">Gate: NMPI &ge; 75 | Outlier M &ge; 2.5x</div>
+        </div>
+
+        <div class="stage-card">
+          <div>
+            <div class="stage-num mono">STAGE 02 · CHAPTERS 4–5</div>
+            <h3>Script (C.L.I.P. + H.E.A.R.T.)</h3>
+            <p>Design Package-First Titles &amp; 3-Word Thumbnails first. Engineer 3-second C.L.I.P. hooks and draft voice-calibrated H.E.A.R.T. pillar scripts with 90-second resets.</p>
+          </div>
+          <div class="stage-gate-pill mono">Gate: CTR &ge; 7.5% | 30s Hold &ge; 70%</div>
+        </div>
+
+        <div class="stage-card">
+          <div>
+            <div class="stage-num mono">STAGE 03 · CHAPTERS 6–7</div>
+            <h3>Multiply (1-to-15 Waterfall)</h3>
+            <p>Execute the 4-Hour Mon–Thu Batch Sprint to transpose 1 weekly Pillar Script into 5 vertical Shorts, 4 LinkedIn/X posts, 3 carousels, and 2 email issues.</p>
+          </div>
+          <div class="stage-gate-pill mono">Gate: 15 Assets in &le; 4.0 Hrs/Wk</div>
+        </div>
+
+        <div class="stage-card">
+          <div>
+            <div class="stage-num mono">STAGE 04 · CHAPTER 8</div>
+            <h3>Convert (Owned Bridge)</h3>
+            <p>Route rented social attention to a 45%+ conversion landing page using a 5-Minute Utility Lead Magnet, 3-tag intent survey, and 5-day automated welcome bridge.</p>
+          </div>
+          <div class="stage-gate-pill mono">Gate: Opt-In &ge; 45% | V_sub &ge; $3.50</div>
+        </div>
+
+        <div class="stage-card">
+          <div>
+            <div class="stage-num mono">STAGE 05 · CHAPTERS 9–10</div>
+            <h3>Monetize (Ladder + Sponsors)</h3>
+            <p>Pre-sell your 4-Tier Digital Product Value Ladder via the 14-Day Validation Sprint (+45% checkout AOV) and close outcome-priced B2B sponsorship retainers.</p>
+          </div>
+          <div class="stage-gate-pill mono">Gate: AOV +45% | RPPH &ge; $200/hr</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE 10-CHAPTER CURRICULUM, 50-PROMPT & 12-SCRIPT EXPLORER -->
+  <section class="section section-alt" id="curriculum">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inside the 91,775-Word Manual &amp; Vault</span>
+        <h2>Interactive 10-Chapter, 50-Prompt &amp; 12-Script Explorer</h2>
+        <p>Click any chapter below to inspect the exact frameworks, mathematical formulas, AI prompts (P01–P50), fillable worksheets, and real-world case studies included inside.</p>
+      </div>
+
+      <div class="explorer-layout">
+        <div class="chapter-tabs" id="chapter-tab-list">
+          <!-- Populated dynamically and initialized with static fallback -->
+        </div>
+
+        <div class="chapter-detail-panel" id="chapter-detail-box">
+          <div class="detail-top-meta">
+            <span class="meta-tag mono" id="det-part">PART I: NICHE &amp; VALIDATION</span>
+            <span class="meta-tag teal mono" id="det-metric">RPPH &ge; $150/hr | Net Margin &ge; 82%</span>
+            <span class="meta-tag amber mono" id="det-time">Implementation: 45 Minutes</span>
+          </div>
+          <h3 id="det-title">Chapter 01: The Creator-to-Operator Paradigm &amp; The 5-Stage Content-to-Cash OS</h3>
+          <p class="detail-summary" id="det-summary">
+            Replaces the burnout-inducing Algorithmic Treadmill with a deterministic 5-stage operating architecture. Quantifies your exact Revenue Per Production Hour (RPPH), isolates non-monetized production bottlenecks, and establishes your weekly 4-hour production ceiling.
+          </p>
+
+          <div class="detail-grid-2">
+            <div class="detail-subbox">
+              <h4>Core Mathematical Formulas &amp; Equations</h4>
+              <ul id="det-formulas" class="mono">
+                <li>RPPH = Monthly Net Creator Income / (4.33 × Weekly Production Hours)</li>
+                <li>HVPR = Strategic Pillar &amp; Conversion Hours / Total Weekly Hours (Target &ge; 70%)</li>
+                <li>Monthly Time-Leak Cost = Leaked Weekly Hours × 4.33 × Target Operator RPPH</li>
+              </ul>
+            </div>
+            <div class="detail-subbox">
+              <h4>Included AI Workflow Prompts &amp; Scripts</h4>
+              <ul id="det-prompts">
+                <li>P01: 7-Day Time-Leak &amp; RPPH Audit</li>
+                <li>P02: 5-Stage Bottleneck Diagnostic</li>
+                <li>P03: Operator Weekly Sprint Scheduler</li>
+                <li>P04: Niche Economics Stress-Test</li>
+                <li>P05: 90-Day Creator-CEO Roadmap</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-subbox" style="margin-bottom:16px;">
+            <h4>Companion Fillable Action Worksheet</h4>
+            <p id="det-worksheet" style="font-size:0.9rem;font-weight:700;">Worksheet 01: 7-Day Creator Time-Leak &amp; Baseline RPPH Audit (48 Fillable Fields)</p>
+          </div>
+
+          <div class="detail-case-banner" id="det-case">
+            <strong>Documented Case Study Proof:</strong> Marcus Vance (B2B RevOps Creator, 14.2K subs): Cut weekly production from 38.5 hrs to 5.5 hrs while growing monthly revenue from $1,310 ($7.86/hr RPPH) to $14,850 ($623/hr RPPH).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- 4B. COMPLETE 62-ITEM PROMPT & EMERGENCY SCRIPT INDEX PREVIEW -->
+  <section class="section" id="prompt-vault-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complete 62-Asset System Inventory</span>
+        <h2>All 50 AI Workflow Prompts (P01–P50) &amp; 12 Emergency Scripts (S01–S12)</h2>
+        <p>Every prompt and negotiation script below is included in full copy-paste format across the Book Back Matter, the Notion CSV Vault, and the Offline Web Companion Application.</p>
+      </div>
+      <style>
+        .vault-preview-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+          max-height: 760px;
+          overflow-y: auto;
+          padding: 12px;
+          background: var(--bg-alt);
+          border: 2px solid var(--border);
+          border-radius: 16px;
+        }
+        .vault-preview-card {
+          background: #FFFFFF;
+          border: 1px solid var(--border);
+          border-top: 3px solid var(--accent);
+          border-radius: 10px;
+          padding: 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+        .vp-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.74rem;
+          font-weight: 800;
+        }
+        .vp-id {
+          background: var(--primary);
+          color: var(--secondary-light);
+          padding: 2px 8px;
+          border-radius: 5px;
+        }
+        .vp-stage {
+          color: var(--muted);
+        }
+        .vault-preview-card h4 {
+          font-size: 0.92rem;
+          color: var(--primary);
+          font-weight: 800;
+        }
+        .vp-meta {
+          font-size: 0.74rem;
+          color: var(--secondary);
+          font-weight: 700;
+        }
+        .vp-vars {
+          font-size: 0.72rem;
+          color: var(--warning);
+        }
+        .vp-code {
+          font-size: 0.72rem;
+          background: #0F172A;
+          color: #CBD5E1;
+          padding: 8px;
+          border-radius: 6px;
+          white-space: pre-wrap;
+          word-break: break-word;
+          margin-top: 4px;
+        }
+        @media (max-width: 960px) {
+          .vault-preview-grid { grid-template-columns: 1fr; }
+        }
+      </style>
+      <div class="vault-preview-grid">
+        <div class="vault-preview-card" data-stage="Stage 1: Operating Foundation">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P01</span>
+                        <span class="vp-stage">Stage 1: Operating Foundation · Chapter 01</span>
+                      </div>
+                      <h4>7-Day Creator Time-Leak & RPPH Diagnostic Auditor</h4>
+                      <div class="vp-meta mono">Use Case: You are a Senior Media Operations Architect and Solopreneur Unit-Economics Analyst specializing...</div>
+                      <div class="vp-vars mono">Variables: [NICHE_AND_TARGET_AUDIENCE], [ACTIVE_PLATFORMS_AND_WEEKLY_POST_COUNT], [WEEKLY_HOURS_BY_TASK], [HOURS_IDEATION], [HOURS_SCRIPTING], [HOURS_RECORDING], [HOURS_EDITING], [HOURS_REPURPOSING], [HOURS_ADMIN], [MONTHLY_NET_REVENUE_BY_STREAM], [REV_ADS], [REV_AFFILIATES]</div>
+                      <pre class="vp-code mono">PROMPT ID: P01 — 7-Day Creator Time-Leak & RPPH Diagnostic Auditor
+
+ROLE:
+You are a Senior Media Operations Architect and Solopreneur Unit-Economics Analyst specializing in creator workflow optimization, time-motion auditing, and Revenue Per Production Hour (RPPH) turnarounds.
+
+CONTEXT:
+I am a solo content creator transitioning from an unsystematized product...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Operating Foundation">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P02</span>
+                        <span class="vp-stage">Stage 1: Operating Foundation · Chapter 01</span>
+                      </div>
+                      <h4>Pillar Format & Primary Platform Selection Architect</h4>
+                      <div class="vp-meta mono">Use Case: You are a Lead Digital Media Strategist who designs high-margin, low-burnout omnichannel archit...</div>
+                      <div class="vp-vars mono">Variables: [CREATOR_CORE_SKILL_STRENGTH], [ON_CAMERA_PREFERENCE], [TARGET_BUYER_PERSONA], [CORE_PAID_OFFER_AND_PRICE], [MAXIMUM_WEEKLY_PRODUCTION_HOURS], [12-16 mins], [10-15 mins], [2,000-2,500 words]</div>
+                      <pre class="vp-code mono">PROMPT ID: P02 — Pillar Format & Primary Platform Selection Architect
+
+ROLE:
+You are a Lead Digital Media Strategist who designs high-margin, low-burnout omnichannel architectures for solo creator-entrepreneurs.
+
+CONTEXT:
+Instead of creating bespoke content from scratch across 5+ social networks, I am installing a single weekly Pillar Asset engine that feeds...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Operating Foundation">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P03</span>
+                        <span class="vp-stage">Stage 1: Operating Foundation · Chapter 01</span>
+                      </div>
+                      <h4>Content-to-Cash Monetization Bridge Mapper</h4>
+                      <div class="vp-meta mono">Use Case: You are a Direct-Response Funnel Architect and Creator Monetization Engineer specializing in Re...</div>
+                      <div class="vp-vars mono">Variables: [UPCOMING_PILLAR_TOPIC], [AUDIENCE_ACUTE_PAIN_POINT], [EXISTING_OR_PLANNED_PAID_PRODUCT], [RELEVANT_AFFILIATE_TOOLS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P03 — Content-to-Cash Monetization Bridge Mapper
+
+ROLE:
+You are a Direct-Response Funnel Architect and Creator Monetization Engineer specializing in Rented-to-Owned audience bridges and 4-Tier Digital Product Value Ladders.
+
+CONTEXT:
+My content currently generates views and engagement on social platforms, but lacks a high-converting bridge to an o...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Operating Foundation">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P04</span>
+                        <span class="vp-stage">Stage 1: Operating Foundation · Chapter 01</span>
+                      </div>
+                      <h4>Weekly 6-Hour Production Sprint Block Scheduler</h4>
+                      <div class="vp-meta mono">Use Case: You are an Executive Productivity Systems Engineer who designs zero-context-switching batch pro...</div>
+                      <div class="vp-vars mono">Variables: [AVAILABLE_DAYS_AND_TIME_WINDOWS], [PEAK_COGNITIVE_ENERGY_TIME], [SELECTED_PILLAR_FORMAT], [CURRENT_BOTTLENECK_STAGE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P04 — Weekly 6-Hour Production Sprint Block Scheduler
+
+ROLE:
+You are an Executive Productivity Systems Engineer who designs zero-context-switching batch production schedules for solo media operators.
+
+CONTEXT:
+I need to compress my entire weekly content research, scripting, recording, editing, 1-to-15 repurposing, and newsletter monetization workf...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Operating Foundation">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P05</span>
+                        <span class="vp-stage">Stage 1: Operating Foundation · Chapter 01</span>
+                      </div>
+                      <h4>Existing Content Library High-ROI Asset Audit & Revival Engine</h4>
+                      <div class="vp-meta mono">Use Case: You are a Content Portfolio Analyst and Algorithmic Revival Strategist....</div>
+                      <div class="vp-vars mono">Variables: [TOP_5_HISTORICAL_POSTS_AND_METRICS], [TITLE_1], [VIEWS_1], [RETENTION_OR_ENGAGEMENT_1], [CTA_1], [TITLE_2], [VIEWS_2], [RETENTION_OR_ENGAGEMENT_2], [CTA_2], [TITLE_3], [VIEWS_3], [RETENTION_OR_ENGAGEMENT_3]</div>
+                      <pre class="vp-code mono">PROMPT ID: P05 — Existing Content Library High-ROI Asset Audit & Revival Engine
+
+ROLE:
+You are a Content Portfolio Analyst and Algorithmic Revival Strategist.
+
+CONTEXT:
+Before I spend hours creating net-new content from scratch, I want to audit my top historical posts/videos/articles to identify proven outlier winners, retroactively wire them with my new Lea...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Niche & Avatar Moat">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P06</span>
+                        <span class="vp-stage">Stage 1: Niche & Avatar Moat · Chapter 02</span>
+                      </div>
+                      <h4>P.A.I.D. Niche Scoring & High-CPM Sub-Niche Excavator</h4>
+                      <div class="vp-meta mono">Use Case: You are a Senior Media Venture Strategist and Niche Unit-Economics Analyst who evaluates conten...</div>
+                      <div class="vp-vars mono">Variables: [CURRENT_BROAD_NICHE_OR_SKILL], [CREATOR_PROFESSIONAL_BACKGROUND], [TOOLS_AND_SYSTEMS_MASTERED], [TARGET_MONTHLY_REVENUE_GOAL], [MONTHLY_GOAL]</div>
+                      <pre class="vp-code mono">PROMPT ID: P06 — P.A.I.D. Niche Scoring & High-CPM Sub-Niche Excavator
+
+ROLE:
+You are a Senior Media Venture Strategist and Niche Unit-Economics Analyst who evaluates content categories using the P.A.I.D. Niche Positioning Matrix and the Niche Monetization Potential Index (NMPI).
+
+CONTEXT:
+I am building a high-margin solo creator and digital product business...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Niche & Avatar Moat">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P07</span>
+                        <span class="vp-stage">Stage 1: Niche & Avatar Moat · Chapter 02</span>
+                      </div>
+                      <h4>Category-of-One Positioning Statement & Bio Authority Architect</h4>
+                      <div class="vp-meta mono">Use Case: You are an Executive Brand Positioning Architect specializing in Category-of-One differentiatio...</div>
+                      <div class="vp-vars mono">Variables: [WINNING_SUB_NICHE], [SPECIFIC_BUYER_AVATAR], [QUANTIFIED_OUTCOME_AND_TIMEFRAME], [NAMED_PROPRIETARY_MECHANISM], [HATED_FRICTION_ELIMINATED], [CREDIBILITY_PROOF_POINTS], [TIER_0_LEAD_MAGNET_NAME], [AVATAR], [QUANTIFIED OUTCOME], [TIMEFRAME], [PROPRIETARY MECHANISM], [HATED FRICTION]</div>
+                      <pre class="vp-code mono">PROMPT ID: P07 — Category-of-One Positioning Statement & Bio Authority Architect
+
+ROLE:
+You are an Executive Brand Positioning Architect specializing in Category-of-One differentiation for solo media operators and B2B creators.
+
+CONTEXT:
+I have selected a high-NMPI sub-niche. Now I need to craft my external positioning statement, channel headers, and platfor...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Niche & Avatar Moat">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P08</span>
+                        <span class="vp-stage">Stage 1: Niche & Avatar Moat · Chapter 02</span>
+                      </div>
+                      <h4>Ideal Viewer/Reader Avatar Psychographic & Buying-Trigger Dossier</h4>
+                      <div class="vp-meta mono">Use Case: You are a Behavioral Consumer Psychologist and B2B Buyer-Intent Researcher....</div>
+                      <div class="vp-vars mono">Variables: [WINNING_SUB_NICHE], [SUB_NICHE], [SPECIFIC_BUYER_AVATAR], [BUYER_AVATAR], [CORE_PAID_PRODUCT_AND_PRICE], [PRODUCT_NAME_AND_PRICE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P08 — Ideal Viewer/Reader Avatar Psychographic & Buying-Trigger Dossier
+
+ROLE:
+You are a Behavioral Consumer Psychologist and B2B Buyer-Intent Researcher.
+
+CONTEXT:
+Demographic fluff (age, city, favorite coffee) does not help me write high-retention hooks or high-converting digital product sales pages. I need a forensic Psychographic & Operational...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Niche & Avatar Moat">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P09</span>
+                        <span class="vp-stage">Stage 1: Niche & Avatar Moat · Chapter 02</span>
+                      </div>
+                      <h4>3-Pillar Content Matrix & 90-Day Sub-Topic Generator</h4>
+                      <div class="vp-meta mono">Use Case: You are a Chief Editorial Architect for a high-margin digital publishing and creator studio....</div>
+                      <div class="vp-vars mono">Variables: [CATEGORY_OF_ONE_STATEMENT], [POSITIONING_STATEMENT], [BUYER_AVATAR_PAIN_POINTS], [TOP_3_PAIN_POINTS], [TIER_0_LEAD_MAGNET], [LEAD_MAGNET_NAME], [TIER_1_AND_TIER_2_PRODUCTS], [PAID_PRODUCTS_LIST]</div>
+                      <pre class="vp-code mono">PROMPT ID: P09 — 3-Pillar Content Matrix & 90-Day Sub-Topic Generator
+
+ROLE:
+You are a Chief Editorial Architect for a high-margin digital publishing and creator studio.
+
+CONTEXT:
+I want to eliminate random weekly ideation and build a cohesive 90-Day (12-Week) Content Matrix anchored in the 3-Pillar Portfolio Ratio:
+- Pillar 1 (40% / 5 Weeks): Reach & Contra...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 1: Niche & Avatar Moat">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P10</span>
+                        <span class="vp-stage">Stage 1: Niche & Avatar Moat · Chapter 02</span>
+                      </div>
+                      <h4>Audience-Offer Alignment Bridge (Mapping Free Topics to Paid Digital Products)</h4>
+                      <div class="vp-meta mono">Use Case: You are a Digital Product Curriculum Designer and Conversion Bridge Engineer....</div>
+                      <div class="vp-vars mono">Variables: [CORE_PAID_PRODUCT_NAME_AND_PRICE], [PAID_PRODUCT_MODULES_LIST], [UPCOMING_4_FREE_PILLAR_TOPICS], [LIST_4_TOPICS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P10 — Audience-Offer Alignment Bridge (Mapping Free Topics to Paid Digital Products)
+
+ROLE:
+You are a Digital Product Curriculum Designer and Conversion Bridge Engineer.
+
+CONTEXT:
+Many creators give away 100% of the answer in their free videos/newsletters in a way that leaves viewers feeling satisfied rather than eager to buy, OR they hold back to...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Outlier Idea Mining">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P11</span>
+                        <span class="vp-stage">Stage 2: Outlier Idea Mining · Chapter 03</span>
+                      </div>
+                      <h4>Competitor Outlier Video/Post Deconstructor ($M_{\text{outlier}} \ge 2.5\times$ Analyzer)</h4>
+                      <div class="vp-meta mono">Use Case: You are a Senior Algorithmic Content Analyst and Media Reverse-Engineering Specialist....</div>
+                      <div class="vp-vars mono">Variables: [MY_SUB_NICHE_AND_AVATAR], [MY_CORE_PAID_OFFER], [OUTLIER_1_DATA], [TITLE_1], [SUBS_1], [MEDIAN_1], [VIEWS_1], [SUMMARY_1], [OUTLIER_2_DATA], [TITLE_2], [SUBS_2], [MEDIAN_2]</div>
+                      <pre class="vp-code mono">PROMPT ID: P11 — Competitor Outlier Video/Post Deconstructor (M_outlier >= 2.5x Analyzer)
+
+ROLE:
+You are a Senior Algorithmic Content Analyst and Media Reverse-Engineering Specialist.
+
+CONTEXT:
+I have identified 3 outlier uploads on peer or adjacent channels that achieved an Outlier Multiplier Score (M_outlier) >= 2.5x their channel's 90-day median views. I ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Outlier Idea Mining">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P12</span>
+                        <span class="vp-stage">Stage 2: Outlier Idea Mining · Chapter 03</span>
+                      </div>
+                      <h4>Comment-Section Friction & Unanswered Question Miner</h4>
+                      <div class="vp-meta mono">Use Case: You are a Qualitative Market Researcher and Voice-of-Customer (VoC) Forensic Analyst....</div>
+                      <div class="vp-vars mono">Variables: [SOURCE_ASSET_TITLE_AND_TOPIC], [COMPETITOR_TITLE], [MY_SUB_NICHE_AND_PAID_OFFER], [MY_NICHE_AND_OFFER], [RAW_COMMENTS_DUMP], [PASTE_15_TO_50_RAW_VIEWER_COMMENTS_HERE], [Verbatim Complaint]</div>
+                      <pre class="vp-code mono">PROMPT ID: P12 — Comment-Section Friction & Unanswered Question Miner
+
+ROLE:
+You are a Qualitative Market Researcher and Voice-of-Customer (VoC) Forensic Analyst.
+
+CONTEXT:
+I have pasted raw viewer/reader comments from high-performing competitor videos, articles, or social threads in my niche. I want you to mine these comments for high-intent buyer friction,...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Outlier Idea Mining">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P13</span>
+                        <span class="vp-stage">Stage 2: Outlier Idea Mining · Chapter 03</span>
+                      </div>
+                      <h4>Search Autocomplete & Reddit Pain-Cluster Synthesizer</h4>
+                      <div class="vp-meta mono">Use Case: You are a Search-Intent Architect and Practitioner Community Intelligence Analyst....</div>
+                      <div class="vp-vars mono">Variables: [CORE_SUB_NICHE_AND_AVATAR], [SUB_NICHE_AND_AVATAR], [PRIMARY_SOFTWARE_AND_WORKFLOW_STACK], [RAW_AUTOCOMPLETE_OR_REDDIT_THREADS], [PASTE_SEARCH_STEMS_OR_THREAD_TITLES], [Workflow], [Bottleneck], [Tool A], [Tool B], [Avatar], [Process], [Tool]</div>
+                      <pre class="vp-code mono">PROMPT ID: P13 — Search Autocomplete & Reddit Pain-Cluster Synthesizer
+
+ROLE:
+You are a Search-Intent Architect and Practitioner Community Intelligence Analyst.
+
+CONTEXT:
+I want to validate Stage S (Search Intent & Autocomplete Velocity) and Stage N (Network & Community Resonance) for my upcoming content cycle. I will provide my core sub-niche topics, softwa...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Outlier Idea Mining">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P14</span>
+                        <span class="vp-stage">Stage 2: Outlier Idea Mining · Chapter 03</span>
+                      </div>
+                      <h4>Contrarian Angle & Unique Mechanism Spin Generator</h4>
+                      <div class="vp-meta mono">Use Case: You are a Category-of-One Editorial Strategist and Proprietary Framework Architect....</div>
+                      <div class="vp-vars mono">Variables: [VALIDATED_OUTLIER_TOPIC], [WHAT_EVERY_COMPETITOR_CURRENTLY_SAYS], [WHY_THEIR_APPROACH_ACTUALLY_FAILS], [MY_ACTUAL_PRACTITIONER_METHOD], [MY_TIER_0_OR_TIER_1_OFFER]</div>
+                      <pre class="vp-code mono">PROMPT ID: P14 — Contrarian Angle & Unique Mechanism Spin Generator
+
+ROLE:
+You are a Category-of-One Editorial Strategist and Proprietary Framework Architect.
+
+CONTEXT:
+I have found a validated topic with strong outlier demand (M_outlier >= 2.5x) and clear comment friction. However, if I publish a standard tutorial with the same angle as everyone else, I wil...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Outlier Idea Mining">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P15</span>
+                        <span class="vp-stage">Stage 2: Outlier Idea Mining · Chapter 03</span>
+                      </div>
+                      <h4>30-Day S.I.G.N.A.L. Validated Idea Bank & Priority Scorer</h4>
+                      <div class="vp-meta mono">Use Case: You are a Portfolio Operations Director for a data-driven digital media studio....</div>
+                      <div class="vp-vars mono">Variables: [MY_CATEGORY_OF_ONE_POSITIONING], [POSITIONING_STATEMENT], [MY_LEAD_MAGNET_AND_PAID_OFFER], [LEAD_MAGNET_AND_PAID_OFFER], [RAW_CANDIDATE_IDEAS_LIST_WITH_NOTES], [IDEA_1 + OUTLIER/SEARCH NOTES], [IDEA_2 + OUTLIER/SEARCH NOTES], [IDEA_3 + OUTLIER/SEARCH NOTES], [IDEA_4 + OUTLIER/SEARCH NOTES], [IDEA_5 + OUTLIER/SEARCH NOTES], [IDEA_6 + OUTLIER/SEARCH NOTES], [IDEA_7 + OUTLIER/SEARCH NOTES]</div>
+                      <pre class="vp-code mono">PROMPT ID: P15 — 30-Day S.I.G.N.A.L. Validated Idea Bank & Priority Scorer
+
+ROLE:
+You are a Portfolio Operations Director for a data-driven digital media studio.
+
+CONTEXT:
+I have gathered a raw list of 8 to 12 candidate Pillar ideas from my outlier scan, comment mining, and search research. I need you to score every candidate rigorously using the 6 S.I.G.N.A...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Packaging & Hooks">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P16</span>
+                        <span class="vp-stage">Stage 2: Packaging & Hooks · Chapter 04</span>
+                      </div>
+                      <h4>15-Variation High-CTR Title & Curiosity-Gap Generator (Across 5 Psychological Angles)</h4>
+                      <div class="vp-meta mono">Use Case: You are a Master Packaging Copywriter and Algorithmic CTR Engineer for high-growth B2B and pros...</div>
+                      <div class="vp-vars mono">Variables: [VALIDATED_PILLAR_TOPIC], [TARGET_BUYER_AVATAR], [QUANTIFIED_OUTCOME_OR_PROOF], [PROPRIETARY_MECHANISM_NAME], [STATUS_QUO_MISTAKE_ATTACKED]</div>
+                      <pre class="vp-code mono">PROMPT ID: P16 — 15-Variation High-CTR Title & Curiosity-Gap Generator (Across 5 Psychological Angles)
+
+ROLE:
+You are a Master Packaging Copywriter and Algorithmic CTR Engineer for high-growth B2B and prosumer media channels.
+
+CONTEXT:
+I have selected a validated S.I.G.N.A.L. Pillar topic. Before I write a single line of my script or newsletter, I must lock ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Packaging & Hooks">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P17</span>
+                        <span class="vp-stage">Stage 2: Packaging & Hooks · Chapter 04</span>
+                      </div>
+                      <h4>Thumbnail Visual Concept & 3-Word Complementary Overlay Architect</h4>
+                      <div class="vp-meta mono">Use Case: You are a Visual Hierarchy Director and Eye-Tracking Thumbnail Psychologist specializing in the...</div>
+                      <div class="vp-vars mono">Variables: [LOCKED_TITLE_A], [PASTE_TITLE_A], [LOCKED_TITLE_B], [PASTE_TITLE_B], [CHANNEL_VISUAL_STYLE], [CORE_TRANSFORMATION_CONTRAST]</div>
+                      <pre class="vp-code mono">PROMPT ID: P17 — Thumbnail Visual Concept & 3-Word Complementary Overlay Architect
+
+ROLE:
+You are a Visual Hierarchy Director and Eye-Tracking Thumbnail Psychologist specializing in the 3-Element Visual Harmony Law.
+
+CONTEXT:
+I have locked my Primary Launch Title (Title A) and Backup Title (Title B). Now I need to wireframe 3 high-contrast Thumbnail / Carous...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Packaging & Hooks">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P18</span>
+                        <span class="vp-stage">Stage 2: Packaging & Hooks · Chapter 04</span>
+                      </div>
+                      <h4>First-30-Seconds C.L.I.P. Hook Scriptwriter (Video, Short-Form & Newsletter Lead)</h4>
+                      <div class="vp-meta mono">Use Case: You are a High-Retention Script Architect specializing in First-30-Second viewer hold rates (R3...</div>
+                      <div class="vp-vars mono">Variables: [LOCKED_TITLE_AND_THUMBNAIL_BADGE], [TITLE_AND_BADGE], [VISUAL_PROOF_SHOWN_IN_FRAME_1], [STATUS_QUO_PAIN_AND_COST], [NAMED_PROPRIETARY_MECHANISM], [3_STEP_ROADMAP_PREVIEW], [STEP_1], [STEP_2], [STEP_3], [ON-SCREEN VISUAL CUE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P18 — First-30-Seconds C.L.I.P. Hook Scriptwriter (Video, Short-Form & Newsletter Lead)
+
+ROLE:
+You are a High-Retention Script Architect specializing in First-30-Second viewer hold rates (R30 >= 72%).
+
+CONTEXT:
+I have locked my Title and 3-Element Thumbnail. Before drafting my body script, I need to write the exact First-30-Seconds Hook (75-85 spo...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Packaging & Hooks">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P19</span>
+                        <span class="vp-stage">Stage 2: Packaging & Hooks · Chapter 04</span>
+                      </div>
+                      <h4>Hook Retention Diagnostic & Throat-Clearing Eliminator</h4>
+                      <div class="vp-meta mono">Use Case: You are a Ruthless Retention Editor and Script Pacing Auditor....</div>
+                      <div class="vp-vars mono">Variables: [PROMISED_TITLE_AND_THUMBNAIL], [TITLE_AND_THUMBNAIL], [DRAFT_INTRO_OR_HOOK_TEXT], [PASTE_YOUR_FIRST_150_WORDS_HERE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P19 — Hook Retention Diagnostic & Throat-Clearing Eliminator
+
+ROLE:
+You are a Ruthless Retention Editor and Script Pacing Auditor.
+
+CONTEXT:
+I have drafted an opening hook (or full intro section) for my upcoming video, podcast, or newsletter. Audit my draft line-by-line to detect and amputate any "Throat-Clearing," slow biographical setup, redunda...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 2: Packaging & Hooks">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P20</span>
+                        <span class="vp-stage">Stage 2: Packaging & Hooks · Chapter 04</span>
+                      </div>
+                      <h4>Post-Publish CTR & Retention Drop-Off A/B Packaging Rescue Protocol</h4>
+                      <div class="vp-meta mono">Use Case: You are a Live-Telemetry Packaging Triage Specialist....</div>
+                      <div class="vp-vars mono">Variables: [CURRENT_LIVE_TITLE], [LIVE_TITLE], [CURRENT_LIVE_THUMBNAIL_DESCRIPTION], [LIVE_THUMBNAIL], [FIRST_30_SECONDS_SPOKEN_TRANSCRIPT], [FIRST_30_SEC_TEXT], [LIVE_24H_METRICS], [IMPRESSIONS], [CTR_PERCENT], [R30_PERCENT], [APV_PERCENT]</div>
+                      <pre class="vp-code mono">PROMPT ID: P20 — Post-Publish CTR & Retention Drop-Off A/B Packaging Rescue Protocol
+
+ROLE:
+You are a Live-Telemetry Packaging Triage Specialist.
+
+CONTEXT:
+I published a Pillar Asset 6 to 24 hours ago, and its early performance metrics are below studio thresholds (CTR < 6.5% or 30-Second Retention R30 < 68%). Based on my live telemetry numbers, diagnose whic...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: Pillar Scripting">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P21</span>
+                        <span class="vp-stage">Stage 3: Pillar Scripting · Chapter 05</span>
+                      </div>
+                      <h4>Creator Voice DNA Extractor & Anti-Slop Style Card Builder</h4>
+                      <div class="vp-meta mono">Use Case: You are a Computational Linguist and Senior Executive Ghostwriter specializing in syntactic fin...</div>
+                      <div class="vp-vars mono">Variables: [CREATOR_NAME_AND_SUB_NICHE], [TARGET_AUDIENCE_AVATAR], [WRITING_OR_TRANSCRIPT_SAMPLE_1], [PASTE_400_TO_800_WORDS_OF_YOUR_BEST_WORK], [WRITING_OR_TRANSCRIPT_SAMPLE_2], [WRITING_OR_TRANSCRIPT_SAMPLE_3]</div>
+                      <pre class="vp-code mono">PROMPT ID: P21 — Creator Voice DNA Extractor & Anti-Slop Style Card Builder
+
+ROLE:
+You are a Computational Linguist and Senior Executive Ghostwriter specializing in syntactic fingerprinting and Creator Voice DNA extraction.
+
+CONTEXT:
+Whenever I use standard AI prompts to draft scripts or newsletters, the output sounds generic, repetitive, and robotic ("AI Sl...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: Pillar Scripting">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P22</span>
+                        <span class="vp-stage">Stage 3: Pillar Scripting · Chapter 05</span>
+                      </div>
+                      <h4>H.E.A.R.T. Master Pillar Outline & Micro-Payoff Pacing Architect</h4>
+                      <div class="vp-meta mono">Use Case: You are a Lead Retention Producer and H.E.A.R.T. Narrative Architect for high-margin educationa...</div>
+                      <div class="vp-vars mono">Variables: [LOCKED_TITLE_AND_30S_CLIP_HOOK], [PASTE_LOCKED_TITLE_AND_30S_HOOK], [CORE_3_STEP_FRAMEWORK_NOTES], [STEP_1], [STEP_2], [STEP_3], [REAL_CASE_STUDY_OR_PROOF_METRICS], [TIER_0_LEAD_MAGNET_AND_PAID_OFFER], [VISUAL CUE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P22 — H.E.A.R.T. Master Pillar Outline & Micro-Payoff Pacing Architect
+
+ROLE:
+You are a Lead Retention Producer and H.E.A.R.T. Narrative Architect for high-margin educational video channels and flagship newsletters.
+
+CONTEXT:
+I have locked my validated S.I.G.N.A.L. topic and my Chapter 4 Package (Title, 3-Element Thumbnail, and 30-Second C.L.I.P. ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: Pillar Scripting">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P23</span>
+                        <span class="vp-stage">Stage 3: Pillar Scripting · Chapter 05</span>
+                      </div>
+                      <h4>Section-by-Section Spoken-Word Video & Audio Script Expander (With B-Roll & Visual Cues)</h4>
+                      <div class="vp-meta mono">Use Case: You are a Voice-Calibrated Executive Scriptwriter writing for a teleprompter or spoken-word stu...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21], [HEART_SECTIONS_TO_EXPAND_IN_THIS_PASS], [SPECIFIC_TECHNICAL_STEPS_AND_NUMBERS], [PASTE_RAW_BULLETS_AND_METRICS_FOR_THESE_SECTIONS], [MICRO-PAYOFF CALLOUT], [Insert explanation here], [VISUAL CUE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P23 — Section-by-Section Spoken-Word Video & Audio Script Expander (With B-Roll & Visual Cues)
+
+ROLE:
+You are a Voice-Calibrated Executive Scriptwriter writing for a teleprompter or spoken-word studio recording.
+
+CONTEXT:
+I am expanding my locked H.E.A.R.T. Master Outline into a verbatim, teleprompter-ready spoken script in modular passes so there...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: Pillar Scripting">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P24</span>
+                        <span class="vp-stage">Stage 3: Pillar Scripting · Chapter 05</span>
+                      </div>
+                      <h4>Deep-Dive Authority Newsletter & Long-Form Essay Draft Engine</h4>
+                      <div class="vp-meta mono">Use Case: You are a Flagship B2B Newsletter Editor and Technical Essayist....</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD_FROM_P21], [HEART_OUTLINE_OR_VIDEO_TRANSCRIPT], [PASTE_OUTLINE_OR_SCRIPT], [Subject_LINE_AND_PREVIEW_TEXT], [PASTE_FROM_WORKSHEET_04], [TIER_0_AND_PAID_OFFER_LINKS], [OFFER_NAMES_AND_CTA_URLS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P24 — Deep-Dive Authority Newsletter & Long-Form Essay Draft Engine
+
+ROLE:
+You are a Flagship B2B Newsletter Editor and Technical Essayist.
+
+CONTEXT:
+I want to transform my H.E.A.R.T. Master Outline (or my completed Video Pillar Script) into a 2,000-to-2,500-word authoritative written newsletter issue (for Beehiiv, Substack, Kit, or LinkedIn Artic...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: Pillar Scripting">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P25</span>
+                        <span class="vp-stage">Stage 3: Pillar Scripting · Chapter 05</span>
+                      </div>
+                      <h4>Native Mid-Roll & End-of-Script Lead-Magnet Bridge Scriptwriter</h4>
+                      <div class="vp-meta mono">Use Case: You are a Conversion Copywriter specializing in invisible, high-retention in-content CTA bridge...</div>
+                      <div class="vp-vars mono">Variables: [STEP_1_JUST_TAUGHT_IN_SCRIPT], [FINAL_STEP_TAUGHT_AT_END_OF_SCRIPT], [TIER_0_LEAD_MAGNET_SPEC], [TIER_1_PAID_PRODUCT_SPEC], [NEXT_RELATED_VIDEO_TOPIC], [VISUAL CUE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P25 — Native Mid-Roll & End-of-Script Lead-Magnet Bridge Scriptwriter
+
+ROLE:
+You are a Conversion Copywriter specializing in invisible, high-retention in-content CTA bridges.
+
+CONTEXT:
+When creators say "Pause the video and sign up for my newsletter" or "That wraps up today's video, check the link below," retention craters and conversion sits unde...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: 1-to-15 Repurposing">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P26</span>
+                        <span class="vp-stage">Stage 3: 1-to-15 Repurposing · Chapter 06</span>
+                      </div>
+                      <h4>Pillar-to-5 Standalone Short-Form Vertical Video Script Extractor (Shorts/Reels/TikTok)</h4>
+                      <div class="vp-meta mono">Use Case: You are a Short-Form Retention Director and Vertical Video Script Architect specializing in 35-...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [PILLAR_VIDEO_TITLE_FOR_RELATED_LINK], [PILLAR_TITLE], [TIER_0_LEAD_MAGNET_AND_KEYWORD], [Common Habit], [Metric], [9:16 VISUAL CUE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P26 — Pillar-to-5 Standalone Short-Form Vertical Video Script Extractor (Shorts/Reels/TikTok)
+
+ROLE:
+You are a Short-Form Retention Director and Vertical Video Script Architect specializing in 35-to-50-second high-completion scripts (>75% AVD and >68% 3-second swipe-stay rate).
+
+CONTEXT:
+I have completed my weekly Long-Form H.E.A.R.T. Pillar Scrip...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: 1-to-15 Repurposing">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P27</span>
+                        <span class="vp-stage">Stage 3: 1-to-15 Repurposing · Chapter 06</span>
+                      </div>
+                      <h4>Pillar-to-LinkedIn Authority Post & Contrarian Story Formatter</h4>
+                      <div class="vp-meta mono">Use Case: You are an Executive B2B LinkedIn Ghostwriter whose posts consistently achieve high dwell time,...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [TIER_0_LEAD_MAGNET_NAME_AND_URL], [LEAD_MAGNET_NAME_AND_URL], [TIER_1_PAID_PRODUCT_NAME_AND_URL], [PAID_PRODUCT_NAME_AND_URL], [Avatar]</div>
+                      <pre class="vp-code mono">PROMPT ID: P27 — Pillar-to-LinkedIn Authority Post & Contrarian Story Formatter
+
+ROLE:
+You are an Executive B2B LinkedIn Ghostwriter whose posts consistently achieve high dwell time, executive comments, and 3.0%+ profile-to-lead-magnet click rates.
+
+CONTEXT:
+I need to extract 2 high-authority LinkedIn text posts (Assets #7 and #8 of my 1-to-15 Waterfall) fro...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: 1-to-15 Repurposing">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P28</span>
+                        <span class="vp-stage">Stage 3: 1-to-15 Repurposing · Chapter 06</span>
+                      </div>
+                      <h4>Pillar-to-X/Threads High-Bookmark Multi-Post Thread Converter</h4>
+                      <div class="vp-meta mono">Use Case: You are a High-Density Technical Thread Architect for X and Threads specializing in bookmark-wo...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [CHAPTER_SVG_DIAGRAM_NAMES], [TIER_0_LEAD_MAGNET_URL], [LEAD_MAGNET_URL]</div>
+                      <pre class="vp-code mono">PROMPT ID: P28 — Pillar-to-X/Threads High-Bookmark Multi-Post Thread Converter
+
+ROLE:
+You are a High-Density Technical Thread Architect for X and Threads specializing in bookmark-worthy practitioner breakdowns.
+
+CONTEXT:
+Users on X and Threads ignore generic fluff threads ("10 AI tools you need ") but aggressively bookmark and share dense, metric-backed syst...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: 1-to-15 Repurposing">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P29</span>
+                        <span class="vp-stage">Stage 3: 1-to-15 Repurposing · Chapter 06</span>
+                      </div>
+                      <h4>8-Slide Visual Carousel & PDF Cheat-Sheet Slide-by-Slide Copy Architect</h4>
+                      <div class="vp-meta mono">Use Case: You are a Visual Information Designer and LinkedIn/Instagram Document Carousel Architect....</div>
+                      <div class="vp-vars mono">Variables: [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [TIER_0_LEAD_MAGNET_NAME_AND_SHORT_URL], [LOCKED_COLOR_PALETTE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P29 — 8-Slide Visual Carousel & PDF Cheat-Sheet Slide-by-Slide Copy Architect
+
+ROLE:
+You are a Visual Information Designer and LinkedIn/Instagram Document Carousel Architect.
+
+CONTEXT:
+Native 8-to-10 slide PDF carousels generate 2.9x higher dwell time and 3.4x more profile-to-link clicks than standard posts. I need to generate the exact slide-by-s...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 3: 1-to-15 Repurposing">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P30</span>
+                        <span class="vp-stage">Stage 3: 1-to-15 Repurposing · Chapter 06</span>
+                      </div>
+                      <h4>2-Part Weekly Newsletter & Offer-Bridge Email Repurposing Sequence</h4>
+                      <div class="vp-meta mono">Use Case: You are a Direct-Response Email Newsletter Strategist for a high-margin creator-solopreneur bus...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_SYSTEM_CARD], [PASTE_12_RULE_VOICE_DNA_CARD], [COMPLETED_PILLAR_SCRIPT_TEXT], [PASTE_FULL_HEART_PILLAR_SCRIPT], [PILLAR_VIDEO_OR_ARTICLE_URL], [PILLAR_URL], [PAID_DIGITAL_PRODUCT_NAME_PRICE_AND_URL], [PRODUCT_URL], [WEEKLY_SPONSOR_OR_AFFILIATE_TOOL], [SPONSOR_OR_TOOL_NAME_AND_URL]</div>
+                      <pre class="vp-code mono">PROMPT ID: P30 — 2-Part Weekly Newsletter & Offer-Bridge Email Repurposing Sequence
+
+ROLE:
+You are a Direct-Response Email Newsletter Strategist for a high-margin creator-solopreneur business.
+
+CONTEXT:
+To complete my 1-to-15 Waterfall, I send 2 targeted emails per week to my owned subscriber list (Assets #14 and #15):
+- Email #1 (Tuesday AM): Drives initial...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Batch Production">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P31</span>
+                        <span class="vp-stage">Stage 4: Batch Production · Chapter 07</span>
+                      </div>
+                      <h4>Visual B-Roll, Screen-Capture & Diagram Cue-Sheet Generator</h4>
+                      <div class="vp-meta mono">Use Case: Senior Technical Video Producer & High-Retention Visual Director...</div>
+                      <div class="vp-vars mono">Variables: [PILLAR_SCRIPT_TEXT], [PRODUCTION_TRACK], [SOFTWARE_OR_TOOLS_SHOWN], [BRAND_HEX_PALETTE], [DIAG-SVG], [SCREEN-DEMO], [DATA-CARD], [A-ROLL-CAM], [MM:SS], [Count], [Seconds], [slug]</div>
+                      <pre class="vp-code mono">PROMPT ID: P31
+ROLE: Senior Technical Video Producer & High-Retention Visual Director
+CONTEXT: I have a completed long-form H.E.A.R.T. Pillar Script (Chapter 5). To avoid hunting for B-roll during editing and to prevent platform "low-effort stock footage" penalties, I need a numbered, timestamped Visual Cue-Sheet (V01 through V15) that maps every 60-to-90-se...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Batch Production">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P32</span>
+                        <span class="vp-stage">Stage 4: Batch Production · Chapter 07</span>
+                      </div>
+                      <h4>Faceless Voiceover Pacing, Phonetic Emphasis & Audio-Retention Script Optimizer</h4>
+                      <div class="vp-meta mono">Use Case: Broadcast Vocal Coach & Acoustic Retention Engineer...</div>
+                      <div class="vp-vars mono">Variables: [RAW_PILLAR_SCRIPT], [VOCAL_DELIVERY_MODE], [TARGET_SPEAKING_RATE], [TECHNICAL_ACRONYMS_OR_TERMS], [PAUSE 0.4s], [CLAP-RETAKE-ANCHOR], [loudness units], [Count], [Target WPM], [MM:SS], [Bullet list]</div>
+                      <pre class="vp-code mono">PROMPT ID: P32
+ROLE: Broadcast Vocal Coach & Acoustic Retention Engineer
+CONTEXT: Monotone vocal delivery destroys audience retention in the first 30 seconds, especially on faceless videos and podcasts. I need to transform my standard written Pillar Script into a broadcast-ready Vocal Performance Script annotated with exact breathing pauses, pitch inflection...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Batch Production">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P33</span>
+                        <span class="vp-stage">Stage 4: Batch Production · Chapter 07</span>
+                      </div>
+                      <h4>Video/Audio Transcript Filler-Word, Silence & Retention-Drop Edit Sheet Builder</h4>
+                      <div class="vp-meta mono">Use Case: Senior Post-Production Rough-Cut Editor & Retention Surgeon...</div>
+                      <div class="vp-vars mono">Variables: [RAW_TIMECODED_TRANSCRIPT], [MM:SS], [TARGET_FINISHED_RUNTIME], [NUMBERED_VISUAL_CUE_LIST], [inaudible / clap], [HARD DELETE], [SHORT-EXTRACT-01], [MM:SS - MM:SS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P33
+ROLE: Senior Post-Production Rough-Cut Editor & Retention Surgeon
+CONTEXT: I have recorded my raw pillar audio/video using the Clap-and-Pause Retake Protocol and generated a raw timecoded transcript (from Descript, Whisper, or Premiere Pro). Before touching the visual timeline, I need an automated Text-Based Rough-Cut Edit Sheet that identifie...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Batch Production">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P34</span>
+                        <span class="vp-stage">Stage 4: Batch Production · Chapter 07</span>
+                      </div>
+                      <h4>Freelance Editor / Virtual Assistant Delegation SOP & Revision Feedback Generator</h4>
+                      <div class="vp-meta mono">Use Case: Post-Production Studio Operations Manager...</div>
+                      <div class="vp-vars mono">Variables: [DELEGATION_STAGE], [SPRINT_FOLDER_LINK_AND_ASSETS], [VISUAL_CUE_SHEET_P31], [EDITOR_DRAFT_NOTES_OR_ISSUES], [ID], [24 Hours / 12 Hours]</div>
+                      <pre class="vp-code mono">PROMPT ID: P34
+ROLE: Post-Production Studio Operations Manager
+CONTEXT: Whether I am handing off my weekly rough cut to a freelance video editor/VA or reviewing their first-draft render, vague creative feedback ("make it punchier") causes endless revision loops. I need a deterministic Delegation Work Order & Timestamped Revision Protocol that gives an editor...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Batch Production">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P35</span>
+                        <span class="vp-stage">Stage 4: Batch Production · Chapter 07</span>
+                      </div>
+                      <h4>Pre-Publish SEO Metadata, Timestamp Chapters & Funnel-Link QA Verifier</h4>
+                      <div class="vp-meta mono">Use Case: Omnichannel Publishing Operations & Conversion Telemetry Auditor...</div>
+                      <div class="vp-vars mono">Variables: [FINAL_LOCKED_SRT_TRANSCRIPT], [CHOSEN_TITLE_AND_THUMBNAIL_TEXT], [LEAD_MAGNET_BASE_URL], [SPRINT_CAMPAIGN_SLUG], [QA_TELEMETRY_INPUTS], [platform], [format], [Keyword-Rich Hook Chapter Title], [Copy + Link], [X / 12], [Score]</div>
+                      <pre class="vp-code mono">PROMPT ID: P35
+ROLE: Omnichannel Publishing Operations & Conversion Telemetry Auditor
+CONTEXT: Before completing Block 4 (Thursday 30-minute QA & Schedule), I need to generate the complete search-optimized metadata package (YouTube/Podcast Description, Timestamp Chapters, High-Intent Tags, Pinned Comment CTA, and UTM Funnel Links) and verify my 16 weekly ass...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Owned List Funnel">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P36</span>
+                        <span class="vp-stage">Stage 4: Owned List Funnel · Chapter 08</span>
+                      </div>
+                      <h4>60-Second High-Utility Lead Magnet Concept & Deliverable Architect</h4>
+                      <div class="vp-meta mono">Use Case: Direct-Response Product Architect & Conversion Funnel Engineer...</div>
+                      <div class="vp-vars mono">Variables: [NICHE_AND_TARGET_ICP], [CORE_PILLAR_TOPIC], [PAID_TIER_1_AND_TIER_2_OFFER], [DELIVERY_PLATFORM], [Title], [Markdown Table + Formula], [Exact Templates], [Exact Copy + Link Placement]</div>
+                      <pre class="vp-code mono">PROMPT ID: P36
+ROLE: Direct-Response Product Architect & Conversion Funnel Engineer
+CONTEXT: Generic PDF ebooks ("The Ultimate Guide to X") convert poorly (<1.5%) and rarely get read. I need to design a 60-Second Immediate-Utility Lead Magnet Kit (combining an interactive diagnostic scorecard/calculator, a copy-paste prompt/template vault, and a 1-page visua...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Owned List Funnel">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P37</span>
+                        <span class="vp-stage">Stage 4: Owned List Funnel · Chapter 08</span>
+                      </div>
+                      <h4>High-Converting Opt-In Landing Page Copy & Thank-You Bridge Builder (50%+ Opt-In Target)</h4>
+                      <div class="vp-meta mono">Use Case: Conversion Rate Optimization (CRO) Copywriter & Funnel Architect...</div>
+                      <div class="vp-vars mono">Variables: [WINNING_LEAD_MAGNET_SPEC], [TARGET_ICP_PAIN_AND_METRIC], [SOCIAL_PROOF_ANCHOR], [TIER_1_FAST_TRACK_OFFER_AND_PRICE], [Copy], [Bullets], [Verbatim Script]</div>
+                      <pre class="vp-code mono">PROMPT ID: P37
+ROLE: Conversion Rate Optimization (CRO) Copywriter & Funnel Architect
+CONTEXT: I need the complete wireframe copy for a zero-distraction, 2-field Opt-In Bridge Page designed to convert 50% to 68% of social traffic, paired with an Instant Thank-You & Fast-Track Micro-Offer Bridge Page that converts 2.5% to 4.5% of new subscribers into my Tier ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Owned List Funnel">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P38</span>
+                        <span class="vp-stage">Stage 4: Owned List Funnel · Chapter 08</span>
+                      </div>
+                      <h4>Complete 5-Email Automated Welcome & Segmentation Sequence Writer</h4>
+                      <div class="vp-meta mono">Use Case: Behavioral Email Marketing Architect & Solopreneur Ghostwriter...</div>
+                      <div class="vp-vars mono">Variables: [VOICE_DNA_PROFILE], [LEAD_MAGNET_TITLE_AND_ACCESS_URL], [3_SEGMENTATION_POLL_OPTIONS], [CASE_STUDY_PROOF_METRICS], [CORE_PAID_OFFER_STACK_AND_URL], [FAST_ACTION_WELCOME_BONUS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P38
+ROLE: Behavioral Email Marketing Architect & Solopreneur Ghostwriter
+CONTEXT: Every new subscriber who claims my Lead Magnet must enter a 5-Email Automated Welcome Sequence (The E.N.G.A.G.E. Funnel: Minute 0, Hour 24, Hour 48, Hour 72, Hour 96). This sequence must deliver immediate tactical utility, segment the subscriber via a 1-click poll in...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Owned List Funnel">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P39</span>
+                        <span class="vp-stage">Stage 4: Owned List Funnel · Chapter 08</span>
+                      </div>
+                      <h4>Weekly Authority Newsletter Issue Compiler (The 3-2-1 Tactical Digest Format)</h4>
+                      <div class="vp-meta mono">Use Case: Flagship B2B Newsletter Editor-in-Chief...</div>
+                      <div class="vp-vars mono">Variables: [WEEKLY_PILLAR_SCRIPT_OR_TRANSCRIPT], [VOICE_DNA_PROFILE], [WEEKLY_YOUTUBE_OR_PODCAST_URL], [PAID_PRODUCT_OR_SPONSOR_SLOT_COPY]</div>
+                      <pre class="vp-code mono">PROMPT ID: P39
+ROLE: Flagship B2B Newsletter Editor-in-Chief
+CONTEXT: Once subscribers finish the 5-day welcome sequence, they receive my Weekly Authority Newsletter every Thursday. To maintain a 46%+ open rate and 4.5%+ click rate while drafting in under 25 minutes, I use the structured "1-2-3 Tactical Authority Digest" format derived from my weekly Pillar ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 4: Owned List Funnel">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P40</span>
+                        <span class="vp-stage">Stage 4: Owned List Funnel · Chapter 08</span>
+                      </div>
+                      <h4>90-Day Cold Subscriber Re-Engagement & List Deliverability Hygiene Engine</h4>
+                      <div class="vp-meta mono">Use Case: Email Deliverability Engineer & List Hygiene Strategist...</div>
+                      <div class="vp-vars mono">Variables: [NEWSLETTER_NAME_AND_NICHE], [RE_ENGAGEMENT_BONUS_GIFT_URL], [ONE_CLICK_KEEP_SUBSCRIBED_LINK], [First Name]</div>
+                      <pre class="vp-code mono">PROMPT ID: P40
+ROLE: Email Deliverability Engineer & List Hygiene Strategist
+CONTEXT: Unengaged subscribers who haven't opened an email in 90 days damage my domain sender reputation with Gmail and Yahoo, dragging down inbox placement for my active buyers. I need a 2-Email Automated Sunset & Re-Engagement Sequence that wakes up dormant subscribers with a high...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Digital Products">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P41</span>
+                        <span class="vp-stage">Stage 5: Digital Products · Chapter 09</span>
+                      </div>
+                      <h4>4-Tier Digital Product Value Ladder & Bundle Packaging Architect</h4>
+                      <div class="vp-meta mono">Use Case: Chief Digital Product Strategist & Pricing Economist...</div>
+                      <div class="vp-vars mono">Variables: [NICHE_AND_CORE_TRANSFORMATION], [10_STEP_METHODOLOGY_OR_CHAPTERS], [TOOLS_AND_TEMPLATES_AVAILABLE], [TARGET_PRICE_ANCHORS]</div>
+                      <pre class="vp-code mono">PROMPT ID: P41
+ROLE: Chief Digital Product Strategist & Pricing Economist
+CONTEXT: Instead of spending months recording a bloated $299 video course that few people finish, I want to package my practitioner methodology into a high-margin 4-Tier Creator Value Ladder (Tier 0 Free Kit -> Tier 1 $24 Impulse Action Toolkit -> Tier 2 $49–$79 Flagship Operating Syst...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Digital Products">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P42</span>
+                        <span class="vp-stage">Stage 5: Digital Products · Chapter 09</span>
+                      </div>
+                      <h4>48-Hour Pre-Sale Validation & Founding-Member Waitlist Pitch Builder</h4>
+                      <div class="vp-meta mono">Use Case: Lean Product Validation Architect & Direct-Response Copywriter...</div>
+                      <div class="vp-vars mono">Variables: [FLAGSHIP_PRODUCT_TITLE_AND_STACK], [RETAIL_PRICE_VS_FOUNDING_PRICE], [GUARANTEED_DELIVERY_DATE], [VOICE_DNA_PROFILE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P42
+ROLE: Lean Product Validation Architect & Direct-Response Copywriter
+CONTEXT: Before I spend 20+ hours building the complete Tier 2 Flagship Operating System Bundle, I must pass the 48-Hour Validate-Before-You-Build Gate (>= 15 paid Founding-Member pre-orders at a 40% pre-release discount). I need 2 high-converting validation emails and 1 soci...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Digital Products">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P43</span>
+                        <span class="vp-stage">Stage 5: Digital Products · Chapter 09</span>
+                      </div>
+                      <h4>High-Converting Gumroad / Sales Page Copywriter (Problem-Mechanism-Proof-Stack Architecture)</h4>
+                      <div class="vp-meta mono">Use Case: Master Direct-Response Conversion Copywriter...</div>
+                      <div class="vp-vars mono">Variables: [PRODUCT_TITLE_AND_SUBTITLE], [4_TIER_PRICING_AND_STACK], [3_PRACTITIONER_CASE_STUDIES], [RISK_REVERSAL_GUARANTEE], [MOST POPULAR]</div>
+                      <pre class="vp-code mono">PROMPT ID: P43
+ROLE: Master Direct-Response Conversion Copywriter
+CONTEXT: My product passed the 48-hour validation gate. Now I need the complete, copy-pasteable Sales Page copy (formatted for Gumroad, Lemon Squeezy, Stan Store, or a custom web page) engineered around the 7-Block Problem-Mechanism-Proof-Stack (P.M.P.S.) architecture to convert 3.5%–6.0% of l...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Digital Products">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P44</span>
+                        <span class="vp-stage">Stage 5: Digital Products · Chapter 09</span>
+                      </div>
+                      <h4>Checkout Order Bump & One-Click Post-Purchase Upsell Offer Designer</h4>
+                      <div class="vp-meta mono">Use Case: E-Commerce Checkout Economist & AOV Optimization Engineer...</div>
+                      <div class="vp-vars mono">Variables: [CORE_PRODUCT_AND_PRICE], [ORDER_BUMP_ASSET_CONCEPT], [POST_PURCHASE_UPSELL_CONCEPT], [Specific Speed/Template Shortcut], [Price]</div>
+                      <pre class="vp-code mono">PROMPT ID: P44
+ROLE: E-Commerce Checkout Economist & AOV Optimization Engineer
+CONTEXT: To expand my Effective Average Order Value (AOV_effective = P_core + P_bump*C_bump + P_upsell*C_upsell) by 45%+, I need to configure a 1-Click Order Bump ($15–$19) on my checkout screen (targeting a 30%+ take rate) and a 1-Click Post-Purchase Upsell ($49/yr Vault Pass or ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Digital Products">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P45</span>
+                        <span class="vp-stage">Stage 5: Digital Products · Chapter 09</span>
+                      </div>
+                      <h4>14-Day Multi-Channel Product Launch Sequence (Social Warm-Up + 6 Launch Emails)</h4>
+                      <div class="vp-meta mono">Use Case: Executive Launch Director & Behavioral Email Copywriter...</div>
+                      <div class="vp-vars mono">Variables: [PRODUCT_NAME_AND_SALES_PAGE_URL], [TIER_PRICING_AND_EARLY_BIRD_BONUS], [CASE_STUDY_AND_PROOF_NUMBERS], [LAUNCH_CLOSE_DEADLINE], [VOICE_DNA_PROFILE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P45
+ROLE: Executive Launch Director & Behavioral Email Copywriter
+CONTEXT: I am running a 14-Day Multi-Channel Launch Sprint for my 4-Tier Digital Product Value Ladder (Days 1–7 Social & Newsletter Pre-Launch Warm-Up + Days 8–14 Cart-Open 6-Email Sequence). I need the synchronized day-by-day execution calendar and all 6 complete launch emails.
+
+IN...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Sponsorships & CEO">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P46</span>
+                        <span class="vp-stage">Stage 5: Sponsorships & CEO · Chapter 10</span>
+                      </div>
+                      <h4>High-Fit Sponsor Prospecting & Brand Alignment Dossier Builder</h4>
+                      <div class="vp-meta mono">Use Case: B2B Media Partnerships Director & Sponsorship Strategist...</div>
+                      <div class="vp-vars mono">Variables: [NICHE_AND_ICP_PROFILE], [UPCOMING_4_PILLAR_TOPICS], [TOOLS_CURRENTLY_IN_MY_STACK], [ADJACENT_NEWSLETTERS_OR_CHANNELS], [ICP]</div>
+                      <pre class="vp-code mono">PROMPT ID: P46
+ROLE: B2B Media Partnerships Director & Sponsorship Strategist
+CONTEXT: Instead of waiting passively for low-ball inbound agency emails, I want to build a targeted Outbound Sponsor Radar of 25–50 high-LTV B2B SaaS, AI, FinTech, and Prosumer brands whose products naturally fit inside my weekly tutorials and newsletters.
+
+INPUT VARIABLES:
+- [NIC...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Sponsorships & CEO">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P47</span>
+                        <span class="vp-stage">Stage 5: Sponsorships & CEO · Chapter 10</span>
+                      </div>
+                      <h4>Cold Outbound Sponsor Pitch & 3-Tier Omnichannel Package Proposal Generator</h4>
+                      <div class="vp-meta mono">Use Case: Executive Media Sales Copywriter & Pricing Architect...</div>
+                      <div class="vp-vars mono">Variables: [TARGET_BRAND_AND_PRODUCT], [UPCOMING_PILLAR_TOPIC_AND_DATE], [AUDIENCE_METRICS_AND_ICP], [CALCULATED_BASE_AND_BUNDLE_RATES], [MOST POPULAR]</div>
+                      <pre class="vp-code mono">PROMPT ID: P47
+ROLE: Executive Media Sales Copywriter & Pricing Architect
+CONTEXT: I am executing my Friday 10-minute outbound habit (sending 5 direct-to-brand sponsor pitches) and need both the concise 4-Sentence Cold Outbound Pitch Email/DM and the 1-Page 3-Tier Omnichannel Partnership Proposal (calculated using the R_sponsor formula) to send as soon as th...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Sponsorships & CEO">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P48</span>
+                        <span class="vp-stage">Stage 5: Sponsorships & CEO · Chapter 10</span>
+                      </div>
+                      <h4>High-Retention 60-Second Native Mid-Roll Sponsor Read Scriptwriter</h4>
+                      <div class="vp-meta mono">Use Case: High-Retention Video Producer & Direct-Response Ad Scriptwriter...</div>
+                      <div class="vp-vars mono">Variables: [TUTORIAL_STEP_1_JUST_TAUGHT], [TUTORIAL_STEP_2_COMING_NEXT], [SPONSOR_NAME_AND_CORE_FEATURE], [SPONSOR_OFFER_AND_SHORT_URL], [MANDATORY_BRAND_TALKING_POINTS], [SCREEN-DEMO CUE], [SCREEN-DEMO], [GRAPHIC]</div>
+                      <pre class="vp-code mono">PROMPT ID: P48
+ROLE: High-Retention Video Producer & Direct-Response Ad Scriptwriter
+CONTEXT: Standard sponsor reads ("This video is sponsored by...") cause 45%+ viewer drop-off and <0.5% CTR. I need a 60-second (150-word) Native Mid-Roll Integration Script placed right after Step 1's micro-payoff (at minute 03:30–04:30) that demonstrates the sponsor's tool ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Sponsorships & CEO">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P49</span>
+                        <span class="vp-stage">Stage 5: Sponsorships & CEO · Chapter 10</span>
+                      </div>
+                      <h4>Post-Campaign Brand ROI & Renewal Upsell Report Generator</h4>
+                      <div class="vp-meta mono">Use Case: Senior Client Success & Media Account Renewal Director...</div>
+                      <div class="vp-vars mono">Variables: [SPONSOR_NAME_AND_CONTACT_FIRST_NAME], [CAMPAIGN_DELIVERABLES_COMPLETED], [ACTUAL_PERFORMANCE_METRICS], [AUDIENCE_COMMENTS_OR_QUOTES], [PROPOSED_90_DAY_RETAINER_TOPICS_AND_PRICE]</div>
+                      <pre class="vp-code mono">PROMPT ID: P49
+ROLE: Senior Client Success & Media Account Renewal Director
+CONTEXT: It is 5x easier to renew an existing sponsor into a 90-day quarterly retainer than to hunt for a new sponsor from scratch. Fourteen days after publishing a sponsored campaign, I send this data-driven Post-Campaign ROI & Renewal Upsell Report to lock in a 3-month extension.
+
+...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Sponsorships & CEO">
+                      <div class="vp-head">
+                        <span class="vp-id mono">P50</span>
+                        <span class="vp-stage">Stage 5: Sponsorships & CEO · Chapter 10</span>
+                      </div>
+                      <h4>The 20-Minute Friday Creator CEO Scorecard & Next-Week Bottleneck Solver</h4>
+                      <div class="vp-meta mono">Use Case: Fractional COO & Quantitative Media Studio Advisor...</div>
+                      <div class="vp-vars mono">Variables: [KPI_1_WEEKLY_HOURS_AND_RPPH], [KPI_2_OUTLIER_MULTIPLIER], [KPI_3_PACKAGING_CTR_AND_RETENTION], [KPI_4_RENTED_TO_OWNED_CAPTURE], [KPI_5_REVENUE_MIX_30D]</div>
+                      <pre class="vp-code mono">PROMPT ID: P50
+ROLE: Fractional COO & Quantitative Media Studio Advisor
+CONTEXT: Every Friday afternoon during my 20-Minute Creator CEO Review, I audit my 5 Core Studio KPIs from the past 7–30 days. I need an objective diagnostic audit that identifies my single highest-impact stage-gate bottleneck for next week and prescribes one concrete 30-minute correctiv...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S01</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Sponsor Asking for "Free Trial / Exposure / Affiliate-Only" Counter-Offer Script</h4>
+                      <div class="vp-meta mono">Use Case: A SaaS, AI, or tech brand emails you asking for a dedicated video integration or newsletter fea...</div>
+                      <div class="vp-vars mono">Variables: [Brand Name], [Your Channel/Newsletter Name], [Contact First Name], [Specific Brand Feature], [Channel/Newsletter Name], [Base Fee, e.g., $1,250], [Upcoming Validated Topic], [X,XXX], [yourdomain.com/brand], [Base Fee], [Date], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Re: [Brand Name] x [Your Channel/Newsletter Name] Partnership
+
+Hi [Contact First Name],
+
+Thanks for reaching out—I'm a fan of what your team is building with [Specific Brand Feature], and it's a strong workflow fit for the [Audience ICP, e.g., 14,500+ B2B operators and engineers] who watch/read [Channel/Newsletter Name].
+
+Because our production team...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S02</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Low-Ball Brand Deal Rate Negotiation & Multi-Asset Upsell Reply</h4>
+                      <div class="vp-meta mono">Use Case: A brand or agency replies to your proposal saying your `$2,500` quote is above their budget and...</div>
+                      <div class="vp-vars mono">Variables: [Brand Name], [Contact First Name], [Low-Ball Offer], [Low-Ball Offer, e.g., $600], [X,XXX], [OPEN_RATE_PCT], [Middle Anchor, e.g., $1,850], [Middle Anchor], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Re: [Brand Name] Partnership Scope & Options
+
+Hi [Contact First Name],
+
+Appreciate the transparency on where your budget sits for this sprint.
+
+To keep things fair across our active quarterly partners, we don't discount our standalone YouTube live-demo integrations down to $[Low-Ball Offer]. However, I'd love to find a way to make the math work for ...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S03</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Paid Ad Whitelisting, Perpetual Usage Rights & Exclusivity Fee Counter-Script</h4>
+                      <div class="vp-meta mono">Use Case: The brand sends over their standard agreement, and you spot clauses granting them *"perpetual, ...</div>
+                      <div class="vp-vars mono">Variables: [Brand Name], [Contact First Name], [Upcoming Topic], [Base Rate], [Usage Fee], [Category Name], [X months], [Exclusivity Fee], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Quick Contract Redline — Usage Rights & Exclusivity Scope ([Brand Name])
+
+Hi [Contact First Name],
+
+Excited to get rolling on the script for [Upcoming Topic]! I just reviewed the draft agreement and everything looks great on deliverables and timeline, with two quick standard licensing adjustments on Clause [X]:
+
+1. **Paid Media & Whitelisting Rights...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S04</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Sponsor Demanding Excessive Script Revisions or Off-Brand Hype Boundary Script</h4>
+                      <div class="vp-meta mono">Use Case: A sponsor's marketing team rewrites your authentic 60-second tutorial demo into a cheesy, hype-...</div>
+                      <div class="vp-vars mono">Variables: [Contact First Name], [Feature A], [Pricing Detail B], [Quote stiff corporate phrase], [350], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Optimizing Our 60s Integration for Maximum Viewer Retention & Clicks
+
+Hi [Contact First Name],
+
+Thanks for sending over your team's script notes! I immediately updated the factual product specs on [Feature A] and [Pricing Detail B] so everything is 100% accurate.
+
+Regarding the suggested marketing phrasing in lines 3–6 (*"[Quote stiff corporate phra...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S05</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Late Sponsor Payment Follow-Up & Net-15 Contract Enforcement Notice</h4>
+                      <div class="vp-meta mono">Use Case: A sponsor or agency invoice (`Net-15` or `Net-30`) is 5+ days past due, and your friendly remin...</div>
+                      <div class="vp-vars mono">Variables: [Invoice Number], [Brand Name], [Contact First Name], [Amount], [Video/Newsletter Title], [Publish Date], [X,XXX], [XXX], [Due Date], [Date 48 Hours From Now], [yourdomain.com/brand], [Late Fee Amount]</div>
+                      <pre class="vp-code mono">Subject: ACTION REQUIRED: Overdue Invoice #[Invoice Number] & Active Campaign Link Status ([Brand Name])
+
+Hi [Contact First Name] (and cc: Accounts Payable),
+
+Following up on Invoice #[Invoice Number] for $[Amount] (Campaign: *[Video/Newsletter Title]*, published on [Publish Date] with `[X,XXX]` views/opens and `[XXX]` verified clicks delivered to date).
+
+Pe...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S06</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Post-Campaign Sponsor Renewal & Quarterly Retainer Pitch Script</h4>
+                      <div class="vp-meta mono">Use Case: Exactly 14 days after publishing a successful sponsored video and newsletter sprint (`>= 85%` a...</div>
+                      <div class="vp-vars mono">Variables: [Brand Name], [Contact First Name], [Video/Newsletter Title], [ICP Description], [XX,XXX], [X,XXX], [88.4], [XXX], [3.2], [yourdomain.com/brand], [Topic A], [Topic B]</div>
+                      <pre class="vp-code mono">Subject: 14-Day ROI Report: [Brand Name] Campaign (+ Q[X] Category Lock Option)
+
+Hi [Contact First Name],
+
+Wanted to share the 14-day performance telemetry from our *[Video/Newsletter Title]* integration—the response from our audience of [ICP Description] has been outstanding:
+
+- **Cross-Channel Impressions (First 14 Days):** `[XX,XXX]` total views/opens (`[...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S07</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Algorithm Slump / Sudden Reach Drop 14-Day Packaging & Format Pivot Protocol</h4>
+                      <div class="vp-meta mono">Use Case: Your last 3 YouTube videos or LinkedIn/X posts scored an Outlier Multiplier below `0.6x` ($M_{\...</div>
+                      <div class="vp-vars mono">Variables: [Bottleneck Option A], [Bottleneck Option B], [Bottleneck Option C], [Bottleneck Option D], [Cheat Sheet / Calculator]</div>
+                      <pre class="vp-code mono">[Post on LinkedIn / X / YouTube Community Tab + Top of Thursday Newsletter]
+
+Quick operational check-in—I need your brutal honesty for 15 seconds.
+
+Over the last 3 weeks, I've been testing a few different technical breakdown formats, and looking at the telemetry, they missed the mark on what you actually need right now.
+
+As I lock in our next 4 weekly studio...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S08</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Cold Subscriber Sunset & Unsubscribe Warning Email (Deliverability Rescue)</h4>
+                      <div class="vp-meta mono">Use Case: Your email open rate has dipped below `38%`, or your monthly 90-day hygiene filter (`Prompt P40...</div>
+                      <div class="vp-vars mono">Variables: [First Name], [Newsletter Name], [ONE_CLICK_KEEP_SUBSCRIBED_TRIGGER_URL], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Removing [First Name] from the [Newsletter Name] list in 48 hours?
+
+Hi [First Name],
+
+I'm doing our monthly inbox hygiene check today, and our telemetry noticed you haven't opened the weekly *[Newsletter Name]* briefings over the past 90 days.
+
+I know firsthand how fast inbox clutter piles up—and I only want to take up space in your primary inbox if...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S09</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>High-Profile Guest / Peer Creator Collab & Cross-Promotion Pitch Script</h4>
+                      <div class="vp-meta mono">Use Case: You want to accelerate owned email list and YouTube growth by arranging a newsletter cross-prom...</div>
+                      <div class="vp-vars mono">Variables: [Their Framework Name], [Peer Creator First Name], [Specific Video/Essay Title], [Specific Tactical Detail], [Their Concept], [Your Concept], [LINK_TO_CUSTOM_SVG_OR_NOTION_DIAGRAM], [X,XXX], [Your ICP], [OPEN_RATE_PCT], [Your Core Specialty], [Date]</div>
+                      <pre class="vp-code mono">Subject: Built a visual architecture map of your [Their Framework Name] (+ quick swap idea)
+
+Hi [Peer Creator First Name],
+
+Your breakdown last week on *[Specific Video/Essay Title]* was surgical—especially your point on [Specific Tactical Detail].
+
+In fact, I mocked up a high-resolution 1-page vector flowchart of how your [Their Concept] connects into our [...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S10</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Digital Product Refund Request De-Escalation & Feedback Extraction Reply</h4>
+                      <div class="vp-meta mono">Use Case: A customer emails within your 30-day guarantee window requesting a refund on your `$24–$99` dig...</div>
+                      <div class="vp-vars mono">Variables: [Order ID], [Product Name], [Customer First Name], [Amount], [Excel / Notion / Web], [Your Name]</div>
+                      <pre class="vp-code mono">Subject: Refund Processed: Order #[Order ID] ([Product Name])
+
+Hi [Customer First Name],
+
+I've just processed a **100% full refund ($[Amount])** back to your original payment method for Order #[Order ID]—you'll see the credit post to your statement within 2 to 5 business days, and you don't need to return or delete any of the downloaded files.
+
+Because we st...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S11</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Unauthorized Content Theft / Re-Upload DMCA Takedown & Licensing Demand Notice</h4>
+                      <div class="vp-meta mono">Use Case: Another account or company downloads your original YouTube video, custom SVG architecture diagr...</div>
+                      <div class="vp-vars mono">Variables: [Your Studio Name], [Platform], [Date], [URL_OF_STOLEN_POST], [URL_OF_YOUR_ORIGINAL_POST_OR_REPO], [Original Date], [950.00], [STRIPE_LINK], [yourdomain.com], [Timestamp 24 Hours From Now], [Platform Name], [Your Name / Rights Management Team]</div>
+                      <pre class="vp-code mono">Subject: COPYRIGHT NOTICE & LICENSING INVOICE: Unauthorized Use of Proprietary Media ([Your Studio Name])
+
+To [Infringing Account Name / Company Legal & Marketing Department]:
+
+Our intellectual property monitoring system flagged an unauthorized reproduction of our copyrighted [Video / Vector Architecture Diagram / Written Carousel] published on your [Platfor...</pre>
+                    </div><div class="vault-preview-card" data-stage="Stage 5: Commercial & Crisis Protection">
+                      <div class="vp-head">
+                        <span class="vp-id mono">S12</span>
+                        <span class="vp-stage">Stage 5: Commercial & Crisis Protection · Back Matter Vault (Appendix B)</span>
+                      </div>
+                      <h4>Creator Burnout / Planned 2-Week Sabbatical Audience & Sponsor Automated Coverage Notice</h4>
+                      <div class="vp-meta mono">Use Case: You are taking a planned 2-week family vacation, recovering from illness, or stepping back for ...</div>
+                      <div class="vp-vars mono">Variables: [Brand Name], [Contact First Name], [Date 1], [Date 2], [Return Date], [Original Date], [X,XXX], [Mid-Break Date], [Your Name], [VAULT EDITION], [First Name], [XXX,XXX]</div>
+                      <pre class="vp-code mono">### PART A: Proactive Sponsor / Partner Schedule Notice (Send 14 Days Ahead)
+Subject: Upcoming Production Schedule & Bonus Placement Notice ([Brand Name])
+
+Hi [Contact First Name],
+
+Quick heads-up on our Q[X] production calendar: during the weeks of [Date 1] and [Date 2], our studio is running our scheduled **Semi-Annual Vault Synthesis & Systems Upgrade**, ...</pre>
+                    </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. VERIFIED CREATOR TRANSFORMATION CASE STUDY MATRIX -->
+  <section class="section section-dark" id="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Empirical Operator Telemetry</span>
+        <h2>10 Documented Creator-to-Operator Transformations</h2>
+        <p>Every chapter in the manual includes a complete quantitative teardown showing how solo creators across technical, B2B, creative, and advisory niches replaced 30+ hour burnout schedules with high-RPPH operating systems.</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="cs-table">
+          <thead>
+            <tr>
+              <th>Creator &amp; Niche</th>
+              <th>Audience Size</th>
+              <th>Before Hours</th>
+              <th>Before Revenue (RPPH)</th>
+              <th>After OS Hours</th>
+              <th>After OS Revenue (RPPH)</th>
+              <th>Primary Stage-Gate Breakthrough</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Marcus Vance</strong><br><span class="cs-niche">B2B RevOps & CRM Systems</span></td>
+              <td class="mono">14,200</td>
+              <td class="mono muted-cell">38.5 hrs/wk</td>
+              <td class="mono muted-cell">$1,310/mo ($7.86/hr)</td>
+              <td class="mono highlight-teal">5.5 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$14,850/mo ($623/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">+1,033% Rev / 33 hrs saved</span></td>
+            </tr>
+<tr>
+              <td><strong>Elena Rostova</strong><br><span class="cs-niche">Clinical AI Documentation</span></td>
+              <td class="mono">8,900</td>
+              <td class="mono muted-cell">31.0 hrs/wk</td>
+              <td class="mono muted-cell">$940/mo ($7.00/hr)</td>
+              <td class="mono highlight-teal">6.0 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$19,400/mo ($746/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">NMPI 89/100 / $248 RPM</span></td>
+            </tr>
+<tr>
+              <td><strong>Devon Brooks</strong><br><span class="cs-niche">Cloud & Kubernetes DevOps</span></td>
+              <td class="mono">11,400</td>
+              <td class="mono muted-cell">29.0 hrs/wk</td>
+              <td class="mono muted-cell">$1,650/mo ($13.13/hr)</td>
+              <td class="mono highlight-teal">4.5 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$11,900/mo ($610/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">8.8x View Velocity Lift</span></td>
+            </tr>
+<tr>
+              <td><strong>Sadia Rahman</strong><br><span class="cs-niche">Fintech UX & Product Design</span></td>
+              <td class="mono">19,500</td>
+              <td class="mono muted-cell">34.0 hrs/wk</td>
+              <td class="mono muted-cell">$2,100/mo ($14.25/hr)</td>
+              <td class="mono highlight-teal">5.0 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$16,250/mo ($750/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">CTR 3.4% -> 8.9% (ERI 3.55)</span></td>
+            </tr>
+<tr>
+              <td><strong>Liam O'Connor</strong><br><span class="cs-niche">Enterprise Cybersecurity</span></td>
+              <td class="mono">22,100</td>
+              <td class="mono muted-cell">36.0 hrs/wk</td>
+              <td class="mono muted-cell">$3,200/mo ($20.51/hr)</td>
+              <td class="mono highlight-teal">4.8 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$21,600/mo ($1,038/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">AVD 36% -> 56.4% (+57%)</span></td>
+            </tr>
+<tr>
+              <td><strong>Nadia Al-Mansoor</strong><br><span class="cs-niche">B2B SaaS Growth Architecture</span></td>
+              <td class="mono">16,800</td>
+              <td class="mono muted-cell">32.5 hrs/wk</td>
+              <td class="mono muted-cell">$2,450/mo ($17.40/hr)</td>
+              <td class="mono highlight-teal">4.2 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$18,900/mo ($1,038/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">15x Weekly Asset Output</span></td>
+            </tr>
+<tr>
+              <td><strong>Kenji Takahashi</strong><br><span class="cs-niche">3D Architectural Visualization</span></td>
+              <td class="mono">31,000</td>
+              <td class="mono muted-cell">34.0 hrs/wk</td>
+              <td class="mono muted-cell">$3,800/mo ($25.79/hr)</td>
+              <td class="mono highlight-teal">3.8 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$22,400/mo ($1,360/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">4-Week Pre-Scheduled Buffer</span></td>
+            </tr>
+<tr>
+              <td><strong>Hannah Lindqvist</strong><br><span class="cs-niche">Notion & Solopreneur Ops</span></td>
+              <td class="mono">9,400</td>
+              <td class="mono muted-cell">27.0 hrs/wk</td>
+              <td class="mono muted-cell">$1,180/mo ($10.09/hr)</td>
+              <td class="mono highlight-teal">4.0 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$13,750/mo ($793/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">54.2% Opt-In CVR / $4.85 V_sub</span></td>
+            </tr>
+<tr>
+              <td><strong>Tariq Mahmoud</strong><br><span class="cs-niche">No-Code & n8n AI Workflows</span></td>
+              <td class="mono">7,800</td>
+              <td class="mono muted-cell">28.0 hrs/wk</td>
+              <td class="mono muted-cell">$890/mo ($7.33/hr)</td>
+              <td class="mono highlight-teal">4.5 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$15,600/mo ($800/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">34 Pre-Orders ($152.35 AOV)</span></td>
+            </tr>
+<tr>
+              <td><strong>Chloe Sterling</strong><br><span class="cs-niche">FP&A & Financial Modeling</span></td>
+              <td class="mono">10,600</td>
+              <td class="mono muted-cell">30.0 hrs/wk</td>
+              <td class="mono muted-cell">$1,720/mo ($13.23/hr)</td>
+              <td class="mono highlight-teal">4.4 hrs/wk</td>
+              <td class="mono highlight-indigo"><strong>$26,800/mo ($1,406/hr)</strong></td>
+              <td><span class="badge-pill badge-teal">$3,400 B2B Sponsor Packages</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. THE 5-TIER COMMERCIAL PRICING TABLE -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Instant Digital Download · DRM-Free</span>
+        <h2>Choose Your Creator Operating System Tier</h2>
+        <p>Start free with the Tier 0 Diagnostic Audit Kit, grab the retail book or interactive workbook suite, or deploy the complete Tier 3 Flagship Solopreneur Operating System Bundle.</p>
+      </div>
+
+      <div class="pricing-controls">
+        <div class="toggle-btn-group" role="group" aria-label="Billing and Currency Toggle">
+          <button class="toggle-btn active" id="btn-curr-usd" onclick="setPricingMode('USD')">USD ($ Global Pricing)</button>
+          <button class="toggle-btn" id="btn-curr-bdt" onclick="setPricingMode('BDT')">BDT (৳ Bangladesh / South Asia Equivalent)</button>
+        </div>
+        <div class="toggle-btn-group" role="group" aria-label="Tier 4 Billing Period">
+          <button class="toggle-btn active" id="btn-t4-annual" onclick="setTier4Cycle('annual')">Tier 4 Annual Pass (Save 55%)</button>
+          <button class="toggle-btn" id="btn-t4-monthly" onclick="setTier4Cycle('monthly')">Tier 4 Monthly ($9/mo)</button>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 0 -->
+        <div class="price-card">
+          <div>
+            <div class="tier-label mono">TIER 0 · STARTER AUDIT</div>
+            <h3>Free Creator Audit Starter Kit</h3>
+            <div class="price-amount mono" id="price-t0">$0</div>
+            <div class="price-sub">100% Free Instant Download · Zero Credit Card Required</div>
+            <ul class="price-features">
+              <li><span class="chk">✓</span><span><strong>Chapter 1 + Audit Book PDF</strong> (Full 9,704-word vertical slice)</span></li>
+              <li><span class="chk">✓</span><span><strong>Fillable Chapter 1 Workbook PDF</strong> (48 interactive fields)</span></li>
+              <li><span class="chk">✓</span><span><strong>Offline Web App</strong> (Free Diagnostic Mode — Module 1 + P01–P05)</span></li>
+              <li><span class="chk">✓</span><span><strong>RPM &amp; Time-Leak Audit CSV</strong> (25-row baseline tracker)</span></li>
+              <li><span class="chk">✓</span><span><strong>Prompts P01–P05 &amp; Scripts S01–S02</strong> included</span></li>
+            </ul>
+          </div>
+          <a href="./downloads/tier0-free-sample-starter-kit.zip" download class="price-cta">Download Free Audit Kit (.ZIP)</a>
+        </div>
+
+        <!-- Tier 1 -->
+        <div class="price-card">
+          <div>
+            <div class="tier-label mono">TIER 1 · RETAIL BOOK</div>
+            <h3>Digital eBook &amp; Print Retail Pack</h3>
+            <div class="price-amount mono" id="price-t1">$9.99</div>
+            <div class="price-sub" id="sub-t1">Kindle / EPUB 3.0 Digital Edition ($16.99 Print Paperback on KDP)</div>
+            <ul class="price-features">
+              <li><span class="chk">✓</span><span><strong>Validated Reflowable EPUB 3.0 eBook</strong> (Kindle, Apple Books, Kobo)</span></li>
+              <li><span class="chk">✓</span><span><strong>6"×9" KDP Print Interior PDF</strong> (314 pages, high-contrast B&amp;W)</span></li>
+              <li><span class="chk">✓</span><span><strong>All 10 Comprehensive Chapters</strong> (91,775 words total)</span></li>
+              <li><span class="chk">✓</span><span><strong>50 AI Prompts (P01–P50) &amp; 12 Scripts</strong> in Back Matter Vault</span></li>
+              <li><span class="chk">✓</span><span><strong>20 Embedded System Diagrams</strong> &amp; 28 Core Formulas</span></li>
+            </ul>
+          </div>
+          <a href="#live-ecosystem-hub" class="price-cta">Get Tier 1 Retail Pack</a>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="price-card">
+          <div>
+            <div class="tier-label mono">TIER 2 · WORKBOOK &amp; TABLET</div>
+            <h3>Interactive Workbook &amp; Tablet Edition</h3>
+            <div class="price-amount mono" id="price-t2">$24</div>
+            <div class="price-sub">One-Time Payment · Complete Book + All 4 Fillable Workbooks</div>
+            <ul class="price-features">
+              <li><span class="chk">✓</span><span><strong>Everything in Tier 1</strong> + 340-Page Full-Color US Letter Book PDF</span></li>
+              <li><span class="chk">✓</span><span><strong>US Letter + ISO A4 Fillable Workbooks</strong> (448 AcroForm fields each)</span></li>
+              <li><span class="chk">✓</span><span><strong>11"×8.5" Landscape Tablet Edition</strong> (iPad GoodNotes/Notability)</span></li>
+              <li><span class="chk">✓</span><span><strong>62-Item Master Prompt &amp; Script Vault CSV</strong> for instant import</span></li>
+              <li><span class="chk">✓</span><span><strong>All 20 High-Res PNG + Vector SVG</strong> architecture diagrams</span></li>
+            </ul>
+          </div>
+          <a href="#live-ecosystem-hub" class="price-cta">Get Tier 2 Workbook Suite ($24)</a>
+        </div>
+
+        <!-- Tier 3 (FEATURED) -->
+        <div class="price-card featured">
+          <div class="popular-ribbon">MOST POPULAR · COMPLETE OS</div>
+          <div>
+            <div class="tier-label mono">TIER 3 · FLAGSHIP BUNDLE</div>
+            <h3>Complete Creator &amp; Solopreneur OS</h3>
+            <div class="price-amount mono" id="price-t3">$49</div>
+            <div class="price-sub">One-Time Payment · Full Pro Web App + Notion OS + All Formats</div>
+            <ul class="price-features">
+              <li><span class="chk">✓</span><span><strong>Everything in Tier 2 Included</strong> (All 7 PDFs, EPUB 3.0, 20 SVGs)</span></li>
+              <li><span class="chk">✓</span><span><strong>Full Pro Offline Web Companion App</strong> + Key <code class="mono">CREATOR-OS-PRO-2026</code></span></li>
+              <li><span class="chk">✓</span><span><strong>5-Database Notion Creator OS Kit</strong> + Formula 2.0 Setup Guide</span></li>
+              <li><span class="chk">✓</span><span><strong>Financial, RPM &amp; Value Ladder Spreadsheets</strong> (CSV/XLSX ready)</span></li>
+              <li><span class="chk">✓</span><span><strong>Editable Office SOPs, Pitch Decks &amp; Automation Blueprints</strong></span></li>
+            </ul>
+          </div>
+          <a href="./app/index.html" class="price-cta">Get Instant Access to Tier 3 ($49)</a>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="price-card">
+          <div>
+            <div class="tier-label mono">TIER 4 · LIVING VAULT PASS</div>
+            <h3>Living Creator Vault Membership</h3>
+            <div class="price-amount mono" id="price-t4">$49/yr</div>
+            <div class="price-sub" id="sub-t4">Or $9/month · Includes All Tier 3 Assets + Monthly Vault Drops</div>
+            <ul class="price-features">
+              <li><span class="chk">✓</span><span><strong>Everything in the Tier 3 Flagship Bundle Included</strong></span></li>
+              <li><span class="chk">✓</span><span><strong>Month 01 Living Creator Vault Drop Included Immediately:</strong></span></li>
+              <li><span class="chk">✓</span><span><strong>20 Plug-and-Play Outlier Title &amp; Thumbnail Frameworks</strong></span></li>
+              <li><span class="chk">✓</span><span><strong>5 Complete Faceless &amp; On-Camera 60s Vertical Scripts</strong></span></li>
+              <li><span class="chk">✓</span><span><strong>3 B2B Sponsor Pitch Emails + 48-Hr $5K Launch Playbook</strong></span></li>
+            </ul>
+          </div>
+          <a href="#live-ecosystem-hub" class="price-cta">Activate Tier 4 Vault Pass</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- 6B. LIVE INTERACTIVE WEB ECOSYSTEM, TIER 0 DOWNLOAD HUB & COMMERCIAL EDITION SHOWCASE -->
+  <section class="section section-dark" id="live-ecosystem-hub">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Static Web Portal &amp; Direct Starter Downloads</span>
+        <h2>Launch the Interactive Web Suite &amp; Download Tier 0 Starter Files</h2>
+        <p>Every interactive tool, vector diagram, and Tier 0 starter kit asset below is hosted directly inside this static web portal with zero external dependencies.</p>
+      </div>
+
+      <!-- 4 Live Interactive Portal Routes -->
+      <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:18px;margin-bottom:44px;">
+        <div style="background:#1E293B;border:2px solid #4F46E5;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span class="badge-pill badge-teal mono" style="margin-bottom:10px;">ROUTE 01 · /app/</span>
+            <h3 style="font-size:1.15rem;font-weight:900;color:#FFFFFF;margin-bottom:8px;">Creator OS Web Companion App</h3>
+            <p style="font-size:0.86rem;color:#CBD5E1;margin-bottom:16px;">6 interactive unit-economics simulators, 50 AI Workflow Prompts (P01–P50), 12 Emergency Scripts (S01–S12), and 20 embedded vector diagrams. Includes Free Diagnostic Mode + Pro Key (<code class="mono">CREATOR-OS-PRO-2026</code>).</p>
+          </div>
+          <a href="./app/index.html" class="price-cta" style="background:#4F46E5;">Launch Web Companion App &rarr;</a>
+        </div>
+
+        <div style="background:#1E293B;border:2px solid #0D9488;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span class="badge-pill badge-teal mono" style="margin-bottom:10px;">ROUTE 02 · /studio/</span>
+            <h3 style="font-size:1.15rem;font-weight:900;color:#FFFFFF;margin-bottom:8px;">Thumbnail &amp; Cover Customizer Studio</h3>
+            <p style="font-size:0.86rem;color:#CBD5E1;margin-bottom:16px;">Interactive vector &amp; high-resolution PNG design engine with 6 platform presets (YouTube 16:9 Thumbnail, 6&times;9 Book Cover, Gumroad Hero, LinkedIn/IG Carousel, Lead Magnet Cover) and 6 color palettes.</p>
+          </div>
+          <a href="./studio/index.html" class="price-cta" style="background:#0D9488;">Open Design Customizer Studio &rarr;</a>
+        </div>
+
+        <div style="background:#1E293B;border:2px solid #D97706;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span class="badge-pill badge-teal mono" style="margin-bottom:10px;">ROUTE 03 · /atlas/</span>
+            <h3 style="font-size:1.15rem;font-weight:900;color:#FFFFFF;margin-bottom:8px;">31-SVG Visual Shortcut Atlas</h3>
+            <p style="font-size:0.86rem;color:#CBD5E1;margin-bottom:16px;">Interactive browser embedding the Master Ecosystem Map Poster, all 10 One-Page Chapter Visual Cheat Sheets, and all 20 Chapter Mindmaps &amp; Flowcharts with full-screen zoom and 1-click SVG export.</p>
+          </div>
+          <a href="./atlas/index.html" class="price-cta" style="background:#D97706;">Explore 31-Diagram Visual Atlas &rarr;</a>
+        </div>
+
+        <div style="background:#1E293B;border:2px solid #818CF8;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span class="badge-pill badge-teal mono" style="margin-bottom:10px;">ROUTE 04 · /downloads/</span>
+            <h3 style="font-size:1.15rem;font-weight:900;color:#FFFFFF;margin-bottom:8px;">Tier 0 Free Audit Starter Hub</h3>
+            <p style="font-size:0.86rem;color:#CBD5E1;margin-bottom:16px;">Direct browser downloads for the 57-page Sample Book PDF, 13-page Fillable Ch 1 Workbook (48 AcroForm fields), 12-page Visual Shortcut Atlas PDF, Baseline Audit CSV, and complete Tier 0 Starter ZIP.</p>
+          </div>
+          <a href="./downloads/index.html" class="price-cta" style="background:#6366F1;">Open Direct Download Hub &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Direct 1-Click Self-Hosted Tier 0 & Visual Atlas File Table -->
+      <div style="background:#0F172A;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:44px;">
+        <h3 style="font-size:1.2rem;font-weight:900;color:#FFFFFF;margin-bottom:6px;">Direct 1-Click Tier 0 Starter Kit &amp; Visual Atlas Downloads</h3>
+        <p style="font-size:0.88rem;color:#94A3B8;margin-bottom:18px;">Click any asset below to download immediately from this static server (<code class="mono">./downloads/</code>):</p>
+        <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;">
+          <a href="./downloads/tier0-free-sample-starter-kit.zip" download style="background:#1E1B4B;border:1px solid #6366F1;border-radius:10px;padding:12px 14px;color:#FFFFFF;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>1. Complete Tier 0 Starter Kit (.ZIP)</span>
+            <span class="mono" style="color:#2DD4BF;font-size:0.76rem;">2.26 MB</span>
+          </a>
+          <a href="./downloads/tier0-free-sample-chapter01-and-audit.pdf" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>2. Chapter 1 + Audit Sample Book (.PDF)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">57 Pages</span>
+          </a>
+          <a href="./downloads/chapter-01-workbook.pdf" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>3. Fillable Ch 01 Action Workbook (.PDF)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">48 Fields</span>
+          </a>
+          <a href="./downloads/the-ai-creator-solopreneur-os-visual-shortcut-atlas.pdf" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>4. 12-Page Visual Shortcut Atlas (.PDF)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">12 Pages</span>
+          </a>
+          <a href="./downloads/sheet1-creator-rpm-and-time-audit.csv" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>5. Creator RPM &amp; Time-Leak Audit (.CSV)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">25 Rows</span>
+          </a>
+          <a href="./downloads/00-ECOSYSTEM-MASTER-MAP-POSTER.png" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>6. Master Ecosystem Map Poster (.PNG)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">300 DPI</span>
+          </a>
+          <a href="./downloads/cheat-sheet-ch01.png" download style="background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px;color:#F8FAFC;text-decoration:none;font-weight:700;font-size:0.85rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>7. Chapter 01 Visual Cheat Sheet (.PNG)</span>
+            <span class="mono" style="color:#94A3B8;font-size:0.76rem;">300 DPI</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Commercial Cover & Dashboard Preview Gallery (./assets/) -->
+      <div style="display:grid;grid-template-columns:repeat(6, 1fr);gap:14px;align-items:stretch;">
+        <div style="background:#0F172A;border:1px solid #334155;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/ebook-cover-kdp-kindle.png" alt="KDP &amp; Kindle eBook Cover" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#E2E8F0;">Tier 1 Retail eBook</div>
+        </div>
+        <div style="background:#0F172A;border:1px solid #334155;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/gumroad-tier0-free-audit-cover.png" alt="Tier 0 Free Creator Audit Cover" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#E2E8F0;">Tier 0 Free Audit Kit</div>
+        </div>
+        <div style="background:#0F172A;border:1px solid #334155;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/gumroad-tier2-workbook-edition-cover.png" alt="Tier 2 Fillable Workbook Cover" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#E2E8F0;">Tier 2 Workbook Suite</div>
+        </div>
+        <div style="background:#0F172A;border:1px solid #4F46E5;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/gumroad-tier3-flagship-bundle-cover.png" alt="Tier 3 Flagship Creator OS Cover" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#A5B4FC;">Tier 3 Flagship Bundle</div>
+        </div>
+        <div style="background:#0F172A;border:1px solid #334155;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/gumroad-tier4-vault-membership-cover.png" alt="Tier 4 Living Vault Pass Cover" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#E2E8F0;">Tier 4 Living Vault Pass</div>
+        </div>
+        <div style="background:#0F172A;border:1px solid #0D9488;border-radius:10px;padding:10px;text-align:center;">
+          <img src="./assets/webapp-dashboard-preview.png" alt="Creator OS Offline Web App Dashboard Preview" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;" loading="lazy" />
+          <div style="font-size:0.74rem;font-weight:800;color:#5EEAD4;">Offline SaaS-Lite App</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 12-ITEM INTERACTIVE FAQ ACCORDION -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Zero Ambiguity · Technical &amp; Commercial FAQ</span>
+        <h2>Frequently Asked Questions (12-Point Operator Briefing)</h2>
+        <p>Direct answers regarding small-channel economics, faceless workflows, offline web app privacy, fillable PDF compatibility, and commercial licensing.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item" id="faq-1">
+              <button class="faq-question" onclick="toggleFaq(1)" aria-expanded="false">
+                <span>1. Do I need a large audience (50K+ subscribers) for this Operating System to generate meaningful revenue?</span>
+                <span class="faq-icon" id="faq-icon-1">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-1">
+                <p>No. Eight of the ten documented creator case studies in this manual generated between $11,900 and $26,800 per month with fewer than 20,000 subscribers (several under 10,000 subscribers). Legacy creator advice fails small channels because it relies on AdSense RPM ($3–$8 per 1,000 views). By installing the P.A.I.D. Niche Matrix (NMPI >= 75/100), a 45%+ opt-in bridge, a 4-tier digital product ladder, and outcome-based B2B sponsorships, a channel getting just 10,000 targeted monthly views can achieve a Blended Effective RPM of $150 to $300+ per 1,000 views.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-2">
+              <button class="faq-question" onclick="toggleFaq(2)" aria-expanded="false">
+                <span>2. Does this system work for faceless channels, written newsletters, and LinkedIn/X creators, or only on-camera YouTubers?</span>
+                <span class="faq-icon" id="faq-icon-2">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-2">
+                <p>It is engineered for both on-camera and faceless/written operators. The 5-Stage Content-to-Cash Engine anchors on a weekly 2,000-word Pillar Script (Stage 2–3). That pillar can be published as a faceless screen-share tutorial, an on-camera video, a deep-dive Substack/Beehiiv newsletter, or a flagship LinkedIn article, and then multiplied via the 1-to-15 Waterfall into 5 vertical Shorts, 4 text posts, 3 carousels, and 2 email issues.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-3">
+              <button class="faq-question" onclick="toggleFaq(3)" aria-expanded="false">
+                <span>3. How does the 5-Parameter Voice DNA Engine prevent my scripts and posts from sounding like generic AI output?</span>
+                <span class="faq-icon" id="faq-icon-3">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-3">
+                <p>Generic AI content fails because creators use one-sentence prompts without structural constraints. In Chapter 5 (Prompts P21–P25) and Module 2 of the Offline Web App, you calibrate five quantitative parameters—Sentence Length Variance, Technical Directness, Contrarian Edge, Formatting Rhythm, and a strict Zero-Cliché Filter—plus feed 3 samples of your real writing. Every script and derivative asset reads indistinguishably from your best human writing.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-4">
+              <button class="faq-question" onclick="toggleFaq(4)" aria-expanded="false">
+                <span>4. Does the Interactive SaaS-Lite Web Companion App require a monthly subscription, API keys, or an internet connection?</span>
+                <span class="faq-icon" id="faq-icon-4">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-4">
+                <p>Zero subscriptions, zero API keys, and zero internet connection required. The Web Companion App (07-INTERACTIVE-TOOLS/creator-os-app.html) is a 528KB 100% self-contained single-file application that runs natively in Chrome, Edge, Brave, Firefox, or Safari off your local hard drive. It persists your data automatically via browser localStorage and exports full JSON backups and Markdown implementation roadmaps.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-5">
+              <button class="faq-question" onclick="toggleFaq(5)" aria-expanded="false">
+                <span>5. What is the difference between Tier 0 (Free), Tier 2 ($24), Tier 3 ($49 Flagship), and Tier 4 ($49/yr Vault)?</span>
+                <span class="faq-icon" id="faq-icon-5">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-5">
+                <p>Tier 0 ($0) gives you Chapter 1, Fillable Worksheet 01, the Baseline Audit CSV, and Free Diagnostic Mode in the Web App. Tier 2 ($24) includes the full 340-page Color Book PDF, EPUB 3.0, all 4 Fillable Workbook Editions (US Letter, A4, Tablet Landscape), the 20 Vector Diagrams, and the 62-item Prompt CSV. Tier 3 ($49 Flagship) adds the Pro Web App License Key (CREATOR-OS-PRO-2026), the 5-Database Notion Creator OS Kit, Financial Spreadsheets, Office SOPs, and Automation Blueprints. Tier 4 ($49/yr) includes everything in Tier 3 plus monthly recurring Hook, Faceless Script, and Sponsor Funnel Vault drops.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-6">
+              <button class="faq-question" onclick="toggleFaq(6)" aria-expanded="false">
+                <span>6. Can I really compress my weekly content research, scripting, filming, and repurposing into 4 hours per week?</span>
+                <span class="faq-icon" id="faq-icon-6">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-6">
+                <p>Yes—provided you stop mixing cognitive modes on the same day. Chapter 7 breaks production into four strict time-boxed blocks: Monday Block 1 (60m S.I.G.N.A.L. Outlier Validation & Title/Thumbnail Lock), Tuesday Block 2 (90m H.E.A.R.T. Pillar Scripting & 1-to-15 AI Extraction), Wednesday Block 3 (60m Teleprompter A-Roll Batch Recording), and Thursday Block 4 (30m 12-Point QA Gate & Queue Scheduling).</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-7">
+              <button class="faq-question" onclick="toggleFaq(7)" aria-expanded="false">
+                <span>7. Are the PDF Workbooks genuinely fillable on my computer or iPad without printing?</span>
+                <span class="faq-icon" id="faq-icon-7">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-7">
+                <p>Yes. All workbook editions in 05-WORKBOOKS/ (Chapter 1 Standalone, Full 10-Chapter US Letter, Full 10-Chapter ISO A4, and 11×8.5 Landscape Tablet Edition) contain programmatically injected interactive AcroForm text inputs and checkboxes (over 1,400 interactive fields across the suite) plus GoodNotes/Notability tablet compatibility.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-8">
+              <button class="faq-question" onclick="toggleFaq(8)" aria-expanded="false">
+                <span>8. What software do I need to use the 5-Database Notion Creator OS Kit?</span>
+                <span class="faq-icon" id="faq-icon-8">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-8">
+                <p>A free personal Notion account is 100% sufficient. All 5 databases (Outlier Idea Bank, Master Content Calendar & 1-to-15 Waterfall, 62-Item AI Prompt & Script Vault, Sponsorship CRM, and RPM/Time-Leak Audit) import in under 15 minutes via Notion's standard CSV/Markdown importer, and our 2,100-word Setup & Formula 2.0 Guide provides exact copy-paste formulas.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-9">
+              <button class="faq-question" onclick="toggleFaq(9)" aria-expanded="false">
+                <span>9. How does the 14-Day Validate-Before-You-Build Protocol protect me from building a product nobody buys?</span>
+                <span class="faq-icon" id="faq-icon-9">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-9">
+                <p>Chapter 9 enforces a strict stage gate: you never record a course module or write a 100-page guide until you publish a pre-sale checkout page and collect at least 15 paid pre-orders within a 14-day sprint using Prompts P41–P44. If an offer fails to hit 15 pre-orders, you pivot the angle or refund early buyers with zero wasted production weeks.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-10">
+              <button class="faq-question" onclick="toggleFaq(10)" aria-expanded="false">
+                <span>10. How can a small channel charge $2,500+ for sponsorships when standard CPM rates would only pay $150?</span>
+                <span class="faq-icon" id="faq-icon-10">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-10">
+                <p>Standard CPM pricing values only raw video views. Chapter 10 replaces CPM pricing with the Outcome-Based Sponsorship Formula (R_sponsor): you bundle a high-intent Pillar Integration with 2 Newsletter placements, 1 LinkedIn/X post, a tracked Lead Magnet link, and 30–90 days of Paid-Ad Whitelisting Usage Rights (+30%/month fee) using Scripts S01–S04 and Prompts P46–P49.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-11">
+              <button class="faq-question" onclick="toggleFaq(11)" aria-expanded="false">
+                <span>11. Which LLM models work best with the 50 AI Workflow Prompts (P01–P50)?</span>
+                <span class="faq-icon" id="faq-icon-11">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-11">
+                <p>All 50 prompts are model-agnostic and engineered with explicit System Roles, Input Context Variables, Quantitative Constraints, and Output Schemas. They run with zero modification inside Claude 3.5/3.7 Sonnet, ChatGPT (GPT-4o / o1 / o3-mini), Google Gemini 2.5 Pro, or local open-weights models via Ollama.</p>
+              </div>
+            </div>
+<div class="faq-item" id="faq-12">
+              <button class="faq-question" onclick="toggleFaq(12)" aria-expanded="false">
+                <span>12. What is your licensing and commercial usage policy for solo creators vs. agencies?</span>
+                <span class="faq-icon" id="faq-icon-12">+</span>
+              </button>
+              <div class="faq-answer" id="faq-ans-12">
+                <p>Tiers 1, 2, and 3 include a perpetual single-operator commercial license to use all prompts, scripts, spreadsheets, Notion databases, and web tools inside your own creator business. Tier 4 (Agency & Living Creator Vault Edition) adds cohort and agency client onboarding rights so you can deploy the templates across managed client accounts.</p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:#FFFFFF;font-size:1rem;">APEX DIGITAL SYSTEMS STUDIO · FLAGSHIP PRODUCT #3</strong>
+        <p style="margin-top:6px;"><em>The AI Content Creator &amp; Solopreneur Operating System</em> · Edition v1.0.0 · 100% Offline-Ready &amp; DRM-Free.</p>
+      </div>
+      <div class="mono" style="font-size:0.8rem;color:#CBD5E1;">
+        91,775 Manuscript Words · 23,910 Workbook Words · 50 AI Prompts · 12 Scripts · 20 Vector Diagrams
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CHAPTER_DATA = [{"num": "01", "part": "PART I: NICHE & VALIDATION", "title": "The Creator-to-Operator Paradigm & The 5-Stage Content-to-Cash OS", "metric": "RPPH >= $150/hr | Net Margin >= 82%", "time": "45 Minutes", "framework": "5-Stage Content-to-Cash Operating Engine & 7-Day Time-Leak Diagnostic", "formulas": ["RPPH = Monthly Net Creator Income / (4.33 \u00d7 Weekly Production Hours)", "HVPR = Strategic Pillar & Conversion Hours / Total Weekly Hours (Target >= 70%)", "Monthly Time-Leak Cost = Leaked Weekly Hours \u00d7 4.33 \u00d7 Target Operator RPPH"], "prompts": ["P01: 7-Day Time-Leak & RPPH Audit", "P02: 5-Stage Bottleneck Diagnostic", "P03: Operator Weekly Sprint Scheduler", "P04: Niche Economics Stress-Test", "P05: 90-Day Creator-CEO Roadmap"], "worksheet": "Worksheet 01: 7-Day Creator Time-Leak & Baseline RPPH Audit (48 Fillable Fields)", "case_study": "Marcus Vance (B2B RevOps Creator, 14.2K subs): Cut weekly production from 38.5 hrs to 5.5 hrs while growing monthly revenue from $1,310 ($7.86/hr RPPH) to $14,850 ($623/hr RPPH).", "summary": "Replaces the burnout-inducing Algorithmic Treadmill with a deterministic 5-stage operating architecture. Quantifies your exact Revenue Per Production Hour (RPPH), isolates non-monetized production bottlenecks, and establishes your weekly 4-hour production ceiling."}, {"num": "02", "part": "PART I: NICHE & VALIDATION", "title": "High-Margin Niche Positioning, Avatar Moat & The 3-Pillar Matrix", "metric": "NMPI Score >= 75/100 | Blended RPM >= $120", "time": "60 Minutes", "framework": "P.A.I.D. Niche Positioning Matrix & Category-of-One Contrarian Thesis", "formulas": ["NMPI = (2.5\u00d7Pain + 3.0\u00d7Purchasing Power + 2.0\u00d7Info Gap + 2.5\u00d7Product Fit)", "Blended Effective RPM = (Total Monthly Revenue / Total Monthly Views) \u00d7 1,000", "Pillar Allocation Ratio = 40% Reach / 35% Authority / 25% Conversion"], "prompts": ["P06: P.A.I.D. Niche & NMPI Scorer", "P07: High-Intent Buyer Avatar Profiler", "P08: Contrarian Positioning Statement Builder", "P09: 3-Pillar Content Matrix Generator", "P10: Offer-to-Content Alignment Audit"], "worksheet": "Worksheet 02: P.A.I.D. Niche Positioning & 3-Pillar Architecture Canvas", "case_study": "Elena Rostova (Clinical AI Workflow Consultant, 8.9K subs): Shifted from broad AI news ($4.10 RPM) to clinical documentation automation (NMPI 89/100), lifting Blended RPM to $248 and monthly profit to $19,400.", "summary": "Engineers a defensible Category-of-One niche moat using the 100-point Niche Monetization Potential Index (NMPI). Locks your 3 core content buckets (40% Growth/Reach, 35% Trust/Depth, 25% Monetization/Conversion) directly to a high-margin digital product ladder."}, {"num": "03", "part": "PART I: NICHE & VALIDATION", "title": "The S.I.G.N.A.L. Outlier Idea Validation & Competitor Intelligence Engine", "metric": "Outlier Multiplier M >= 2.5x | Idea Hit Rate >= 65%", "time": "45 Minutes", "framework": "S.I.G.N.A.L. 6-Step Outlier Mining Loop & Comment Friction Extractor", "formulas": ["Outlier Multiplier (M) = Video 14-Day Views / Channel 90-Day Median Views (Gate >= 2.5x)", "Velocity Adjusted Score (VAS) = Views per Day / Peer Baseline Views per Day", "Idea Validation Priority (IVP) = M \u00d7 (Commercial Intent Score / 10)"], "prompts": ["P11: Peer Cohort Outlier Miner", "P12: Comment Section Buying-Intent Extractor", "P13: S.I.G.N.A.L. Angle Transposition Engine", "P14: 30-Idea Validated Backlog Builder", "P15: Pre-Production Demand Stress-Test"], "worksheet": "Worksheet 03: S.I.G.N.A.L. Outlier Idea Validation & 30-Topic Backlog Tracker", "case_study": "Devon Brooks (Solo DevOps Educator, 11.4K subs): Stopped filming unvalidated tutorials (1.1x multiplier) and enforced the M >= 2.5x stage gate, increasing average views per upload from 1,850 to 16,400 in 6 weeks.", "summary": "Eliminates topic guesswork by mining statistically proven outlier concepts across 25 peer channels. Teaches you how to extract structural packaging psychology from videos outperforming their channel median by 2.5x to 10x and transpose them ethically into your niche."}, {"num": "04", "part": "PART II: HOOKS & SCRIPTING", "title": "3-Second Hook Engineering, C.L.I.P. Architecture & Package-First Design", "metric": "CTR >= 7.5% | 30-Second Hold Rate >= 70% | ERI >= 2.30", "time": "45 Minutes", "framework": "C.L.I.P. 4-Part Opening Sequence & 3-Element Thumbnail Contrast Rule", "formulas": ["Effective Retention Index (ERI) = CTR (%) \u00d7 (30s Hold % / 100) \u00d7 (AVD % / 100)", "Hook Drop-Off Delta = 100% - 30-Second Retention % (Target <= 30%)", "Title-Thumbnail Curiosity Delta = Promise Value - Visual Information Revealed"], "prompts": ["P16: 6-Archetype Hook Matrix Generator", "P17: Package-First Title & 3-Word Thumbnail Architect", "P18: C.L.I.P. First-30-Second Script Doctor", "P19: Visual Pattern-Interrupt Mapper", "P20: Pre-Publish CTR & ERI Diagnostic"], "worksheet": "Worksheet 04: Package-First Title, 3-Word Thumbnail & C.L.I.P. Hook Lab", "case_study": "Sadia Rahman (Fintech Product Designer, Dhaka, 19.5K subs): Raised YouTube CTR from 3.4% to 8.9% and 30-second retention from 48% to 74% (ERI 3.55), tripling organic impressions without changing cameras.", "summary": "Installs the Package-First rule: never write a line of script until the Title and 3-Word Thumbnail Concept pass quantitative curiosity gates. Structures the first 30 seconds using Context, Stakes, Visual Proof, and Open Loop to lock viewer retention."}, {"num": "05", "part": "PART II: HOOKS & SCRIPTING", "title": "The H.E.A.R.T. Pillar Scripting System & 5-Parameter Voice DNA Calibration", "metric": "AVD >= 52% | Drafting Speed: 2,200 Words in 35 Min", "time": "60 Minutes", "framework": "H.E.A.R.T. 5-Block Narrative Arc & 90-Second Retention Reset Loop", "formulas": ["Script Retention Density (SRD) = Pattern Resets / Total Script Minutes (Target >= 0.67/min)", "Voice Authenticity Score (VAS) = 100 - (15 \u00d7 Synthetic Clich\u00e9 Count) (Target = 100%)", "Mid-Roll Native Bridge Conversion = Bridge Clicks / Pillar Views (Target >= 2.8%)"], "prompts": ["P21: 5-Parameter Voice DNA Extractor", "P22: H.E.A.R.T. Master Pillar Outline Architect", "P23: Section-by-Section Voice-Calibrated Drafter", "P24: 90-Second Open-Loop & Visual B-Roll Injector", "P25: Anti-Robotic Prose Sanitizer & Cadence Polish"], "worksheet": "Worksheet 05: 5-Parameter Voice DNA Calibration & H.E.A.R.T. Script Blueprint", "case_study": "Liam O'Connor (Cybersecurity Solopreneur, 22.1K subs): Cut pillar script drafting time from 9.5 hours to 38 minutes while boosting Average View Duration from 36% to 56.4% across 18-minute deep dives.", "summary": "Eliminates generic AI prose forever by encoding your exact sentence cadence, vocabulary rules, and contrarian beliefs into a 5-Parameter Voice DNA JSON/Markdown profile. Pairs with the H.E.A.R.T. narrative architecture and 90-second micro-payoffs."}, {"num": "06", "part": "PART III: WATERFALL & BATCH OPS", "title": "The 1-to-15 Omnichannel Repurposing Waterfall Engine", "metric": "Content Multiplication Ratio = 15x | Omnichannel Reach +340%", "time": "50 Minutes", "framework": "1-to-15 Platform-Native Transposition Matrix (5 Shorts + 4 Text + 3 Carousels + 2 Emails)", "formulas": ["Omnichannel Amplification Factor (OAF) = Total Derivative Impressions / Pillar Impressions", "Asset Production Cost (APC) = Total Weekly Sprint Hours / 15 Published Assets (Target <= 0.27 hr/asset)", "Cross-Platform Lead Attribution = Derivative Opt-Ins / Total Weekly Opt-Ins"], "prompts": ["P26: Pillar-to-5-Vertical-Shorts Extractor", "P27: LinkedIn Long-Form & X Thread Transposer", "P28: 8-Slide PDF/IG Carousel Storyboarder", "P29: Dual Value + Offer Newsletter Compiler", "P30: Cross-Platform Native CTA & Bridge Mapper"], "worksheet": "Worksheet 06: 1-to-15 Omnichannel Repurposing Waterfall Execution Matrix", "case_study": "Nadia Al-Mansoor (B2B SaaS Growth Advisor, 16.8K subs): Transformed 1 weekly YouTube script into 15 native assets across LinkedIn, X, Shorts, and Substack in 45 minutes, adding 1,420 monthly email subscribers.", "summary": "Turns one weekly 2,000-word H.E.A.R.T. Pillar Script into 15 platform-native assets\u20145 vertical 60s Shorts/Reels, 4 LinkedIn/X authority posts, 3 visual carousels, and 2 high-converting newsletter issues\u2014without copy-paste cross-posting."}, {"num": "07", "part": "PART III: WATERFALL & BATCH OPS", "title": "The 4-Hour Weekly Batch Production Sprint & 12-Point QA Pipeline", "metric": "Total Weekly Production <= 4.0 Hours | On-Time Streak = 100%", "time": "240 Minutes / Week", "framework": "Mon-Thu 4-Block Time-Boxed Sprint Architecture & $65/hr Delegation Trigger", "formulas": ["Batch Efficiency Ratio (BER) = Published Asset Minutes / Raw Recording Minutes (Target >= 0.65)", "Maximum Editor Delegation Rate = Operator RPPH \u00d7 0.35", "Buffer Runway Weeks = Fully Scheduled Future Weeks in Queue (Target >= 3 Weeks)"], "prompts": ["P31: Teleprompter & A-Roll Batch Prep Generator", "P32: Rough-Cut Timestamp & Silence/Filler Stripping Spec", "P33: Editor Delegation SOP & B-Roll Cue Sheet", "P34: 12-Point Pre-Flight Quality Assurance Gate", "P35: 3-Week Evergreen Content Buffer Scheduler"], "worksheet": "Worksheet 07: 4-Hour Weekly Batch Sprint Tracker & 12-Point QA Gate", "case_study": "Kenji Takahashi (Architecture Visualization Creator, 31.0K subs): Compressed a chaotic 34-hour weekly filming/editing grind into a 3.8-hour Mon-Thu batch system while building a 4-week pre-scheduled runway.", "summary": "Separates incompatible cognitive modes into four strict weekly blocks: Block 1 (60m Validation & Packaging), Block 2 (90m Pillar Scripting & Derivative Extraction), Block 3 (60m A-Roll Recording), and Block 4 (30m 12-Point QA & Scheduling)."}, {"num": "08", "part": "PART IV: FUNNEL & MONETIZATION", "title": "Audience Ownership, Lead Magnet Engineering & The 5-Day Welcome Bridge", "metric": "Opt-In Landing Page CVR >= 45% | 90-Day V_sub >= $3.50", "time": "60 Minutes", "framework": "Rented-to-Owned Traffic Bridge, 5-Minute Utility Lead Magnet & 3-Tag Intent Router", "formulas": ["Net Monthly List Growth = New Opt-Ins - (Unsubscribes + 60-Day Cold Prunes)", "90-Day Subscriber Value (V_sub) = 90-Day Funnel Revenue / Active Subscribers (Target >= $3.50)", "Welcome Sequence Revenue Per Recipient (RPR) = Sequence Sales / Delivered Welcome Emails"], "prompts": ["P36: 5-Minute Utility Lead Magnet Architect", "P37: 45%+ High-Conversion Opt-In Page Copywriter", "P38: 3-Tag Zero-Party Intent Survey Designer", "P39: 5-Day Automated Welcome & Pitch Sequence", "P40: 60-Day Cold Subscriber Re-Engagement & Sunset Filter"], "worksheet": "Worksheet 08: Rented-to-Owned Lead Magnet, Opt-In Page & 5-Day Welcome Sequence Blueprint", "case_study": "Hannah Lindqvist (Notion & Operations Architect, 9.4K subs): Replaced a generic 'Join my newsletter' footer (0.4% CTR, 18% opt-in) with a 5-Minute ROI Calculator magnet, hitting 54.2% landing page CVR and $4.85 V_sub.", "summary": "Insulates your business from social algorithm volatility by converting rented social viewers into owned email subscribers. Includes the exact 5-section opt-in wireframe, 3-tag behavioral segmentation, and 5-day automated welcome sequence."}, {"num": "09", "part": "PART IV: FUNNEL & MONETIZATION", "title": "The 4-Tier Digital Product Value Ladder & 14-Day Pre-Sale Launch Engine", "metric": "Pre-Sale Gate >= 15 Orders | Checkout Stack AOV Lift >= +45%", "time": "90 Minutes", "framework": "4-Tier Solopreneur Value Ladder ($29 -> $99 -> $697 -> $2,500) & 14-Day Validation Launch", "formulas": ["Effective Checkout AOV = Base Price + (Bump Price \u00d7 Bump Take %) + (Upsell Price \u00d7 Upsell Take %)", "Pre-Sale Validation Ratio = Paid Pre-Orders / Minimum Viable Threshold (15 Sales)", "Value Ladder LTV Multiplier = Total Tier 1-4 Revenue / Tier 1 Initial Buyer Revenue"], "prompts": ["P41: 4-Tier Value Ladder Offer Architect", "P42: 14-Day Validate-Before-You-Build Pre-Sale Page", "P43: 35%-Take-Rate Order Bump & 1-Click Upsell Copywriter", "P44: 7-Email Product Launch Cart-Close Sequence", "P45: Buyer Onboarding & Automated Testimonial Collector"], "worksheet": "Worksheet 09: 4-Tier Value Ladder, Checkout Stack & 14-Day Validation Launch Planner", "case_study": "Tariq Mahmoud (AI Automation Engineer, 7.8K subs): Pre-sold 34 copies of a $99 workflow kit in 14 days before recording a single module, generating $5,180 with a 41% order bump take rate ($152.35 effective AOV).", "summary": "Prohibits building any digital product before collecting at least 15 paid pre-orders via a 14-Day Validation Sprint. Pairs a frictionless $29\u2013$49 impulse toolkit with a $99\u2013$199 flagship system, checkout order bumps, and one-click post-purchase upsells."}, {"num": "10", "part": "PART IV: FUNNEL & MONETIZATION", "title": "Outcome-Based B2B Sponsorships, Licensing Multipliers & The Friday CEO Cadence", "metric": "Sponsor Package >= $2,500 | Renewal Rate >= 65% | Workweek <= 25 Hrs", "time": "20 Minutes / Friday", "framework": "Outcome-Based Omnichannel Sponsorship Formula (R_sponsor) & 20-Minute Friday CEO Review", "formulas": ["R_sponsor = (Base Rate \u00d7 Niche Authority Multiplier) + Omnichannel Add-Ons + Usage Fee + Exclusivity", "Paid-Ad Whitelisting Fee = Base Placement Rate \u00d7 0.30 \u00d7 Licensing Months", "Creator Enterprise Valuation = Annual Net Distributable Profit \u00d7 (2.5x to 4.0x Multiple)"], "prompts": ["P46: Outcome-Based Media Kit & Rate Card Builder", "P47: 5-Sentence Cold B2B Sponsor Outbound Pitch", "P48: CPM-Objection & Usage-Rights Negotiation Counter", "P49: Day-14 Proof-of-Performance Renewal Report", "P50: 20-Minute Friday Creator-CEO Executive Diagnostic"], "worksheet": "Worksheet 10: Outcome-Based Sponsorship Calculator, Pitch Tracker & Friday CEO Scorecard", "case_study": "Chloe Sterling (Financial Modeling Creator, 10.6K subs): Replaced $180 flat CPM integrations with $3,400 quarterly omnichannel B2B packages (75% renewal rate), reaching $26,800/month working 19 hours/week.", "summary": "Replaces legacy $25 CPM begging with outcome-priced B2B sponsorship packages combining YouTube, newsletter, LinkedIn, and 30%/mo paid-ad whitelisting fees. Locks in the 20-Minute Friday Creator-CEO Review to protect your 85%+ profit margin."}, {"num": "VAULT", "part": "BACK MATTER VAULT", "title": "Master 50-Prompt Index (P01\u2013P50), 12 Emergency Scripts (S01\u2013S12) & 28-Formula Glossary", "metric": "62 Copy-Paste Templates | 28 Mathematical Equations", "time": "Instant Reference", "framework": "Complete Copy-Paste Prompt Library + Crisis/Negotiation Playbook + Quantitative Glossary", "formulas": ["All 28 Creator Economy Equations Indexed by Stage & Benchmark Threshold", "12 Verbatim Scripts for Sponsor Scope Creep, Late Invoices, Algorithm Drops & Low-Energy Weeks", "50 Modular Prompts Synced Across Book, Fillable Workbooks, Notion Kit & Offline Web App"], "prompts": ["S01\u2013S04: Sponsor Rate Defense, Whitelisting Fee & Scope-Creep Scripts", "S05\u2013S08: Pre-Sale Refund Guard, Affiliate Bump & Day-14 Renewal Scripts", "S09\u2013S12: Emergency Evergreen Pivot, Algorithm Drop Triage & Editor Handoff Scripts"], "worksheet": "Included in Full Book PDF, EPUB 3.0, Notion Vault CSV & Offline SaaS-Lite Web App", "case_study": "Complete Cross-Platform Synchronization: Every prompt ID [P01]\u2013[P50] and script [S01]\u2013[S12] maps 1:1 across the print book, fillable PDF workbooks, Notion database, and offline web application.", "summary": "Your permanent desk reference containing the complete Master Index of all 50 AI Workflow Prompts, all 12 word-for-word Emergency & Negotiation Scripts, and the 28-Formula Creator Economy Mathematical Glossary."}];
+
+    function renderChapterTabs() {
+      const listEl = document.getElementById('chapter-tab-list');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+      CHAPTER_DATA.forEach((ch, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'chapter-tab-btn' + (idx === 0 ? ' active' : '');
+        btn.id = 'ch-tab-' + idx;
+        btn.onclick = () => selectChapter(idx);
+        btn.innerHTML = `<span class="tab-num mono">${ch.num === 'VAULT' ? 'VAULT' : 'CH ' + ch.num}</span><span class="tab-title">${ch.title}</span>`;
+        listEl.appendChild(btn);
+      });
+    }
+
+    function selectChapter(idx) {
+      const ch = CHAPTER_DATA[idx];
+      if (!ch) return;
+      document.querySelectorAll('.chapter-tab-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+      document.getElementById('det-part').textContent = ch.part;
+      document.getElementById('det-metric').textContent = ch.metric;
+      document.getElementById('det-time').textContent = 'Implementation: ' + ch.time;
+      document.getElementById('det-title').textContent = (ch.num === 'VAULT' ? '' : 'Chapter ' + ch.num + ': ') + ch.title;
+      document.getElementById('det-summary').textContent = ch.summary;
+      document.getElementById('det-worksheet').textContent = ch.worksheet;
+      document.getElementById('det-case').innerHTML = '<strong>Documented Case Study Proof:</strong> ' + ch.case_study;
+
+      const fUl = document.getElementById('det-formulas');
+      fUl.innerHTML = ch.formulas.map(f => `<li>${f}</li>`).join('');
+      const pUl = document.getElementById('det-prompts');
+      pUl.innerHTML = ch.prompts.map(p => `<li>${p}</li>`).join('');
+    }
+
+    function recalcRpph() {
+      const oldHours = parseFloat(document.getElementById('inp-hours').value) || 32;
+      const views = parseFloat(document.getElementById('inp-views').value) || 25000;
+      const optinPct = parseFloat(document.getElementById('inp-optin').value) || 2.2;
+      const basePrice = parseFloat(document.getElementById('inp-price').value) || 49;
+      const sponsorDeals = parseFloat(document.getElementById('inp-sponsors').value) || 2;
+
+      document.getElementById('lbl-hours').textContent = oldHours + ' hrs/wk';
+      document.getElementById('lbl-views').textContent = views.toLocaleString() + ' views/mo';
+      document.getElementById('lbl-optin').textContent = optinPct.toFixed(1) + '%';
+      document.getElementById('lbl-price').textContent = '$' + basePrice;
+      document.getElementById('lbl-sponsors').textContent = sponsorDeals + (sponsorDeals === 1 ? ' deal/mo' : ' deals/mo');
+
+      // Legacy treadmill baseline: AdSense + sporadic affiliate (~$14 per 1,000 views)
+      const legacyMonthlyRev = Math.max(250, Math.round((views / 1000) * 14));
+      const legacyMonthlyHours = oldHours * 4.33;
+      const legacyRpph = legacyMonthlyRev / legacyMonthlyHours;
+
+      // Systematized OS math:
+      // 1. New email subscribers = views * (optinPct / 100)
+      const newSubs = Math.round(views * (optinPct / 100));
+      // 2. 5-Day Welcome + Value Ladder conversion (~4.2% of new subs buy + existing list multiplier)
+      // Effective AOV with 35% order bump + 18% upsell = basePrice * 1.45
+      const effectiveAov = basePrice * 1.45;
+      const buyers = Math.max(1, Math.round(newSubs * 0.065));
+      const prodRev = Math.round(buyers * effectiveAov);
+
+      // 3. Outcome Sponsorship Package value scales with views + B2B authority floor ($1,650 base + view factor)
+      const perSponsorRate = Math.round(1650 + (views / 1000) * 22);
+      const sponRev = sponsorDeals * perSponsorRate;
+
+      // 4. Platform AdSense + Affiliate baseline
+      const adAffRev = Math.round((views / 1000) * 18);
+
+      const newMonthlyRev = prodRev + sponRev + adAffRev;
+      const osWeeklyHours = 5.5; // 4-hour batch sprint + 1.5h engagement/CEO review
+      const osMonthlyHours = osWeeklyHours * 4.33;
+      const newRpph = newMonthlyRev / osMonthlyHours;
+
+      const monthlyLift = Math.max(0, newMonthlyRev - legacyMonthlyRev);
+      const annualRev = newMonthlyRev * 12;
+      const blendedRpm = (newMonthlyRev / (views / 1000));
+      const hoursSavedYr = Math.max(0, Math.round((oldHours - osWeeklyHours) * 52));
+
+      document.getElementById('out-old-rpph').textContent = '$' + legacyRpph.toFixed(2) + '/hr';
+      document.getElementById('out-new-rpph').textContent = '$' + newRpph.toFixed(2) + '/hr';
+      document.getElementById('out-monthly-lift').textContent = '+$' + monthlyLift.toLocaleString() + '/mo';
+      document.getElementById('out-annual-rev').textContent = '$' + annualRev.toLocaleString() + '/yr';
+      document.getElementById('out-new-subs').textContent = newSubs.toLocaleString() + ' subs/mo';
+      document.getElementById('out-prod-rev').textContent = '$' + prodRev.toLocaleString() + '/mo';
+      document.getElementById('out-spon-rev').textContent = '$' + sponRev.toLocaleString() + '/mo';
+      document.getElementById('out-blended-rpm').textContent = '$' + blendedRpm.toFixed(2) + ' RPM';
+      document.getElementById('out-hours-saved').textContent = hoursSavedYr.toLocaleString() + ' hrs/yr saved';
+    }
+
+    let currentCurrency = 'USD';
+    let currentT4Cycle = 'annual';
+
+    function updatePricingDisplay() {
+      const isBdt = currentCurrency === 'BDT';
+      document.getElementById('price-t0').textContent = isBdt ? '৳0' : '$0';
+      document.getElementById('price-t1').textContent = isBdt ? '৳1,190' : '$9.99';
+      document.getElementById('sub-t1').textContent = isBdt
+        ? 'Kindle / EPUB 3.0 Digital (৳2,050 Print Paperback Equivalent)'
+        : 'Kindle / EPUB 3.0 Digital Edition ($16.99 Print Paperback on KDP)';
+      document.getElementById('price-t2').textContent = isBdt ? '৳2,880' : '$24';
+      document.getElementById('price-t3').textContent = isBdt ? '৳5,880' : '$49';
+
+      if (currentT4Cycle === 'annual') {
+        document.getElementById('price-t4').textContent = isBdt ? '৳5,880/yr' : '$49/yr';
+        document.getElementById('sub-t4').textContent = isBdt
+          ? 'Annual Living Vault Pass (Save 55% vs. Monthly)'
+          : 'Or $9/month · Includes All Tier 3 Assets + Monthly Vault Drops';
+      } else {
+        document.getElementById('price-t4').textContent = isBdt ? '৳1,080/mo' : '$9/mo';
+        document.getElementById('sub-t4').textContent = isBdt
+          ? 'Monthly Living Vault Subscription (Or ৳5,880/yr Annual Pass)'
+          : 'Billed Monthly · Or Switch to $49/yr Annual Pass to Save 55%';
+      }
+    }
+
+    function setPricingMode(curr) {
+      currentCurrency = curr;
+      document.getElementById('btn-curr-usd').classList.toggle('active', curr === 'USD');
+      document.getElementById('btn-curr-bdt').classList.toggle('active', curr === 'BDT');
+      updatePricingDisplay();
+    }
+
+    function setTier4Cycle(cycle) {
+      currentT4Cycle = cycle;
+      document.getElementById('btn-t4-annual').classList.toggle('active', cycle === 'annual');
+      document.getElementById('btn-t4-monthly').classList.toggle('active', cycle === 'monthly');
+      updatePricingDisplay();
+    }
+
+    function toggleFaq(num) {
+      const item = document.getElementById('faq-' + num);
+      const icon = document.getElementById('faq-icon-' + num);
+      if (!item) return;
+      const isOpen = item.classList.toggle('open');
+      if (icon) icon.textContent = isOpen ? '−' : '+';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderChapterTabs();
+      selectChapter(0);
+      recalcRpph();
+      toggleFaq(1);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Log_ID,Day_of_Week,Workflow_Activity,Pipeline_Stage,Hours_Spent,Energy_Score,Gross_Revenue_USD,Direct_Cost_USD,Net_Revenue_USD,Task_RPPH_USD,Delegation_Gate
+AUD-01,Monday,25-Peer Outlier Cohort Radar Scan,Stage 1: Validate,0.5,2,420.0,12.0,408.0,816.0,KEEP / CORE ENGINE
+AUD-02,Monday,Comment Gap Pain Mining (Prompt P12),Stage 1: Validate,0.5,2,380.0,10.0,370.0,740.0,KEEP / CORE ENGINE
+AUD-03,Monday,Package-First Title & 3-Word Thumbnail Lock,Stage 2: Script,0.5,2,510.0,15.0,495.0,990.0,KEEP / CORE ENGINE
+AUD-04,Monday,First 30s C.L.I.P. Hook Scripting,Stage 2: Script,0.5,2,490.0,10.0,480.0,960.0,KEEP / CORE ENGINE
+AUD-05,Monday,Manual Unbatched Social Feed Scrolling,Time Leak,1.5,-2,0.0,0.0,0.0,0.0,PRUNE / DELEGATE NOW
+AUD-06,Tuesday,"H.E.A.R.T. Master Pillar Script (2,000 Wds)",Stage 2: Script,0.75,2,950.0,25.0,925.0,1233.33,KEEP / CORE ENGINE
+AUD-07,Tuesday,Extract 5 Vertical Short Scripts (P26),Stage 3: Atomize,0.25,1,310.0,8.0,302.0,1208.0,KEEP / CORE ENGINE
+AUD-08,Tuesday,Extract LinkedIn & X Authority Suite (P27),Stage 3: Atomize,0.25,1,290.0,8.0,282.0,1128.0,KEEP / CORE ENGINE
+AUD-09,Tuesday,Generate 3 Slide Carousel Outlines (P28),Stage 3: Atomize,0.25,1,260.0,8.0,252.0,1008.0,KEEP / CORE ENGINE
+AUD-10,Tuesday,Draft Tue & Fri Newsletter Issues (P29),Stage 4: Capture,0.5,2,840.0,20.0,820.0,1640.0,KEEP / CORE ENGINE
+AUD-11,Wednesday,One-Take Teleprompter A-Roll Video Shoot,Stage 3: Atomize,0.75,2,880.0,30.0,850.0,1133.33,KEEP / CORE ENGINE
+AUD-12,Wednesday,Record 60s Native B2B Sponsor Integration,Stage 5: Monetize,0.25,2,1600.0,0.0,1600.0,6400.0,KEEP / CORE ENGINE
+AUD-13,Wednesday,Text-Based Rough Cut & Silence Strip,Stage 3: Atomize,0.5,0,180.0,15.0,165.0,330.0,KEEP / CORE ENGINE
+AUD-14,Wednesday,Manual Keyframe Subtitle Tweaking,Time Leak,1.25,-2,15.0,0.0,15.0,12.0,PRUNE / DELEGATE NOW
+AUD-15,Thursday,12-Point Pre-Flight QA Gate (Prompt P34),Stage 3: Atomize,0.25,1,240.0,5.0,235.0,940.0,KEEP / CORE ENGINE
+AUD-16,Thursday,Omnichannel Queue & UTM Verification,Stage 3: Atomize,0.25,1,220.0,10.0,210.0,840.0,KEEP / CORE ENGINE
+AUD-17,Thursday,5-Day Automated Welcome Funnel Check,Stage 4: Capture,0.25,2,620.0,18.0,602.0,2408.0,KEEP / CORE ENGINE
+AUD-18,Thursday,Ad-Hoc Graphic Formatting in Legacy Tool,Time Leak,1.0,-1,10.0,5.0,5.0,5.0,PRUNE / DELEGATE NOW
+AUD-19,Friday,20-Min Friday Creator CEO KPI Telemetry,Stage 5: Monetize,0.25,2,540.0,0.0,540.0,2160.0,KEEP / CORE ENGINE
+AUD-20,Friday,Send 5 Outbound B2B Sponsor Pitches (P47),Stage 5: Monetize,0.25,2,1250.0,0.0,1250.0,5000.0,KEEP / CORE ENGINE
+AUD-21,Friday,Deliver Day-14 Sponsor Proof-of-ROI Report,Stage 5: Monetize,0.25,2,950.0,0.0,950.0,3800.0,KEEP / CORE ENGINE
+AUD-22,Friday,4-Tier Value Ladder Checkout Optimization,Stage 5: Monetize,0.5,2,780.0,22.0,758.0,1516.0,KEEP / CORE ENGINE
+AUD-23,Saturday,Tier 4 Monthly Living Vault Drop Curation,Stage 5: Monetize,0.5,2,690.0,15.0,675.0,1350.0,KEEP / CORE ENGINE
+AUD-24,Saturday,Customer Support FAQ Macro Automation,Stage 5: Monetize,0.25,0,110.0,5.0,105.0,420.0,KEEP / CORE ENGINE
+AUD-25,Saturday,Unplanned Reply-Guy Comment Arguments,Time Leak,1.0,-2,0.0,0.0,0.0,0.0,PRUNE / DELEGATE NOW
+AUD-26,Sunday,Weekly 90-Day Email List Hygiene Check,Stage 4: Capture,0.25,1,210.0,5.0,205.0,820.0,KEEP / CORE ENGINE
+AUD-27,Sunday,Lead Magnet Opt-In Page A/B Split Check,Stage 4: Capture,0.25,2,460.0,10.0,450.0,1800.0,KEEP / CORE ENGINE
+AUD-28,Sunday,Next Week Studio Desk & Teleprompter Reset,Stage 3: Atomize,0.25,1,150.0,0.0,150.0,600.0,KEEP / CORE ENGINE
