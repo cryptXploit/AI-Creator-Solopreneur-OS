@@ -366,7 +366,7 @@ EXECUTION STEPS:
    - The "Next Logical Bottleneck" Bridge (Why ongoing monthly outlier data & fresh prompts keep their system compounding all year).
    - Bullet stack of what drops every month inside [POST_PURCHASE_UPSELL_CONCEPT].
    - Dual CTA Buttons: Primary (`"Yes! Upgrade My Order with 1 Click ($49/yr)"`) and Secondary (`"No thanks, take me to my downloads"`).
-3. Calculate the projected $\text{AOV}_{\text{effective}}$ Table across Conservative (`20% bump / 10% upsell`), Target (`32% bump / 15% upsell`), and Stretch (`40% bump / 20% upsell`) scenarios.
+3. Calculate the projected AOV_effective Table across Conservative (`20% bump / 10% upsell`), Target (`32% bump / 15% upsell`), and Stretch (`40% bump / 20% upsell`) scenarios.
 
 QUALITY CONSTRAINTS:
 - Order bump copy must strictly be `<= 45 words` so it fits cleanly inside mobile checkout boxes.
@@ -374,7 +374,7 @@ QUALITY CONSTRAINTS:
 OUTPUT TEMPLATE:
 ### 1. Checkout Order Bump Copy Variants (3x `<= 45-Word` Boxes)
 ### 2. Post-Purchase 1-Click Upsell Page Copy
-### 3. Projected $\text{AOV}_{\text{effective}}$ & Revenue Lift Matrix
+### 3. Projected AOV_effective & Revenue Lift Matrix
 ```
 
 ---

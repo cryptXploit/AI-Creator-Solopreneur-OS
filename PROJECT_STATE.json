@@ -95,7 +95,7 @@
     "Phase 2": "COMPLETED",
     "Phase 3": "COMPLETED",
     "Phase 4": "COMPLETED",
-    "Phase 5": "PENDING",
+    "Phase 5": "COMPLETED",
     "Phase 6": "PENDING",
     "Phase 7": "PENDING",
     "Phase 8": "PENDING",
@@ -111,6 +111,58 @@
     "target_ai_prompts": 50,
     "completed_ai_prompts": 50,
     "target_emergency_scripts": 12,
-    "completed_emergency_scripts": 12
+    "completed_emergency_scripts": 12,
+    "completed_png_diagrams": 20
+  },
+  "phase5_exports": {
+    "kdp_paperback_6x9_pages": 314,
+    "complete_book_us_letter_pages": 340,
+    "workbook_us_letter_pages": 113,
+    "workbook_us_letter_acroform_fields": 448,
+    "workbook_a4_pages": 101,
+    "workbook_a4_acroform_fields": 400,
+    "tablet_planner_pages": 132,
+    "tablet_planner_acroform_fields": 524,
+    "tier0_sample_pages": 57,
+    "chapter01_workbook_pages": 13,
+    "chapter01_workbook_acroform_fields": 48,
+    "epub_size_bytes": 344915,
+    "deliverables": {
+      "09-EXPORTS/PDF/the-ai-creator-solopreneur-os-complete-book.pdf": {
+        "pages": 340,
+        "bytes": 9082608
+      },
+      "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-kdp-paperback-6x9.pdf": {
+        "pages": 314,
+        "bytes": 9045201
+      },
+      "09-EXPORTS/EPUB/the-ai-creator-solopreneur-os.epub": {
+        "bytes": 344915
+      },
+      "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-workbook-us-letter.pdf": {
+        "pages": 113,
+        "acroform_fields": 448,
+        "bytes": 3723838
+      },
+      "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-workbook-a4.pdf": {
+        "pages": 101,
+        "acroform_fields": 400,
+        "bytes": 3685565
+      },
+      "09-EXPORTS/PDF/the-ai-creator-solopreneur-os-tablet-planner.pdf": {
+        "pages": 132,
+        "acroform_fields": 524,
+        "bytes": 4238990
+      },
+      "09-EXPORTS/PDF/tier0-free-sample-chapter01-and-audit.pdf": {
+        "pages": 57,
+        "bytes": 1615564
+      },
+      "05-WORKBOOKS/chapter-01-workbook.pdf": {
+        "pages": 13,
+        "acroform_fields": 48,
+        "bytes": 533273
+      }
+    }
   }
 }

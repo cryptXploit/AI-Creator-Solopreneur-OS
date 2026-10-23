@@ -457,22 +457,20 @@ EXECUTION STEPS:
 1. Generate the **First-160-Character Conversion & SEO Hook** for the video/podcast description, placing the primary keyword and the UTM-tagged Lead Magnet link above the "Show More" fold.
 2. Extract 6–10 **Algorithmic Timestamp Chapters** (`00:00` format) from [FINAL_LOCKED_SRT_TRANSCRIPT] using high-intent search phrasing (never generic labels like "Introduction" or "Conclusion").
 3. Build the **UTM Attribution Link Matrix** for all 6 platforms (YouTube Description, YouTube Pinned Comment, LinkedIn Comment/DM, X Thread Plug, Instagram/TikTok Bio/DM, and Newsletter Deep-Links) using `[LEAD_MAGNET_BASE_URL]?utm_source=[platform]&utm_medium=[format]&utm_campaign=[SPRINT_CAMPAIGN_SLUG]`.
-4. Audit [QA_TELEMETRY_INPUTS] against the **12-Point Pre-Publish Quality Control Matrix** (`QC-01` through `QC-12`) and calculate the weekly **Production Throughput Efficiency Score ($\text{PTES}$)**.
+4. Audit [QA_TELEMETRY_INPUTS] against the **12-Point Pre-Publish Quality Control Matrix** (`QC-01` through `QC-12`) and calculate the weekly **Production Throughput Efficiency Score (PTES)**.
 
 QUALITY CONSTRAINTS:
-- Timestamp chapters must start at `00:00` and have at least 3 chapters separated by $\ge 60$ seconds each.
+- Timestamp chapters must start at `00:00` and have at least 3 chapters separated by >= 60 seconds each.
 - Every UTM parameter must be lowercase, hyphen-separated, and URL-safe.
 
 OUTPUT TEMPLATE:
 ### 1. Copy-Paste Description & Above-the-Fold CTA Block
-```text
 [Line 1: Primary Lead Magnet CTA + UTM Link Above Fold]
 [Line 2–3: 160-Character SEO Summary Paragraph]
 
 ⏱️ CHAPTER TIMESTAMPS:
 00:00 - [Keyword-Rich Hook Chapter Title]
 ...
-```
 
 ### 2. Omnichannel UTM Attribution Link Matrix
 | Platform & Placement | Exact Full UTM-Tagged URL | Short-Link / Trigger Keyword |
@@ -482,8 +480,8 @@ OUTPUT TEMPLATE:
 - **YouTube Pinned Comment:** [Copy + Link]
 - **LinkedIn / X First-Comment Plug:** [Copy + Link]
 
-### 4. 12-Point Pre-Publish QA Gate & $\text{PTES}$ Sign-Off
-- **Passed Checks:** `[X / 12]` | **Calculated Weekly $\text{PTES}$:** `[Score] Assets/Hour` | **Release Status:** `[APPROVED / HOLD]`
+### 4. 12-Point Pre-Publish QA Gate & PTES Sign-Off
+- **Passed Checks:** `[X / 12]` | **Calculated Weekly PTES:** `[Score] Assets/Hour` | **Release Status:** `[APPROVED / HOLD]`
 ```
 
 ---
