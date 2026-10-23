@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="'Inter', 'Noto Sans', sans-serif">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#4F46E5" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#D97706" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF" />
+
+  <!-- Title Banner -->
+  <rect x="20" y="14" width="860" height="44" rx="6" fill="#0F172A" />
+  <text x="450" y="34" fill="#FFFFFF" font-size="13" font-weight="700" text-anchor="middle">CHAPTER 09 DECISION TREE: 14-DAY VALIDATE-BEFORE-YOU-BUILD &amp; PRICING GATE</text>
+  <text x="450" y="50" fill="#CBD5E1" font-size="10" font-weight="500" text-anchor="middle">Go / No-Go Pre-Sale Thresholds, Checkout Order-Bump Optimization &amp; Tier Ascension Routing</text>
+
+  <!-- Step 1: Days 1-3 Pre-Sale Setup -->
+  <rect x="30" y="76" width="245" height="74" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="30" y="76" width="245" height="22" rx="4" fill="#0F172A" />
+  <text x="152" y="91" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">STAGE 1: DAYS 1-3 SYLLABUS &amp; CART</text>
+  <text x="152" y="111" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Publish 1-Page Outcome Syllabus</text>
+  <text x="152" y="126" fill="#4F46E5" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">Founding Price: 40% Off Retail</text>
+  <text x="152" y="141" fill="#64748B" font-size="8.5" text-anchor="middle">Zero Module Production Before Gate 1</text>
+
+  <path d="M 152 150 L 152 178" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <text x="188" y="168" fill="#4F46E5" font-size="8.5" font-weight="700">DAYS 4-7 SPRINT</text>
+
+  <!-- Gate 1: Day 7 Pre-Sale Validation -->
+  <rect x="30" y="182" width="245" height="76" rx="6" fill="#F8FAFC" stroke="#D97706" stroke-width="2" />
+  <rect x="30" y="182" width="245" height="22" rx="4" fill="#D97706" />
+  <text x="152" y="197" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 1: DAY 7 VALIDATION CHECK</text>
+  <text x="152" y="217" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">4-Email Founding Member Campaign</text>
+  <text x="152" y="232" fill="#D97706" font-size="9" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">Threshold: Sales &gt;= 10 Units</text>
+  <text x="152" y="247" fill="#64748B" font-size="8.5" text-anchor="middle">(Or Pre-Sale Revenue &gt;= $1,000)</text>
+
+  <!-- Fail Branch Gate 1 -->
+  <path d="M 275 220 L 330 220" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)" />
+  <text x="302" y="213" fill="#D97706" font-size="8.5" font-weight="700" text-anchor="middle">&lt; 10 SALES</text>
+  <rect x="335" y="182" width="255" height="76" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8" />
+  <text x="462" y="201" fill="#B45309" font-size="10" font-weight="700" text-anchor="middle">KILL / PIVOT PROTOCOL (ZERO SUNK COST)</text>
+  <text x="462" y="217" fill="#1E293B" font-size="9" text-anchor="middle">1. Issue immediate 100% refund to early buyers</text>
+  <text x="462" y="231" fill="#1E293B" font-size="9" text-anchor="middle">2. Send 1-question non-buyer objection poll</text>
+  <text x="462" y="245" fill="#64748B" font-size="8.5" text-anchor="middle">3. Reposition offer hook before building</text>
+
+  <!-- Pass Branch Gate 1 -> Gate 2 -->
+  <path d="M 152 258 L 152 286" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <text x="190" y="276" fill="#0D9488" font-size="8.5" font-weight="700">&gt;= 10 SALES (GO)</text>
+
+  <!-- Gate 2: Days 8-14 Build + Checkout Bump Audit -->
+  <rect x="30" y="290" width="245" height="76" rx="6" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="30" y="290" width="245" height="22" rx="4" fill="#0D9488" />
+  <text x="152" y="305" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 2: CHECKOUT BUMP TAKE RATE</text>
+  <text x="152" y="325" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Deliver Core Asset + Audit Cart Telemetry</text>
+  <text x="152" y="340" fill="#0D9488" font-size="9" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">Target: r_bump &gt;= 25.0%</text>
+  <text x="152" y="355" fill="#64748B" font-size="8.5" text-anchor="middle">Price Ratio: 25% - 40% of Core Offer</text>
+
+  <!-- Fail Branch Gate 2 -->
+  <path d="M 275 328 L 330 328" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)" />
+  <text x="302" y="321" fill="#D97706" font-size="8.5" font-weight="700" text-anchor="middle">&lt; 25%</text>
+  <rect x="335" y="290" width="255" height="76" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8" />
+  <text x="462" y="309" fill="#B45309" font-size="10" font-weight="700" text-anchor="middle">REMEDIATION: BUMP RE-PACKAGING</text>
+  <text x="462" y="325" fill="#1E293B" font-size="9" text-anchor="middle">1. Replace theory bonus with Done-For-You Templates</text>
+  <text x="462" y="339" fill="#1E293B" font-size="9" text-anchor="middle">2. Cap bump copy at 45 words inside yellow box</text>
+  <text x="462" y="353" fill="#64748B" font-size="8.5" text-anchor="middle">3. Frame as "Save 6 Hours of Setup Time"</text>
+
+  <!-- Pass Branch Gate 2 -> Gate 3 -->
+  <path d="M 152 366 L 152 392" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <text x="188" y="383" fill="#4F46E5" font-size="8.5" font-weight="700">PASS</text>
+
+  <!-- Gate 3: Post-Purchase Upsell Take Rate -->
+  <rect x="30" y="396" width="245" height="68" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2" />
+  <rect x="30" y="396" width="245" height="22" rx="4" fill="#4F46E5" />
+  <text x="152" y="411" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 3: 1-CLICK UPSELL AUDIT</text>
+  <text x="152" y="431" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Post-Checkout Automation Vault Pitch</text>
+  <text x="152" y="446" fill="#4F46E5" font-size="9" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">Target: r_upsell &gt;= 12.0%</text>
+  <text x="152" y="459" fill="#64748B" font-size="8.5" text-anchor="middle">Zero Card Re-Entry Required</text>
+
+  <path d="M 275 430 L 330 430" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <rect x="335" y="396" width="255" height="68" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.8" />
+  <text x="462" y="415" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">EVERGREEN BRIDGE INSTALLATION</text>
+  <text x="462" y="431" fill="#1E293B" font-size="9" text-anchor="middle">Raise price to full retail ($149 - $249)</text>
+  <text x="462" y="445" fill="#1E293B" font-size="9" text-anchor="middle">Embed into Chapter 8 Welcome Emails 4 &amp; 5</text>
+  <text x="462" y="458" fill="#0D9488" font-size="8.5" font-weight="700" text-anchor="middle">Generates Daily Autonomous Sales</text>
+
+  <!-- Right Panel: Price Elasticity & Tier 3/4 Ascension -->
+  <rect x="615" y="76" width="265" height="190" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="615" y="76" width="265" height="24" rx="4" fill="#0F172A" />
+  <text x="747" y="92" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 4: PRICE ELASTICITY SCALING</text>
+  <text x="747" y="114" fill="#1E293B" font-size="9.5" font-weight="700" text-anchor="middle">Every 25 Full-Price Units Sold:</text>
+  <line x1="630" y1="122" x2="865" y2="122" stroke="#CBD5E1" stroke-width="1" />
+  <text x="630" y="140" fill="#1E293B" font-size="9">- Step 1: Increase Core Price by +15% to +20%</text>
+  <text x="630" y="156" fill="#1E293B" font-size="9">- Step 2: Measure Gross Revenue per 100 Visits</text>
+  <text x="630" y="172" fill="#0D9488" font-size="9" font-weight="700">- Step 3: Keep Higher Price while Rev/Visit Rises</text>
+  <rect x="630" y="186" width="235" height="66" rx="4" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.2" />
+  <text x="747" y="204" fill="#4F46E5" font-size="9.5" font-weight="700" text-anchor="middle">DAY-21 TIER 3/4 ASCENSION TRIGGER</text>
+  <text x="747" y="220" fill="#1E293B" font-size="8.5" text-anchor="middle">Automated Check-In Email to Tier 2 Buyers</text>
+  <text x="747" y="234" fill="#1E293B" font-size="8.5" text-anchor="middle">Invites Top 15% Action-Takers to</text>
+  <text x="747" y="246" fill="#0F172A" font-size="8.5" font-weight="700" text-anchor="middle">Tier 3 Sprint ($697) or Tier 4 Advisory ($2,500)</text>
+
+  <!-- Bottom Right Summary Box -->
+  <rect x="615" y="284" width="265" height="180" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="615" y="284" width="265" height="24" rx="4" fill="#0D9488" />
+  <text x="747" y="300" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">PRODUCT MONETIZATION TELEMETRY</text>
+  <text x="630" y="324" fill="#0F172A" font-size="9.5" font-weight="700">Verified Solopreneur Benchmarks:</text>
+  <text x="630" y="342" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Pre-Sale Gate:  &gt;= 10 Sales in 7d</text>
+  <text x="630" y="358" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Bump Take Rate: 25.0% - 42.0%</text>
+  <text x="630" y="374" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Upsell Rate:    12.0% - 22.0%</text>
+  <text x="630" y="390" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Refund Rate:    &lt; 2.0%</text>
+  <rect x="630" y="405" width="235" height="45" rx="4" fill="#0F172A" />
+  <text x="747" y="423" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">READY FOR CHAPTER 10</text>
+  <text x="747" y="439" fill="#CBD5E1" font-size="8.5" text-anchor="middle">Sponsorships &amp; Friday Creator CEO Cadence</text>
+</svg>

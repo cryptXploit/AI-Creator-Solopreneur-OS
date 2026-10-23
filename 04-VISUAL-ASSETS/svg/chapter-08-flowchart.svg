@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="'Inter', 'Noto Sans', sans-serif">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#4F46E5" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#D97706" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF" />
+
+  <!-- Title Banner -->
+  <rect x="20" y="14" width="860" height="44" rx="6" fill="#0F172A" />
+  <text x="450" y="34" fill="#FFFFFF" font-size="13" font-weight="700" text-anchor="middle">CHAPTER 08 DECISION TREE: SUBSCRIBER SEGMENTATION, WELCOME CONVERSION &amp; LIST HYGIENE</text>
+  <text x="450" y="50" fill="#CBD5E1" font-size="10" font-weight="500" text-anchor="middle">Quantitative Threshold Routing across Opt-In Landing Page, Email 1 Delivery, 5-Day Sequence &amp; 60-Day Cold Pruning</text>
+
+  <!-- Gate 1 -->
+  <rect x="30" y="76" width="240" height="72" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="30" y="76" width="240" height="22" rx="4" fill="#0F172A" />
+  <text x="150" y="91" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 1: OPT-IN PAGE CONVERSION</text>
+  <text x="150" y="111" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Evaluate After First 250 Unique Visits</text>
+  <text x="150" y="126" fill="#4F46E5" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">Target Threshold: CVR &gt;= 45.0%</text>
+  <text x="150" y="141" fill="#64748B" font-size="8.5" text-anchor="middle">Single-Field Above-Fold Layout</text>
+
+  <!-- Fail Branch Gate 1 -->
+  <path d="M 270 112 L 325 112" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)" />
+  <text x="297" y="105" fill="#D97706" font-size="8.5" font-weight="700" text-anchor="middle">&lt; 45%</text>
+  <rect x="330" y="76" width="255" height="72" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8" />
+  <text x="457" y="95" fill="#B45309" font-size="10" font-weight="700" text-anchor="middle">REMEDIATION: PAGE FRICTION AUDIT</text>
+  <text x="457" y="111" fill="#1E293B" font-size="9" text-anchor="middle">1. Strip navigation header &amp; multi-field inputs</text>
+  <text x="457" y="125" fill="#1E293B" font-size="9" text-anchor="middle">2. Rewrite headline around 5-min utility outcome</text>
+  <text x="457" y="139" fill="#64748B" font-size="8.5" text-anchor="middle">3. Re-test next 100 clicks before scaling CTA</text>
+
+  <!-- Pass Branch Gate 1 -> Gate 2 -->
+  <path d="M 150 148 L 150 176" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <text x="180" y="166" fill="#0D9488" font-size="8.5" font-weight="700">&gt;= 45% PASS</text>
+
+  <!-- Gate 2 -->
+  <rect x="30" y="180" width="240" height="72" rx="6" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2" />
+  <rect x="30" y="180" width="240" height="22" rx="4" fill="#4F46E5" />
+  <text x="150" y="195" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 2: EMAIL 1 DELIVERY &amp; CLICK</text>
+  <text x="150" y="215" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Instant Lead Magnet Fulfillment Check</text>
+  <text x="150" y="230" fill="#4F46E5" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">Open &gt;= 65% | Asset CTR &gt;= 35%</text>
+  <text x="150" y="245" fill="#64748B" font-size="8.5" text-anchor="middle">Zero-Attachment Plain-Text Format</text>
+
+  <!-- Fail Branch Gate 2 -->
+  <path d="M 270 216 L 325 216" fill="none" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber)" />
+  <text x="297" y="209" fill="#D97706" font-size="8.5" font-weight="700" text-anchor="middle">FAIL</text>
+  <rect x="330" y="180" width="255" height="72" rx="6" fill="#FFFBEB" stroke="#D97706" stroke-width="1.8" />
+  <text x="457" y="199" fill="#B45309" font-size="10" font-weight="700" text-anchor="middle">REMEDIATION: INBOX PLACEMENT FIX</text>
+  <text x="457" y="215" fill="#1E293B" font-size="9" text-anchor="middle">1. Remove heavy banner images &amp; HTML wrappers</text>
+  <text x="457" y="229" fill="#1E293B" font-size="9" text-anchor="middle">2. Verify SPF, DKIM &amp; DMARC DNS records</text>
+  <text x="457" y="243" fill="#64748B" font-size="8.5" text-anchor="middle">3. Move asset download link to Line 2 of Email 1</text>
+
+  <!-- Pass Branch Gate 2 -> Gate 3 -->
+  <path d="M 150 252 L 150 280" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <text x="180" y="270" fill="#0D9488" font-size="8.5" font-weight="700">PASS</text>
+
+  <!-- Gate 3 -->
+  <rect x="30" y="284" width="240" height="76" rx="6" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="30" y="284" width="240" height="22" rx="4" fill="#0D9488" />
+  <text x="150" y="299" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 3: EMAIL 2 INTENT TAGGING</text>
+  <text x="150" y="319" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">3-Link Self-Segmentation Matrix</text>
+  <text x="150" y="334" fill="#0D9488" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">Tag: Beginner | Operator | Buyer</text>
+  <text x="150" y="349" fill="#64748B" font-size="8.5" text-anchor="middle">Routes Email 4 &amp; 5 Product Pitch</text>
+
+  <!-- Branch Gate 3 -> Buyer Fast-Track -->
+  <path d="M 270 322 L 325 322" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <text x="297" y="315" fill="#0D9488" font-size="8.5" font-weight="700" text-anchor="middle">TAGGED</text>
+  <rect x="330" y="284" width="255" height="76" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.8" />
+  <text x="457" y="303" fill="#0F172A" font-size="10" font-weight="700" text-anchor="middle">DYNAMIC WELCOME OFFER ROUTING</text>
+  <text x="457" y="319" fill="#1E293B" font-size="9" text-anchor="middle">- Tag [Beginner]: Route to Tier 1 Impulse Offer ($37)</text>
+  <text x="457" y="333" fill="#1E293B" font-size="9" text-anchor="middle">- Tag [Operator]: Route to Core System ($149)</text>
+  <text x="457" y="347" fill="#0D9488" font-size="8.5" font-weight="700" text-anchor="middle">- Tag [Buyer]: Route to High-Ticket Audit ($997+)</text>
+
+  <!-- Pass Branch Gate 3 -> Gate 4 -->
+  <path d="M 150 360 L 150 386" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <text x="186" y="377" fill="#4F46E5" font-size="8.5" font-weight="700">DAY 5 AUDIT</text>
+
+  <!-- Gate 4 -->
+  <rect x="30" y="390" width="240" height="72" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="30" y="390" width="240" height="22" rx="4" fill="#0F172A" />
+  <text x="150" y="405" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 4: WELCOME SEQUENCE ROI</text>
+  <text x="150" y="425" fill="#1E293B" font-size="9.5" font-weight="600" text-anchor="middle">Evaluate Paid Buyer Conversion (E1-E5)</text>
+  <text x="150" y="440" fill="#0D9488" font-size="9" font-family="'JetBrains Mono', monospace" text-anchor="middle">Target: CVR_welcome &gt;= 2.5%</text>
+  <text x="150" y="454" fill="#64748B" font-size="8.5" text-anchor="middle">Target V_sub &gt;= $3.50 / Subscriber</text>
+
+  <!-- Branch Gate 4 -> Weekly Broadcast & Hygiene -->
+  <path d="M 270 426 L 325 426" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+  <rect x="330" y="390" width="255" height="72" rx="6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.8" />
+  <text x="457" y="409" fill="#4F46E5" font-size="10" font-weight="700" text-anchor="middle">WEEKLY BROADCAST CADENCE</text>
+  <text x="457" y="425" fill="#1E293B" font-size="9" text-anchor="middle">Graduate to Weekly Newsletter Engine</text>
+  <text x="457" y="439" fill="#1E293B" font-size="9" text-anchor="middle">Monitor 60-Day Open &amp; Click Activity</text>
+  <text x="457" y="453" fill="#64748B" font-size="8.5" text-anchor="middle">Enforce Automated List Hygiene Rule</text>
+
+  <!-- Right Column: 60-Day Hygiene & Monetization Telemetry -->
+  <path d="M 585 322 L 620 322" fill="none" stroke="#0D9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <path d="M 585 426 L 620 426" fill="none" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrow-indigo)" />
+
+  <rect x="625" y="76" width="250" height="190" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" />
+  <rect x="625" y="76" width="250" height="24" rx="4" fill="#0F172A" />
+  <text x="750" y="92" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">GATE 5: 60-DAY COLD LIST PRUNING</text>
+  <text x="750" y="114" fill="#1E293B" font-size="9.5" font-weight="700" text-anchor="middle">Condition: 0 Opens in 60 Consecutive Days</text>
+  <line x1="640" y1="122" x2="860" y2="122" stroke="#CBD5E1" stroke-width="1" />
+  <text x="640" y="140" fill="#1E293B" font-size="9">- Step 1: Trigger 2-Email Breakup Sequence</text>
+  <text x="640" y="156" fill="#1E293B" font-size="9">- Step 2: Require 1-Click Keep-Me-Active Link</text>
+  <text x="640" y="172" fill="#D97706" font-size="9" font-weight="700">- Step 3: No Click after 72h -&gt; Unsubscribe</text>
+  <rect x="640" y="186" width="220" height="66" rx="4" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.2" />
+  <text x="750" y="204" fill="#0D9488" font-size="9.5" font-weight="700" text-anchor="middle">DELIVERABILITY SHIELD ACTIVE</text>
+  <text x="750" y="220" fill="#1E293B" font-size="8.5" text-anchor="middle">Maintains 48%-58% Broadcast Open Rate</text>
+  <text x="750" y="234" fill="#1E293B" font-size="8.5" text-anchor="middle">&amp; Protects Primary Inbox Sender Score</text>
+  <text x="750" y="246" fill="#64748B" font-size="8" text-anchor="middle">Eliminates Dead ESP Tier Billing</text>
+
+  <!-- Bottom Right Outcome Card -->
+  <rect x="625" y="284" width="250" height="178" rx="6" fill="#F0FDFA" stroke="#0D9488" stroke-width="2" />
+  <rect x="625" y="284" width="250" height="24" rx="4" fill="#0D9488" />
+  <text x="750" y="300" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">OWNED AUDIENCE COMPOUND ENGINE</text>
+  <text x="640" y="325" fill="#0F172A" font-size="9.5" font-weight="700">Verified Unit Economics Output:</text>
+  <text x="640" y="343" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Opt-In Rate:    48.0% - 62.0%</text>
+  <text x="640" y="359" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Welcome CVR:    2.5% - 4.8%</text>
+  <text x="640" y="375" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- 90-Day V_sub:   $3.50 - $8.40</text>
+  <text x="640" y="391" fill="#1E293B" font-size="9" font-family="'JetBrains Mono', monospace">- Spam Rate:      &lt; 0.05%</text>
+  <rect x="640" y="405" width="220" height="44" rx="4" fill="#0F172A" />
+  <text x="750" y="423" fill="#FFFFFF" font-size="9.5" font-weight="700" text-anchor="middle">READY FOR CHAPTER 09</text>
+  <text x="750" y="439" fill="#CBD5E1" font-size="8.5" text-anchor="middle">4-Tier Digital Product Value Ladder</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="'Inter', 'Noto Sans', sans-serif">
+  <defs>
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#4F46E5" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0D9488" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#D97706" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="480" fill="#FFFFFF" />
+
+  <!-- Title Banner -->
+  <rect x="20" y="14" width="860" height="44" rx="6" fill="#0F172A" />
+  <text x="450" y="34" fill="#FFFFFF" font-size="13" font-weight="700" text-anchor="middle">CHAPTER 10 SYSTEM MINDMAP: OUTCOME SPONSORSHIPS &amp; FRIDAY CREATOR CEO OS</text>
+  <text x="450" y="50" fill="#CBD5E1" font-size="10" font-weight="500" text-anchor="middle">Omnichannel Brand Deal Pricing Formula (R_sponsor), Usage-Rights Multipliers &amp; 20-Minute Weekly Governance</text>
+
+  <!-- Connectors from Center Hub -->
+  <path d="M 350 215 L 275 135" fill="none" stroke="#4F46E5" stroke-width="2.2" marker-end="url(#arrow-indigo)" />
+  <path d="M 350 265 L 275 340" fill="none" stroke="#0D9488" stroke-width="2.2" marker-end="url(#arrow-teal)" />
+  <path d="M 550 215 L 625 135" fill="none" stroke="#0D9488" stroke-width="2.2" marker-end="url(#arrow-teal)" />
+  <path d="M 550 265 L 625 340" fill="none" stroke="#D97706" stroke-width="2.2" marker-end="url(#arrow-amber)" />
+
+  <!-- Central Hub -->
+  <rect x="340" y="186" width="220" height="108" rx="10" fill="#0F172A" stroke="#0D9488" stroke-width="3" />
+  <text x="450" y="213" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">CREATOR CEO</text>
+  <text x="450" y="231" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">COMMAND CENTER</text>
+  <text x="450" y="251" fill="#0D9488" font-size="9" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">R_sponsor = Base x M_u x M_e + B</text>
+  <text x="450" y="268" fill="#CBD5E1" font-size="9" text-anchor="middle">20-Min Friday Executive Review</text>
+  <text x="450" y="283" fill="#D97706" font-size="8.5" font-weight="700" text-anchor="middle">Hard Cap: &lt;= 25 Operational Hrs/Wk</text>
+
+  <!-- Node 1: Omnichannel Bundle Architecture -->
+  <rect x="25" y="74" width="250" height="145" rx="8" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2" />
+  <rect x="25" y="74" width="250" height="24" rx="6" fill="#4F46E5" />
+  <text x="150" y="90" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">1. OMNICHANNEL BUNDLE ENGINE</text>
+  <text x="38" y="114" fill="#0F172A" font-size="9.5" font-weight="700">Never Sell Single-Channel Ad Slots</text>
+  <text x="38" y="130" fill="#1E293B" font-size="9">- 60-90s Mid-Roll Anchor Integration</text>
+  <text x="38" y="145" fill="#1E293B" font-size="9">- Pinned High-Intent Link + Dedicated Email</text>
+  <text x="38" y="160" fill="#1E293B" font-size="9">- Short-Form Clips + LinkedIn Carousel</text>
+  <text x="38" y="176" fill="#4F46E5" font-size="9" font-weight="600">- Niche B2B CPM_niche: $45 - $120</text>
+  <text x="38" y="191" fill="#4F46E5" font-size="9" font-weight="600">- Newsletter CPC_niche: $3.50 - $8.00</text>
+  <text x="38" y="206" fill="#64748B" font-size="8.5">- 3-Tier Proposal: Bronze / Silver / Gold</text>
+
+  <!-- Node 2: Usage Rights & Exclusivity Multipliers -->
+  <rect x="25" y="275" width="250" height="145" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="25" y="275" width="250" height="24" rx="6" fill="#0D9488" />
+  <text x="150" y="291" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">2. USAGE RIGHTS &amp; EXCLUSIVITY</text>
+  <text x="38" y="315" fill="#0F172A" font-size="9.5" font-weight="700">Protect Commercial IP Licensing</text>
+  <text x="38" y="331" fill="#1E293B" font-size="9">- Organic Only: M_usage = 1.00x</text>
+  <text x="38" y="346" fill="#1E293B" font-size="9">- 30-Day Paid Whitelisting: M_usage = 1.30x</text>
+  <text x="38" y="361" fill="#1E293B" font-size="9">- 90-Day Paid Ad Spark: M_usage = 1.60x</text>
+  <text x="38" y="376" fill="#0D9488" font-size="9" font-weight="600">- Category Exclusivity: +20% per 30 Days</text>
+  <text x="38" y="391" fill="#0D9488" font-size="9" font-weight="600">- Raw Footage Buyout: +50% to +100%</text>
+  <text x="38" y="406" fill="#64748B" font-size="8.5">- Zero Perpetual Free Ad Rights Allowed</text>
+
+  <!-- Node 3: Outbound Pitch & Proof-of-Performance -->
+  <rect x="625" y="74" width="250" height="145" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" />
+  <rect x="625" y="74" width="250" height="24" rx="6" fill="#0D9488" />
+  <text x="750" y="90" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">3. OUTBOUND &amp; RENEWAL FLYWHEEL</text>
+  <text x="638" y="114" fill="#0F172A" font-size="9.5" font-weight="700">Weekly 5-Brand Outbound Cadence</text>
+  <text x="638" y="130" fill="#1E293B" font-size="9">- Target Funded B2B SaaS &amp; Active Advertisers</text>
+  <text x="638" y="145" fill="#1E293B" font-size="9">- Send 120-Word Custom Integration Pitch</text>
+  <text x="638" y="160" fill="#1E293B" font-size="9">- Native 4-Part Storyboard (Problem-&gt;CTA)</text>
+  <text x="638" y="176" fill="#0D9488" font-size="9" font-weight="600">- Day-14 Post-Campaign ROI Report</text>
+  <text x="638" y="191" fill="#0D9488" font-size="9" font-weight="600">- Pitch 90-Day Retainer (10% Bundle Discount)</text>
+  <text x="638" y="206" fill="#64748B" font-size="8.5">- Converts 40%-60% of Single Deals to Retainers</text>
+
+  <!-- Node 4: 20-Minute Friday Creator CEO Review -->
+  <rect x="625" y="275" width="250" height="145" rx="8" fill="#F8FAFC" stroke="#D97706" stroke-width="2" />
+  <rect x="625" y="275" width="250" height="24" rx="6" fill="#D97706" />
+  <text x="750" y="291" fill="#FFFFFF" font-size="10.5" font-weight="700" text-anchor="middle">4. 20-MINUTE FRIDAY CEO REVIEW</text>
+  <text x="638" y="315" fill="#0F172A" font-size="9.5" font-weight="700">4 Time-Boxed 5-Minute Executive Sprints</text>
+  <text x="638" y="331" fill="#1E293B" font-size="9">- Min 0-5: Acquisition &amp; Retention Audit</text>
+  <text x="638" y="346" fill="#1E293B" font-size="9">- Min 5-10: Owned List &amp; Product AOV Check</text>
+  <text x="638" y="361" fill="#1E293B" font-size="9">- Min 10-15: 5 Outbound Sponsor Pitches</text>
+  <text x="638" y="376" fill="#D97706" font-size="9" font-weight="700">- Min 15-20: Burnout &amp; Bottleneck Kill Rule</text>
+  <text x="638" y="391" fill="#1E293B" font-size="9">- Eliminate Lowest-ROI Task If Hrs &gt; 25/Wk</text>
+  <text x="638" y="406" fill="#64748B" font-size="8.5">- Lock Next Week's Top 3 Pillar Priorities</text>
+
+  <!-- Bottom Telemetry Strip -->
+  <rect x="20" y="432" width="860" height="34" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+  <text x="450" y="453" fill="#0F172A" font-size="10" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">BENCHMARK: $1,950 BASE x 1.30 (WHITELISTING) x 1.20 (EXCLUSIVITY) + $500 BONUS = $3,542 DEAL VALUE (+304% LIFT)</text>
+</svg>
