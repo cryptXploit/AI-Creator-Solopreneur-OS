@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911" />
+      <stop offset="55%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <radialGradient id="glowCenter" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#090D16" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="gridPat" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.6" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="600" fill="url(#bgGrad)" />
+  <rect width="600" height="600" fill="url(#gridPat)" />
+  <circle cx="300" cy="240" r="260" fill="url(#glowCenter)" />
+
+  <!-- Outer Precision Frame -->
+  <rect x="16" y="16" width="568" height="568" rx="18" fill="none" stroke="url(#accentGrad)" stroke-width="3" />
+  <rect x="24" y="24" width="552" height="552" rx="14" fill="none" stroke="#334155" stroke-width="1" />
+
+  <!-- Top Pill & Price Badge Row -->
+  <rect x="38" y="38" width="336" height="36" rx="8" fill="#1E1B4B" stroke="#FBBF24" stroke-width="1.5" />
+  <text x="54" y="61" fill="#FFFFFF" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="900" letter-spacing="1.2">COMPLETE AI CREATOR OS</text>
+
+  <rect x="390" y="38" width="172" height="36" rx="8" fill="url(#accentGrad)" />
+  <text x="476" y="61" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="900">$0 / $19 / $39 / $59</text>
+
+  <!-- 3D Ecosystem Stack Icon Graphic -->
+  <g transform="translate(42, 92)">
+    <rect x="0" y="0" width="516" height="82" rx="12" fill="#090D16" fill-opacity="0.82" stroke="#334155" stroke-width="1.5" />
+    <rect x="18" y="14" width="54" height="54" rx="10" fill="url(#accentGrad)" />
+    <text x="45" y="47" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Segoe UI, sans-serif" font-size="20" font-weight="900">OS</text>
+    <text x="88" y="34" fill="#FBBF24" font-family="JetBrains Mono, Consolas, monospace" font-size="12" font-weight="800" letter-spacing="1.4">APEX DIGITAL SYSTEMS STUDIO · EDITION 2026</text>
+    <text x="88" y="58" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="15.5" font-weight="800">5-Stage Content-to-Cash Operating System</text>
+  </g>
+
+  <!-- Main Center Display Typography -->
+  <text x="300" y="226" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Segoe UI, sans-serif" font-size="36" font-weight="900" letter-spacing="-0.8">THE AI CREATOR &amp;</text>
+  <text x="300" y="270" text-anchor="middle" fill="#FBBF24" font-family="Inter, Segoe UI, sans-serif" font-size="35" font-weight="900" letter-spacing="-0.8">SOLOPRENEUR</text>
+  <text x="300" y="314" text-anchor="middle" fill="#E0E7FF" font-family="Inter, Segoe UI, sans-serif" font-size="33" font-weight="900" letter-spacing="-0.6">OPERATING SYSTEM</text>
+
+  <!-- Highlight Feature Banner -->
+  <rect x="38" y="338" width="524" height="44" rx="10" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
+  <text x="300" y="365" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="13.5" font-weight="800" letter-spacing="0.5">50 AI PROMPTS • WEB APP • 8-TAB EXCEL • NOTION OS</text>
+
+  <!-- 3-Column Quantitative Telemetry Cards -->
+  <g transform="translate(38, 398)">
+    <rect x="0" y="0" width="166" height="92" rx="10" fill="#090D16" stroke="#334155" stroke-width="1.5" />
+    <line x1="0" y1="0" x2="166" y2="0" stroke="#FBBF24" stroke-width="3" />
+    <text x="83" y="42" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="22" font-weight="900">340 PAGES</text>
+    <text x="83" y="68" text-anchor="middle" fill="#94A3B8" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8">10-CH MANUAL</text>
+
+    <rect x="179" y="0" width="166" height="92" rx="10" fill="#090D16" stroke="#334155" stroke-width="1.5" />
+    <line x1="179" y1="0" x2="345" y2="0" stroke="#4F46E5" stroke-width="3" />
+    <text x="262" y="42" text-anchor="middle" fill="#FBBF24" font-family="JetBrains Mono, Consolas, monospace" font-size="22" font-weight="900">1,420</text>
+    <text x="262" y="68" text-anchor="middle" fill="#94A3B8" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8">FILLABLE FIELDS</text>
+
+    <rect x="358" y="0" width="166" height="92" rx="10" fill="#090D16" stroke="#334155" stroke-width="1.5" />
+    <line x1="358" y1="0" x2="524" y2="0" stroke="#FBBF24" stroke-width="3" />
+    <text x="441" y="42" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, Consolas, monospace" font-size="22" font-weight="900">112 FILES</text>
+    <text x="441" y="68" text-anchor="middle" fill="#94A3B8" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8">FULL PRO SUITE</text>
+  </g>
+
+  <!-- Bottom Author Credit & System Signature -->
+  <rect x="38" y="508" width="524" height="52" rx="10" fill="#060911" stroke="#1E293B" stroke-width="1.5" />
+  <text x="300" y="530" text-anchor="middle" fill="#CBD5E1" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.2">BOOK • WORKBOOKS • SAAS APP • EXCEL • WORD • PPTX • N8N</text>
+  <text x="300" y="550" text-anchor="middle" fill="#FBBF24" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="900" letter-spacing="3">SYSTEM ARCHITECT: BY OMAR SUNNY</text>
+</svg>
