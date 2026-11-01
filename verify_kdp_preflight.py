@@ -19,12 +19,31 @@ Audits every page of the KDP 6"x9" Paperback Interior PDF and KDP Full-Wrap Cove
 """
 
 import json
+import re
 import sys
 import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 from pypdf import PdfReader
 
 STUDIO_ROOT = Path(__file__).resolve().parent
+
+KDP_FORBIDDEN_DCE_PATTERNS = [
+    (re.compile(r"\bworkbooks?\b", re.IGNORECASE), "workbook(s)"),
+    (re.compile(r"\bworksheets?\b", re.IGNORECASE), "worksheet(s)"),
+    (re.compile(r"\bfillable\b", re.IGNORECASE), "fillable"),
+    (re.compile(r"creator-os-app", re.IGNORECASE), "creator-os-app.html"),
+    (re.compile(r"CREATOR-OS-PRO", re.IGNORECASE), "CREATOR-OS-PRO-2026"),
+    (re.compile(r"PRODUCT-03", re.IGNORECASE), "PRODUCT-03"),
+    (re.compile(r"05-WORKBOOKS", re.IGNORECASE), "05-WORKBOOKS"),
+    (re.compile(r"01-MARKET-RESEARCH", re.IGNORECASE), "01-MARKET-RESEARCH"),
+    (re.compile(r"sources\.md", re.IGNORECASE), "sources.md"),
+    (re.compile(r"Editorial\s*&\s*Systems", re.IGNORECASE), "Editorial & Systems Team"),
+    (re.compile(r"Half-Title Page", re.IGNORECASE), "Literal 'Half-Title Page'"),
+    (re.compile(r"Full Title Page", re.IGNORECASE), "Literal 'Full Title Page'"),
+    (re.compile(r"Monetize Your Audience Without Burnout", re.IGNORECASE), "Truncated >200-char subtitle 'Monetize Your Audience Without Burnout'"),
+    (re.compile(r"☐"), "Interactive checkbox glyph ☐"),
+]
 
 
 def main() -> int:
@@ -216,6 +235,64 @@ def main() -> int:
                     "KDP Back Cover Barcode & Transparency Safe Zone",
                     "PASS",
                     "0 text elements in lower-right Barcode (2.0\"x1.2\") + Transparency QR zone",
+                )
+            )
+
+    # 5. Check Kindle EPUB 3.0 & KDP Covers for Content Review (DCE & Copyright/Metadata) Compliance
+    epub_path = STUDIO_ROOT / "09-EXPORTS/EPUB/the-ai-creator-solopreneur-os.epub"
+    kindle_svg_path = STUDIO_ROOT / "08-COVER-DESIGN/svg/ebook-cover-kdp-kindle.svg"
+    if not epub_path.is_file() or not kindle_svg_path.is_file():
+        errors.append("Missing Kindle EPUB or Kindle Cover SVG")
+        checks.append(("Kindle EPUB 3.0 & Cover Files", "FAIL", "Missing EPUB or SVG"))
+    else:
+        dce_hits = []
+        png_img_count = 0
+        with zipfile.ZipFile(epub_path, "r") as zf:
+            names = set(zf.namelist())
+            opf_text = zf.read("OEBPS/content.opf").decode("utf-8")
+            fm_text = zf.read("OEBPS/front-matter.xhtml").decode("utf-8")
+
+            if "<dc:creator>Omar Sunny</dc:creator>" not in opf_text:
+                errors.append("EPUB content.opf missing <dc:creator>Omar Sunny</dc:creator>")
+                dce_hits.append("OPF missing Omar Sunny")
+            if "Without Burnout" in opf_text:
+                errors.append("EPUB content.opf contains >200-char truncated subtitle suffix 'Without Burnout'")
+                dce_hits.append("OPF >200-char subtitle")
+            if "By Omar Sunny" not in fm_text or "Copyright © 2026 by Omar Sunny" not in fm_text:
+                errors.append("EPUB front-matter.xhtml missing 'By Omar Sunny' or 'Copyright © 2026 by Omar Sunny'")
+                dce_hits.append("Front matter missing Omar Sunny copyright")
+
+            for zname in sorted(names):
+                if zname.endswith(".xhtml"):
+                    xhtml_str = zf.read(zname).decode("utf-8")
+                    png_img_count += len(re.findall(r'src="images/chapter-\d+-.*\.png"', xhtml_str))
+                    for pat, label in KDP_FORBIDDEN_DCE_PATTERNS:
+                        m = pat.search(xhtml_str)
+                        if m:
+                            dce_hits.append(f"{zname}: {label} ('{m.group(0)}')")
+
+        # Also scan KDP Kindle Cover SVG and KDP Full-Wrap Cover SVG for forbidden DCE claims
+        for cov_path, cov_label in [
+            (kindle_svg_path, "ebook-cover-kdp-kindle.svg"),
+            (wrap_svg_path, "kdp-paperback-full-wrap-cover.svg"),
+        ]:
+            cov_str = cov_path.read_text(encoding="utf-8")
+            if "OMAR SUNNY" not in cov_str:
+                dce_hits.append(f"{cov_label}: missing OMAR SUNNY")
+            for pat, label in KDP_FORBIDDEN_DCE_PATTERNS:
+                m = pat.search(cov_str)
+                if m:
+                    dce_hits.append(f"{cov_label}: {label} ('{m.group(0)}')")
+
+        if dce_hits:
+            errors.extend(dce_hits[:10])
+            checks.append(("Kindle Content Review (Zero DCE & Metadata Blocks)", "FAIL", f"{len(dce_hits)} issues: {dce_hits[:3]}"))
+        else:
+            checks.append(
+                (
+                    "Kindle Content Review (Zero DCE & Metadata Blocks)",
+                    "PASS",
+                    f"0 workbook/fillable/key/truncation triggers; {png_img_count} PNG diagrams; Omar Sunny copyright verified",
                 )
             )
 

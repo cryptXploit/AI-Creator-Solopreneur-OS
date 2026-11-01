@@ -12,9 +12,9 @@
 ## Full Title Page
 
 # THE AI CONTENT CREATOR & SOLOPRENEUR OPERATING SYSTEM
-### A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout
+### A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize
 
-**By The Editorial & Systems Architecture Team**
+**By Omar Sunny**
 **Apex Digital Systems Studio**
 
 *Flagship Product #3 — Autonomous Digital Publishing Studio Series*
@@ -24,9 +24,11 @@
 
 ## Copyright, ISBN & Commercial Licensing Notice
 
-**Copyright © 2026 by Apex Digital Systems Studio. All Rights Reserved.**
+**Copyright © 2026 by Omar Sunny. All Rights Reserved.**
 
 * **Publication Title:** *The AI Content Creator & Solopreneur Operating System*
+* **Author:** Omar Sunny
+* **Publisher:** Apex Digital Systems Studio
 * **Product Identifier:** `PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS`
 * **Edition Telemetry:** First Flagship Digital & Print-Ready Edition (`Version 1.0.0 — 2026 Release`)
 * **Digital Print Standard:** Dual-Format Precision Layout (`US Letter 8.5" x 11"` & `ISO A4 210mm x 297mm`) + Reflowable `EPUB 3`
@@ -34,7 +36,7 @@
 * **Companion Pro Suite Activation Key:** `CREATOR-OS-PRO-2026`
 
 ### Intellectual Property & Commercial Usage Rights by Tier
-No part of this publication may be reproduced, resold, uploaded to public file-sharing repositories, or used to train third-party public foundation models without the express written permission of **Apex Digital Systems Studio**, except as governed by your licensed commercial tier:
+No part of this publication may be reproduced, resold, uploaded to public file-sharing repositories, or used to train third-party public foundation models without the express written permission of **Omar Sunny** and **Apex Digital Systems Studio**, except as governed by your licensed commercial tier:
 
 1. **Personal & Solo Practitioner License (Tier 1 Core Edition & Tier 2 Creator Operator Pro Bundle):** Grants a single individual creator, consultant, or solopreneur perpetual rights to use, modify, and deploy all 50 AI prompts (`P01`–`P50`), 10 Action Worksheets (`Worksheet 01`–`Worksheet 10`), 12 Emergency Scripts (`S01`–`S12`), spreadsheet calculators, and Notion/automation templates inside their own personal or company media operations.
 2. **Executive & Agency White-Label License (Tier 3 Executive Suite & Tier 4 Agency/Incubator License):** Grants registered agencies, fractional COOs, corporate marketing teams, and creator incubators the commercial right to deploy customized versions of the worksheets, SOPs, n8n/Make automation blueprints, and slide decks directly with paying clients or internal team cohorts, provided copyright attribution to *Apex Digital Systems Studio* remains intact on master reference manuals.

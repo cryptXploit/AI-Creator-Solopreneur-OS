@@ -313,6 +313,218 @@ def slugify(text: str) -> str:
     return clean or "section"
 
 
+KDP_COMPLIANT_SUBTITLE = (
+    "A Practical System to Research Validated Ideas, Script High-Retention Content, "
+    "Repurpose Across Platforms, Automate Production, and Monetize"
+)
+
+
+def sanitize_markdown_for_kdp(md_text: str, doc_slug: str = "") -> str:
+    """
+    Transforms studio manuscript Markdown into a 100% self-contained Amazon KDP
+    Kindle eBook & 6"x9" Paperback Trade Edition with zero 'Disappointing Customer
+    Experience' (DCE) triggers:
+      - Exact <200-char Title + Subtitle match
+      - Explicit 'By Omar Sunny' & 'Copyright © 2026 by Omar Sunny' attribution
+      - Strips all external local file paths (../05-WORKBOOKS/, creator-os-app.html, etc.),
+        activation keys (CREATOR-OS-PRO-2026), and internal CSS/build telemetry
+      - Replaces all 'workbook'/'worksheet'/'fillable' references and interactive checkboxes
+        with self-contained in-book action rubrics and standard bullet lists.
+    """
+    text = md_text
+
+    # 1. Temporarily protect Markdown SVG diagram image tags ![Alt](...)
+    protected_imgs: list[str] = []
+
+    def _protect_img(m: re.Match) -> str:
+        protected_imgs.append(m.group(0))
+        return f"@@KDP_PROTECTED_IMG_{len(protected_imgs) - 1}@@"
+
+    text = re.sub(r"!\[[^\]]*\]\([^)]+\.svg\)", _protect_img, text)
+
+    # 2. Front Matter specific KDP trade-book transformations
+    if doc_slug == "front-matter":
+        text = re.sub(
+            r"## Half-Title Page\s+.*?---\s+## Full Title Page",
+            "",
+            text,
+            flags=re.DOTALL,
+        )
+        text = text.replace(
+            "### A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout",
+            f"### {KDP_COMPLIANT_SUBTITLE}",
+        )
+        text = text.replace(
+            "**By The Editorial & Systems Architecture Team**",
+            "**By Omar Sunny**",
+        )
+        text = re.sub(
+            r"\*Flagship Product #3[^\n]*\n\*Includes Complete Access[^\n]*",
+            (
+                "*First Edition — Complete 10-Chapter Systems Engineering & Operational Reference Manual*\n"
+                "*Featuring 50 Structured AI Workflow Prompts (P01–P50), 20 System Architecture Diagrams, "
+                "12 Executive & Sponsorship Scripts (S01–S12), and 28 Quantitative Models*"
+            ),
+            text,
+        )
+        text = re.sub(
+            r"## Copyright, ISBN & Commercial Licensing Notice.*?(?=### Financial, Legal & Platform Compliance Disclaimer)",
+            """## Copyright & Publication Notice
+
+**Copyright © 2026 by Omar Sunny. All Rights Reserved.**
+
+* **Publication Title:** *The AI Content Creator & Solopreneur Operating System*
+* **Subtitle:** *A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize*
+* **Author:** Omar Sunny
+* **Publisher:** Apex Digital Systems Studio
+* **Edition:** First Edition (2026 Release)
+
+### Intellectual Property & Reader Implementation Rights
+No part of this publication may be reproduced, resold, distributed, or transmitted in any form or by any means without the prior written permission of the author, **Omar Sunny**, except for brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+1. **Individual Practitioner Implementation Rights:** Purchasing this book grants the individual reader the personal and professional right to adapt, customize, and deploy all 50 structured AI workflow prompts (`P01`–`P50`), 10 Chapter Action Rubrics (`Section 12` of each chapter), 12 Emergency & Sponsorship Scripts (`S01`–`S12`), quantitative scoring formulas, and standard operating procedures within their own content production and business operations.
+2. **Team & Organizational Implementation Rights:** Founders, executive operators, and marketing leads may apply the standard operating procedures, scoring rubrics, and workflow architectures taught in this volume across their internal company media operations, provided copyright attribution to **Omar Sunny** remains intact on reference copies.
+
+""",
+            text,
+            flags=re.DOTALL,
+        )
+        text = text.replace(
+            "This manual and its companion software suite are designed",
+            "This manual is designed",
+        )
+        text = re.sub(
+            r"## The Companion Digital Toolkit & Pro Access Instructions[^\n]*\n.*?(?=## The 7-Day Quick-Start Installation Checklist)",
+            """## How to Use the Built-In Prompts, Scoring Rubrics & Reference Vaults
+
+Every framework, mathematical formula, AI workflow prompt, and diagnostic rubric in *The AI Content Creator & Solopreneur Operating System* is 100% self-contained within the pages of this book:
+
+| In-Book System Component | Location in This Book | Operational Purpose & How to Deploy |
+| :--- | :--- | :--- |
+| **1. 10 Chapter Action Rubrics** | Section 12 of Chapters 1–10 | Step-by-step diagnostic tables, scoring rubrics, and stage-gate criteria for every chapter. Track your weekly numbers in any notebook or spreadsheet. |
+| **2. 50 Structured AI Workflow Prompts (`P01`–`P50`)** | Section 9 of Chapters 1–10 & Back Matter Index | Complete, structured prompts containing `ROLE`, `CONTEXT`, `INPUT VARIABLES`, `EXECUTION STEPS`, `QUALITY CONSTRAINTS`, and `OUTPUT TEMPLATE` ready for any LLM. |
+| **3. 20 System Architecture Diagrams** | Sections 6 & 8 of Chapters 1–10 | High-resolution system mindmaps and quantitative decision-tree flowcharts embedded directly inside each chapter. |
+| **4. 12 Emergency & Sponsorship Scripts (`S01`–`S12`)** | Back Matter Vault (Section 2) | Word-for-word email and negotiation scripts for sponsor renewals, rate-card defenses, launch extensions, and creator boundary protection. |
+| **5. 28-Formula Mathematical Glossary** | Back Matter Vault (Section 3) | Consolidated quick-reference dictionary of all 28 core equations, composite indices, and pass/fail benchmarks (`RPPH`, `NMPI`, `SPI`, `ERI`, `SRVAS`, `CMLR`, `PTES`, `V_sub`, `AOV_effective`, and `R_sponsor`). |
+| **6. 10-Point Stage-Gate Verification Lists** | Section 13 of Chapters 1–10 | End-of-chapter operational sign-off criteria ensuring every stage of your media engine is verified before advancing. |
+
+### How to Execute the In-Book Prompts & Quantitative Rubrics
+1. At the close of each chapter, review **Section 12 (Chapter Action Audit & Implementation Rubric)** and **Section 13 (10-Point Stage-Gate Verification)** to benchmark your current baseline metrics.
+2. When executing any of the 50 AI Workflow Prompts (`P01`–`P50`), replace the bracketed input variables (`[LIKE_THIS]`) with your specific niche, audience avatar, and baseline telemetry.
+3. Log your weekly `RPPH`, `NMPI`, `SPI`, `ERI`, `SRVAS`, `CMLR`, and `PTES` scores in a dedicated page of your personal notes app or spreadsheet during your 20-minute Friday Creator CEO Review (Chapter 10).
+
+---
+
+""",
+            text,
+            flags=re.DOTALL,
+        )
+        text = text.replace(
+            "Turn the page to **Chapter 1**, open `Worksheet 01`, and begin engineering your autonomous creator studio.",
+            "Proceed to **Chapter 1** and begin engineering your autonomous creator studio.",
+        )
+
+    # 3. Clean up all local file paths, folder references, and file extensions across all chapters
+    text = re.sub(
+        r"`\.\./04-VISUAL-ASSETS/svg/chapter-(\d+)-mindmap\.svg`\s*&\s*`\.\./04-VISUAL-ASSETS/svg/chapter-\d+-flowchart\.svg`",
+        r"Chapter \1 System Mindmap & Operational Decision Tree (Included Inline)",
+        text,
+    )
+    text = re.sub(
+        r"`\.\./04-VISUAL-ASSETS/svg/chapter-(\d+)-mindmap\.svg`",
+        r"the Chapter \1 System Mindmap (Figure below)",
+        text,
+    )
+    text = re.sub(
+        r"`\.\./04-VISUAL-ASSETS/svg/chapter-(\d+)-flowchart\.svg`",
+        r"the Chapter \1 Operational Decision Tree (Figure below)",
+        text,
+    )
+    text = re.sub(
+        r"`(?:04-VISUAL-ASSETS/svg/)?chapter-[0-9X]+-(?:mindmap|flowchart)\.svg`",
+        "the in-chapter architecture diagram",
+        text,
+    )
+    text = re.sub(
+        r"\*\*`\.\./05-WORKBOOKS/markdown/worksheet-(\d+)\.md`\*\*",
+        r"**the Section 12 Chapter \1 Action Rubric**",
+        text,
+    )
+    text = re.sub(
+        r"`(?:\.\./)?05-WORKBOOKS/markdown/worksheet-(\d+)\.md`",
+        r"Section 12 (Chapter \1 Action Rubric)",
+        text,
+    )
+    text = re.sub(
+        r"`worksheet-([0-9X]+)\.md`",
+        r"the Section 12 Action Rubric",
+        text,
+    )
+    text = re.sub(
+        r"`01-MARKET-RESEARCH/sources\.md`",
+        "the empirical research bibliography",
+        text,
+    )
+    text = re.sub(
+        r"`(?:07-INTERACTIVE-TOOLS/|10-WEB-TOOLS/creator-os-app\.html|creator-os-app\.html)`",
+        "your operational tracking scorecard",
+        text,
+    )
+    text = text.replace("CREATOR-OS-PRO-2026", "FIRST-EDITION-2026")
+    text = text.replace("PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS", "FIRST-EDITION-2026")
+    text = text.replace("Flagship Product #3", "First Edition")
+
+    # 4. Replace 'workbook', 'worksheet', and 'fillable' terminology with trade-book rubric terms
+    text = re.sub(r"\(`WS-(\d+)`\)", r"(Ch \1 Rubric)", text)
+    text = re.sub(r"\(WS-(\d+)\)", r"(Ch \1 Rubric)", text)
+    text = re.sub(r"`WS-(\d+)`", r"Ch \1 Rubric", text)
+    text = re.sub(r"`Worksheet\s+(\d+)`", r"Chapter \1 Action Rubric", text)
+    text = re.sub(r"\bWorksheet\s+(\d+)\b", r"Chapter \1 Action Rubric", text)
+    text = text.replace("CHAPTER ACTION WORKSHEET SUMMARY", "CHAPTER ACTION AUDIT & IMPLEMENTATION RUBRIC")
+    text = text.replace("Chapter Action Worksheet Summary", "Chapter Action Audit & Implementation Rubric")
+    text = text.replace("Companion Action Workbook", "Chapter Action Rubric")
+    text = text.replace("Prescribed Chapter & Workbook Sequence", "Prescribed Chapter & Implementation Sequence")
+    text = text.replace("Chapter & Companion Worksheet", "Chapter & Action Rubric")
+    text = text.replace("Inline Worksheet Scoring Preview", "Inline Action Rubric Scoring Preview")
+    text = text.replace("What You Will Complete Inside", "Core Implementation Steps in")
+    text = re.sub(r"open your companion workbook file:\s*", "review ", text, flags=re.IGNORECASE)
+    text = re.sub(r"open your companion workbook:\s*", "review ", text, flags=re.IGNORECASE)
+    text = re.sub(r"Open Companion Workbook\s*", "Review ", text, flags=re.IGNORECASE)
+    text = re.sub(r"complete your companion workbook:\s*", "review ", text, flags=re.IGNORECASE)
+    text = re.sub(r"inside the final companion workbook:\s*", "using ", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bcompanion operational workbook\b", "implementation rubric", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bcompanion workbook\b", "Section 12 Action Rubric", text, flags=re.IGNORECASE)
+
+    def _replace_case(word_lower: str, repl_lower: str, repl_title: str, repl_upper: str):
+        def _cb(m: re.Match) -> str:
+            w = m.group(0)
+            if w.isupper():
+                return repl_upper
+            if w[0].isupper():
+                return repl_title
+            return repl_lower
+        return re.compile(rf"\b{word_lower}\b", re.IGNORECASE), _cb
+
+    text = text.replace("WORKSHEET_", "CHAPTER_RUBRIC_").replace("WORKBOOK_", "ACTION_GUIDE_")
+    for pat_re, cb_fn in [
+        (_replace_case("fillable", "structured", "Structured", "STRUCTURED")),
+        (_replace_case("workbooks", "action guides", "Action Guides", "ACTION GUIDES")),
+        (_replace_case("workbook", "action guide", "Action Guide", "ACTION GUIDE")),
+        (_replace_case("worksheets", "action rubrics", "Action Rubrics", "ACTION RUBRICS")),
+        (_replace_case("worksheet", "action rubric", "Action Rubric", "ACTION RUBRIC")),
+    ]:
+        text = pat_re.sub(cb_fn, text)
+
+    # 5. Convert interactive checkboxes (- [ ] and - [x]) into standard non-interactive bullet points
+    text = re.sub(r"^(\s*-\s+)\[[ xX]\]\s+", r"\1", text, flags=re.MULTILINE)
+
+    # 6. Restore protected Markdown SVG diagram image links
+    for i, img_tag in enumerate(protected_imgs):
+        text = text.replace(f"@@KDP_PROTECTED_IMG_{i}@@", img_tag)
+
+    return text
+
+
 def convert_markdown_to_html(
     md_text: str,
     svg_mode: str = "inline",  # "inline" for PDFs, "img" for EPUB
@@ -388,6 +600,14 @@ def convert_markdown_to_html(
             fig_html = (
                 f'<figure class="diagram-container">'
                 f'<div class="svg-frame">{raw_svg}</div>'
+                f'<figcaption class="diagram-caption"><strong>Figure:</strong> {alt_escaped}</figcaption>'
+                f"</figure>"
+            )
+        elif svg_mode == "epub_png":
+            png_filename = svg_filename.replace(".svg", ".png")
+            fig_html = (
+                f'<figure class="diagram-container">'
+                f'<img src="images/{png_filename}" alt="{alt_escaped}" class="epub-diagram-img" />'
                 f'<figcaption class="diagram-caption"><strong>Figure:</strong> {alt_escaped}</figcaption>'
                 f"</figure>"
             )
@@ -1172,28 +1392,42 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
 
     # Title Hero Page
     edition_label = (
-        "AMAZON KDP 6\" × 9\" PRINT EDITION"
+        "FIRST EDITION"
         if is_kdp
         else "FLAGSHIP DIGITAL & PRINT EDITION (v1.0.0)"
     )
     toc_lead = (
-        "Complete chapter and operational vault architecture for this print edition:"
+        "Complete chapter and operational vault architecture for this edition:"
         if is_kdp
         else "Click any chapter or vault section below to jump directly to its implementation blueprint, visual architecture diagrams, and copy-paste prompt stack."
     )
-    sections_html.append(f"""
-    <div class="title-hero-page">
-        <div class="title-eyebrow">APEX DIGITAL SYSTEMS STUDIO · {edition_label}</div>
-        <div class="title-main">The AI Content Creator &amp; Solopreneur Operating System</div>
-        <div class="title-sub">A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout</div>
-        <div class="title-meta-box">
-            <p><strong>Author:</strong> Omar Sunny · Apex Digital Systems Studio</p>
-            <p><strong>Product ID:</strong> PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS</p>
-            <p><strong>Included Architecture:</strong> 10 End-to-End Chapters · 20 Vector System Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
-            <p><strong>Companion Pro Suite Key:</strong> <code>CREATOR-OS-PRO-2026</code></p>
+    if is_kdp:
+        sections_html.append(f"""
+        <div class="title-hero-page">
+            <div class="title-eyebrow">APEX DIGITAL SYSTEMS STUDIO · {edition_label}</div>
+            <div class="title-main">The AI Content Creator &amp; Solopreneur Operating System</div>
+            <div class="title-sub">{html.escape(KDP_COMPLIANT_SUBTITLE)}</div>
+            <div class="title-meta-box">
+                <p><strong>Author:</strong> Omar Sunny</p>
+                <p><strong>Publisher:</strong> Apex Digital Systems Studio</p>
+                <p><strong>Included Architecture:</strong> 10 End-to-End Chapters · 20 System Architecture Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
+            </div>
         </div>
-    </div>
-    """)
+        """)
+    else:
+        sections_html.append(f"""
+        <div class="title-hero-page">
+            <div class="title-eyebrow">APEX DIGITAL SYSTEMS STUDIO · {edition_label}</div>
+            <div class="title-main">The AI Content Creator &amp; Solopreneur Operating System</div>
+            <div class="title-sub">{html.escape(KDP_COMPLIANT_SUBTITLE)}</div>
+            <div class="title-meta-box">
+                <p><strong>Author:</strong> Omar Sunny · Apex Digital Systems Studio</p>
+                <p><strong>Product ID:</strong> PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS</p>
+                <p><strong>Included Architecture:</strong> 10 End-to-End Chapters · 20 Vector System Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
+                <p><strong>Companion Pro Suite Key:</strong> <code>CREATOR-OS-PRO-2026</code></p>
+            </div>
+        </div>
+        """)
 
     # Table of Contents
     sections_html.append(f"""
@@ -1207,6 +1441,8 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
     """)
 
     # Front Matter
+    if is_kdp:
+        fm_md = sanitize_markdown_for_kdp(fm_md, "front-matter")
     fm_html = convert_markdown_to_html(fm_md, svg_mode="inline", doc_prefix="fm")
     sections_html.append(f'<section id="sec-front-matter" class="chapter-container">{fm_html}</section>')
 
@@ -1214,10 +1450,14 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
     for ch_slug, _ in CHAPTER_TITLES:
         ch_path = STUDIO_ROOT / "03-MANUSCRIPT" / f"{ch_slug}.md"
         ch_md = ch_path.read_text(encoding="utf-8")
+        if is_kdp:
+            ch_md = sanitize_markdown_for_kdp(ch_md, ch_slug)
         ch_html = convert_markdown_to_html(ch_md, svg_mode="inline", doc_prefix=ch_slug)
         sections_html.append(f'<section id="sec-{ch_slug}" class="chapter-container">{ch_html}</section>')
 
     # Back Matter
+    if is_kdp:
+        bm_md = sanitize_markdown_for_kdp(bm_md, "back-matter")
     bm_html = convert_markdown_to_html(bm_md, svg_mode="inline", doc_prefix="bm")
     sections_html.append(f'<section id="sec-back-matter" class="chapter-container">{bm_html}</section>')
 
@@ -1483,10 +1723,18 @@ def build_epub3(epub_path: Path) -> None:
     .diagram-caption { font-size: 0.85em; color: #64748B; margin-top: 0.4em; }
     """
 
+    png_files = sorted((STUDIO_ROOT / "04-VISUAL-ASSETS/png").glob("chapter-*.png"))
+    use_png_in_epub = len(png_files) >= 20
+
     xhtml_files: dict[str, str] = {}
     for slug, title, md_path in doc_specs:
         md_raw = md_path.read_text(encoding="utf-8")
-        body_xhtml = convert_markdown_to_html(md_raw, svg_mode="img", doc_prefix=slug)
+        md_raw = sanitize_markdown_for_kdp(md_raw, slug)
+        body_xhtml = convert_markdown_to_html(
+            md_raw,
+            svg_mode="epub_png" if use_png_in_epub else "img",
+            doc_prefix=slug,
+        )
         full_xhtml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
@@ -1571,17 +1819,23 @@ def build_epub3(epub_path: Path) -> None:
         manifest_items.append(
             f'    <item id="{svg_id}" href="images/{svg_p.name}" media-type="image/svg+xml" />'
         )
+    if use_png_in_epub:
+        for png_p in png_files:
+            png_id = f"png-{png_p.stem}"
+            manifest_items.append(
+                f'    <item id="{png_id}" href="images/{png_p.name}" media-type="image/png" />'
+            )
 
     content_opf = f"""<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookId" xml:lang="en">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="BookId">{book_uuid}</dc:identifier>
-    <dc:title>The AI Content Creator &amp; Solopreneur Operating System</dc:title>
+    <dc:title>The AI Content Creator &amp; Solopreneur Operating System: {html.escape(KDP_COMPLIANT_SUBTITLE)}</dc:title>
     <dc:creator>Omar Sunny</dc:creator>
     <dc:language>en</dc:language>
     <dc:publisher>Apex Digital Systems Studio</dc:publisher>
-    <dc:description>A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout.</dc:description>
-    <dc:rights>Copyright 2026 Omar Sunny &amp; Apex Digital Systems Studio. All rights reserved.</dc:rights>
+    <dc:description>{html.escape(KDP_COMPLIANT_SUBTITLE)}.</dc:description>
+    <dc:rights>Copyright © 2026 by Omar Sunny. All rights reserved.</dc:rights>
     <meta property="dcterms:modified">{modified_utc}</meta>
   </metadata>
   <manifest>
@@ -1617,6 +1871,10 @@ def build_epub3(epub_path: Path) -> None:
             svg_bytes = svg_p.read_bytes()
             ET.fromstring(svg_bytes)
             zf.writestr(f"OEBPS/images/{svg_p.name}", svg_bytes, compress_type=zipfile.ZIP_DEFLATED)
+
+        if use_png_in_epub:
+            for png_p in png_files:
+                zf.writestr(f"OEBPS/images/{png_p.name}", png_p.read_bytes(), compress_type=zipfile.ZIP_DEFLATED)
 
 
 # ---------------------------------------------------------------------------

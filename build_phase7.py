@@ -899,7 +899,7 @@ def build_ebook_kindle_cover_svg() -> Path:
 
   <!-- Top Imprint Header Strip -->
   <rect x="120" y="110" width="1360" height="74" rx="10" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
-  <text x="800" y="157" fill="#E2E8F0" font-size="26" font-weight="800" letter-spacing="5" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO · FLAGSHIP EDITION</text>
+  <text x="800" y="157" fill="#E2E8F0" font-size="26" font-weight="800" letter-spacing="5" text-anchor="middle">THE COMPLETE 5-STAGE CONTENT-TO-CASH ENGINEERING MANUAL</text>
 
   <!-- Primary Book Title Hierarchy -->
   <text x="800" y="310" fill="#818CF8" font-size="38" font-weight="800" letter-spacing="6" text-anchor="middle">THE QUANTITATIVE SOLOPRENEUR MANUAL</text>
@@ -911,88 +911,63 @@ def build_ebook_kindle_cover_svg() -> Path:
   <!-- Accent Divider Bar -->
   <rect x="280" y="885" width="1040" height="8" rx="4" fill="url(#indigo-grad)" />
 
-  <!-- Subtitle Block -->
-  <text x="800" y="955" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">A Practical System to Research Validated Ideas, Script High-Retention</text>
-  <text x="800" y="1005" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">Content, Repurpose Across Platforms, Automate Production, and</text>
-  <text x="800" y="1055" fill="#FFFFFF" font-size="35" font-weight="700" text-anchor="middle">Monetize Your Audience Without Burnout</text>
+  <!-- Exact KDP-Compliant Subtitle Block (<200 chars combined) -->
+  <text x="800" y="960" fill="#CBD5E1" font-size="34" font-weight="500" text-anchor="middle">A Practical System to Research Validated Ideas, Script High-Retention</text>
+  <text x="800" y="1015" fill="#FFFFFF" font-size="35" font-weight="700" text-anchor="middle">Content, Repurpose Across Platforms, Automate Production, and Monetize</text>
 
   <!-- Centerpiece Architectural Diagram: The 5-Stage Content-to-Cash Engine -->
-  <rect x="120" y="1125" width="1360" height="940" rx="20" fill="#0F172A" stroke="#4F46E5" stroke-width="3" />
-  <rect x="120" y="1125" width="1360" height="68" rx="18" fill="#1E1B4B" />
-  <text x="800" y="1169" fill="#FFFFFF" font-size="27" font-weight="800" letter-spacing="3" text-anchor="middle">5-STAGE CONTENT-TO-CASH OPERATING ARCHITECTURE</text>
+  <rect x="120" y="1105" width="1360" height="960" rx="20" fill="#0F172A" stroke="#4F46E5" stroke-width="3" />
+  <rect x="120" y="1105" width="1360" height="72" rx="18" fill="#1E1B4B" />
+  <text x="800" y="1152" fill="#FFFFFF" font-size="28" font-weight="800" letter-spacing="3" text-anchor="middle">THE 5-STAGE CONTENT-TO-CASH OPERATING SYSTEM</text>
 
-  <!-- Stage Cards Row 1 -->
-  <rect x="165" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
-  <rect x="165" y="1230" width="400" height="44" rx="10" fill="url(#indigo-grad)" />
-  <text x="365" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 1: NICHE &amp; AVATAR MOAT</text>
-  <text x="365" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">P.A.I.D. Positioning Matrix</text>
-  <text x="365" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">NMPI Score &gt;= 75 / 100 Gate</text>
-  <text x="365" y="1375" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">RPPH Floor: $150 - $250/hr</text>
-  <text x="365" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">3-Pillar Authority Architecture</text>
+  <!-- Stage Cards Row 1 (High-Contrast Large Typography) -->
+  <rect x="165" y="1215" width="400" height="235" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
+  <rect x="165" y="1215" width="400" height="48" rx="10" fill="url(#indigo-grad)" />
+  <text x="365" y="1247" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">1. NICHE POSITIONING</text>
+  <text x="365" y="1305" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">P.A.I.D. Authority Moat</text>
+  <text x="365" y="1352" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">Category-of-One ICP</text>
+  <text x="365" y="1398" fill="#CBD5E1" font-size="21" text-anchor="middle">3-Pillar Topic Matrix</text>
 
-  <rect x="600" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
-  <rect x="600" y="1230" width="400" height="44" rx="10" fill="url(#indigo-grad)" />
-  <text x="800" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 2: OUTLIER &amp; HOOKS</text>
-  <text x="800" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">S.I.G.N.A.L. Idea Validation</text>
-  <text x="800" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">Outlier Multiplier M &gt;= 2.5x</text>
-  <text x="800" y="1375" fill="#FBBF24" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">30s C.L.I.P. Hold &gt;= 70%</text>
-  <text x="800" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">Package-First Title &amp; Thumbnail</text>
+  <rect x="600" y="1215" width="400" height="235" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2.5" />
+  <rect x="600" y="1215" width="400" height="48" rx="10" fill="url(#indigo-grad)" />
+  <text x="800" y="1247" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">2. OUTLIER &amp; HOOKS</text>
+  <text x="800" y="1305" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">S.I.G.N.A.L. Idea Mining</text>
+  <text x="800" y="1352" fill="#FBBF24" font-size="22" font-weight="700" text-anchor="middle">3-Second C.L.I.P. Hooks</text>
+  <text x="800" y="1398" fill="#CBD5E1" font-size="21" text-anchor="middle">Package-First Design</text>
 
-  <rect x="1035" y="1230" width="400" height="230" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <rect x="1035" y="1230" width="400" height="44" rx="10" fill="url(#teal-grad)" />
-  <text x="1235" y="1259" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 3: 1-TO-15 WATERFALL</text>
-  <text x="1235" y="1305" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">H.E.A.R.T. Pillar Scripting</text>
-  <text x="1235" y="1340" fill="#94A3B8" font-size="17" text-anchor="middle">5-Parameter Voice DNA Engine</text>
-  <text x="1235" y="1375" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">1 Pillar -&gt; 15 Native Assets</text>
-  <text x="1235" y="1415" fill="#CBD5E1" font-size="16" text-anchor="middle">YouTube · LinkedIn · X · Shorts</text>
+  <rect x="1035" y="1215" width="400" height="235" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <rect x="1035" y="1215" width="400" height="48" rx="10" fill="url(#teal-grad)" />
+  <text x="1235" y="1247" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">3. 1-TO-15 WATERFALL</text>
+  <text x="1235" y="1305" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">H.E.A.R.T. Scripting</text>
+  <text x="1235" y="1352" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">Voice DNA Calibration</text>
+  <text x="1235" y="1398" fill="#CBD5E1" font-size="21" text-anchor="middle">Omnichannel Multiplication</text>
 
   <!-- Stage Cards Row 2 -->
-  <rect x="165" y="1500" width="615" height="240" rx="12" fill="#1E293B" stroke="#D97706" stroke-width="2.5" />
-  <rect x="165" y="1500" width="615" height="44" rx="10" fill="url(#amber-grad)" />
-  <text x="472" y="1529" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 4: 4-HOUR BATCH SPRINT &amp; OWNED FUNNEL</text>
-  <text x="472" y="1575" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">Mon-Thu 240-Minute Production Pipeline + 12-Point QA Gate</text>
-  <text x="472" y="1615" fill="#FBBF24" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">Opt-In Page CVR &gt;= 45% · 5-Day Welcome CVR &gt;= 2.5%</text>
-  <text x="472" y="1655" fill="#CBD5E1" font-size="17" text-anchor="middle">5-Minute Utility Lead Magnets · 3-Tag Intent Segmentation</text>
-  <text x="472" y="1695" fill="#94A3B8" font-size="16" text-anchor="middle">90-Day Subscriber Value V_sub &gt;= $3.50 · 60-Day List Hygiene</text>
+  <rect x="165" y="1490" width="615" height="240" rx="12" fill="#1E293B" stroke="#D97706" stroke-width="2.5" />
+  <rect x="165" y="1490" width="615" height="48" rx="10" fill="url(#amber-grad)" />
+  <text x="472" y="1522" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">4. 4-HOUR BATCH SPRINT &amp; OWNED FUNNELS</text>
+  <text x="472" y="1580" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">240-Minute Weekly Production Pipeline</text>
+  <text x="472" y="1628" fill="#FBBF24" font-size="22" font-weight="700" text-anchor="middle">Rented-to-Owned Audience Bridge</text>
+  <text x="472" y="1675" fill="#CBD5E1" font-size="21" text-anchor="middle">Automated 5-Day E.N.G.A.G.E. Welcome Sequence</text>
 
-  <rect x="820" y="1500" width="615" height="240" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <rect x="820" y="1500" width="615" height="44" rx="10" fill="url(#teal-grad)" />
-  <text x="1127" y="1529" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">STAGE 5: 4-TIER VALUE LADDER &amp; SPONSORSHIPS</text>
-  <text x="1127" y="1575" fill="#E2E8F0" font-size="19" font-weight="600" text-anchor="middle">14-Day Validate-Before-You-Build Launch + Checkout Stack</text>
-  <text x="1127" y="1615" fill="#2DD4BF" font-size="18" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">Effective AOV Lift +45% · R_sponsor Usage Multipliers</text>
-  <text x="1127" y="1655" fill="#CBD5E1" font-size="17" text-anchor="middle">Impulse ($29) -&gt; Flagship ($99) -&gt; Sprint ($697) -&gt; Advisory ($2.5k)</text>
-  <text x="1127" y="1695" fill="#94A3B8" font-size="16" text-anchor="middle">20-Minute Friday Creator CEO Scorecard · 85%+ Net Margin</text>
+  <rect x="820" y="1490" width="615" height="240" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <rect x="820" y="1490" width="615" height="48" rx="10" fill="url(#teal-grad)" />
+  <text x="1127" y="1522" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">5. DIGITAL PRODUCTS &amp; SPONSORSHIPS</text>
+  <text x="1127" y="1580" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">4-Tier Digital Product Value Ladder</text>
+  <text x="1127" y="1628" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">14-Day Pre-Sale Launch Architecture</text>
+  <text x="1127" y="1675" fill="#CBD5E1" font-size="21" text-anchor="middle">Omnichannel B2B Sponsorships &amp; CEO Cadence</text>
 
-  <!-- Telemetry Metric Strip Inside Centerpiece -->
-  <rect x="165" y="1780" width="1270" height="240" rx="12" fill="#111827" stroke="#334155" stroke-width="2" />
-  <text x="800" y="1828" fill="#818CF8" font-size="22" font-weight="800" letter-spacing="2" text-anchor="middle">INCLUDED IN THIS COMPLETE OPERATING SYSTEM EDITION</text>
-
-  <rect x="200" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#4F46E5" stroke-width="1.5" />
-  <text x="340" y="1910" fill="#FFFFFF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">50</text>
-  <text x="340" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">TESTED AI PROMPTS</text>
-  <text x="340" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Prompts P01 through P50</text>
-
-  <rect x="510" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#0D9488" stroke-width="1.5" />
-  <text x="650" y="1910" fill="#2DD4BF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">20</text>
-  <text x="650" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">SYSTEM DIAGRAMS</text>
-  <text x="650" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Mindmaps &amp; Decision Trees</text>
-
-  <rect x="820" y="1855" width="280" height="130" rx="8" fill="#1E293B" stroke="#D97706" stroke-width="1.5" />
-  <text x="960" y="1910" fill="#FBBF24" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">12</text>
-  <text x="960" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">EMERGENCY SCRIPTS</text>
-  <text x="960" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Sponsor &amp; Crisis Vault</text>
-
-  <rect x="1130" y="1855" width="270" height="130" rx="8" fill="#1E293B" stroke="#4F46E5" stroke-width="1.5" />
-  <text x="1265" y="1910" fill="#FFFFFF" font-size="42" font-weight="900" font-family="'JetBrains Mono', monospace" text-anchor="middle">10</text>
-  <text x="1265" y="1948" fill="#CBD5E1" font-size="17" font-weight="700" text-anchor="middle">ACTION WORKBOOKS</text>
-  <text x="1265" y="1972" fill="#94A3B8" font-size="14" text-anchor="middle">Fillable Audits &amp; Rubrics</text>
+  <!-- Core Book Highlights Strip -->
+  <rect x="165" y="1775" width="1270" height="240" rx="12" fill="#111827" stroke="#334155" stroke-width="2" />
+  <text x="800" y="1830" fill="#818CF8" font-size="24" font-weight="800" letter-spacing="2" text-anchor="middle">COMPLETE 10-CHAPTER SYSTEMS &amp; REFERENCE ARCHITECTURE</text>
+  <text x="800" y="1895" fill="#FFFFFF" font-size="30" font-weight="800" text-anchor="middle">50 AI WORKFLOW PROMPTS · 20 ARCHITECTURE DIAGRAMS</text>
+  <text x="800" y="1955" fill="#2DD4BF" font-size="26" font-weight="700" text-anchor="middle">12 EXECUTIVE SCRIPTS · 28 QUANTITATIVE CREATOR FORMULAS</text>
 
   <!-- Bottom Author & Imprint Footer -->
   <rect x="120" y="2135" width="1360" height="295" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <text x="800" y="2198" fill="#2DD4BF" font-size="24" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES COMPANION WEB APP ACCESS · KEY: CREATOR-OS-PRO-2026</text>
-  <text x="800" y="2262" fill="#FFFFFF" font-size="44" font-weight="900" letter-spacing="3" text-anchor="middle">BY OMAR SUNNY</text>
-  <text x="800" y="2318" fill="#CBD5E1" font-size="23" font-weight="700" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
-  <text x="800" y="2375" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace" text-anchor="middle">EDITION v1.0.0 · 91,775 MANUSCRIPT WORDS · 28 CORE MATHEMATICAL FORMULAS</text>
+  <text x="800" y="2235" fill="#FFFFFF" font-size="56" font-weight="900" letter-spacing="4" text-anchor="middle">BY OMAR SUNNY</text>
+  <text x="800" y="2310" fill="#2DD4BF" font-size="26" font-weight="800" letter-spacing="3" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
+  <text x="800" y="2370" fill="#CBD5E1" font-size="22" font-weight="600" letter-spacing="2" text-anchor="middle">BUSINESS &amp; DIGITAL MEDIA · SOLOPRENEUR OPERATING MANUAL</text>
 </svg>"""
     ET.fromstring(svg.encode("utf-8"))
     out_path.write_text(svg, encoding="utf-8")
@@ -1103,21 +1078,18 @@ def build_kdp_full_wrap_cover_svg(kdp_pages: int = 314) -> tuple[Path, dict]:
 
   <!-- Back Cover Vault Summary (Left Column) + Clear Right KDP Barcode & Transparency Code Safe Zone -->
   <rect x="{back_x + 100}" y="1560" width="900" height="580" rx="16" fill="#1E293B" stroke="#334155" stroke-width="2" />
-  <text x="{back_x + 135}" y="1622" fill="#FFFFFF" font-size="25" font-weight="800">COMPLETE VAULT &amp; TOOLKIT INCLUDED:</text>
-  <text x="{back_x + 135}" y="1682" fill="#E2E8F0" font-size="21">✓ 50 Copy-Paste AI Workflow Prompts (P01–P50)</text>
-  <text x="{back_x + 135}" y="1736" fill="#E2E8F0" font-size="21">✓ 12 Emergency Negotiation Scripts (S01–S12)</text>
-  <text x="{back_x + 135}" y="1790" fill="#E2E8F0" font-size="21">✓ 20 Vector Mindmaps &amp; Decision Trees</text>
-  <text x="{back_x + 135}" y="1844" fill="#E2E8F0" font-size="21">✓ 28 Core Creator Economy Formulas</text>
-  <text x="{back_x + 135}" y="1898" fill="#2DD4BF" font-size="21" font-weight="700">✓ Web App Pro Key: CREATOR-OS-PRO-2026</text>
-  <text x="{back_x + 135}" y="1952" fill="#94A3B8" font-size="20">✓ 10 Fillable Action Worksheets &amp; Audits</text>
-  <text x="{back_x + 135}" y="2015" fill="#FFFFFF" font-size="22" font-weight="800">AUTHORED BY OMAR SUNNY</text>
-  <text x="{back_x + 135}" y="2055" fill="#94A3B8" font-size="18">Apex Digital Systems Studio</text>
-  <text x="{back_x + 135}" y="2095" fill="#64748B" font-size="17" font-family="'JetBrains Mono', monospace">6.0&quot;x9.0&quot; · {kdp_pages} PAGES · SPINE {spine_in:.4f}&quot;</text>
+  <text x="{back_x + 135}" y="1625" fill="#FFFFFF" font-size="26" font-weight="800">COMPLETE REFERENCE ARCHITECTURE:</text>
+  <text x="{back_x + 135}" y="1690" fill="#E2E8F0" font-size="22">• 50 Structured AI Workflow Prompts (P01–P50)</text>
+  <text x="{back_x + 135}" y="1750" fill="#E2E8F0" font-size="22">• 12 Executive &amp; Sponsorship Scripts (S01–S12)</text>
+  <text x="{back_x + 135}" y="1810" fill="#E2E8F0" font-size="22">• 20 System Mindmaps &amp; Decision Trees</text>
+  <text x="{back_x + 135}" y="1870" fill="#E2E8F0" font-size="22">• 28 Core Creator Economy Mathematical Models</text>
+  <text x="{back_x + 135}" y="1930" fill="#2DD4BF" font-size="22" font-weight="700">• 10 Chapter Implementation &amp; Scoring Rubrics</text>
+  <text x="{back_x + 135}" y="2010" fill="#FFFFFF" font-size="25" font-weight="800">AUTHORED BY OMAR SUNNY</text>
+  <text x="{back_x + 135}" y="2058" fill="#94A3B8" font-size="20">Apex Digital Systems Studio · First Edition</text>
 
   <!-- Left Bottom Imprint Footer (Strictly Left of Barcode/Transparency Safe Zone) -->
-  <text x="{back_x + 100}" y="2260" fill="#FFFFFF" font-size="28" font-weight="800">OMAR SUNNY · APEX DIGITAL SYSTEMS</text>
-  <text x="{back_x + 100}" y="2310" fill="#94A3B8" font-size="20">Business &amp; Money / Digital Media &amp; Solopreneurship</text>
-  <text x="{back_x + 100}" y="2355" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace">PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS</text>
+  <text x="{back_x + 100}" y="2260" fill="#FFFFFF" font-size="30" font-weight="800">OMAR SUNNY · APEX DIGITAL SYSTEMS</text>
+  <text x="{back_x + 100}" y="2315" fill="#94A3B8" font-size="22">Business &amp; Money / Digital Media &amp; Solopreneurship</text>
 
   <!-- Reserved KDP Transparency QR Code + White ISBN Barcode Safe Zone (100% Blank, Zero Text Overlap) -->
   <rect x="{back_x + trim_w_px - 680}" y="1720" width="580" height="440" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1.5" />
@@ -1134,7 +1106,7 @@ def build_kdp_full_wrap_cover_svg(kdp_pages: int = 314) -> tuple[Path, dict]:
   <!-- 3. FRONT COVER PANEL (Right 6"x9" Trim Area)                          -->
   <!-- ===================================================================== -->
   <rect x="{front_x + 100}" y="130" width="{trim_w_px - 200}" height="74" rx="10" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
-  <text x="{front_cx}" y="177" fill="#E2E8F0" font-size="26" font-weight="800" letter-spacing="4" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO · FLAGSHIP EDITION</text>
+  <text x="{front_cx}" y="177" fill="#E2E8F0" font-size="26" font-weight="800" letter-spacing="4" text-anchor="middle">THE COMPLETE 5-STAGE CONTENT-TO-CASH ENGINEERING MANUAL</text>
 
   <text x="{front_cx}" y="330" fill="#818CF8" font-size="38" font-weight="800" letter-spacing="5" text-anchor="middle">THE QUANTITATIVE SOLOPRENEUR MANUAL</text>
   <text x="{front_cx}" y="470" fill="#FFFFFF" font-size="112" font-weight="900" text-anchor="middle">THE AI CONTENT</text>
@@ -1144,56 +1116,55 @@ def build_kdp_full_wrap_cover_svg(kdp_pages: int = 314) -> tuple[Path, dict]:
 
   <rect x="{front_x + 260}" y="910" width="{trim_w_px - 520}" height="8" rx="4" fill="url(#wrap-indigo)" />
 
-  <text x="{front_cx}" y="980" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">A Practical System to Research Validated Ideas, Script High-Retention</text>
-  <text x="{front_cx}" y="1030" fill="#CBD5E1" font-size="33" font-weight="500" text-anchor="middle">Content, Repurpose Across Platforms, Automate Production, and</text>
-  <text x="{front_cx}" y="1080" fill="#FFFFFF" font-size="35" font-weight="700" text-anchor="middle">Monetize Your Audience Without Burnout</text>
+  <!-- Exact KDP-Compliant Subtitle (<200 chars combined) -->
+  <text x="{front_cx}" y="985" fill="#CBD5E1" font-size="34" font-weight="500" text-anchor="middle">A Practical System to Research Validated Ideas, Script High-Retention</text>
+  <text x="{front_cx}" y="1040" fill="#FFFFFF" font-size="35" font-weight="700" text-anchor="middle">Content, Repurpose Across Platforms, Automate Production, and Monetize</text>
 
   <!-- Front Cover Architectural Centerpiece -->
-  <rect x="{front_x + 100}" y="1150" width="{trim_w_px - 200}" height="960" rx="18" fill="#0F172A" stroke="#4F46E5" stroke-width="3" />
-  <rect x="{front_x + 100}" y="1150" width="{trim_w_px - 200}" height="68" rx="16" fill="#1E1B4B" />
-  <text x="{front_cx}" y="1194" fill="#FFFFFF" font-size="26" font-weight="800" letter-spacing="3" text-anchor="middle">5-STAGE CONTENT-TO-CASH OPERATING SYSTEM</text>
+  <rect x="{front_x + 100}" y="1130" width="{trim_w_px - 200}" height="960" rx="18" fill="#0F172A" stroke="#4F46E5" stroke-width="3" />
+  <rect x="{front_x + 100}" y="1130" width="{trim_w_px - 200}" height="72" rx="16" fill="#1E1B4B" />
+  <text x="{front_cx}" y="1177" fill="#FFFFFF" font-size="28" font-weight="800" letter-spacing="3" text-anchor="middle">THE 5-STAGE CONTENT-TO-CASH OPERATING SYSTEM</text>
 
-  <rect x="{front_x + 145}" y="1255" width="470" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
-  <text x="{front_x + 380}" y="1305" fill="#818CF8" font-size="22" font-weight="800" text-anchor="middle">1. NICHE &amp; AVATAR MOAT</text>
-  <text x="{front_x + 380}" y="1350" fill="#FFFFFF" font-size="20" text-anchor="middle">P.A.I.D. Positioning Framework</text>
-  <text x="{front_x + 380}" y="1390" fill="#2DD4BF" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">NMPI Score &gt;= 75 / 100</text>
-  <text x="{front_x + 380}" y="1430" fill="#94A3B8" font-size="18" text-anchor="middle">RPPH Target: $150-$250/hr</text>
+  <rect x="{front_x + 145}" y="1240" width="470" height="235" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
+  <text x="{front_x + 380}" y="1295" fill="#818CF8" font-size="23" font-weight="800" text-anchor="middle">1. NICHE POSITIONING</text>
+  <text x="{front_x + 380}" y="1348" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">P.A.I.D. Authority Moat</text>
+  <text x="{front_x + 380}" y="1398" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">Category-of-One ICP</text>
+  <text x="{front_x + 380}" y="1442" fill="#CBD5E1" font-size="21" text-anchor="middle">3-Pillar Topic Matrix</text>
 
-  <rect x="{front_x + 665}" y="1255" width="470" height="230" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
-  <text x="{front_x + 900}" y="1305" fill="#818CF8" font-size="22" font-weight="800" text-anchor="middle">2. OUTLIER &amp; 3S HOOKS</text>
-  <text x="{front_x + 900}" y="1350" fill="#FFFFFF" font-size="20" text-anchor="middle">S.I.G.N.A.L. Idea Validation</text>
-  <text x="{front_x + 900}" y="1390" fill="#FBBF24" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">Outlier M &gt;= 2.5x Median</text>
-  <text x="{front_x + 900}" y="1430" fill="#94A3B8" font-size="18" text-anchor="middle">30s Hold Rate &gt;= 70%</text>
+  <rect x="{front_x + 665}" y="1240" width="470" height="235" rx="12" fill="#1E293B" stroke="#4F46E5" stroke-width="2" />
+  <text x="{front_x + 900}" y="1295" fill="#818CF8" font-size="23" font-weight="800" text-anchor="middle">2. OUTLIER &amp; HOOKS</text>
+  <text x="{front_x + 900}" y="1348" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">S.I.G.N.A.L. Idea Mining</text>
+  <text x="{front_x + 900}" y="1398" fill="#FBBF24" font-size="22" font-weight="700" text-anchor="middle">3-Second C.L.I.P. Hooks</text>
+  <text x="{front_x + 900}" y="1442" fill="#CBD5E1" font-size="21" text-anchor="middle">Package-First Design</text>
 
-  <rect x="{front_x + 1185}" y="1255" width="470" height="230" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2" />
-  <text x="{front_x + 1420}" y="1305" fill="#2DD4BF" font-size="22" font-weight="800" text-anchor="middle">3. 1-TO-15 WATERFALL</text>
-  <text x="{front_x + 1420}" y="1350" fill="#FFFFFF" font-size="20" text-anchor="middle">H.E.A.R.T. Pillar Scripting</text>
-  <text x="{front_x + 1420}" y="1390" fill="#2DD4BF" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">1 Script -&gt; 15 Native Posts</text>
-  <text x="{front_x + 1420}" y="1430" fill="#94A3B8" font-size="18" text-anchor="middle">5-Parameter Voice DNA</text>
+  <rect x="{front_x + 1185}" y="1240" width="470" height="235" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2" />
+  <text x="{front_x + 1420}" y="1295" fill="#2DD4BF" font-size="23" font-weight="800" text-anchor="middle">3. 1-TO-15 WATERFALL</text>
+  <text x="{front_x + 1420}" y="1348" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">H.E.A.R.T. Scripting</text>
+  <text x="{front_x + 1420}" y="1398" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">Voice DNA Calibration</text>
+  <text x="{front_x + 1420}" y="1442" fill="#CBD5E1" font-size="21" text-anchor="middle">Omnichannel Multiplication</text>
 
-  <rect x="{front_x + 145}" y="1525" width="730" height="240" rx="12" fill="#1E293B" stroke="#D97706" stroke-width="2" />
-  <text x="{front_x + 510}" y="1580" fill="#FBBF24" font-size="23" font-weight="800" text-anchor="middle">4. 4-HOUR BATCH SPRINT &amp; OWNED FUNNEL</text>
-  <text x="{front_x + 510}" y="1625" fill="#FFFFFF" font-size="20" text-anchor="middle">Mon-Thu 240-Min Sprint + 12-Point QA Gate</text>
-  <text x="{front_x + 510}" y="1668" fill="#2DD4BF" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">Opt-In Page &gt;= 45% · Welcome CVR &gt;= 2.5%</text>
-  <text x="{front_x + 510}" y="1710" fill="#94A3B8" font-size="18" text-anchor="middle">5-Minute Utility Lead Magnets · V_sub &gt;= $3.50</text>
+  <rect x="{front_x + 145}" y="1515" width="730" height="240" rx="12" fill="#1E293B" stroke="#D97706" stroke-width="2" />
+  <text x="{front_x + 510}" y="1572" fill="#FBBF24" font-size="24" font-weight="800" text-anchor="middle">4. 4-HOUR BATCH SPRINT &amp; OWNED FUNNELS</text>
+  <text x="{front_x + 510}" y="1625" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">240-Minute Weekly Production Pipeline</text>
+  <text x="{front_x + 510}" y="1675" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">Rented-to-Owned Audience Bridge</text>
+  <text x="{front_x + 510}" y="1720" fill="#CBD5E1" font-size="21" text-anchor="middle">Automated 5-Day E.N.G.A.G.E. Welcome Sequence</text>
 
-  <rect x="{front_x + 925}" y="1525" width="730" height="240" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2" />
-  <text x="{front_x + 1290}" y="1580" fill="#2DD4BF" font-size="23" font-weight="800" text-anchor="middle">5. 4-TIER VALUE LADDER &amp; SPONSORSHIPS</text>
-  <text x="{front_x + 1290}" y="1625" fill="#FFFFFF" font-size="20" text-anchor="middle">14-Day Validate-Before-You-Build Launch</text>
-  <text x="{front_x + 1290}" y="1668" fill="#2DD4BF" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">Checkout AOV +45% · R_sponsor Multipliers</text>
-  <text x="{front_x + 1290}" y="1710" fill="#94A3B8" font-size="18" text-anchor="middle">20-Min Friday Creator CEO Cadence · 85% Margin</text>
+  <rect x="{front_x + 925}" y="1515" width="730" height="240" rx="12" fill="#1E293B" stroke="#0D9488" stroke-width="2" />
+  <text x="{front_x + 1290}" y="1572" fill="#2DD4BF" font-size="24" font-weight="800" text-anchor="middle">5. DIGITAL PRODUCTS &amp; SPONSORSHIPS</text>
+  <text x="{front_x + 1290}" y="1625" fill="#FFFFFF" font-size="23" font-weight="700" text-anchor="middle">4-Tier Digital Product Value Ladder</text>
+  <text x="{front_x + 1290}" y="1675" fill="#2DD4BF" font-size="22" font-weight="700" text-anchor="middle">14-Day Pre-Sale Launch Architecture</text>
+  <text x="{front_x + 1290}" y="1720" fill="#CBD5E1" font-size="21" text-anchor="middle">Omnichannel B2B Sponsorships &amp; CEO Cadence</text>
 
-  <rect x="{front_x + 145}" y="1810" width="1510" height="250" rx="12" fill="#111827" stroke="#334155" stroke-width="2" />
-  <text x="{front_cx}" y="1875" fill="#FFFFFF" font-size="30" font-weight="800" text-anchor="middle">50 AI WORKFLOW PROMPTS · 20 SYSTEM DIAGRAMS · 12 EMERGENCY SCRIPTS</text>
-  <text x="{front_cx}" y="1935" fill="#2DD4BF" font-size="24" font-family="'JetBrains Mono', monospace" font-weight="700" text-anchor="middle">10 FILLABLE WORKSHEETS · 28 CORE FORMULAS · OFFLINE WEB APP INCLUDED</text>
-  <text x="{front_cx}" y="1995" fill="#94A3B8" font-size="21" text-anchor="middle">Complete End-to-End Implementation System for Modern Creator-Operators</text>
+  <rect x="{front_x + 145}" y="1800" width="1510" height="245" rx="12" fill="#111827" stroke="#334155" stroke-width="2" />
+  <text x="{front_cx}" y="1862" fill="#818CF8" font-size="24" font-weight="800" letter-spacing="2" text-anchor="middle">COMPLETE 10-CHAPTER SYSTEMS &amp; REFERENCE ARCHITECTURE</text>
+  <text x="{front_cx}" y="1928" fill="#FFFFFF" font-size="31" font-weight="800" text-anchor="middle">50 AI WORKFLOW PROMPTS · 20 ARCHITECTURE DIAGRAMS</text>
+  <text x="{front_cx}" y="1990" fill="#2DD4BF" font-size="27" font-weight="700" text-anchor="middle">12 EXECUTIVE SCRIPTS · 28 QUANTITATIVE CREATOR FORMULAS</text>
 
   <!-- Front Cover Bottom Author Banner -->
-  <rect x="{front_x + 100}" y="2180" width="{trim_w_px - 200}" height="360" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <text x="{front_cx}" y="2255" fill="#2DD4BF" font-size="24" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES PRO WEB SUITE LICENSE KEY: CREATOR-OS-PRO-2026</text>
-  <text x="{front_cx}" y="2335" fill="#FFFFFF" font-size="50" font-weight="900" letter-spacing="3" text-anchor="middle">BY OMAR SUNNY</text>
-  <text x="{front_cx}" y="2405" fill="#CBD5E1" font-size="25" font-weight="700" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
-  <text x="{front_cx}" y="2470" fill="#64748B" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS · PRINT EDITION v1.0.0</text>
+  <rect x="{front_x + 100}" y="2160" width="{trim_w_px - 200}" height="340" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
+  <text x="{front_cx}" y="2275" fill="#FFFFFF" font-size="58" font-weight="900" letter-spacing="4" text-anchor="middle">BY OMAR SUNNY</text>
+  <text x="{front_cx}" y="2360" fill="#2DD4BF" font-size="27" font-weight="800" letter-spacing="3" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
+  <text x="{front_cx}" y="2428" fill="#CBD5E1" font-size="23" font-weight="600" letter-spacing="2" text-anchor="middle">BUSINESS &amp; DIGITAL MEDIA · SOLOPRENEUR OPERATING MANUAL</text>
 </svg>"""
     ET.fromstring(svg.encode("utf-8"))
     out_path.write_text(svg, encoding="utf-8")
