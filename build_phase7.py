@@ -989,9 +989,9 @@ def build_ebook_kindle_cover_svg() -> Path:
 
   <!-- Bottom Author & Imprint Footer -->
   <rect x="120" y="2135" width="1360" height="295" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <text x="800" y="2205" fill="#2DD4BF" font-size="25" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES COMPANION WEB APP ACCESS · KEY: CREATOR-OS-PRO-2026</text>
-  <text x="800" y="2265" fill="#FFFFFF" font-size="38" font-weight="900" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
-  <text x="800" y="2320" fill="#94A3B8" font-size="22" font-weight="600" text-anchor="middle">Quantitative Operating Systems for Independent Media &amp; Solopreneur Enterprises</text>
+  <text x="800" y="2198" fill="#2DD4BF" font-size="24" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES COMPANION WEB APP ACCESS · KEY: CREATOR-OS-PRO-2026</text>
+  <text x="800" y="2262" fill="#FFFFFF" font-size="44" font-weight="900" letter-spacing="3" text-anchor="middle">BY OMAR SUNNY</text>
+  <text x="800" y="2318" fill="#CBD5E1" font-size="23" font-weight="700" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
   <text x="800" y="2375" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace" text-anchor="middle">EDITION v1.0.0 · 91,775 MANUSCRIPT WORDS · 28 CORE MATHEMATICAL FORMULAS</text>
 </svg>"""
     ET.fromstring(svg.encode("utf-8"))
@@ -1101,31 +1101,33 @@ def build_kdp_full_wrap_cover_svg(kdp_pages: int = 314) -> tuple[Path, dict]:
   <text x="{back_x + 170}" y="1428" fill="#CBD5E1" font-size="21">Pre-sell digital products via the 14-Day Validation Protocol, lift checkout</text>
   <text x="{back_x + 170}" y="1465" fill="#2DD4BF" font-size="20" font-family="'JetBrains Mono', monospace">AOV by +45%, and price B2B brand deals with usage-rights multipliers.</text>
 
-  <!-- Back Cover Vault Summary & KDP Mandatory White Barcode Safe Box (2.0" x 1.2" = 600 x 360 px) -->
-  <rect x="{back_x + 100}" y="1580" width="{trim_w_px - 200}" height="520" rx="16" fill="#1E293B" stroke="#334155" stroke-width="2" />
-  <text x="{back_cx}" y="1645" fill="#FFFFFF" font-size="30" font-weight="800" text-anchor="middle">COMPLETE VAULT &amp; COMPANION TOOLKIT INCLUDED:</text>
-  <text x="{back_x + 150}" y="1710" fill="#E2E8F0" font-size="24">✓ 50 Copy-Paste AI Workflow Prompts (P01–P50) with Bracketed Variables</text>
-  <text x="{back_x + 150}" y="1765" fill="#E2E8F0" font-size="24">✓ 12 Emergency Creator &amp; Sponsorship Negotiation Scripts (S01–S12)</text>
-  <text x="{back_x + 150}" y="1820" fill="#E2E8F0" font-size="24">✓ 20 Vector System Mindmaps &amp; Quantitative Stage-Gate Decision Trees</text>
-  <text x="{back_x + 150}" y="1875" fill="#E2E8F0" font-size="24">✓ 28 Core Creator Economy Mathematical Formulas &amp; Benchmark Tables</text>
-  <text x="{back_x + 150}" y="1930" fill="#2DD4BF" font-size="24" font-weight="700">✓ Offline Web Companion App Key Included: CREATOR-OS-PRO-2026</text>
-  <text x="{back_x + 150}" y="1985" fill="#94A3B8" font-size="21">✓ 10 Companion Fillable Action Worksheets &amp; Friday CEO Scorecards</text>
+  <!-- Back Cover Vault Summary (Left Column) + Clear Right KDP Barcode & Transparency Code Safe Zone -->
+  <rect x="{back_x + 100}" y="1560" width="900" height="580" rx="16" fill="#1E293B" stroke="#334155" stroke-width="2" />
+  <text x="{back_x + 135}" y="1622" fill="#FFFFFF" font-size="25" font-weight="800">COMPLETE VAULT &amp; TOOLKIT INCLUDED:</text>
+  <text x="{back_x + 135}" y="1682" fill="#E2E8F0" font-size="21">✓ 50 Copy-Paste AI Workflow Prompts (P01–P50)</text>
+  <text x="{back_x + 135}" y="1736" fill="#E2E8F0" font-size="21">✓ 12 Emergency Negotiation Scripts (S01–S12)</text>
+  <text x="{back_x + 135}" y="1790" fill="#E2E8F0" font-size="21">✓ 20 Vector Mindmaps &amp; Decision Trees</text>
+  <text x="{back_x + 135}" y="1844" fill="#E2E8F0" font-size="21">✓ 28 Core Creator Economy Formulas</text>
+  <text x="{back_x + 135}" y="1898" fill="#2DD4BF" font-size="21" font-weight="700">✓ Web App Pro Key: CREATOR-OS-PRO-2026</text>
+  <text x="{back_x + 135}" y="1952" fill="#94A3B8" font-size="20">✓ 10 Fillable Action Worksheets &amp; Audits</text>
+  <text x="{back_x + 135}" y="2015" fill="#FFFFFF" font-size="22" font-weight="800">AUTHORED BY OMAR SUNNY</text>
+  <text x="{back_x + 135}" y="2055" fill="#94A3B8" font-size="18">Apex Digital Systems Studio</text>
+  <text x="{back_x + 135}" y="2095" fill="#64748B" font-size="17" font-family="'JetBrains Mono', monospace">6.0&quot;x9.0&quot; · {kdp_pages} PAGES · SPINE {spine_in:.4f}&quot;</text>
 
-  <!-- Left Footer Spec + Right KDP Barcode Safe Zone -->
-  <text x="{back_x + 110}" y="2240" fill="#FFFFFF" font-size="32" font-weight="800">APEX DIGITAL SYSTEMS STUDIO</text>
-  <text x="{back_x + 110}" y="2290" fill="#94A3B8" font-size="22">Category: Business &amp; Money / Digital Media &amp; Entrepreneurship</text>
-  <text x="{back_x + 110}" y="2335" fill="#64748B" font-size="20" font-family="'JetBrains Mono', monospace">TRIM: 6.0&quot; x 9.0&quot; · {kdp_pages} PAGES · SPINE: {spine_in:.4f}&quot;</text>
+  <!-- Left Bottom Imprint Footer (Strictly Left of Barcode/Transparency Safe Zone) -->
+  <text x="{back_x + 100}" y="2260" fill="#FFFFFF" font-size="28" font-weight="800">OMAR SUNNY · APEX DIGITAL SYSTEMS</text>
+  <text x="{back_x + 100}" y="2310" fill="#94A3B8" font-size="20">Business &amp; Money / Digital Media &amp; Solopreneurship</text>
+  <text x="{back_x + 100}" y="2355" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace">PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS</text>
 
-  <!-- Reserved KDP White Barcode Box (600x360 px = 2.0in x 1.2in) -->
-  <rect x="{back_x + trim_w_px - 720}" y="2180" width="600" height="360" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" />
-  <text x="{back_x + trim_w_px - 420}" y="2350" fill="#475569" font-size="22" font-weight="700" font-family="'JetBrains Mono', monospace" text-anchor="middle">AMAZON KDP ISBN BARCODE ZONE</text>
-  <text x="{back_x + trim_w_px - 420}" y="2390" fill="#64748B" font-size="18" font-family="'JetBrains Mono', monospace" text-anchor="middle">(2.00&quot; x 1.20&quot; Reserved Safe Area)</text>
+  <!-- Reserved KDP Transparency QR Code + White ISBN Barcode Safe Zone (100% Blank, Zero Text Overlap) -->
+  <rect x="{back_x + trim_w_px - 680}" y="1720" width="580" height="440" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="1.5" />
+  <rect x="{back_x + trim_w_px - 680}" y="2180" width="600" height="360" rx="6" fill="#FFFFFF" />
 
   <!-- ===================================================================== -->
-  <!-- 2. SPINE PANEL (Center 0.7071" = 211 px at 300 DPI)                   -->
+  <!-- 2. SPINE PANEL (Center {spine_in:.4f}" = {spine_px} px at 300 DPI)    -->
   <!-- ===================================================================== -->
   <g transform="translate({spine_cx}, 1387) rotate(90)">
-    <text x="0" y="10" fill="#FFFFFF" font-size="30" font-weight="800" letter-spacing="2" text-anchor="middle">THE AI CONTENT CREATOR &amp; SOLOPRENEUR OPERATING SYSTEM   ·   APEX DIGITAL SYSTEMS</text>
+    <text x="0" y="10" fill="#FFFFFF" font-size="28" font-weight="800" letter-spacing="2" text-anchor="middle">THE AI CONTENT CREATOR &amp; SOLOPRENEUR OPERATING SYSTEM   ·   OMAR SUNNY</text>
   </g>
 
   <!-- ===================================================================== -->
@@ -1188,10 +1190,10 @@ def build_kdp_full_wrap_cover_svg(kdp_pages: int = 314) -> tuple[Path, dict]:
 
   <!-- Front Cover Bottom Author Banner -->
   <rect x="{front_x + 100}" y="2180" width="{trim_w_px - 200}" height="360" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="2.5" />
-  <text x="{front_cx}" y="2265" fill="#2DD4BF" font-size="25" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES PRO WEB SUITE LICENSE KEY: CREATOR-OS-PRO-2026</text>
-  <text x="{front_cx}" y="2345" fill="#FFFFFF" font-size="44" font-weight="900" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
-  <text x="{front_cx}" y="2415" fill="#CBD5E1" font-size="24" font-weight="500" text-anchor="middle">Autonomous Digital Publishing &amp; Creator Economy Engineering</text>
-  <text x="{front_cx}" y="2475" fill="#64748B" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS · PRINT EDITION v1.0.0</text>
+  <text x="{front_cx}" y="2255" fill="#2DD4BF" font-size="24" font-weight="800" letter-spacing="3" text-anchor="middle">INCLUDES PRO WEB SUITE LICENSE KEY: CREATOR-OS-PRO-2026</text>
+  <text x="{front_cx}" y="2335" fill="#FFFFFF" font-size="50" font-weight="900" letter-spacing="3" text-anchor="middle">BY OMAR SUNNY</text>
+  <text x="{front_cx}" y="2405" fill="#CBD5E1" font-size="25" font-weight="700" letter-spacing="2" text-anchor="middle">APEX DIGITAL SYSTEMS STUDIO</text>
+  <text x="{front_cx}" y="2470" fill="#64748B" font-size="19" font-family="'JetBrains Mono', monospace" text-anchor="middle">PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS · PRINT EDITION v1.0.0</text>
 </svg>"""
     ET.fromstring(svg.encode("utf-8"))
     out_path.write_text(svg, encoding="utf-8")

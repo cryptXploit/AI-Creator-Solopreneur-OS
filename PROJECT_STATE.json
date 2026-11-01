@@ -119,51 +119,51 @@
   "phase5_exports": {
     "kdp_paperback_6x9_pages": 314,
     "complete_book_us_letter_pages": 340,
-    "workbook_us_letter_pages": 113,
-    "workbook_us_letter_acroform_fields": 448,
-    "workbook_a4_pages": 101,
-    "workbook_a4_acroform_fields": 400,
-    "tablet_planner_pages": 132,
-    "tablet_planner_acroform_fields": 524,
-    "tier0_sample_pages": 57,
-    "chapter01_workbook_pages": 13,
-    "chapter01_workbook_acroform_fields": 48,
-    "epub_size_bytes": 344915,
+    "workbook_us_letter_pages": 133,
+    "workbook_us_letter_acroform_fields": 528,
+    "workbook_a4_pages": 128,
+    "workbook_a4_acroform_fields": 508,
+    "tablet_planner_pages": 142,
+    "tablet_planner_acroform_fields": 564,
+    "tier0_sample_pages": 59,
+    "chapter01_workbook_pages": 18,
+    "chapter01_workbook_acroform_fields": 68,
+    "epub_size_bytes": 344494,
     "deliverables": {
       "09-EXPORTS/PDF/the-ai-creator-solopreneur-os-complete-book.pdf": {
         "pages": 340,
-        "bytes": 9082608
+        "bytes": 9188074
       },
       "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-kdp-paperback-6x9.pdf": {
         "pages": 314,
-        "bytes": 9045201
+        "bytes": 4489811
       },
       "09-EXPORTS/EPUB/the-ai-creator-solopreneur-os.epub": {
-        "bytes": 344915
+        "bytes": 344494
       },
       "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-workbook-us-letter.pdf": {
-        "pages": 113,
-        "acroform_fields": 448,
-        "bytes": 3723838
+        "pages": 133,
+        "acroform_fields": 528,
+        "bytes": 3947160
       },
       "09-EXPORTS/PRINT/the-ai-creator-solopreneur-os-workbook-a4.pdf": {
-        "pages": 101,
-        "acroform_fields": 400,
-        "bytes": 3685565
+        "pages": 128,
+        "acroform_fields": 508,
+        "bytes": 3882979
       },
       "09-EXPORTS/PDF/the-ai-creator-solopreneur-os-tablet-planner.pdf": {
-        "pages": 132,
-        "acroform_fields": 524,
-        "bytes": 4238990
+        "pages": 142,
+        "acroform_fields": 564,
+        "bytes": 4508364
       },
       "09-EXPORTS/PDF/tier0-free-sample-chapter01-and-audit.pdf": {
-        "pages": 57,
-        "bytes": 1615564
+        "pages": 59,
+        "bytes": 1626686
       },
       "05-WORKBOOKS/chapter-01-workbook.pdf": {
-        "pages": 13,
-        "acroform_fields": 48,
-        "bytes": 533273
+        "pages": 18,
+        "acroform_fields": 68,
+        "bytes": 563107
       }
     }
   },
@@ -211,9 +211,9 @@
       "height_pt": 666.0
     },
     "cover_suite": {
-      "ebook_kindle_png_bytes": 2627002,
-      "kdp_full_wrap_png_bytes": 3096558,
-      "kdp_full_wrap_pdf_bytes": 322694,
+      "ebook_kindle_png_bytes": 2620860,
+      "kdp_full_wrap_png_bytes": 3104745,
+      "kdp_full_wrap_pdf_bytes": 321294,
       "gumroad_tier0_png_bytes": 1164901,
       "gumroad_tier2_png_bytes": 1225599,
       "gumroad_tier3_png_bytes": 1163925,
@@ -222,7 +222,7 @@
     }
   },
   "current_phase": 11,
-  "last_updated": "2026-10-31T06:22:34.165881+00:00",
+  "last_updated": "2026-11-01T18:03:09.613633+00:00",
   "phase8_marketing_and_bundles": {
     "landing_page_html_bytes": 174175,
     "landing_page_preview_png_bytes": 1592657,
@@ -344,23 +344,23 @@
     "commercial_zip_bundles": {
       "tier0-free-sample-starter-kit.zip": {
         "file_count": 5,
-        "size_bytes": 2261235
+        "size_bytes": 2287050
       },
       "tier1-reader-edition.zip": {
         "file_count": 16,
-        "size_bytes": 21811985
+        "size_bytes": 20611723
       },
       "tier2-implementation-pack.zip": {
         "file_count": 65,
-        "size_bytes": 38345984
+        "size_bytes": 37806828
       },
       "tier3-creator-os-complete-bundle.zip": {
         "file_count": 112,
-        "size_bytes": 41901418
+        "size_bytes": 41363230
       },
       "tier4-pro-living-system-and-vault.zip": {
-        "file_count": 156,
-        "size_bytes": 55553910
+        "file_count": 191,
+        "size_bytes": 72788689
       }
     }
   },
@@ -413,6 +413,7 @@
       "04-GUMROAD-CHECKOUT-UPSELLS-COUPONS-AND-WORKFLOWS.md": 2099,
       "05-AI-COVER-AND-THUMBNAIL-IMAGE-GENERATION-PROMPTS.md": 1868
     },
-    "tier4_zip_bytes": 72297025
-  }
+    "tier4_zip_bytes": 89518032
+  },
+  "kdp_paperback_6x9_pages": 314
 }

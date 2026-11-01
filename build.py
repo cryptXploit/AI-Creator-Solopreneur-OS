@@ -361,8 +361,14 @@ def convert_markdown_to_html(
 
     text = re.sub(r"`([^`\n]+)`", _save_inline_code, text)
 
-    # 3. Replace escaped dollar signs \$ outside code/math with literal placeholder
+    # 3. Replace escaped dollar signs \$ and currency dollar signs outside code/math with literal placeholder
     text = text.replace(r"\$", "@@LITERALDOLLAR@@")
+    text = re.sub(r"\(\$(/[A-Za-z]+)?\)", r"(@@LITERALDOLLAR@@\1)", text)
+    text = re.sub(
+        r"\$(\d[\d,]*(?:\.\d+)?[kKmM+]?)(?=\s*[\u2013\-]\s*\$\d|\s+[A-Za-z(\$/]|/[A-Za-z]|\)|\s*\||\*)",
+        r"@@LITERALDOLLAR@@\1",
+        text,
+    )
 
     # 4. Extract SVG image links ![Alt](../04-VISUAL-ASSETS/svg/chapter-XX-mindmap.svg)
     def _save_svg_figure(m: re.Match) -> str:
@@ -406,14 +412,26 @@ def convert_markdown_to_html(
 
     text = re.sub(r"\$\$(.*?)\$\$", _save_display_math, text, flags=re.DOTALL)
 
-    # 6. Extract Inline Math $...$
+    # 6. Extract Inline Math $...$ (ignoring any remaining currency dollar pairs)
+    def _is_real_inline_math(expr: str) -> bool:
+        if "|" in expr or "**" in expr or expr.count("(") != expr.count(")"):
+            return False
+        stripped = re.sub(r"\\text\{[^{}]*\}", "", expr)
+        if re.search(r"\b[a-zA-Z]{2,}\s+[a-zA-Z]{2,}\b", stripped):
+            return False
+        if expr.endswith((" ", "–", "-", "to")):
+            return False
+        return True
+
     def _save_inline_math(m: re.Match) -> str:
         expr = m.group(1)
+        if not _is_real_inline_math(expr):
+            return m.group(0)
         rendered = convert_latex_expr_to_html(expr)
         math_blocks.append(f'<span class="math-inline">{rendered}</span>')
         return f"@@MATHBLOCK{len(math_blocks) - 1}@@"
 
-    text = re.sub(r"(?<!\$)\$(?!\$)([^\$\n]+?)(?<!\$)\$(?!\$)", _save_inline_math, text)
+    text = re.sub(r"(?<!\$)\$(?!\$)([^\$\n]+?)(?<!\$)\$(?!\$)(?![0-9])", _save_inline_math, text)
 
     # Safety sweep: if any stray \text{ or \frac{ existed outside $ delimiters, convert them too
     if r"\text{" in text or r"\frac{" in text:
@@ -500,7 +518,7 @@ def get_book_css(mode: str = "color_letter") -> str:
         page_rule = """
         @page {
             size: 6in 9in;
-            margin: 0.65in 0.58in 0.65in 0.72in;
+            margin: 0.62in 0.75in 0.62in 0.75in;
         }
         """
         primary = "#000000"
@@ -509,10 +527,10 @@ def get_book_css(mode: str = "color_letter") -> str:
         warning = "#334155"
         text_col = "#000000"
         muted = "#475569"
-        body_pt = "10pt"
-        table_pt = "8.5pt"
-        code_pt = "8.5pt"
-        svg_filter = "filter: grayscale(100%) contrast(118%); max-height: 3.3in;"
+        body_pt = "8.16pt"
+        table_pt = "6.72pt"
+        code_pt = "5.75pt"
+        svg_filter = "filter: grayscale(100%) contrast(118%); max-height: 2.65in;"
     elif mode == "workbook_a4":
         page_rule = """
         @page {
@@ -567,7 +585,28 @@ def get_book_css(mode: str = "color_letter") -> str:
         svg_filter = "max-height: 4.3in;"
 
     is_workbook = mode in {"workbook_letter", "workbook_a4", "tablet_landscape"}
-    td_padding = "8px 10px" if is_workbook else "6px 8px"
+    is_kdp = mode == "kdp_6x9"
+    td_padding = "8px 10px" if is_workbook else ("3px 4px" if is_kdp else "6px 8px")
+    line_height_val = "1.472" if is_kdp else "1.58"
+    h1_pt = "16pt" if is_kdp else "20pt"
+    h2_pt = "11.5pt" if is_kdp else "14pt"
+    h3_pt = "9.8pt" if is_kdp else "11.5pt"
+    h4_pt = "8.8pt" if is_kdp else "10.5pt"
+    inline_code_bg = "transparent" if is_kdp else "#F1F5F9"
+    inline_code_pad = "0" if is_kdp else "1px 4px"
+    inline_code_rad = "0" if is_kdp else "3px"
+    inline_math_bg = "transparent" if is_kdp else "#F8FAFC"
+    inline_math_pad = "0" if is_kdp else "0 3px"
+    inline_math_rad = "0" if is_kdp else "2px"
+    block_rad = "0" if is_kdp else "4px"
+    pre_lh = "1.22" if is_kdp else "1.4"
+    pre_pad = "5px 8px" if is_kdp else "8px 10px"
+    h2_border_css = "border: none; padding-left: 0;" if is_kdp else f"border-left: 3.5px solid {accent}; padding-left: 8px;"
+    bq_border_css = (
+        "border: 1px solid #CBD5E1;"
+        if is_kdp
+        else f"border-left: 3.5px solid {secondary}; border-top: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;"
+    )
 
     return f"""
     {page_rule}
@@ -575,20 +614,25 @@ def get_book_css(mode: str = "color_letter") -> str:
         box-sizing: border-box;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        max-width: 100%;
     }}
     html, body {{
         margin: 0;
         padding: 0;
-        background-color: #FFFFFF;
+        width: 100%;
+        max-width: 100%;
         color: {text_col};
         font-family: 'Inter', 'Segoe UI', 'Noto Sans', -apple-system, sans-serif;
         font-size: {body_pt};
-        line-height: 1.58;
+        line-height: {line_height_val};
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     .chapter-container {{
         page-break-before: always;
         break-before: page;
-        padding-bottom: 14px;
+        padding-bottom: 10px;
+        max-width: 100%;
     }}
     .chapter-container.first-section {{
         page-break-before: avoid;
@@ -599,24 +643,23 @@ def get_book_css(mode: str = "color_letter") -> str:
         break-before: page;
     }}
     h1 {{
-        font-size: 20pt;
+        font-size: {h1_pt};
         font-weight: 800;
         color: {primary};
-        border-bottom: 3px solid {accent};
-        padding-bottom: 8px;
+        border-bottom: 2.5px solid {accent};
+        padding-bottom: 6px;
         margin-top: 0;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
         line-height: 1.25;
         page-break-after: avoid;
     }}
     h2 {{
-        font-size: 14pt;
+        font-size: {h2_pt};
         font-weight: 700;
         color: {primary};
-        border-left: 4px solid {accent};
-        padding-left: 10px;
-        margin-top: 22px;
-        margin-bottom: 10px;
+        {h2_border_css}
+        margin-top: 16px;
+        margin-bottom: 8px;
         line-height: 1.3;
         page-break-after: avoid;
     }}
@@ -626,54 +669,58 @@ def get_book_css(mode: str = "color_letter") -> str:
         margin-top: 0;
     }}
     h3 {{
-        font-size: 11.5pt;
+        font-size: {h3_pt};
         font-weight: 700;
         color: {accent};
-        margin-top: 16px;
-        margin-bottom: 8px;
-        page-break-after: avoid;
-    }}
-    h4 {{
-        font-size: 10.5pt;
-        font-weight: 700;
-        color: {secondary};
         margin-top: 12px;
         margin-bottom: 6px;
         page-break-after: avoid;
     }}
+    h4 {{
+        font-size: {h4_pt};
+        font-weight: 700;
+        color: {secondary};
+        margin-top: 10px;
+        margin-bottom: 5px;
+        page-break-after: avoid;
+    }}
     p {{
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-align: left;
         orphans: 3;
         widows: 3;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     ul, ol {{
         margin-top: 4px;
-        margin-bottom: 12px;
-        padding-left: 22px;
+        margin-bottom: 10px;
+        padding-left: 18px;
     }}
     li {{
-        margin-bottom: 5px;
+        margin-bottom: 4px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     blockquote {{
-        margin: 12px 0;
-        padding: 10px 14px;
+        margin: 10px 0;
+        padding: 8px 12px;
         background-color: #F8FAFC;
-        border-left: 4px solid {secondary};
-        border-top: 1px solid #E2E8F0;
-        border-right: 1px solid #E2E8F0;
-        border-bottom: 1px solid #E2E8F0;
-        border-radius: 4px;
+        {bq_border_css}
+        border-radius: {block_rad};
         page-break-inside: avoid;
+        max-width: 100%;
     }}
     blockquote p:last-child {{
         margin-bottom: 0;
     }}
     table {{
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
         border-collapse: collapse;
-        margin: 14px 0;
+        margin: 10px 0;
         font-size: {table_pt};
         page-break-inside: auto;
     }}
@@ -691,13 +738,20 @@ def get_book_css(mode: str = "color_letter") -> str:
         text-align: left;
         padding: {td_padding};
         border: 1px solid #94A3B8;
-        border-bottom: 2px solid {primary};
+        border-bottom: 1.5px solid {primary};
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+        word-wrap: break-word !important;
+        hyphens: auto;
     }}
     td {{
         padding: {td_padding};
         border: 1px solid #CBD5E1;
         vertical-align: top;
-        overflow-wrap: anywhere;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+        word-wrap: break-word !important;
+        hyphens: auto;
     }}
     tbody tr:nth-child(even) {{
         background-color: #F8FAFC;
@@ -705,37 +759,44 @@ def get_book_css(mode: str = "color_letter") -> str:
     code {{
         font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
         font-size: {code_pt};
-        background-color: #F1F5F9;
+        background-color: {inline_code_bg};
         color: {primary};
-        padding: 1px 4px;
-        border-radius: 3px;
+        padding: {inline_code_pad};
+        border-radius: {inline_code_rad};
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     .code-wrapper {{
-        margin: 14px 0;
+        margin: 8px 0;
         background-color: #F8FAFC;
-        border: 1px solid #CBD5E1;
-        border-left: 4px solid {accent};
-        border-radius: 4px;
+        {bq_border_css}
+        border-radius: {block_rad};
         page-break-inside: avoid;
         break-inside: avoid;
+        max-width: 100%;
     }}
     .code-header-badge {{
         background-color: #EEF2FF;
         color: {primary};
         font-family: 'JetBrains Mono', 'Consolas', monospace;
-        font-size: 8.5pt;
+        font-size: {code_pt};
         font-weight: 700;
-        padding: 5px 10px;
+        padding: 3px 8px;
         border-bottom: 1px solid #CBD5E1;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     pre {{
         margin: 0;
-        padding: 10px 12px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
+        padding: {pre_pad};
+        white-space: pre-wrap !important;
+        word-wrap: break-word !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
         font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
         font-size: {code_pt};
-        line-height: 1.45;
+        line-height: {pre_lh};
+        max-width: 100%;
     }}
     pre code {{
         background: transparent;
@@ -743,111 +804,125 @@ def get_book_css(mode: str = "color_letter") -> str:
         border: none;
     }}
     .math-display-block {{
-        margin: 12px 0;
-        padding: 10px 14px;
+        margin: 10px 0;
+        padding: 8px 10px;
         background-color: #F8FAFC;
-        border: 1px solid #CBD5E1;
-        border-left: 4px solid {secondary};
-        border-radius: 4px;
+        {bq_border_css}
+        border-radius: {block_rad};
         font-family: 'JetBrains Mono', 'Consolas', monospace;
         font-size: {code_pt};
         text-align: center;
         color: {primary};
         page-break-inside: avoid;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     .math-inline {{
         font-family: 'JetBrains Mono', 'Consolas', monospace;
         font-size: 92%;
         color: {primary};
-        background-color: #F8FAFC;
-        padding: 0 3px;
-        border-radius: 2px;
+        background-color: {inline_math_bg};
+        padding: {inline_math_pad};
+        border-radius: {inline_math_rad};
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     .math-frac {{
-        display: inline-block;
+        display: inline;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }}
     .diagram-container {{
-        margin: 16px 0;
-        padding: 10px;
+        margin: 12px 0;
+        padding: 8px;
         background-color: #FFFFFF;
         border: 1px solid #CBD5E1;
-        border-radius: 6px;
+        border-radius: {block_rad};
         text-align: center;
         page-break-inside: avoid;
         break-inside: avoid;
+        max-width: 100%;
+    }}
+    .svg-frame {{
+        max-width: 100%;
     }}
     .svg-frame svg {{
-        width: 100%;
+        width: 98%;
+        max-width: 98%;
         height: auto;
         {svg_filter}
         display: block;
         margin: 0 auto;
     }}
     .diagram-caption {{
-        margin-top: 6px;
-        font-size: 8.5pt;
+        margin-top: 5px;
+        font-size: {table_pt};
         color: {muted};
         text-align: center;
     }}
     .title-hero-page {{
-        border: 3px solid {primary};
-        padding: 36px 28px;
-        margin-bottom: 20px;
+        border: 2.5px solid {primary};
+        padding: 28px 22px;
+        margin-bottom: 16px;
         background-color: #FFFFFF;
         page-break-after: always;
+        max-width: 100%;
     }}
     .title-eyebrow {{
-        font-size: 9.5pt;
+        font-size: 8.5pt;
         font-weight: 700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
         text-transform: uppercase;
         color: {accent};
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }}
     .title-main {{
-        font-size: 26pt;
+        font-size: {"20pt" if is_kdp else "26pt"};
         font-weight: 800;
         color: {primary};
         line-height: 1.18;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
     }}
     .title-sub {{
-        font-size: 12pt;
+        font-size: {"10pt" if is_kdp else "12pt"};
         font-weight: 500;
         color: {text_col};
-        line-height: 1.45;
-        margin-bottom: 24px;
+        line-height: 1.42;
+        margin-bottom: 18px;
     }}
     .title-meta-box {{
         border-top: 2px solid {primary};
-        padding-top: 16px;
-        margin-top: 28px;
-        font-size: 9.5pt;
+        padding-top: 12px;
+        margin-top: 20px;
+        font-size: {"8.2pt" if is_kdp else "9.5pt"};
         color: {muted};
     }}
     .toc-box {{
         page-break-before: always;
         page-break-after: always;
-        padding: 10px 0;
+        padding: 8px 0;
+        max-width: 100%;
     }}
     .toc-list {{
         list-style: none;
         padding-left: 0;
     }}
     .toc-list li {{
-        padding: 6px 0;
+        padding: 5px 0;
         border-bottom: 1px dashed #CBD5E1;
         display: flex;
         justify-content: space-between;
-        font-size: 10pt;
+        gap: 8px;
+        font-size: {"8.2pt" if is_kdp else "10pt"};
     }}
-    .toc-list a {{
+    .toc-list a, .toc-list .toc-item-title {{
         color: {primary};
         text-decoration: none;
         font-weight: 600;
     }}
     .checkbox-box {{
-        font-size: 11pt;
+        font-size: {"9.5pt" if is_kdp else "11pt"};
         font-weight: 700;
         color: {accent};
     }}
@@ -1021,6 +1096,31 @@ def inject_acroform_fields(pdf_path: Path, fields_per_page: int = 3) -> int:
     return total_fields
 
 
+def strip_pdf_annotations(pdf_path: Path) -> int:
+    """
+    Removes all non-printable link/markup annotations (/Annots) from a print PDF
+    so Amazon KDP Print Previewer never warns about non-printable markup on Page 2.
+    """
+    reader = PdfReader(str(pdf_path))
+    writer = PdfWriter()
+    removed = 0
+    for page in reader.pages:
+        if "/Annots" in page:
+            annots = page["/Annots"]
+            try:
+                removed += len(annots.get_object() if hasattr(annots, "get_object") else annots)
+            except Exception:
+                removed += 1
+            del page[NameObject("/Annots")]
+        writer.add_page(page)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf", dir=str(pdf_path.parent)) as tmp_f:
+        tmp_out = Path(tmp_f.name)
+    with open(tmp_out, "wb") as f_out:
+        writer.write(f_out)
+    shutil.move(str(tmp_out), str(pdf_path))
+    return removed
+
+
 # ---------------------------------------------------------------------------
 # 5. BOOK, WORKBOOK, TABLET PLANNER & SAMPLE HTML ASSEMBLERS
 # ---------------------------------------------------------------------------
@@ -1044,24 +1144,42 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
     fm_md = (STUDIO_ROOT / "03-MANUSCRIPT/front-matter.md").read_text(encoding="utf-8")
     bm_md = (STUDIO_ROOT / "03-MANUSCRIPT/back-matter.md").read_text(encoding="utf-8")
 
-    toc_items = [
-        '<li><a href="#sec-front-matter">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</a><span>Part 0</span></li>'
-    ]
-    for ch_slug, ch_title in CHAPTER_TITLES:
+    is_kdp = mode == "kdp_6x9"
+    if is_kdp:
+        toc_items = [
+            '<li><span class="toc-item-title">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</span><span>Part 0</span></li>'
+        ]
+        for _, ch_title in CHAPTER_TITLES:
+            toc_items.append(
+                f'<li><span class="toc-item-title">{html.escape(ch_title)}</span><span>Core Chapter</span></li>'
+            )
         toc_items.append(
-            f'<li><a href="#sec-{ch_slug}">{html.escape(ch_title)}</a><span>Core Chapter</span></li>'
+            '<li><span class="toc-item-title">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</span><span>Vault</span></li>'
         )
-    toc_items.append(
-        '<li><a href="#sec-back-matter">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</a><span>Vault</span></li>'
-    )
+    else:
+        toc_items = [
+            '<li><a href="#sec-front-matter">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</a><span>Part 0</span></li>'
+        ]
+        for ch_slug, ch_title in CHAPTER_TITLES:
+            toc_items.append(
+                f'<li><a href="#sec-{ch_slug}">{html.escape(ch_title)}</a><span>Core Chapter</span></li>'
+            )
+        toc_items.append(
+            '<li><a href="#sec-back-matter">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</a><span>Vault</span></li>'
+        )
 
     sections_html = []
 
     # Title Hero Page
     edition_label = (
         "AMAZON KDP 6\" × 9\" PRINT EDITION"
-        if mode == "kdp_6x9"
+        if is_kdp
         else "FLAGSHIP DIGITAL & PRINT EDITION (v1.0.0)"
+    )
+    toc_lead = (
+        "Complete chapter and operational vault architecture for this print edition:"
+        if is_kdp
+        else "Click any chapter or vault section below to jump directly to its implementation blueprint, visual architecture diagrams, and copy-paste prompt stack."
     )
     sections_html.append(f"""
     <div class="title-hero-page">
@@ -1069,6 +1187,7 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
         <div class="title-main">The AI Content Creator &amp; Solopreneur Operating System</div>
         <div class="title-sub">A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout</div>
         <div class="title-meta-box">
+            <p><strong>Author:</strong> Omar Sunny · Apex Digital Systems Studio</p>
             <p><strong>Product ID:</strong> PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS</p>
             <p><strong>Included Architecture:</strong> 10 End-to-End Chapters · 20 Vector System Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
             <p><strong>Companion Pro Suite Key:</strong> <code>CREATOR-OS-PRO-2026</code></p>
@@ -1076,11 +1195,11 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
     </div>
     """)
 
-    # Interactive Table of Contents
+    # Table of Contents
     sections_html.append(f"""
     <div class="toc-box">
         <h1>Master Table of Contents</h1>
-        <p>Click any chapter or vault section below to jump directly to its implementation blueprint, visual architecture diagrams, and copy-paste prompt stack.</p>
+        <p>{toc_lead}</p>
         <ul class="toc-list">
             {''.join(toc_items)}
         </ul>
@@ -1458,11 +1577,11 @@ def build_epub3(epub_path: Path) -> None:
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier id="BookId">{book_uuid}</dc:identifier>
     <dc:title>The AI Content Creator &amp; Solopreneur Operating System</dc:title>
-    <dc:creator>Apex Digital Systems Studio</dc:creator>
+    <dc:creator>Omar Sunny</dc:creator>
     <dc:language>en</dc:language>
     <dc:publisher>Apex Digital Systems Studio</dc:publisher>
     <dc:description>A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout.</dc:description>
-    <dc:rights>Copyright 2026 Apex Digital Systems Studio. All rights reserved.</dc:rights>
+    <dc:rights>Copyright 2026 Omar Sunny &amp; Apex Digital Systems Studio. All rights reserved.</dc:rights>
     <meta property="dcterms:modified">{modified_utc}</meta>
   </metadata>
   <manifest>
@@ -1531,8 +1650,9 @@ def main() -> int:
     print("[2/8] Compiling Amazon KDP Print-Ready Paperback PDF (6\" x 9\" Monochrome)...")
     html_book_kdp = build_complete_book_html("kdp_6x9")
     render_html_to_pdf(html_book_kdp, pdf_kdp_6x9)
+    removed_annots = strip_pdf_annotations(pdf_kdp_6x9)
     r_kdp = PdfReader(str(pdf_kdp_6x9))
-    print(f"      -> Done: {len(r_kdp.pages)} pages, {pdf_kdp_6x9.stat().st_size:,} bytes")
+    print(f"      -> Done: {len(r_kdp.pages)} pages, {removed_annots} annotations stripped, {pdf_kdp_6x9.stat().st_size:,} bytes")
 
     # 3. Validated Reflowable EPUB 3.0 eBook
     print("[3/8] Compiling Validated Reflowable EPUB 3.0 eBook...")
@@ -1591,6 +1711,7 @@ def main() -> int:
     state_data = json.loads(state_path.read_text(encoding="utf-8"))
     state_data.setdefault("phase_status", {})["Phase 5"] = "COMPLETED"
     state_data.setdefault("asset_inventory", {})["completed_png_diagrams"] = 20
+    state_data["kdp_paperback_6x9_pages"] = len(r_kdp.pages)
     state_data["phase5_exports"] = {
         "kdp_paperback_6x9_pages": len(r_kdp.pages),
         "complete_book_us_letter_pages": len(r_book.pages),
