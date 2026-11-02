@@ -2387,28 +2387,30 @@ $$\text{Net Publisher Royalty per Paperback Sold} = \$10.194 - \$4.618 = \mathbf
 | **6"×9" Paperback (`Amazon.co.uk` UK)** | `£13.99 GBP` | `60%` | `£3.58` (`314 pages` B&W) | **`£4.81 GBP`** |
 | **6"×9" Paperback (`Amazon.de` EU)** | `€15.99 EUR` | `60%` | `€4.25` (`314 pages` B&W) | **`€5.34 EUR`** |
 
-### 1.6 KDP Content Review Compliance Audit & Reply Template (`ID: 68593324`)
+### 1.6 KDP Content Review Compliance Audit & Reply Template (`ID: 68593324` & `ID: PRI-JYPG0EJNNFM`)
 
-Both the **Kindle eBook (`the-ai-creator-solopreneur-os.epub`)** and the **6" × 9" Paperback (`the-ai-creator-solopreneur-os-kdp-paperback-6x9.pdf`)** have been audited against Amazon KDP's **Kindle Content Quality Guide** and **Print Previewer** standards:
+Both the **Kindle eBook (`the-ai-creator-solopreneur-os.epub`)** and the **6" × 9" Paperback (`the-ai-creator-solopreneur-os-kdp-paperback-6x9.pdf`)** have been audited against Amazon KDP's **Kindle & Print Content Quality Guide** (zero Disappointing Customer Experience / DCE triggers) and **Print Previewer** standards:
 
 1. **Exact 195-Character Combined Title + Subtitle (`<= 200 chars`):** The cover, interior Title Page, OPF metadata, and KDP Book Details all use the identical 140-character subtitle (*"A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize"*), preventing KDP's 200-character truncation mismatch.
-2. **Verified Author & Copyright Attribution (`Omar Sunny`):** Both the Title Page (`By Omar Sunny`), Copyright Page (`Copyright © 2026 by Omar Sunny. All Rights Reserved.`), Cover (`BY OMAR SUNNY`), and EPUB OPF `<dc:creator>` match your KDP account contributor field (`Sunny, Omar`).
-3. **Zero Unsupported Workbook / Fillable / External File Triggers in Kindle & Print Editions:** All standalone KDP files are 100% self-contained reading editions with zero fillable form references, zero checkbox characters (`☐`), zero local folder path references, and high-resolution rasterized PNG diagrams (`1600×1100 px`) embedded inside the EPUB 3.0 package.
+2. **Verified Author & Copyright Attribution (`Omar Sunny`) + Standard Front Matter Order:** Page 1 is the Full Title Page (`Omar Sunny`), Page 2 is the Copyright & Publication Notice + Legal/Financial Disclaimer (`Copyright © 2026 by Omar Sunny. All rights reserved.`), and Page 3 is the Master Table of Contents with exact printed starting page numbers (`Page 4` through `Page 287`), eliminating duplicate title blocks.
+3. **Printed Page Numbers (`Page 2`–`Page 314`) & Zero Blank or Sparse Pages:** Every page from Page 2 through Page 314 in the 6" × 9" Paperback interior has a centered bottom folio (`Page X`) inside the safe print margin, `0` blank mid-chapter pages, and `0` sparse pages (`< 200` characters).
+4. **Zero Unrendered Markdown Tags, Citation Brackets, Placeholders, or Workbook Triggers:** All raw `**bold**` asterisks inside prompt/script code blocks are rendered as clean rich typography, all `[SRC-XX]` internal citations and `[UPPERCASE]` bracket tokens are converted into natural prose or `{lowercase_variables}`, and all interactive workbook/fillable/file-extension references are removed so the Kindle and Paperback editions read as 100% self-contained trade nonfiction books.
 
-#### Word-for-Word Reply to `kindle-content-review@kdp-support.amazon.com` (To Unblock Title ID `68593324` or Submit Revised Edition):
+#### Word-for-Word Reply to `kindle-content-review@kdp-support.amazon.com` (To Unblock Title IDs `68593324` & `PRI-JYPG0EJNNFM`):
 
-> **Subject:** Re: Title Submission Review — The AI Content Creator & Solopreneur Operating System (ID: 68593324) — Corrected Files & Metadata Confirmation
+> **Subject:** Re: Title Submission Review — The AI Content Creator & Solopreneur Operating System (Kindle ID: 68593324 / Print ID: PRI-JYPG0EJNNFM) — Corrected Print & eBook Files Ready
 >
 > Hello Kindle Content Review Team,
 >
-> Thank you for reviewing my book, *The AI Content Creator & Solopreneur Operating System: A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize* by Omar Sunny (Title ID: 68593324).
+> Thank you for reviewing my book, *The AI Content Creator & Solopreneur Operating System: A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize* by Omar Sunny (Kindle ID: **68593324** / Paperback ID: **PRI-JYPG0EJNNFM**).
 >
-> I have identified and resolved the formatting and metadata issues that caused the automated quality/copyright flags in the initial upload:
-> 1. **Author & Copyright Alignment:** The interior Title Page and Copyright Page originally listed my studio imprint name instead of my personal author name (`Omar Sunny`). Both the interior Title Page, Copyright Page (`Copyright © 2026 by Omar Sunny`), EPUB OPF metadata, and front cover now explicitly display `Omar Sunny` to match my KDP contributor profile (`Sunny, Omar`).
-> 2. **Exact Cover-to-Metadata Subtitle Match:** The cover and interior Title Page subtitle have been updated to match the exact 140-character KDP subtitle word-for-word (under the 200-character combined title/subtitle limit).
-> 3. **Reflowable Kindle eBook Formatting Cleanup:** All companion worksheet/workbook references, checkbox symbols, external file pointers, and SVG vector tags have been removed from the Kindle EPUB 3.0 manuscript and cover so the eBook reads as a 100% self-contained, reflowable trade nonfiction book on all Kindle devices.
+> I have conducted a complete page-by-page quality audit of both the 314-page 6"×9" Paperback interior PDF and the Kindle EPUB 3.0 file and resolved every formatting issue that could cause a disappointing customer experience:
+> 1. **Eliminated All Blank & Sparse Mid-Chapter Pages:** Fixed CSS section breaks that previously left 4 blank divider pages and 12 sparse pages in the 6"×9" print interior. All 314 pages now flow continuously with zero blank or sparse pages.
+> 2. **Added Printed Page Numbers (`Page 2`–`Page 314`) & Numbered Table of Contents:** Added centered bottom page numbers across the entire 314-page print interior and replaced section labels in the Page 3 Master Table of Contents with exact starting page numbers (`Page 4` through `Page 287`).
+> 3. **Standardized Front Matter & Removed Duplicate Title Pages:** Removed the duplicate title block in Front Matter and placed the Copyright & Legal Disclaimer directly on Page 2 (`Copyright © 2026 by Omar Sunny`) behind the Page 1 Title Page.
+> 4. **Cleaned All Code Blocks, Citations & Companion References:** Converted all literal `**bold**` markdown characters inside prompt templates into formatted typography, removed all internal `[SRC-XX]` bracketed source tags and file-extension references, and removed all companion workbook/fillable mentions.
 >
-> Please restore and unblock Title ID **68593324** in my KDP Bookshelf so I can upload the corrected EPUB manuscript and updated cover file (or let me know if I should submit the corrected edition as a new title). I am also confirming that I am the sole original author (`Omar Sunny`) and hold 100% of the worldwide publishing rights to this work.
+> Please restore and unblock Paperback ID **PRI-JYPG0EJNNFM** and Kindle ID **68593324** in my KDP Bookshelf so I can upload the corrected 314-page print PDF, EPUB 3.0 manuscript, and matching cover files. I also confirm that I am the sole original author (`Omar Sunny`) and hold 100% of the worldwide publishing rights to this work.
 >
 > Thank you for your time and assistance,
 > **Omar Sunny**

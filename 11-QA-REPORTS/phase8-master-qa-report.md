@@ -1,6 +1,6 @@
 # Phase 8 Master QA Report — Conversion Funnel, Bangladesh Launch Runbook & 5-Tier ZIP Packaging
 
-- **Timestamp:** `2026-11-01T19:08:38.614589+00:00`
+- **Timestamp:** `2026-11-02T05:33:28.139278+00:00`
 - **Status:** **PASSED (0 ERRORS)**
 - **Full-Studio Manuscript Words:** `91,776 words` (12 files)
 - **Full-Studio Workbook Words:** `23,910 words` (10 files)
@@ -11,7 +11,7 @@
 | :--- | :---: | :---: | :---: |
 | `10-MARKETING/index.html` | 100% Offline HTML5 (0 CDN deps) | 174,175 | **PASS** |
 | `04-VISUAL-ASSETS/png/marketing-landing-page-preview.png` | `1600 × 1200 px` PNG | 1,592,657 | **PASS** |
-| `10-MARKETING/marketplace-listings-and-bd-launch-runbook.md` | `4,003 words` | 27,893 | **PASS** |
+| `10-MARKETING/marketplace-listings-and-bd-launch-runbook.md` | `4,143 words` | 28,844 | **PASS** |
 | `10-MARKETING/email-funnel-and-upsell-sequence.md` | `3,851 words` (7 Emails) | 25,354 | **PASS** |
 | `06-NOTION-TEMPLATES/tier4-monthly-vault-drop-01.md` | `4,108 words` | 25,913 | **PASS** |
 | `10-MARKETING/tier4-monthly-vault-drop-01.md` | `4,108 words` | 25,913 | **PASS** |
@@ -20,11 +20,11 @@
 
 | Bundle Archive Path | Packaged Files | Compressed Size (Bytes) | Integrity (`testzip()`) |
 | :--- | :---: | :---: | :---: |
-| `09-EXPORTS/HYBRID-BUNDLE/Tier0-Free-Creator-Audit-Starter-Kit.zip` | `7 files` | `2,710,931` | **PASS (`None`)** |
-| `09-EXPORTS/HYBRID-BUNDLE/Tier1-KDP-and-D2D-Retail-Book-Pack.zip` | `5 files` | `8,449,061` | **PASS (`None`)** |
-| `09-EXPORTS/HYBRID-BUNDLE/Tier2-Interactive-Workbook-and-Tablet-Edition.zip` | `62 files` | `29,764,982` | **PASS (`None`)** |
-| `09-EXPORTS/HYBRID-BUNDLE/Tier3-Complete-Creator-Solopreneur-OS-Flagship-Bundle.zip` | `76 files` | `31,241,932` | **PASS (`None`)** |
-| `09-EXPORTS/HYBRID-BUNDLE/Tier4-Living-Creator-Vault-Membership-Pack.zip` | `114 files` | `49,205,793` | **PASS (`None`)** |
+| `09-EXPORTS/HYBRID-BUNDLE/Tier0-Free-Creator-Audit-Starter-Kit.zip` | `7 files` | `2,734,735` | **PASS (`None`)** |
+| `09-EXPORTS/HYBRID-BUNDLE/Tier1-KDP-and-D2D-Retail-Book-Pack.zip` | `5 files` | `12,573,535` | **PASS (`None`)** |
+| `09-EXPORTS/HYBRID-BUNDLE/Tier2-Interactive-Workbook-and-Tablet-Edition.zip` | `62 files` | `34,649,744` | **PASS (`None`)** |
+| `09-EXPORTS/HYBRID-BUNDLE/Tier3-Complete-Creator-Solopreneur-OS-Flagship-Bundle.zip` | `76 files` | `36,128,513` | **PASS (`None`)** |
+| `09-EXPORTS/HYBRID-BUNDLE/Tier4-Living-Creator-Vault-Membership-Pack.zip` | `88 files` | `37,367,643` | **PASS (`None`)** |
 
 ## 3. Master Verification Check Log
 
@@ -32,15 +32,15 @@
 | :--- | :---: | :--- |
 | 10-MARKETING/index.html | **PASS** | 174,175 bytes, 0 external CDN deps, 5 tiers + RPPH calc + 12 FAQs verified |
 | 04-VISUAL-ASSETS/png/marketing-landing-page-preview.png | **PASS** | 1600×1200 px valid PNG (1,592,657 bytes) |
-| 10-MARKETING/marketplace-listings-and-bd-launch-runbook.md | **PASS** | 4,003 words (27,893 bytes) — KDP, Gumroad, D2D, Payoneer & W-8BEN Article 12 (10%) verified |
+| 10-MARKETING/marketplace-listings-and-bd-launch-runbook.md | **PASS** | 4,143 words (28,844 bytes) — KDP, Gumroad, D2D, Payoneer & W-8BEN Article 12 (10%) verified |
 | 10-MARKETING/email-funnel-and-upsell-sequence.md | **PASS** | 3,851 words (25,354 bytes) — Emails 01..07 verified |
 | 06-NOTION-TEMPLATES/tier4-monthly-vault-drop-01.md | **PASS** | 4,108 words (25,913 bytes) |
 | 10-MARKETING/tier4-monthly-vault-drop-01.md | **PASS** | 4,108 words (25,913 bytes) |
-| 09-EXPORTS/HYBRID-BUNDLE/Tier0-Free-Creator-Audit-Starter-Kit.zip | **PASS** | testzip() OK, 7 files (2,710,931 bytes) |
-| 09-EXPORTS/HYBRID-BUNDLE/Tier1-KDP-and-D2D-Retail-Book-Pack.zip | **PASS** | testzip() OK, 5 files (8,449,061 bytes) |
-| 09-EXPORTS/HYBRID-BUNDLE/Tier2-Interactive-Workbook-and-Tablet-Edition.zip | **PASS** | testzip() OK, 62 files (29,764,982 bytes) |
-| 09-EXPORTS/HYBRID-BUNDLE/Tier3-Complete-Creator-Solopreneur-OS-Flagship-Bundle.zip | **PASS** | testzip() OK, 76 files (31,241,932 bytes) |
-| 09-EXPORTS/HYBRID-BUNDLE/Tier4-Living-Creator-Vault-Membership-Pack.zip | **PASS** | testzip() OK, 114 files (49,205,793 bytes) |
+| 09-EXPORTS/HYBRID-BUNDLE/Tier0-Free-Creator-Audit-Starter-Kit.zip | **PASS** | testzip() OK, 7 files (2,734,735 bytes) |
+| 09-EXPORTS/HYBRID-BUNDLE/Tier1-KDP-and-D2D-Retail-Book-Pack.zip | **PASS** | testzip() OK, 5 files (12,573,535 bytes) |
+| 09-EXPORTS/HYBRID-BUNDLE/Tier2-Interactive-Workbook-and-Tablet-Edition.zip | **PASS** | testzip() OK, 62 files (34,649,744 bytes) |
+| 09-EXPORTS/HYBRID-BUNDLE/Tier3-Complete-Creator-Solopreneur-OS-Flagship-Bundle.zip | **PASS** | testzip() OK, 76 files (36,128,513 bytes) |
+| 09-EXPORTS/HYBRID-BUNDLE/Tier4-Living-Creator-Vault-Membership-Pack.zip | **PASS** | testzip() OK, 88 files (37,367,643 bytes) |
 | Regression: 12 Manuscript Files (03-MANUSCRIPT/) | **PASS** | 91,776 words, 0 banned words |
 | Regression: 10 Action Worksheets (05-WORKBOOKS/) | **PASS** | 23,910 words, 0 banned words |
 | Regression: 20 Vector SVGs + 20 Retina PNGs | **PASS** | 20 SVGs, 20 PNGs intact |

@@ -37,6 +37,7 @@ from pypdf import PdfReader, PdfWriter
 from pypdf.generic import (
     ArrayObject,
     BooleanObject,
+    DecodedStreamObject,
     DictionaryObject,
     FloatObject,
     NameObject,
@@ -319,15 +320,17 @@ KDP_COMPLIANT_SUBTITLE = (
 )
 
 
-def sanitize_markdown_for_kdp(md_text: str, doc_slug: str = "") -> str:
+def sanitize_markdown_for_kdp(md_text: str, doc_slug: str = "", target_format: str = "kdp_print") -> str:
     """
     Transforms studio manuscript Markdown into a 100% self-contained Amazon KDP
     Kindle eBook & 6"x9" Paperback Trade Edition with zero 'Disappointing Customer
     Experience' (DCE) triggers:
       - Exact <200-char Title + Subtitle match
       - Explicit 'By Omar Sunny' & 'Copyright © 2026 by Omar Sunny' attribution
+      - Removes duplicate Half-Title / Full-Title blocks so Title never prints twice
       - Strips all external local file paths (../05-WORKBOOKS/, creator-os-app.html, etc.),
-        activation keys (CREATOR-OS-PRO-2026), and internal CSS/build telemetry
+        activation keys (CREATOR-OS-PRO-2026), [SRC-XX] tags, [PLACEHOLDER] brackets,
+        and .md/.csv/.svg/.pdf file extension references
       - Replaces all 'workbook'/'worksheet'/'fillable' references and interactive checkboxes
         with self-contained in-book action rubrics and standard bullet lists.
     """
@@ -344,32 +347,44 @@ def sanitize_markdown_for_kdp(md_text: str, doc_slug: str = "") -> str:
 
     # 2. Front Matter specific KDP trade-book transformations
     if doc_slug == "front-matter":
-        text = re.sub(
-            r"## Half-Title Page\s+.*?---\s+## Full Title Page",
-            "",
-            text,
-            flags=re.DOTALL,
-        )
-        text = text.replace(
-            "### A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout",
-            f"### {KDP_COMPLIANT_SUBTITLE}",
-        )
-        text = text.replace(
-            "**By The Editorial & Systems Architecture Team**",
-            "**By Omar Sunny**",
-        )
-        text = re.sub(
-            r"\*Flagship Product #3[^\n]*\n\*Includes Complete Access[^\n]*",
-            (
-                "*First Edition — Complete 10-Chapter Systems Engineering & Operational Reference Manual*\n"
-                "*Featuring 50 Structured AI Workflow Prompts (P01–P50), 20 System Architecture Diagrams, "
-                "12 Executive & Sponsorship Scripts (S01–S12), and 28 Quantitative Models*"
-            ),
-            text,
-        )
-        text = re.sub(
-            r"## Copyright, ISBN & Commercial Licensing Notice.*?(?=### Financial, Legal & Platform Compliance Disclaimer)",
-            """## Copyright & Publication Notice
+        if target_format == "kdp_print":
+            # In kdp_6x9 print edition, Page 1 is the Full Title Page, Page 2 is the Copyright Page,
+            # and Page 3 is the Master Table of Contents. Strip the duplicate title & copyright blocks
+            # from front-matter so Page 4 begins cleanly with the Manifesto!
+            text = re.sub(
+                r"^.*?(?=## The Creator-to-Operator Manifesto)",
+                "# Part 0: The Creator-to-Operator Manifesto & Installation Guide\n\n",
+                text,
+                flags=re.DOTALL,
+            )
+        else:
+            # In EPUB, strip the duplicate top title + Half-Title so front-matter.xhtml starts with ONE Title block
+            text = re.sub(
+                r"^.*?## Full Title Page\s*",
+                "",
+                text,
+                flags=re.DOTALL,
+            )
+            text = text.replace(
+                "### A Practical System to Research Validated Ideas, Script High-Retention Content, Repurpose Across Platforms, Automate Production, and Monetize Your Audience Without Burnout",
+                f"### {KDP_COMPLIANT_SUBTITLE}",
+            )
+            text = text.replace(
+                "**By The Editorial & Systems Architecture Team**",
+                "**By Omar Sunny**",
+            )
+            text = re.sub(
+                r"\*Flagship Product #3[^\n]*\n\*Includes Complete Access[^\n]*",
+                (
+                    "*First Edition — Complete 10-Chapter Systems Engineering & Operational Reference Manual*\n"
+                    "*Featuring 50 Structured AI Workflow Prompts (P01–P50), 20 System Architecture Diagrams, "
+                    "12 Executive & Sponsorship Scripts (S01–S12), and 28 Quantitative Models*"
+                ),
+                text,
+            )
+            text = re.sub(
+                r"## Copyright, ISBN & Commercial Licensing Notice.*?(?=### Financial, Legal & Platform Compliance Disclaimer)",
+                """## Copyright & Publication Notice
 
 **Copyright © 2026 by Omar Sunny. All Rights Reserved.**
 
@@ -386,13 +401,13 @@ No part of this publication may be reproduced, resold, distributed, or transmitt
 2. **Team & Organizational Implementation Rights:** Founders, executive operators, and marketing leads may apply the standard operating procedures, scoring rubrics, and workflow architectures taught in this volume across their internal company media operations, provided copyright attribution to **Omar Sunny** remains intact on reference copies.
 
 """,
-            text,
-            flags=re.DOTALL,
-        )
-        text = text.replace(
-            "This manual and its companion software suite are designed",
-            "This manual is designed",
-        )
+                text,
+                flags=re.DOTALL,
+            )
+            text = text.replace(
+                "This manual and its companion software suite are designed",
+                "This manual is designed",
+            )
         text = re.sub(
             r"## The Companion Digital Toolkit & Pro Access Instructions[^\n]*\n.*?(?=## The 7-Day Quick-Start Installation Checklist)",
             """## How to Use the Built-In Prompts, Scoring Rubrics & Reference Vaults
@@ -410,7 +425,7 @@ Every framework, mathematical formula, AI workflow prompt, and diagnostic rubric
 
 ### How to Execute the In-Book Prompts & Quantitative Rubrics
 1. At the close of each chapter, review **Section 12 (Chapter Action Audit & Implementation Rubric)** and **Section 13 (10-Point Stage-Gate Verification)** to benchmark your current baseline metrics.
-2. When executing any of the 50 AI Workflow Prompts (`P01`–`P50`), replace the bracketed input variables (`[LIKE_THIS]`) with your specific niche, audience avatar, and baseline telemetry.
+2. When executing any of the 50 AI Workflow Prompts (`P01`–`P50`), replace the curly-brace input variables (`{like_this}`) with your specific niche, audience avatar, and baseline telemetry.
 3. Log your weekly `RPPH`, `NMPI`, `SPI`, `ERI`, `SRVAS`, `CMLR`, and `PTES` scores in a dedicated page of your personal notes app or spreadsheet during your 20-minute Friday Creator CEO Review (Chapter 10).
 
 ---
@@ -448,7 +463,7 @@ Every framework, mathematical formula, AI workflow prompt, and diagnostic rubric
     text = re.sub(
         r"\*\*`\.\./05-WORKBOOKS/markdown/worksheet-(\d+)\.md`\*\*",
         r"**the Section 12 Chapter \1 Action Rubric**",
-        text,
+    text,
     )
     text = re.sub(
         r"`(?:\.\./)?05-WORKBOOKS/markdown/worksheet-(\d+)\.md`",
@@ -473,6 +488,56 @@ Every framework, mathematical formula, AI workflow prompt, and diagnostic rubric
     text = text.replace("CREATOR-OS-PRO-2026", "FIRST-EDITION-2026")
     text = text.replace("PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS", "FIRST-EDITION-2026")
     text = text.replace("Flagship Product #3", "First Edition")
+
+    # Clean up local file extension examples (.md, .csv, .svg, .pdf, .mp4)
+    for ext_src, ext_dst in [
+        ("01-IDEA-VAULT/outlier-swipe-file.csv", "Outlier-Swipe-Log"),
+        ("outlier-swipe-file.csv", "Outlier-Swipe-Log"),
+        ("buyer-friction-questions.md", "Buyer-Friction-Questions"),
+        ("CREATOR-OS-WORKSPACE/02-PILLAR-PRODUCTION/voice-dna-card.md", "Voice-DNA-Profile-Card"),
+        ("02-PILLAR-PRODUCTION/voice-dna-card.md", "Voice-DNA-Profile-Card"),
+        ("voice-dna-card.md", "Voice-DNA-Profile-Card"),
+        ("02-heart-script.md", "02-Heart-Script-Draft"),
+        ("weekly-rpph-tracker.csv", "Weekly-RPPH-Scorecard"),
+        ("Short_01.mp4", "Short_01_Video"),
+        ("16x9_Pillar.mp4", "16x9_Pillar_Master"),
+        ("V01_outlier-dashboard.mp4", "V01_Outlier_Dashboard"),
+        ("V02_formula-breakdown.mp4", "V02_Formula_Breakdown"),
+        ("Carousel_02.pdf", "Carousel_02_Slides"),
+        ("Newsletter.md", "Newsletter_Draft"),
+        ("V01_hook-chart.mp4", "V01_Hook_Chart"),
+        ("V12_cta.svg", "V12_CTA_Graphic"),
+        ("`V0X_short-slug.mp4` or `.svg`", "`V0X_short-slug`"),
+    ]:
+        text = text.replace(ext_src, ext_dst)
+
+    # Strip [SRC-XX] citation tags (including backtick-wrapped and parenthesized lists)
+    text = re.sub(
+        r"\s*\(\s*`?\[SRC-\d+(?:,\s*SRC-\d+)*\]`?(?:\s*[,;&/]\s*`?\[SRC-\d+(?:,\s*SRC-\d+)*\]`?)*\s*\)",
+        "",
+        text,
+    )
+    text = re.sub(r"\*\*`?\[SRC-\d+(?:,\s*SRC-\d+)*\]`?\s*", "**", text)
+    text = re.sub(
+        r"\s*`?\[SRC-\d+(?:,\s*SRC-\d+)*\]`?(?:\s*[,;&/]\s*`?\[SRC-\d+(?:,\s*SRC-\d+)*\]`?)*\s*\)?",
+        "",
+        text,
+    )
+    text = re.sub(r"\*\*\s+(?=[A-Za-z0-9])", "**", text)
+    text = text.replace("`[INSERT_STRIPE_OR_ACH_URL]`", "your direct payment portal link")
+    text = text.replace("[INSERT_STRIPE_OR_ACH_URL]", "your direct payment portal link")
+    text = text.replace('"[Insert explanation here]"', '"an abbreviated summary"')
+    text = text.replace("`[LIKE_THIS]`", "`{like_this}`").replace("[LIKE_THIS]", "{like_this}")
+
+    def _bracket_var_to_curly(m: re.Match) -> str:
+        inner = m.group(1).strip()
+        # Keep P01..P50 and S01..S12 prompt/script IDs as clean P01 without square brackets
+        if re.fullmatch(r"[PS]\d{2}", inner):
+            return inner
+        clean_var = inner.lower().replace(" ", "_")
+        return "{" + clean_var + "}"
+
+    text = re.sub(r"\[([A-Z][A-Z0-9_ /,-]{1,60})\]", _bracket_var_to_curly, text)
 
     # 4. Replace 'workbook', 'worksheet', and 'fillable' terminology with trade-book rubric terms
     text = re.sub(r"\(`WS-(\d+)`\)", r"(Ch \1 Rubric)", text)
@@ -551,12 +616,16 @@ def convert_markdown_to_html(
         code_raw = re.sub(r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1 / \2)", code_raw)
         code_raw = code_raw.replace(r"\ge", ">=").replace(r"\le", "<=").replace(r"\times", "x")
         escaped = html.escape(code_raw, quote=False)
+        # Render any inline **bold** or `backticks` inside prompt/script blocks so raw asterisks never appear
+        escaped = re.sub(r"\*\*([^*\n]+)\*\*", r"<strong>\1</strong>", escaped)
+        escaped = re.sub(r"`([^`\n]+)`", r"\1", escaped)
         is_prompt = "PROMPT ID:" in code_raw or "SCRIPT ID:" in code_raw
         block_cls = "prompt-code-block" if is_prompt else "standard-code-block"
         badge = ""
         if is_prompt:
             first_line = code_raw.strip().splitlines()[0] if code_raw.strip() else "STUDIO PROMPT"
-            badge = f'<div class="code-header-badge">{html.escape(first_line)}</div>'
+            first_line_clean = re.sub(r"[*`]", "", first_line)
+            badge = f'<div class="code-header-badge">{html.escape(first_line_clean)}</div>'
         html_block = f'<div class="code-wrapper {block_cls}">{badge}<pre><code class="language-{lang or "text"}">{escaped}</code></pre></div>'
         code_blocks.append(html_block)
         return f"\n\n@@CODEBLOCK{len(code_blocks) - 1}@@\n\n"
@@ -747,9 +816,9 @@ def get_book_css(mode: str = "color_letter") -> str:
         warning = "#334155"
         text_col = "#000000"
         muted = "#475569"
-        body_pt = "8.16pt"
-        table_pt = "6.72pt"
-        code_pt = "5.75pt"
+        body_pt = "9.30pt"
+        table_pt = "7.52pt"
+        code_pt = "6.70pt"
         svg_filter = "filter: grayscale(100%) contrast(118%); max-height: 2.65in;"
     elif mode == "workbook_a4":
         page_rule = """
@@ -807,7 +876,7 @@ def get_book_css(mode: str = "color_letter") -> str:
     is_workbook = mode in {"workbook_letter", "workbook_a4", "tablet_landscape"}
     is_kdp = mode == "kdp_6x9"
     td_padding = "8px 10px" if is_workbook else ("3px 4px" if is_kdp else "6px 8px")
-    line_height_val = "1.472" if is_kdp else "1.58"
+    line_height_val = "1.545" if is_kdp else "1.58"
     h1_pt = "16pt" if is_kdp else "20pt"
     h2_pt = "11.5pt" if is_kdp else "14pt"
     h3_pt = "9.8pt" if is_kdp else "11.5pt"
@@ -819,7 +888,7 @@ def get_book_css(mode: str = "color_letter") -> str:
     inline_math_pad = "0" if is_kdp else "0 3px"
     inline_math_rad = "0" if is_kdp else "2px"
     block_rad = "0" if is_kdp else "4px"
-    pre_lh = "1.22" if is_kdp else "1.4"
+    pre_lh = "1.26" if is_kdp else "1.4"
     pre_pad = "5px 8px" if is_kdp else "8px 10px"
     h2_border_css = "border: none; padding-left: 0;" if is_kdp else f"border-left: 3.5px solid {accent}; padding-left: 8px;"
     bq_border_css = (
@@ -851,9 +920,13 @@ def get_book_css(mode: str = "color_letter") -> str:
     .chapter-container {{
         page-break-before: always;
         break-before: page;
-        padding-bottom: 10px;
+        padding-bottom: {"0" if is_kdp else "10px"};
         max-width: 100%;
     }}
+    .chapter-container > :last-child {{
+        margin-bottom: 0 !important;
+    }}
+    {"#sec-chapter-03 p, #sec-chapter-03 li { line-height: 1.62; margin-bottom: 9.5px; } #sec-chapter-09 p, #sec-chapter-09 li { line-height: 1.50; margin-bottom: 6px; }" if is_kdp else ""}
     .chapter-container.first-section {{
         page-break-before: avoid;
         break-before: avoid;
@@ -884,9 +957,9 @@ def get_book_css(mode: str = "color_letter") -> str:
         page-break-after: avoid;
     }}
     h2.major-section-break {{
-        page-break-before: always;
-        break-before: page;
-        margin-top: 0;
+        page-break-before: {"auto" if is_kdp else "always"};
+        break-before: {"auto" if is_kdp else "page"};
+        margin-top: {"16px" if is_kdp else "0"};
     }}
     h3 {{
         font-size: {h3_pt};
@@ -925,15 +998,19 @@ def get_book_css(mode: str = "color_letter") -> str:
     }}
     blockquote {{
         margin: 10px 0;
-        padding: 8px 12px;
-        background-color: #F8FAFC;
-        {bq_border_css}
+        padding: {"4px 12px" if is_kdp else "8px 12px"};
+        background-color: {"transparent" if is_kdp else "#F8FAFC"};
+        {"" if is_kdp else bq_border_css}
         border-radius: {block_rad};
-        page-break-inside: avoid;
+        page-break-inside: {"auto" if is_kdp else "avoid"};
+        break-inside: {"auto" if is_kdp else "avoid"};
         max-width: 100%;
     }}
     blockquote p:last-child {{
         margin-bottom: 0;
+    }}
+    hr {{
+        {"display: none;" if is_kdp else "border: none; border-top: 1px solid #CBD5E1; margin: 12px 0; page-break-after: avoid; break-after: avoid;"}
     }}
     table {{
         width: 100% !important;
@@ -988,23 +1065,27 @@ def get_book_css(mode: str = "color_letter") -> str:
     }}
     .code-wrapper {{
         margin: 8px 0;
-        background-color: #F8FAFC;
-        {bq_border_css}
+        background-color: {"transparent" if is_kdp else "#F8FAFC"};
+        {"" if is_kdp else bq_border_css}
         border-radius: {block_rad};
-        page-break-inside: avoid;
-        break-inside: avoid;
+        page-break-inside: {"auto" if is_kdp else "avoid"};
+        break-inside: {"auto" if is_kdp else "avoid"};
         max-width: 100%;
     }}
     .code-header-badge {{
-        background-color: #EEF2FF;
+        background-color: {"transparent" if is_kdp else "#EEF2FF"};
         color: {primary};
         font-family: 'JetBrains Mono', 'Consolas', monospace;
         font-size: {code_pt};
         font-weight: 700;
         padding: 3px 8px;
-        border-bottom: 1px solid #CBD5E1;
+        {"border-top: 1.5px solid #000000; border-bottom: 1px solid #94A3B8;" if is_kdp else "border-bottom: 1px solid #CBD5E1;"}
         overflow-wrap: anywhere;
         word-break: break-word;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        page-break-after: avoid;
+        break-after: avoid;
     }}
     pre {{
         margin: 0;
@@ -1121,7 +1202,9 @@ def get_book_css(mode: str = "color_letter") -> str:
     .toc-box {{
         page-break-before: always;
         page-break-after: always;
-        padding: 8px 0;
+        padding: 4px 0;
+        font-size: {"8.2pt" if is_kdp else "10pt"};
+        line-height: {"1.42" if is_kdp else "1.58"};
         max-width: 100%;
     }}
     .toc-list {{
@@ -1140,6 +1223,13 @@ def get_book_css(mode: str = "color_letter") -> str:
         color: {primary};
         text-decoration: none;
         font-weight: 600;
+    }}
+    .toc-page-num {{
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-weight: 700;
+        color: {primary};
+        margin-left: 12px;
     }}
     .checkbox-box {{
         font-size: {"9.5pt" if is_kdp else "11pt"};
@@ -1341,6 +1431,71 @@ def strip_pdf_annotations(pdf_path: Path) -> int:
     return removed
 
 
+def extract_kdp_toc_page_numbers(pdf_path: Path) -> dict[str, int]:
+    """
+    Reads PDF named destinations (/sec-front-matter, /sec-chapter-01 .. /sec-back-matter)
+    in <10ms to get the exact 1-based starting page number of every section.
+    """
+    reader = PdfReader(str(pdf_path))
+    nd = reader.named_destinations
+    toc_map: dict[str, int] = {"front-matter": 4}
+    for k, v in nd.items():
+        clean_k = k.lstrip("/")
+        if clean_k.startswith("sec-"):
+            slug = clean_k[len("sec-"):]
+            toc_map[slug] = reader.get_page_number(v.page) + 1
+    return toc_map
+
+
+def stamp_kdp_page_numbers(pdf_path: Path) -> int:
+    """
+    Stamps centered bottom page numbers ('Page 2' .. 'Page N') at (X=202.0pt, Y=40.0pt)
+    inside the KDP safe print area ([50pt, 380pt] x [38pt, 610pt]) on every page after Page 1.
+    """
+    reader = PdfReader(str(pdf_path))
+    writer = PdfWriter()
+    for page in reader.pages:
+        writer.add_page(page)
+
+    helv_font = DictionaryObject({
+        NameObject("/Type"): NameObject("/Font"),
+        NameObject("/Subtype"): NameObject("/Type1"),
+        NameObject("/BaseFont"): NameObject("/Helvetica"),
+    })
+    helv_ref = writer._add_object(helv_font)
+
+    stamped = 0
+    for idx, page in enumerate(writer.pages):
+        if idx == 0:
+            continue
+        res = page.get("/Resources")
+        if hasattr(res, "get_object"):
+            res = res.get_object()
+        if "/Font" not in res:
+            res[NameObject("/Font")] = DictionaryObject()
+        fonts = res["/Font"]
+        if hasattr(fonts, "get_object"):
+            fonts = fonts.get_object()
+        fonts[NameObject("/F_folio")] = helv_ref
+
+        orig_bytes = page.get_contents().get_data()
+        folio_label = f"Page {idx + 1}"
+        # Center 'Page X' horizontally around X = 216pt (3.0in)
+        x_pos = round(216.0 - (len(folio_label) * 2.1), 1)
+        folio_cmd = f"\nQ\nq 0.09 0.13 0.22 rg BT /F_folio 8.2 Tf {x_pos} 40.0 Td ({folio_label}) Tj ET Q\n".encode("ascii")
+        new_stream = DecodedStreamObject()
+        new_stream.set_data(b"q\n" + orig_bytes + folio_cmd)
+        page[NameObject("/Contents")] = writer._add_object(new_stream)
+        stamped += 1
+
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf", dir=str(pdf_path.parent)) as tmp_f:
+        tmp_out = Path(tmp_f.name)
+    with open(tmp_out, "wb") as f_out:
+        writer.write(f_out)
+    shutil.move(str(tmp_out), str(pdf_path))
+    return stamped
+
+
 # ---------------------------------------------------------------------------
 # 5. BOOK, WORKBOOK, TABLET PLANNER & SAMPLE HTML ASSEMBLERS
 # ---------------------------------------------------------------------------
@@ -1359,33 +1514,53 @@ CHAPTER_TITLES = [
 ]
 
 
-def build_complete_book_html(mode: str = "color_letter") -> str:
+KDP_DEFAULT_TOC_MAP: dict[str, int] = {
+    "front-matter": 4,
+    "chapter-01": 12,
+    "chapter-02": 45,
+    "chapter-03": 74,
+    "chapter-04": 101,
+    "chapter-05": 126,
+    "chapter-06": 151,
+    "chapter-07": 177,
+    "chapter-08": 207,
+    "chapter-09": 235,
+    "chapter-10": 260,
+    "back-matter": 287,
+}
+
+
+def build_complete_book_html(mode: str = "color_letter", toc_page_map: dict[str, int] | None = None) -> str:
     css = get_book_css(mode)
     fm_md = (STUDIO_ROOT / "03-MANUSCRIPT/front-matter.md").read_text(encoding="utf-8")
     bm_md = (STUDIO_ROOT / "03-MANUSCRIPT/back-matter.md").read_text(encoding="utf-8")
 
     is_kdp = mode == "kdp_6x9"
     if is_kdp:
+        pm = toc_page_map or KDP_DEFAULT_TOC_MAP
+        fm_pg = f"Page {pm.get('front-matter', 4)}"
+        bm_pg = f"Page {pm.get('back-matter', 287)}"
         toc_items = [
-            '<li><span class="toc-item-title">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</span><span>Part 0</span></li>'
+            f'<li><a href="#sec-front-matter" class="toc-item-title">Part 0: The Creator-to-Operator Manifesto &amp; Installation Guide</a><span class="toc-page-num">{fm_pg}</span></li>'
         ]
-        for _, ch_title in CHAPTER_TITLES:
+        for ch_slug, ch_title in CHAPTER_TITLES:
+            ch_pg = f"Page {pm.get(ch_slug, 14)}"
             toc_items.append(
-                f'<li><span class="toc-item-title">{html.escape(ch_title)}</span><span>Core Chapter</span></li>'
+                f'<li><a href="#sec-{ch_slug}" class="toc-item-title">{html.escape(ch_title)}</a><span class="toc-page-num">{ch_pg}</span></li>'
             )
         toc_items.append(
-            '<li><span class="toc-item-title">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</span><span>Vault</span></li>'
+            f'<li><a href="#sec-back-matter" class="toc-item-title">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</a><span class="toc-page-num">{bm_pg}</span></li>'
         )
     else:
         toc_items = [
-            '<li><a href="#sec-front-matter">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</a><span>Part 0</span></li>'
+            '<li><a href="#sec-front-matter">Front Matter: The Creator-to-Operator Manifesto &amp; Installation Guide</a><span class="toc-page-num">Part 0</span></li>'
         ]
         for ch_slug, ch_title in CHAPTER_TITLES:
             toc_items.append(
-                f'<li><a href="#sec-{ch_slug}">{html.escape(ch_title)}</a><span>Core Chapter</span></li>'
+                f'<li><a href="#sec-{ch_slug}">{html.escape(ch_title)}</a><span class="toc-page-num">Core Chapter</span></li>'
             )
         toc_items.append(
-            '<li><a href="#sec-back-matter">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</a><span>Vault</span></li>'
+            '<li><a href="#sec-back-matter">Back Matter Vault: 50-Prompt Master Index (P01–P50), 12 Emergency Scripts (S01–S12) &amp; Mathematical Glossary</a><span class="toc-page-num">Vault</span></li>'
         )
 
     sections_html = []
@@ -1397,11 +1572,12 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
         else "FLAGSHIP DIGITAL & PRINT EDITION (v1.0.0)"
     )
     toc_lead = (
-        "Complete chapter and operational vault architecture for this edition:"
+        "Complete chapter and operational vault directory with starting page numbers:"
         if is_kdp
         else "Click any chapter or vault section below to jump directly to its implementation blueprint, visual architecture diagrams, and copy-paste prompt stack."
     )
     if is_kdp:
+        # Page 1: Full Title Page
         sections_html.append(f"""
         <div class="title-hero-page">
             <div class="title-eyebrow">APEX DIGITAL SYSTEMS STUDIO · {edition_label}</div>
@@ -1410,8 +1586,22 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
             <div class="title-meta-box">
                 <p><strong>Author:</strong> Omar Sunny</p>
                 <p><strong>Publisher:</strong> Apex Digital Systems Studio</p>
-                <p><strong>Included Architecture:</strong> 10 End-to-End Chapters · 20 System Architecture Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
+                <p><strong>Edition Architecture:</strong> 10 End-to-End Chapters · 20 System Architecture Diagrams · 50 Tested AI Prompts (P01–P50) · 12 Emergency Scripts (S01–S12) · 28 Quantitative Formulas</p>
             </div>
+        </div>
+        """)
+        # Page 2: Copyright & Publication Notice (Directly behind Title Page per trade publishing standard)
+        sections_html.append(f"""
+        <div class="toc-box">
+            <h1>Copyright &amp; Publication Notice</h1>
+            <p><strong>The AI Content Creator &amp; Solopreneur Operating System: {html.escape(KDP_COMPLIANT_SUBTITLE)}</strong></p>
+            <p>Copyright &copy; 2026 by Omar Sunny. Published by Apex Digital Systems Studio. All rights reserved.</p>
+            <p>No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means—electronic, mechanical, photocopying, recording, or otherwise—without the prior written permission of the publisher, except for brief quotations embodied in critical articles or reviews and for the personal or internal business execution of the prompts, scripts, and mathematical frameworks by the original purchaser.</p>
+            <p><strong>Edition:</strong> First Edition (2026)</p>
+            <h2>Legal, Financial &amp; Operational Disclaimer</h2>
+            <p>This manual provides educational, strategic, and operational frameworks for digital media production, audience development, workflow automation, and solo business management. The author and publisher are not licensed financial advisors, certified public accountants, or legal counsel. Nothing in this publication constitutes legal, tax, accounting, or investment advice.</p>
+            <p>All case studies, revenue figures, conversion rates, click-through rates (CTR), retention benchmarks, and Revenue Per Production Hour (RPPH) calculations presented in this book are illustrative operational benchmarks and documented case architectures. Individual creator and business outcomes vary substantially based on niche selection, execution consistency, market conditions, platform algorithm shifts, and offer quality. No guarantee of specific financial earnings or audience growth is made or implied.</p>
+            <p><strong>Trademark Notice:</strong> All product names, artificial intelligence models, software platforms, and company names mentioned herein (including but not limited to YouTube, LinkedIn, X, TikTok, Instagram, Substack, Beehiiv, ConvertKit, Stripe, Notion, n8n, Make, OpenAI, and Anthropic) are trademarks or registered trademarks of their respective owners. Their inclusion is strictly for technical instruction and workflow architecture illustration and does not imply endorsement or affiliation.</p>
         </div>
         """)
     else:
@@ -1429,7 +1619,7 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
         </div>
         """)
 
-    # Table of Contents
+    # Table of Contents (Page 3 in KDP Print, Page 2 in Digital Edition)
     sections_html.append(f"""
     <div class="toc-box">
         <h1>Master Table of Contents</h1>
@@ -1442,7 +1632,7 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
 
     # Front Matter
     if is_kdp:
-        fm_md = sanitize_markdown_for_kdp(fm_md, "front-matter")
+        fm_md = sanitize_markdown_for_kdp(fm_md, "front-matter", target_format="kdp_print")
     fm_html = convert_markdown_to_html(fm_md, svg_mode="inline", doc_prefix="fm")
     sections_html.append(f'<section id="sec-front-matter" class="chapter-container">{fm_html}</section>')
 
@@ -1451,13 +1641,13 @@ def build_complete_book_html(mode: str = "color_letter") -> str:
         ch_path = STUDIO_ROOT / "03-MANUSCRIPT" / f"{ch_slug}.md"
         ch_md = ch_path.read_text(encoding="utf-8")
         if is_kdp:
-            ch_md = sanitize_markdown_for_kdp(ch_md, ch_slug)
+            ch_md = sanitize_markdown_for_kdp(ch_md, ch_slug, target_format="kdp_print")
         ch_html = convert_markdown_to_html(ch_md, svg_mode="inline", doc_prefix=ch_slug)
         sections_html.append(f'<section id="sec-{ch_slug}" class="chapter-container">{ch_html}</section>')
 
     # Back Matter
     if is_kdp:
-        bm_md = sanitize_markdown_for_kdp(bm_md, "back-matter")
+        bm_md = sanitize_markdown_for_kdp(bm_md, "back-matter", target_format="kdp_print")
     bm_html = convert_markdown_to_html(bm_md, svg_mode="inline", doc_prefix="bm")
     sections_html.append(f'<section id="sec-back-matter" class="chapter-container">{bm_html}</section>')
 
@@ -1729,7 +1919,7 @@ def build_epub3(epub_path: Path) -> None:
     xhtml_files: dict[str, str] = {}
     for slug, title, md_path in doc_specs:
         md_raw = md_path.read_text(encoding="utf-8")
-        md_raw = sanitize_markdown_for_kdp(md_raw, slug)
+        md_raw = sanitize_markdown_for_kdp(md_raw, slug, target_format="epub")
         body_xhtml = convert_markdown_to_html(
             md_raw,
             svg_mode="epub_png" if use_png_in_epub else "img",
@@ -1906,11 +2096,19 @@ def main() -> int:
 
     # 2. Amazon KDP Print-Ready Paperback Interior PDF (6" x 9" Monochrome)
     print("[2/8] Compiling Amazon KDP Print-Ready Paperback PDF (6\" x 9\" Monochrome)...")
-    html_book_kdp = build_complete_book_html("kdp_6x9")
-    render_html_to_pdf(html_book_kdp, pdf_kdp_6x9)
+    html_book_kdp_pass1 = build_complete_book_html("kdp_6x9", toc_page_map=KDP_DEFAULT_TOC_MAP)
+    render_html_to_pdf(html_book_kdp_pass1, pdf_kdp_6x9)
+    toc_page_map = extract_kdp_toc_page_numbers(pdf_kdp_6x9)
+    if toc_page_map and toc_page_map != KDP_DEFAULT_TOC_MAP:
+        html_book_kdp_pass2 = build_complete_book_html("kdp_6x9", toc_page_map=toc_page_map)
+        render_html_to_pdf(html_book_kdp_pass2, pdf_kdp_6x9)
     removed_annots = strip_pdf_annotations(pdf_kdp_6x9)
+    stamped_folios = stamp_kdp_page_numbers(pdf_kdp_6x9)
     r_kdp = PdfReader(str(pdf_kdp_6x9))
-    print(f"      -> Done: {len(r_kdp.pages)} pages, {removed_annots} annotations stripped, {pdf_kdp_6x9.stat().st_size:,} bytes")
+    print(
+        f"      -> Done: {len(r_kdp.pages)} pages, {removed_annots} annotations stripped, "
+        f"{stamped_folios} folios stamped, {pdf_kdp_6x9.stat().st_size:,} bytes"
+    )
 
     # 3. Validated Reflowable EPUB 3.0 eBook
     print("[3/8] Compiling Validated Reflowable EPUB 3.0 eBook...")

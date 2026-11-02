@@ -43,6 +43,10 @@ KDP_FORBIDDEN_DCE_PATTERNS = [
     (re.compile(r"Full Title Page", re.IGNORECASE), "Literal 'Full Title Page'"),
     (re.compile(r"Monetize Your Audience Without Burnout", re.IGNORECASE), "Truncated >200-char subtitle 'Monetize Your Audience Without Burnout'"),
     (re.compile(r"☐"), "Interactive checkbox glyph ☐"),
+    (re.compile(r"\*\*[^*\n]+\*\*"), "Unrendered raw Markdown **bold** syntax"),
+    (re.compile(r"\[SRC-\d+\]"), "Unresolved [SRC-XX] citation tag"),
+    (re.compile(r"\[[A-Z][A-Z0-9_\s/-]{2,}\]"), "Unresolved [ALL_CAPS] bracket placeholder"),
+    (re.compile(r"\b[\w-]+\.(?:md|csv|svg|pdf|mp4|json|xlsx)\b"), "Local file extension reference"),
 ]
 
 
@@ -71,19 +75,36 @@ def main() -> int:
     else:
         checks.append(("KDP Page Count Sync", "PASS", f"{num_pages} pages (matches PROJECT_STATE.json)"))
 
-    # Check Title Page Author Attribution
+    # Check Title Page Author Attribution, Page 2 Copyright/Disclaimer, and Page 3 Numbered TOC
     p1_text = reader.pages[0].extract_text() or ""
+    p2_text = reader.pages[1].extract_text() or ""
+    p3_text = reader.pages[2].extract_text() or ""
     if "Omar Sunny" in p1_text:
         checks.append(("Interior Title Page Author ('Omar Sunny')", "PASS", "Verified on Page 1"))
     else:
         errors.append("Interior Title Page missing author 'Omar Sunny'")
         checks.append(("Interior Title Page Author ('Omar Sunny')", "FAIL", "Missing on Page 1"))
 
-    # Scan all pages for MediaBox, Annotations, Text Bounds, and Vector Object Bounds
+    if "Copyright" in p2_text and "Omar Sunny" in p2_text and "Page 2" in p2_text:
+        checks.append(("Page 2 Copyright & Legal Disclaimer + Folio", "PASS", "Verified on Page 2 (directly behind Title Page)"))
+    else:
+        errors.append("Page 2 missing Copyright & Legal Disclaimer or 'Page 2' folio")
+        checks.append(("Page 2 Copyright & Legal Disclaimer + Folio", "FAIL", "Missing on Page 2"))
+
+    if "Master Table of Contents" in p3_text and "Page 4" in p3_text and "Page 12" in p3_text and "Page 287" in p3_text:
+        checks.append(("Page 3 Master TOC with Printed Page Numbers", "PASS", "Verified exact starting page numbers (Page 4 .. Page 287)"))
+    else:
+        errors.append(f"Page 3 Master TOC missing printed starting page numbers: {p3_text[:150]}")
+        checks.append(("Page 3 Master TOC with Printed Page Numbers", "FAIL", "Missing starting page numbers"))
+
+    # Scan all pages for MediaBox, Annotations, Text Bounds, Vector Object Bounds, Blank/Sparse Pages, and Stamped Folios
     bad_dims = []
     annot_pages = []
     text_margin_violations = []
     rect_margin_violations = []
+    sparse_pages = []
+    missing_folios = []
+    pdf_dce_hits = []
 
     min_x_global = 999.0
     max_x_global = 0.0
@@ -143,11 +164,14 @@ def main() -> int:
                         (p_num, round(ux, 1), round(ux, 1), round(uy, 1), round(uy, 1))
                     )
 
+        page_text_chunks: list[str] = []
+
         def v_tx(text, cm, tm, fd, fs):
             nonlocal min_x_global, max_x_global, min_y_global, max_y_global
             s = text.strip()
             if not s:
                 return
+            page_text_chunks.append(s)
             x = cm[4] + tm[4] * cm[0]
             y = cm[5] + tm[5] * cm[3]
             if x < min_x_global:
@@ -162,6 +186,15 @@ def main() -> int:
                 text_margin_violations.append((p_num, round(x, 1), round(y, 1), ascii(s[:25])))
 
         page.extract_text(visitor_operand_before=v_op, visitor_text=v_tx)
+        joined_page_txt = " ".join(page_text_chunks)
+        if len(joined_page_txt) < 200:
+            sparse_pages.append((p_num, len(joined_page_txt)))
+        if p_num >= 2 and f"Page {p_num}" not in joined_page_txt:
+            missing_folios.append(p_num)
+        for pat, label in KDP_FORBIDDEN_DCE_PATTERNS:
+            m = pat.search(joined_page_txt)
+            if m:
+                pdf_dce_hits.append(f"PDF p.{p_num}: {label} ('{m.group(0)}')")
 
     if bad_dims:
         errors.append(f"Trim size violations: {bad_dims[:5]}")
@@ -198,6 +231,24 @@ def main() -> int:
                 f"0 violations; all tables, code boxes & SVGs inside [{min_x_global:.1f}pt, {max_x_global:.1f}pt]",
             )
         )
+
+    if sparse_pages:
+        errors.append(f"Blank or sparse pages (<200 chars) in KDP PDF: {sparse_pages}")
+        checks.append(("Zero Blank or Sparse Pages (<200 chars)", "FAIL", f"Found on {sparse_pages}"))
+    else:
+        checks.append(("Zero Blank or Sparse Pages (<200 chars)", "PASS", f"0 blank/sparse pages across all {num_pages} pages"))
+
+    if missing_folios:
+        errors.append(f"Missing printed page numbers on KDP pages: {missing_folios[:10]}")
+        checks.append(("Printed Page Numbers (Pages 2..314)", "FAIL", f"Missing on {len(missing_folios)} pages"))
+    else:
+        checks.append(("Printed Page Numbers (Pages 2..314)", "PASS", f"All {num_pages - 1} content pages stamped with 'Page X' folio"))
+
+    if pdf_dce_hits:
+        errors.extend(pdf_dce_hits[:10])
+        checks.append(("KDP Print Interior Zero DCE/Markdown/Placeholder", "FAIL", f"{len(pdf_dce_hits)} hits: {pdf_dce_hits[:3]}"))
+    else:
+        checks.append(("KDP Print Interior Zero DCE/Markdown/Placeholder", "PASS", "0 **bold**, 0 [SRC-XX], 0 [PLACEHOLDERS], 0 file exts"))
 
     # Check KDP Full-Wrap Cover SVG & PDF for Barcode/Transparency Safe Zone & Author Name
     wrap_svg_path = STUDIO_ROOT / "08-COVER-DESIGN/svg/kdp-paperback-full-wrap-cover.svg"
@@ -261,6 +312,9 @@ def main() -> int:
             if "By Omar Sunny" not in fm_text or "Copyright © 2026 by Omar Sunny" not in fm_text:
                 errors.append("EPUB front-matter.xhtml missing 'By Omar Sunny' or 'Copyright © 2026 by Omar Sunny'")
                 dce_hits.append("Front matter missing Omar Sunny copyright")
+            if len(re.findall(r"<h1[^>]*>", fm_text)) != 1:
+                errors.append("EPUB front-matter.xhtml has duplicate <h1> title blocks")
+                dce_hits.append("Duplicate <h1> in front-matter.xhtml")
 
             for zname in sorted(names):
                 if zname.endswith(".xhtml"):
