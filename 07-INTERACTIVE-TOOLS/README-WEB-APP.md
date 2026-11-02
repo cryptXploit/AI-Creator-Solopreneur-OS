@@ -32,7 +32,7 @@ Because `creator-os-app.html` is distributed across both the **Tier 0 Free Start
 | **Module 2: Emergency Scripts (`S01`–`S02` vs. `S03`–`S12`)** | `S01`–`S02` Active | **All 12 Scripts (`S01`–`S12`) Active** |
 | **Module 3: S.I.G.N.A.L. Outlier & C.L.I.P. Packaging Studio** | Full Access | Full Access |
 | **Module 4: 1-to-15 Repurposing Matrix & 4-Hr Batch Sprint** | Full Access | Full Access |
-| **Module 5: Brand Sponsorship Rate Card Calculator ($R_{	ext{sponsor}}$)** | Full Access | Full Access |
+| **Module 5: Brand Sponsorship Rate Card Calculator ($R_{\text{sponsor}}$)** | Full Access | Full Access |
 | **Module 6: Friday Creator CEO Scorecard & 100-Gate OS Tracker** | Full Access | Full Access |
 
 ### How to Activate Pro Full Operating System Mode
@@ -50,9 +50,9 @@ Because `creator-os-app.html` is distributed across both the **Tier 0 Free Start
 
 ### 3.1 Module 1: Creator RPPH, RPM & 4-Tier Value-Ladder Simulator (Chapters 1 & 9)
 
-Module 1 implements the **Revenue Per Production Hour ($	ext{RPPH}$)** and **4-Tier Digital Product Value Ladder** equations from Chapters 1, 8, and 9:
+Module 1 implements the **Revenue Per Production Hour ($\text{RPPH}$)** and **4-Tier Digital Product Value Ladder** equations from Chapters 1, 8, and 9:
 
-$$	ext{RPPH} = rac{	ext{Total Monthly Creator Revenue}}{	ext{Total Monthly Production Hours}}$$
+$$\text{RPPH} = \frac{\text{Total Monthly Creator Revenue}}{\text{Total Monthly Production Hours}}$$
 
 * **Left Panel (Weekly Production Hours & Traffic Inputs):** Enter your current weekly hours across *Ideation & Research*, *Pillar Scripting*, *Recording & Takes*, *Editing & Revisions*, *Manual Repurposing*, and *Admin & Inbound DMs*, alongside your monthly views, platform AdSense RPM, and current monthly revenue.
 * **Right Panel (Owned Funnel & 4-Tier Value Ladder Inputs):** Configure your view-to-email capture rate (`%`), Tier 1 Impulse Price (`$29`), Tier 2 Flagship System Price (`$99`), Checkout Order Bump + Upsell Cart Lift (`%`), Tier 3/4 High-Ticket Price (`$997`), and Monthly Sponsorship Retainers (`$`).
@@ -70,8 +70,8 @@ Module 2 embeds the complete verbatim corpus of **50 Tested AI Workflow Prompts 
 
 Module 3 enforces the **Package-First Rule**: never write a single line of a Pillar Script until your niche, topic outlier multiplier, title, thumbnail overlay, and 30-second hook pass quantitative thresholds:
 
-* **Part A — P.A.I.D. Niche & S.I.G.N.A.L. Outlier Scorer:** Computes your **Niche Monetization Potential Index (NMPI)** on a 100-point scale (`>= 70` Green Go Gate) and calculates your candidate topic's **Outlier Multiplier ($M_{	ext{outlier}} = 	ext{Competitor 14-Day Views} \div 	ext{Channel 90-Day Median Views}$)**, enforcing the `>= 2.5x` Green Light threshold.
-* **Part B — Package-First & C.L.I.P. Hook Stress-Tester:** Provides live character-count guardrails (`<= 60 chars`) for your primary title, strict word-count validation (`<= 4 words`) for your thumbnail text overlay, a 4-beat **C.L.I.P.** hook drafter (*Contradiction*, *Locked-In Stakes*, *Instant Proof*, *Payoff Loop*), and a real-time **Effective Retention Index ($	ext{ERI} = 	ext{CTR} 	imes 	ext{30s Hold} 	imes 	ext{APV}$)** calculator.
+* **Part A — P.A.I.D. Niche & S.I.G.N.A.L. Outlier Scorer:** Computes your **Niche Monetization Potential Index (NMPI)** on a 100-point scale (`>= 70` Green Go Gate) and calculates your candidate topic's **Outlier Multiplier ($M_{\text{outlier}} = \text{Competitor 14-Day Views} \div \text{Channel 90-Day Median Views}$)**, enforcing the `>= 2.5x` Green Light threshold.
+* **Part B — Package-First & C.L.I.P. Hook Stress-Tester:** Provides live character-count guardrails (`<= 60 chars`) for your primary title, strict word-count validation (`<= 4 words`) for your thumbnail text overlay, a 4-beat **C.L.I.P.** hook drafter (*Contradiction*, *Locked-In Stakes*, *Instant Proof*, *Payoff Loop*), and a real-time **Effective Retention Index ($\text{ERI} = \text{CTR} \times \text{30s Hold} \times \text{APV}$)** calculator.
 
 ### 3.4 Module 4: 1-to-15 Omnichannel Repurposing Matrix & 4-Hour Batch Sprint Tracker (Chapters 5, 6 & 7)
 
@@ -80,7 +80,7 @@ Module 4 operationalizes the **1-to-15 Omnichannel Waterfall** (`A01` Anchor Pil
 * **4-Hour Weekly Batch Sprint Checkboxes:** Track your four time-boxed weekly production blocks (Monday 45m Research, Tuesday 75m Scripting, Wednesday 90m Batch Recording, Thursday 30m 12-Point QA & Scheduling).
 * **Interactive 15-Asset Pipeline Board:** Update the status of each derivative asset (`Draft` -> `Ready` -> `Scheduled` -> `Published`) and monitor your weekly completion counter.
 
-### 3.5 Module 5: Brand Sponsorship Rate Card & Usage-Rights Pricing Calculator ($R_{	ext{sponsor}}$ — Chapter 10)
+### 3.5 Module 5: Brand Sponsorship Rate Card & Usage-Rights Pricing Calculator ($R_{\text{sponsor}}$ — Chapter 10)
 
 Module 5 prevents creators from underpricing their B2B media inventory or giving away perpetual paid ad whitelisting for free. Enter your trailing long-form views, niche CPM (`$45–$120`), active newsletter subscribers, open rate, sponsor click rate, B2B CPC (`$3.50–$8.00`), paid ad whitelisting months (`+30%/mo`), and category exclusivity months (`+20%/mo`). The module calculates:
 

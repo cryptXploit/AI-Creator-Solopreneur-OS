@@ -1,0 +1,118 @@
+{
+  "blueprint_version": "2.0.0",
+  "studio_product": "The AI Content Creator & Solopreneur Operating System",
+  "publisher": "Apex Digital Systems Studio",
+  "compatible_platforms": [
+    "Make.com (Integromat)",
+    "n8n (Self-Hosted or Cloud)",
+    "Zapier Webhook/Code Steps"
+  ],
+  "workflow_name": "Creator OS Workflow #01 \u2014 Master Pillar Script to 1-to-15 Omnichannel Repurposing Pipeline",
+  "description": "Triggers when a Pillar Script status changes to 'Locked for Extraction' in Notion DB2, executes chained Claude/OpenAI prompts (P26-P30) with your 5-Parameter Voice DNA, and populates all 14 derivative asset records with tracked UTM bridges.",
+  "chapter_alignment": "Chapters 05, 06 & 07 (H.E.A.R.T. Scripting + 1-to-15 Repurposing Waterfall)",
+  "trigger_type": "notion.database.item_updated",
+  "environment_variables_required": [
+    "OPENAI_OR_ANTHROPIC_API_KEY",
+    "NOTION_INTEGRATION_SECRET_TOKEN",
+    "NOTION_DB1_SIGNAL_IDEA_BANK_ID",
+    "NOTION_DB2_CONTENT_PIPELINE_ID",
+    "NOTION_DB5_SPONSOR_CRM_ID",
+    "ESP_API_KEY_CONVERTKIT_OR_BEEHIIV",
+    "YOUTUBE_DATA_API_KEY",
+    "OPERATOR_CEO_EMAIL"
+  ],
+  "error_handling_policy": {
+    "retry_attempts": 3,
+    "backoff_strategy": "exponential_60s",
+    "fallback_notification": "Send alert to OPERATOR_CEO_EMAIL and preserve payload in Notion Dead-Letter Queue"
+  },
+  "nodes": [
+    {
+      "id": "node_01_notion_trigger",
+      "name": "Watch Notion DB2 Content Pipeline (Status == Ready to Atomize)",
+      "type": "notion.watchDatabaseItems",
+      "parameters": {
+        "database_id": "{{NOTION_DB2_CONTENT_PIPELINE_ID}}",
+        "filter_property": "Production_Stage",
+        "filter_value": "Stage 2: Pillar Script Locked",
+        "poll_interval_minutes": 15
+      }
+    },
+    {
+      "id": "node_02_fetch_voice_dna",
+      "name": "Load Operator 5-Parameter Voice DNA & Anti-Slop Ruleset",
+      "type": "datastore.getRecord",
+      "parameters": {
+        "store_name": "Creator_OS_Voice_DNA_Store",
+        "profile_id": "primary_operator_voice_v2",
+        "strict_banned_words": [
+          "unveil",
+          "transformative",
+          "groundbreaking",
+          "paradigm",
+          "synergy",
+          "holistic",
+          "seamless",
+          "empower"
+        ]
+      }
+    },
+    {
+      "id": "node_03_extract_5_shorts",
+      "name": "LLM Chain #1 (Prompt P26) \u2014 Extract 5 Standalone 60s Vertical Short Scripts",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "provider": "anthropic_or_openai",
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.35,
+        "max_tokens": 3200,
+        "system_prompt": "You are an elite short-form retention scriptwriter operating under the attached 5-Parameter Voice DNA Profile. Never chop mid-sentence clips. Extract 5 standalone 60-second vertical scripts (135-150 words each): (1) Contrarian Status-Quo Hook, (2) Before/After Case Study, (3) Core Formula Walkthrough, (4) #1 Mistake Fix, (5) 60-Second Tool/Prompt Demo.",
+        "user_prompt": "SOURCE H.E.A.R.T. PILLAR SCRIPT:\n{{node_01_notion_trigger.body_markdown}}\n\nPRIMARY LEAD MAGNET URL: {{node_01_notion_trigger.lead_magnet_url}}\nReturn valid JSON containing array 'shorts' with fields: asset_code, hook_0_to_3s, spoken_body, visual_broll_cue, cta_bridge."
+      }
+    },
+    {
+      "id": "node_04_extract_linkedin_and_x",
+      "name": "LLM Chain #2 (Prompt P27) \u2014 Extract 2 LinkedIn Posts, 1 X Thread & 1 Atomic Essay",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "provider": "anthropic_or_openai",
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.4,
+        "max_tokens": 3500,
+        "system_prompt": "Translate the master H.E.A.R.T. Pillar script into 4 native written authority assets: A07 LinkedIn Framework Post (2-line metric contrast above fold), A08 LinkedIn Case Study Post, A09 8-Post X Thread, and A10 Single-Image Atomic Essay.",
+        "user_prompt": "SOURCE H.E.A.R.T. PILLAR SCRIPT:\n{{node_01_notion_trigger.body_markdown}}\n\nUTM CAMPAIGN SLUG: {{node_01_notion_trigger.sprint_slug}}"
+      }
+    },
+    {
+      "id": "node_05_extract_carousels_and_emails",
+      "name": "LLM Chain #3 (Prompts P28 & P29) \u2014 Extract 3 8-Slide Carousels & 2 Newsletter Issues",
+      "type": "llm.chatCompletion",
+      "parameters": {
+        "provider": "anthropic_or_openai",
+        "model": "claude-3-7-sonnet-or-gpt-4o",
+        "temperature": 0.35,
+        "max_tokens": 4000,
+        "system_prompt": "Generate slide-by-slide copy (Slides 1 to 8, max 28 words per slide) for 3 LinkedIn/IG Carousels (A11 Blueprint, A12 Math Contrast, A13 Prompt Swipe) plus full drafts for A14 Tuesday Value Newsletter and A15 Friday Monetization Issue.",
+        "user_prompt": "SOURCE H.E.A.R.T. SCRIPT:\n{{node_01_notion_trigger.body_markdown}}\n\nCORE OFFER LINK: {{node_01_notion_trigger.tier3_checkout_url}}"
+      }
+    },
+    {
+      "id": "node_06_utm_builder_and_qa_filter",
+      "name": "Deterministic Anti-Slop QA Filter & UTM Attribution Builder (Prompt P30/P34)",
+      "type": "code.javascript",
+      "parameters": {
+        "code": "const assets = [...shorts, ...social, ...carousels, ...emails]; return assets.map((a, idx) => ({ ...a, utm_url: `${baseUrl}?utm_source=${a.platform}&utm_medium=organic&utm_campaign=${sprintSlug}&utm_content=A${String(idx+2).padStart(2,'0')}` }));"
+      }
+    },
+    {
+      "id": "node_07_populate_notion_children",
+      "name": "Batch Create All 14 Derivative Asset Cards in Notion DB2 & Notify Operator",
+      "type": "notion.bulkCreatePages",
+      "parameters": {
+        "database_id": "{{NOTION_DB2_CONTENT_PIPELINE_ID}}",
+        "parent_pillar_id": "{{node_01_notion_trigger.page_id}}",
+        "update_parent_status": "Stage 3: 15-Asset Waterfall Ready for Thu QA"
+      }
+    }
+  ]
+}

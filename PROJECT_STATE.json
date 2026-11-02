@@ -169,14 +169,14 @@
   },
   "phase6_webapp": {
     "app_path": "07-INTERACTIVE-TOOLS/creator-os-app.html",
-    "app_size_bytes": 528023,
+    "app_size_bytes": 590104,
     "license_key_path": "07-INTERACTIVE-TOOLS/PRO-ACCESS-LICENSE-KEY.txt",
     "license_key_size_bytes": 2692,
     "readme_path": "07-INTERACTIVE-TOOLS/README-WEB-APP.md",
-    "readme_words": 1542,
-    "readme_size_bytes": 11008,
+    "readme_words": 1534,
+    "readme_size_bytes": 11024,
     "preview_png_path": "04-VISUAL-ASSETS/png/webapp-dashboard-preview.png",
-    "preview_png_size_bytes": 148118,
+    "preview_png_size_bytes": 208933,
     "embedded_prompts_count": 50,
     "embedded_scripts_count": 12,
     "interactive_modules_count": 6,
@@ -222,7 +222,7 @@
     }
   },
   "current_phase": "Phase 10: Completed \u2014 Static Web Deployment Portal & Live Interactive Hub Ready",
-  "last_updated": "2026-11-02T05:33:39.205281+00:00",
+  "last_updated": "2026-11-02T21:05:34.682362+00:00",
   "phase8_marketing_and_bundles": {
     "landing_page_html_bytes": 174175,
     "landing_page_preview_png_bytes": 1592657,
@@ -259,7 +259,8 @@
   "phases": {
     "Phase 9": "COMPLETED",
     "Phase 10": "COMPLETED",
-    "Phase 11": "COMPLETED"
+    "Phase 11": "COMPLETED",
+    "Phase 10 Funnel": "COMPLETED"
   },
   "phase9_upgrades": {
     "upgrade_1_visual_shortcut_atlas": {
@@ -372,7 +373,7 @@
     "total_files_per_tree": 29,
     "routes": {
       "index.html": 189753,
-      "app/index.html": 531311,
+      "app/index.html": 590104,
       "studio/index.html": 50774,
       "atlas/index.html": 444558,
       "downloads/index.html": 9091,
@@ -415,5 +416,8 @@
     },
     "tier4_zip_bytes": 89518032
   },
-  "kdp_paperback_6x9_pages": 314
+  "kdp_paperback_6x9_pages": 314,
+  "phase10_funnel_completed": true,
+  "phase10_crud_app_ready": true,
+  "phase10_free_tier_supercharged": true
 }

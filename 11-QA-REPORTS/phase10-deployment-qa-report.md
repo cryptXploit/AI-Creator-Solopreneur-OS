@@ -1,7 +1,7 @@
 # PHASE 10 QA REPORT — STATIC WEB DEPLOYMENT PORTAL & LIVE INTERACTIVE HUB
 
 - **Product:** *The AI Content Creator & Solopreneur Operating System*
-- **Verification Timestamp (UTC):** `2026-11-02T05:33:39.205281+00:00`
+- **Verification Timestamp (UTC):** `2026-11-02T21:05:34.682362+00:00`
 - **Total Automated Checks Executed:** `37`
 - **Passed:** `37`
 - **Errors:** `0`
@@ -13,8 +13,8 @@
 | :--- | :--- | :---: | :--- |
 | 01 | 15-WEB-DEPLOYMENT/ & docs/ Directories Exist | **PASS** | 15-WEB-DEPLOYMENT=True, docs=True |
 | 02 | HTML Route `index.html` (>= 170,000 bytes & mirrored) | **PASS** | size=189,753 bytes (min 170,000), docs_mirror_identical=True |
-| 03 | HTML Route `app/index.html` (>= 500,000 bytes & mirrored) | **PASS** | size=531,311 bytes (min 500,000), docs_mirror_identical=True |
-| 04 | HTML Route `app/creator-os-app.html` (>= 500,000 bytes & mirrored) | **PASS** | size=531,311 bytes (min 500,000), docs_mirror_identical=True |
+| 03 | HTML Route `app/index.html` (>= 500,000 bytes & mirrored) | **PASS** | size=590,104 bytes (min 500,000), docs_mirror_identical=True |
+| 04 | HTML Route `app/creator-os-app.html` (>= 500,000 bytes & mirrored) | **PASS** | size=590,104 bytes (min 500,000), docs_mirror_identical=True |
 | 05 | HTML Route `studio/index.html` (>= 45,000 bytes & mirrored) | **PASS** | size=50,774 bytes (min 45,000), docs_mirror_identical=True |
 | 06 | HTML Route `studio/design-customizer-studio.html` (>= 45,000 bytes & mirrored) | **PASS** | size=50,774 bytes (min 45,000), docs_mirror_identical=True |
 | 07 | HTML Route `atlas/index.html` (>= 45,000 bytes & mirrored) | **PASS** | size=444,558 bytes (min 45,000), docs_mirror_identical=True |
@@ -34,14 +34,14 @@
 | 21 | Self-Hosted Download `downloads/sheet1-creator-rpm-and-time-audit.csv` | **PASS** | source=3,535 B, 15-WEB-DEPLOYMENT=3,535 B, docs=3,535 B |
 | 22 | Self-Hosted Download `downloads/00-ECOSYSTEM-MASTER-MAP-POSTER.png` | **PASS** | source=437,245 B, 15-WEB-DEPLOYMENT=437,245 B, docs=437,245 B |
 | 23 | Self-Hosted Download `downloads/cheat-sheet-ch01.png` | **PASS** | source=435,023 B, 15-WEB-DEPLOYMENT=435,023 B, docs=435,023 B |
-| 24 | Self-Hosted Download `downloads/tier0-free-sample-starter-kit.zip` | **PASS** | source=2,285,039 B, 15-WEB-DEPLOYMENT=2,285,039 B, docs=2,285,039 B |
+| 24 | Self-Hosted Download `downloads/tier0-free-sample-starter-kit.zip` | **PASS** | source=2,444,848 B, 15-WEB-DEPLOYMENT=2,444,848 B, docs=2,444,848 B |
 | 25 | Commercial Cover/Preview Asset `assets/ebook-cover-kdp-kindle.png` | **PASS** | source=2,583,958 B, 15-WEB-DEPLOYMENT=2,583,958 B, docs=2,583,958 B |
 | 26 | Commercial Cover/Preview Asset `assets/gumroad-tier0-free-audit-cover.png` | **PASS** | source=1,164,901 B, 15-WEB-DEPLOYMENT=1,164,901 B, docs=1,164,901 B |
 | 27 | Commercial Cover/Preview Asset `assets/gumroad-tier2-workbook-edition-cover.png` | **PASS** | source=1,225,599 B, 15-WEB-DEPLOYMENT=1,225,599 B, docs=1,225,599 B |
 | 28 | Commercial Cover/Preview Asset `assets/gumroad-tier3-flagship-bundle-cover.png` | **PASS** | source=1,163,925 B, 15-WEB-DEPLOYMENT=1,163,925 B, docs=1,163,925 B |
 | 29 | Commercial Cover/Preview Asset `assets/gumroad-tier4-vault-membership-cover.png` | **PASS** | source=1,233,492 B, 15-WEB-DEPLOYMENT=1,233,492 B, docs=1,233,492 B |
-| 30 | Commercial Cover/Preview Asset `assets/webapp-dashboard-preview.png` | **PASS** | source=148,118 B, 15-WEB-DEPLOYMENT=148,118 B, docs=148,118 B |
-| 31 | Internal Link & Asset Integrity (0 Broken Relative Links) | **PASS** | checked 196 attributes across 15-WEB-DEPLOYMENT/ & docs/; broken=0 |
+| 30 | Commercial Cover/Preview Asset `assets/webapp-dashboard-preview.png` | **PASS** | source=208,933 B, 15-WEB-DEPLOYMENT=208,933 B, docs=208,933 B |
+| 31 | Internal Link & Asset Integrity (0 Broken Relative Links) | **PASS** | checked 184 attributes across 15-WEB-DEPLOYMENT/ & docs/; broken=0 |
 | 32 | Zero External HTTP/HTTPS Script/CSS Dependencies | **PASS** | external_dependencies=0 |
 | 33 | DEPLOYMENT-RUNBOOK.md Word Count (>= 1,200 words & mirrored) | **PASS** | words=1,639, bytes=11,586 |
 | 34 | Zero Banned Words & Banned Phrases Across Phase 10 Files | **PASS** | scanned 16 text files; violations=0 |
@@ -54,7 +54,7 @@
 | Route | File Path | Size (Bytes) | Description |
 | :--- | :--- | ---: | :--- |
 | `/` | `index.html` | `189,753` | Flagship Conversion Sales Landing Page, RPPH Calculator & Live Ecosystem Hub |
-| `/app/` | `app/index.html` | `531,311` | Interactive SaaS-Lite Creator OS Web Companion Application (Free + Pro Key `CREATOR-OS-PRO-2026`) |
+| `/app/` | `app/index.html` | `590,104` | Interactive SaaS-Lite Creator OS Web Companion Application (Free + Pro Key `CREATOR-OS-PRO-2026`) |
 | `/studio/` | `studio/index.html` | `50,774` | Interactive Cover, YouTube Thumbnail & Social Card Customizer Studio |
 | `/atlas/` | `atlas/index.html` | `444,558` | Interactive Visual Shortcut Atlas & 31-Diagram Vector Architecture Explorer |
 | `/downloads/` | `downloads/index.html` | `9,091` | Direct Tier 0 Free Audit Starter Kit Download Hub + 7 Self-Hosted Files |

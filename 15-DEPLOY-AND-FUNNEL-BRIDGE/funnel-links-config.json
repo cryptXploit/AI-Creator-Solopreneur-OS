@@ -1,0 +1,28 @@
+{
+  "product_id": "PRODUCT-03-AI-CREATOR-SOLOPRENEUR-OS",
+  "author": "OMAR SUNNY",
+  "imprint": "Apex Digital Systems Studio",
+  "currency": "USD",
+  "funnel_links": {
+    "gumroad_tier0_free_url": "https://omarsunny.gumroad.com/l/creator-os-free-starter",
+    "gumroad_tier2_workbook_url": "https://omarsunny.gumroad.com/l/creator-os-workbook",
+    "gumroad_tier3_flagship_url": "https://omarsunny.gumroad.com/l/creator-os-flagship",
+    "gumroad_tier4_vip_url": "https://omarsunny.gumroad.com/l/creator-os-vip-vault",
+    "payhip_store_url": "https://payhip.com/omarsunny",
+    "amazon_kdp_ebook_url": "https://amazon.com/dp/B0EXAMP1E1",
+    "amazon_kdp_paperback_url": "https://amazon.com/dp/123456789X",
+    "live_web_app_demo_url": "https://cryptxploit.github.io/AI-Creator-Solopreneur-OS/app/"
+  },
+  "license_keys": {
+    "tier0": "FREE-DIAGNOSTIC-MODE",
+    "tier2": "STUDIO-TIER2-2026",
+    "tier3": "CREATOR-OS-PRO-2026",
+    "tier4": "STUDIO-PRO-OS-2026"
+  },
+  "affiliate_programs": {
+    "make_com_affiliate_url": "https://make.com?ref=omarsunny",
+    "notion_affiliate_url": "https://notion.so?ref=omarsunny",
+    "payoneer_affiliate_url": "https://payoneer.com?ref=omarsunny",
+    "convertkit_affiliate_url": "https://convertkit.com?ref=omarsunny"
+  }
+}
